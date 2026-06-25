@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="css/style.css">
     <title>ProjetoSenac</title>
 </head>
 <body>
@@ -11,19 +12,19 @@
 <main>
 
     <!-- //menu de navegação -->
-    <nav>
+    <nav style =" display:flex">
         <!-- //espaço para cada titulo de navegacao -->
-        <div>
+        <div class ="box_azul">
              <!-- //link para acessar -->
-            <a href="cadastro_novo_usuario.php">
+            <a class="box_azul_letra" href="cadastro_novo_usuario.php">
             Cadastro Novo Usuario
             </a>
         </div>
     </nav>
 
-    <nav>
+    <nav class="box_verde">
         <div>
-            <a href="navegacao.php">
+            <a class="box_azul_letra" href="navegacao.php">
             Entrar
             </a>
         </div>

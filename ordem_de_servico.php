@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="css/style.css">
     <title>Ordem de Servico</title>
 </head>
 <body>
@@ -10,39 +11,38 @@
 <!-- corpo -->
 <main>
 
-      <!-- //espaço para cada titulo de navegacao -->
-        <div>
-             <!-- //link para acessar -->
-            <a href="index.php">
-            Tela Inicial
-            </a>
-        </div>
+      <!-- //menu de navegação -->
+    <nav style =" display:flex">
+        <!-- //espaço para cada titulo de navegacao -->
+       
 
-        <div>
+       
+
+        <div class="box_azul_claro">
              <!-- //link para acessar -->
             <a href="cadastro_de_produtos.php">
             Cadastro de Produtos
             </a>
         </div>
-       <div>
+      <div>
              <!-- //link para acessar -->
             <a href="navegacao.php">
             Menu
             </a>
         </div>
-        <div>
+        <div class="box_azul_claro" >
              <!-- //link para acessar -->
             <a href="acessar_aos_relatorios.php">
             Acessar aos Relatorios
             </a>
         </div>
-        <div>
+        <div class="box_verde">
              <!-- //link para acessar -->
             <a href="estoque_entrada.php">
             Estoque - Entrada
             </a>
         </div>
-        <div>
+        <div class="box_vermelho">
              <!-- //link para acessar -->
             <a href="estoque_saida.php">
             Estoque - Saida

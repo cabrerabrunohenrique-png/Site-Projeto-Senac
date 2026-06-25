@@ -1,0 +1,60 @@
+.box_azul {
+    background-color: #007bff; /* Define a cor azul */
+    width: 200px;              /* Define a largura igual à altura */
+    height: 200px;             /* Define a altura igual à largura */
+    display: flex;             /* Ativa o modo flexbox */
+    justify-content: center;   /* Centraliza o link na horizontal */
+    align-items: center;       /* Centraliza o link na vertical */
+    text-align: center;        /* Garante o alinhamento do texto */
+}
+
+.box_azul_letra {
+    color: white;              /* Muda a cor do texto para branco */
+    text-decoration: none;     /* Remove o sublinhado padrão do link */
+    font-family: sans-serif;   /* Define uma fonte mais moderna */
+    font-weight: bold;         /* Deixa o texto em negrito */
+    padding: 10px;             /* Adiciona um espaçamento interno ao texto */
+}
+
+.box_verde {
+    background-color: #00ff73; /* Define a cor azul */
+    width: 200px;              /* Define a largura igual à altura */
+    height: 200px;             /* Define a altura igual à largura */
+    display: flex;             /* Ativa o modo flexbox */
+    justify-content: center;   /* Centraliza o link na horizontal */
+    align-items: center;       /* Centraliza o link na vertical */
+    text-align: center;        /* Garante o alinhamento do texto */
+}
+
+.box_amarelo {
+    background-color: #e8d30f; /* Define a cor azul */
+    width: 200px;              /* Define a largura igual à altura */
+    height: 200px;             /* Define a altura igual à largura */
+    display: flex;             /* Ativa o modo flexbox */
+    justify-content: center;   /* Centraliza o link na horizontal */
+    align-items: center;       /* Centraliza o link na vertical */
+    text-align: center;        /* Garante o alinhamento do texto */
+}
+
+.box_azul_claro {
+    background-color: #27adce; /* Define a cor azul */
+    width: 200px;              /* Define a largura igual à altura */
+    height: 200px;             /* Define a altura igual à largura */
+    display: flex;             /* Ativa o modo flexbox */
+    justify-content: center;   /* Centraliza o link na horizontal */
+    align-items: center;       /* Centraliza o link na vertical */
+    text-align: center;        /* Garante o alinhamento do texto */
+}
+
+
+
+.box_vermelho {
+    background-color: #f5550b; /* Define a cor azul */
+    width: 200px;              /* Define a largura igual à altura */
+    height: 200px;             /* Define a altura igual à largura */
+    display: flex;             /* Ativa o modo flexbox */
+    justify-content: center;   /* Centraliza o link na horizontal */
+    align-items: center;       /* Centraliza o link na vertical */
+    text-align: center;        /* Garante o alinhamento do texto */
+}
+

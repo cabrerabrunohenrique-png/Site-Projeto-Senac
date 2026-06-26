@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Cadastro de Produtos</title>
 </head>
-<body>
+<body class ="container">
  
-<!-- corpo -->
-<main>
+<!-- cabeça -->
+<header>
 
-      <nav style =" display:flex">
+    <nav style =" display:flex">
         <!-- //espaço para cada titulo de navegacao -->
         
-        <div class="">
+        <div class="box_azul">
              <!-- //link para acessar -->
-            <a href="navegacao.php">
+            <a class="box_azul_letra" href="navegacao.php">
             Menu
             </a>
         </div>
@@ -44,9 +45,66 @@
             Estoque - Saida
             </a>
         </div>
+    </nav>
+</header>
+
+    <main >
+        <form>
+            <div class="col-md-4">
+                <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                <input type="number" class="form-control" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
+            </div>
+
+            <div class="row g-3">
+                <div class="col-12">
+                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" id="nome_do_produto" name="nome_do_produto"
+                placeholder="Ex.: Cidade de Deus">
+            </div>
+
+            <div class="row g-3">
+                <div class="col-12">
+                <label for="fabricante" class="form-label">Fabricante</label>
+                <input type="text" class="form-control" id="fabricante" name="fabricante"
+                placeholder="Ex.: Cidade de Deus">
+            </div>
+    
+            <div class="col-md-6">
+                <label for="peso_do_produto" class="form-label">Peso do Produto</label>
+                <div class="input-group">
+                    <span class="input-group-text">R$</span>
+                    <input type="number" class="form-control" id="peso_do_produto" name="peso_do_produto" placeholder="0,00"
+                step="0.01">
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="altura_do_produto" class="form-label">Altura do Produto</label>
+                <div class="input-group">
+                    <span class="input-group-text">R$</span>
+                    <input type="number" class="form-control" id="altura_do_produto" name="altura_do_produto" placeholder="0,00"
+                step="0.01">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="comprimento_do_produto" class="form-label">Comprimento do Produto</label>
+                <div class="input-group">
+                    <span class="input-group-text">R$</span>
+                    <input type="number" class="form-control" id="comprimento_do_produto" name="comprimento_do_produto" placeholder="0,00"
+                step="0.01">
+                </div>
+            </div>
+            
+            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
+                <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+            </div>
+        </form>
+    </main>
     
 
-</main>
+
     
 </body>
 </html>

@@ -6,13 +6,13 @@
     <link rel ="stylesheet" href="css/style.css">
     <title>ProjetoSenac</title>
 </head>
-<body>
+<body class="" style="border: 1px solid blue; display: flex; justify-content: center;" >
  
 <!-- corpo -->
-<main>
+<main class="" style="border: 1px solid red; " >
 
     <!-- //menu de navegação -->
-    <nav style =" display:flex">
+    <nav >
         <!-- //espaço para cada titulo de navegacao -->
         <div class ="box_azul">
              <!-- //link para acessar -->

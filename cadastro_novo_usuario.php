@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Cadastro de Novo Usuario</title>
 
 </head>
@@ -15,9 +15,9 @@
 
    <nav >
         <!-- //espaço para cada titulo de navegacao -->
-        <div class="box_azul">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_azul_letra" href="index.php">
+            <a class="box_letra" href="index.php">
             Voltar
             </a>
         </div>

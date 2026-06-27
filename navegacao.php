@@ -15,41 +15,41 @@
     <!-- //menu de navegação -->
     <nav style =" display:flex">
         <!-- //espaço para cada titulo de navegacao -->
-        <div class="box_azul" >
+        <div class="box_cinza_claro" >
              <!-- //link para acessar -->
-            <a class="box_azul_letra" href="index.php">
-            Tela Inicial
+            <a class="box_letra" href="index.php">
+            Tela de Login
             </a>
         </div>
 
-        <div class="box_azul_claro">
+        <div class="box_cinza_medio">
              <!-- //link para acessar -->
-            <a href="cadastro_de_produtos.php">
+            <a class="box_letra" href="cadastro_de_produtos.php">
             Cadastro de Produtos
             </a>
         </div>
-        <div class="box_amarelo">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="ordem_de_servico.php">
+            <a class="box_letra" href="ordem_de_servico.php">
             Ordem de Serviços(OS)
             </a>
         </div>
-        <div class="box_azul_claro" >
+        <div class="box_cinza_medio" >
              <!-- //link para acessar -->
-            <a href="acessar_aos_relatorios.php">
+            <a class="box_letra" href="acessar_aos_relatorios.php">
             Acessar aos Relatorios
             </a>
         </div>
-        <div class="box_verde">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="estoque_entrada.php">
-            Estoque - Entrada
+            <a class="box_letra" href="estoque_entrada.php">
+            Entrada
             </a>
         </div>
-        <div class="box_vermelho">
+        <div class="box_cinza_medio">
              <!-- //link para acessar -->
-            <a href="estoque_saida.php">
-            Estoque - Saida
+            <a class="box_letra" href="estoque_saida.php">
+            Saida
             </a>
         </div>
 

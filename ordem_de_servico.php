@@ -14,35 +14,35 @@
 
     <nav style =" display:flex">
         <!-- //espaço para cada titulo de navegacao -->
-        <div class="box_amarelo">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="cadastro_de_produtos.php">
+            <a class="box_letra" href="cadastro_de_produtos.php">
             Cadastro de Produto
             </a>
         </div>
 
-        <div class="box_azul">
+        <div class="box_cinza_medio">
              <!-- //link para acessar -->
-            <a class="box_azul_letra" href="navegacao.php">
+            <a class="box_letra" href="navegacao.php">
             Menu
             </a>
         </div>
        
-        <div class="box_azul_claro" >
+        <div class="box_cinza_claro" >
              <!-- //link para acessar -->
-            <a href="acessar_aos_relatorios.php">
+            <a class="box_letra" href="acessar_aos_relatorios.php">
             Acessar aos Relatorios
             </a>
         </div>
-        <div class="box_verde">
+        <div class="box_cinza_medio">
              <!-- //link para acessar -->
-            <a href="estoque_entrada.php">
+            <a class="box_letra" href="estoque_entrada.php">
             Estoque - Entrada
             </a>
         </div>
-        <div class="box_vermelho">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="estoque_saida.php">
+            <a class="box_letra" href="estoque_saida.php">
             Estoque - Saida
             </a>
         </div>

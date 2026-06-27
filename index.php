@@ -14,17 +14,17 @@
     <!-- //menu de navegação -->
     <nav >
         <!-- //espaço para cada titulo de navegacao -->
-        <div class ="box_azul">
+        <div class ="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_azul_letra" href="cadastro_novo_usuario.php">
+            <a class="box_letra" href="cadastro_novo_usuario.php">
             Cadastro Novo Usuario
             </a>
         </div>
     </nav>
 
-    <nav class="box_verde">
+    <nav class="box_cinza_medio">
         <div>
-            <a class="box_azul_letra" href="navegacao.php">
+            <a class="box_letra" href="navegacao.php">
             Entrar
             </a>
         </div>

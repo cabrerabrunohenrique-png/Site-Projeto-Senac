@@ -15,33 +15,33 @@
         <!-- //espaço para cada titulo de navegacao -->
       
 
-        <div class="box_azul_claro">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="cadastro_de_produtos.php">
+            <a class="box_letra" href="cadastro_de_produtos.php">
             Cadastro de Produtos
             </a>
         </div>
-        <div class="box_amarelo">
+        <div class="box_cinza_medio">
              <!-- //link para acessar -->
-            <a href="ordem_de_servico.php">
+            <a class="box_letra" href="ordem_de_servico.php">
             Ordem de Serviços(OS)
             </a>
         </div>
-       <div>
+       <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="navegacao.php">
+            <a class="box_letra" href="navegacao.php">
             Menu
             </a>
         </div>
-        <div class="box_verde">
+        <div class="box_cinza_medio">
              <!-- //link para acessar -->
-            <a href="estoque_entrada.php">
+            <a class="box_letra" href="estoque_entrada.php">
             Estoque - Entrada
             </a>
         </div>
-        <div class="box_vermelho">
+        <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a href="estoque_saida.php">
+            <a class="box_letra" href="estoque_saida.php">
             Estoque - Saida
             </a>
         </div>

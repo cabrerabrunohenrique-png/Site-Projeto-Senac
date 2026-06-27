@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <title>Cadastro de Novo Usuario</title>
+    <title>deletar</title>
 
 </head>
 <body class ="container" style="border: 1px solid blue; ">
@@ -17,24 +17,11 @@
         <!-- //espaço para cada titulo de navegacao -->
         <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_letra" href="index.php">
+            <a class="box_letra" href="cadastro_novo_usuario">
             Voltar
             </a>
         </div>
 
-        <div class="box_cinza_medio">
-             <!-- //link para acessar -->
-            <a class="box_letra" href="atualizar.php">
-            Atualizar
-            </a>
-        </div>
-        <div class="box_cinza_claro">
-             <!-- //link para acessar -->
-            <a class="box_letra" href="deletar.php">
-            Deletar
-            </a>
-        </div>
-        
         
     </nav>
 
@@ -82,7 +69,7 @@
             <div class="d-flex gap-2 mt-4">
                                                           <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
-                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                
             </div>
     </form>
 

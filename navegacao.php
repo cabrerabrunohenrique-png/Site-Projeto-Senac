@@ -8,65 +8,57 @@
     <title>Navegacao</title>
 </head>
 <body>
- 
-<!-- corpo -->
-<main>
-    
-    <div style =" display:flex; justify-content: center">
+    <nav style =" display:flex; justify-content: center">
 
-        <div class="box_cinza_claro m" style ="" >
-             <!-- //link para acessar -->
-        <a class="box_letra" href="index.php">Tela de Login
-            </a>
+        <div class="box_cinza_claro " style ="" >
+                <!-- //link para acessar -->
+            <a class="box_letra" href="index.php">Tela de Login</a>
         </div>    
-    </div>
-    
-    <!-- //menu de navegação -->
-    <div class="" style =" ">
-        <nav style ="display:flex; justify-content: center  " class="">
-            <!-- //espaço para cada titulo de navegacao -->
-        <div class="m">
-            <div class="box_cinza_medio">
-                <!-- //link para acessar -->
-                <a class="box_letra" href="cadastro_de_produtos.php">
-                Cadastro de Produtos
-                </a>
+    </nav> 
+
+    <!-- corpo -->
+    <main class=''>
+        <!--a-->
+        <div class='' style ='display:flex; justify-content: center'>
+            <!--b-->
+            <div class=''>
+                <!--c-->
+                <div class='box_cinza_claro'>
+                    <a class='box_letra' href="cadastro_de_produtos.php">Cadastro de Produtos</a>
+                </div>
+                <!--c-->
+                <div class='box_cinza_medio'>
+                    <a class='box_letra' href="ordem_de_servico.php">Ordem de Servico(OS)</a>
+                </div>
+
             </div>
-            <div class="box_cinza_claro">
-                <!-- //link para acessar -->
-                <a class="box_letra" href="ordem_de_servico.php">
-                Ordem de Serviços(OS)
-                </a>
-            </div>
-            
-            <div class="box_cinza_medio" >
-                <!-- //link para acessar -->
-                <a class="box_letra" href="acessar_aos_relatorios.php">
-                Acessar aos Relatorios
-                </a>
+            <!--b-->
+            <div class=''>
+                <!--c-->
+                <div class='box_cinza_claro'>
+                    <a class='box_letra' href="acessar_aos_relatorios.php">Acessar aos Relatorios</a>
+                </div>
+                <!--c-->
+                <div class='box_cinza_medio'>
+                    <a class='box_letra' href="estoque_entrada.php">Entrada</a>
+
+                </div>
+
             </div>
 
         </div>
-        <div>
-            <div class="box_cinza_claro">
-                <!-- //link para acessar -->
-                <a class="box_letra" href="estoque_entrada.php">
-                Entrada
-                </a>
-            </div>
-            <div class="box_cinza_medio">
-                <!-- //link para acessar -->
-                <a class="box_letra" href="estoque_saida.php">
-                Saida
-                </a>
-            </div>
-        <div>
-    </div>
-</nav>
+        <!-- a-->
+        <div class='' style ='display:flex; justify-content: center' >
+            <div class='box_cinza_medio'>
+                <a class='box_letra' href ='estoque_saida.php'>Saida </a>
 
-    
+            </div>
 
-</main>
+        </div>
+
+
+    </main>
+
     
 </body>
 </html>

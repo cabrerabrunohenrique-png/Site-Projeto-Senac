@@ -11,8 +11,8 @@
 
 .box_cinza_claro  {
     background-color: #E2E8F0  ; /* Define a cinza */
-    width: 200px;              /* Define a largura igual à altura */
-    height: 200px;             /* Define a altura igual à largura */
+    width: 150px;              /* Define a largura igual à altura */
+    height: 100px;             /* Define a altura igual à largura */
     display: flex;             /* Ativa o modo flexbox */
     justify-content: center;   /* Centraliza o link na horizontal */
     align-items: center;       /* Centraliza o link na vertical */
@@ -24,8 +24,8 @@
 
 .box_cinza_medio {
     background-color: #6B7280 ; /* Define a cor  */
-    width: 200px;              /* Define a largura igual à altura */
-    height: 200px;             /* Define a altura igual à largura */
+    width: 150px;              /* Define a largura igual à altura */
+    height: 100px;             /* Define a altura igual à largura */
     display: flex;             /* Ativa o modo flexbox */
     justify-content: center;   /* Centraliza o link na horizontal */
     align-items: center;       /* Centraliza o link na vertical */

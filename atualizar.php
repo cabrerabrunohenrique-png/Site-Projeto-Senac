@@ -17,17 +17,11 @@
         <!-- //espaço para cada titulo de navegacao -->
         <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_letra" href="index.php">
+            <a class="box_letra" href="cadastro_novo_usuario">
             Voltar
             </a>
         </div>
 
-        <div class="box_cinza_medio">
-             <!-- //link para acessar -->
-            <a class="box_letra" href="atualizar.php">
-            Atualizar
-            </a>
-        </div>
         
     </nav>
 
@@ -75,7 +69,7 @@
             <div class="d-flex gap-2 mt-4">
                                                           <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
-                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                
             </div>
     </form>
 

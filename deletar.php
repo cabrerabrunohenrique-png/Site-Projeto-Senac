@@ -17,7 +17,7 @@
         <!-- //espaço para cada titulo de navegacao -->
         <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_letra" href="cadastro_novo_usuario">
+            <a class="box_letra" href="FormularioCadastroNovoUsuario.php">
             Voltar
             </a>
         </div>
@@ -35,7 +35,7 @@
           <div class="row g-3">
             <div class="col-12">
               <label for="tituloFilme" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="tituloFilme" name="tituloFilme"
+              <input  type="text" class="form-control" id="tituloFilme" name="tituloFilme"
                 placeholder="Ex.: Cidade de Deus">
             </div>
             <div class="col-md-4">
@@ -70,7 +70,7 @@
                                                           <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
                 
-            </div>
+          </div>
     </form>
 
 </main>

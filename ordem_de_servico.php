@@ -37,13 +37,13 @@
         <div class="box_cinza_medio">
              <!-- //link para acessar -->
             <a class="box_letra" href="estoque_entrada.php">
-            Estoque - Entrada
+            Entrada
             </a>
         </div>
         <div class="box_cinza_claro">
              <!-- //link para acessar -->
             <a class="box_letra" href="estoque_saida.php">
-            Estoque - Saida
+            Saida
             </a>
         </div>
     </nav>

@@ -16,7 +16,7 @@
         <!-- //espaço para cada titulo de navegacao -->
         <div class ="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_letra" href="cadastro_novo_usuario.php">
+            <a class="box_letra" href="FormularioCadastroNovoUsuario.php">
             Cadastro Novo Usuario
             </a>
         </div>

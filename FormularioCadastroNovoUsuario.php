@@ -46,7 +46,8 @@
     <h1 class="">Cadastro Novo Usuario</h1>
   </div>
 
-<form style=";" action="sqlCadastroNovoUsuario.php" method ="post">
+<form action="sqlCadastroNovoUsuario.php" method="post" onsubmit="return fnValidacao()">
+
   <div class="row g-3">
     <div class="col-12">
         <label for="NomeCompleto" class="form-label">Nome Completo</label>
@@ -57,8 +58,8 @@
         <input type="number" class="form-control" id="NumerodeRegistro" name="numero_de_registro" placeholder="Ex.:1, 15, 2024">
       </div>
       <div class="col-md-6">
-        <label for="NiveldePesquisa" class="form-label">Nivel de Permissao</label>
-          <select class="form-select" id="NiveldePesquisa" name="nivel_de_permissao">
+        <label for="NiveldePermisao" class="form-label">Nivel de Permissao</label>
+          <select class="form-select" id="NiveldePermisao" name="nivel_de_permissao">
             <option selected value="">Selecione</option>
               <option></option>
               <option value ="adm" id="Adm">Adm</option>
@@ -79,12 +80,13 @@
             <input type="password" class="form-control" id="ConfirmarSenhadeAcesso" name="confirmar_senha_de_acesso">
           </div>
         <div class=' mb-3 centro'>
-          <button  class=" btn btn-primary" type="submit">Cadastrar</button>
+          <button  class=" btn btn-primary" type="submit" >Cadastrar</button>
         </div>
-      </d>
+      </div>
     </form>
   </div>
 
 </main>
 </body>
+<script src="js/validacao.js"></script>
 </html>

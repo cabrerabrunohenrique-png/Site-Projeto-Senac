@@ -38,10 +38,6 @@
               <input type="text" class="form-control" id="tituloFilme" name="tituloFilme"
                 placeholder="Ex.: Cidade de Deus">
             </div>
-            <div class="col-md-4">
-              <label for="anoProducao" class="form-label">Numero de registro</label>
-              <input type="number" class="form-control" id="anoProducao" name="anoProducao" placeholder="Ex.: 2024">
-            </div>
             <div class="col-md-6">
               <label for="generoPrincipal" class="form-label">Nivel de Permissao</label>
               <select class="form-select" id="generoPrincipal" name="generoPrincipal">

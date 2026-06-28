@@ -14,7 +14,7 @@
     #inserir os dados
 
 
-    $slq = "select nomeusuario, senhaacesso from tbcadastronovousuario where nomeUsuario = '$nomedeusuario' and senhaacesso='$senhadeacesso'";
+    $slq = "select nomeusuario, senhaacesso from tbcadastronovousuario where nomeUsuario = '$nomedeusuario' and SenhaAcesso='$senhadeacesso'";
     
     $resultado = mysqli_query($conexao ,$slq);
 

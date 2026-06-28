@@ -30,8 +30,8 @@
                     <input type="text" class="form-control" id="NomedeUsuario" name="nome_de_usuario">
                 </div>
                 <div class="col-md-6">
-                    <label for="SenhadeAcesso" class="form-label">Senha de Acesso</label>
-                    <input type="password" class="form-control" id="SenhadeAcesso" name="senha_de_acesso">
+                    <label for="SenhaAcesso" class="form-label">Senha de Acesso</label>
+                    <input type="password" class="form-control" id="SenhaAcesso" name="senha_de_acesso">
                 </div>
                 
                     <div class=' mb-3 centro'>

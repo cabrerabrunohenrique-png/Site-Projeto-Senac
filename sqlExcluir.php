@@ -1,0 +1,53 @@
+<?php
+    $nomecompleto =$_POST['nome_completo']??'';
+    $nomedeusuario =$_POST['nome_de_usuario']??'';
+    $senhadeacesso =$_POST['senhade_de_acesso']??'';
+
+    
+    /*abri conexao*/
+    $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+
+    if(!$conexao){
+        die("<h3>Erro</h3>".mysqli_connect_error());
+    }
+
+    #inserir os dados
+
+    $sql = " delete from tbcadastronovousuario where nomeCompleto ='$nomecompleto' and nomeUsuario='$nomedeusuario' and senhaAcesso='$senhadeacesso'";
+
+    $resultado = mysqli_query($conexao,$sql);
+                    
+
+    $linha = mysqli_affected_rows($conexao);
+    
+    if ($linha > 0 ) {
+        mysqli_close($conexao);
+        
+        header('Location: FormularioCadastroNovoUsuario.php');
+        exit; 
+        
+
+    }
+
+    else {
+        mysqli_close($conexao);
+       
+        echo"<link rel ='stylesheet' href='css/style.css'>
+            <div style='display: flex; justify-content: center;' > 
+                <div class='box_cinza_claro'>
+                    <a class='box_letra' href='FormularioCadastroNovoUsuario.php'>
+                    Voltar
+                </a>
+                </div>
+            </div>";
+        echo "<h1 class='box_letra' >Nao foi exluido!</h1>";
+        exit;
+    }
+
+
+
+    //header('Location:discografia_listagem.php');
+
+
+
+?>

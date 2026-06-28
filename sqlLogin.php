@@ -27,7 +27,16 @@
     }
     else {
         mysqli_close($conexao);
-        echo "<h1>Usuário ou senha incorretos!</h1>";
+       
+        echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > <div class='box_cinza_claro'>
+        
+             <!-- link para acessar -->
+            <a class='box_letra' href='index.php'>
+            Voltar
+            </a>
+        </div>
+        </div>";
+        echo "<h1 class='box_letra' >Usuário ou senha incorretos!</h1>";
         exit;
     }
 

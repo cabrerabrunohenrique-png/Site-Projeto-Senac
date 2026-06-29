@@ -16,7 +16,7 @@
         <!-- //espaço para cada titulo de navegacao -->
         <div class="box_cinza_claro">
              <!-- //link para acessar -->
-            <a class="box_letra" href="cadastro_de_produtos.php">
+            <a class="box_letra" href="produtos/cadastro_de_produtos.php">
             Cadastro de Produto
             </a>
         </div>

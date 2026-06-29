@@ -25,7 +25,7 @@
             <div class=''>
                 <!--c-->
                 <div class=''>
-                    <a class='letraFundoAzul caixa' href="cadastro_de_produtos.php">Cadastro de Produtos</a>
+                    <a class='letraFundoAzul caixa' href="produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>
                 </div>
                  <div style="height: 15px"> </div>
                 <div class=''>

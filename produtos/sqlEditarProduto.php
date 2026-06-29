@@ -37,7 +37,7 @@
                     Cadastro de Prodtuos
                 </a>
                 </div>
-                 <div style='width: 15px'> </div>
+                 <div style='width: 15px> </div>
                 <div class='box_cinza_claro'>
                     <a class='box_letra' href='../navegacao.php'>
                     Menu

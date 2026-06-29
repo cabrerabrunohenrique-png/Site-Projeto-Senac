@@ -6,39 +6,35 @@
     <link rel ="stylesheet" href="css/style.css">
     <title>index</title>
 </head>
-<body class="" style="border: 1px solid blue; display: flex; justify-content: center;" >
+<body class="s" style=" " >
  
-<!-- corpo -->
-<main class="" style="border: 1px solid red; " >
-
-    <!-- //menu de navegação -->
+<main class="" >
     <nav >
-        <!-- //espaço para cada titulo de navegacao -->
-        <div class ="box_cinza_claro">
-             <!-- //link para acessar -->
-            <a class="box_letra" href="FormularioCadastroNovoUsuario.php">
+        <div class ="s  box_cinza_claro">
+            <a class=" fm " href="FormularioCadastroNovoUsuario.php">
             Cadastro Novo Usuario
             </a>
         </div>
-   
-
-   
-        <div class="box_cinza_medio">
-            <form action="sqlLogin.php" method="post" onsubmit="return fnValidacao()">
-                <div class="col-md-6">
-                    <label for="NomedeUsuario" class="form-label">Nome de Usuario</label>
-                    <input type="text" class="form-control" id="NomedeUsuario" name="nome_de_usuario">
-                </div>
-                <div class="col-md-6">
-                    <label for="SenhaAcesso" class="form-label">Senha de Acesso</label>
-                    <input type="password" class="form-control" id="SenhaAcesso" name="senha_de_acesso">
-                </div>
-                
-                    <div class=' mb-3 centro'>
-                    <button  class=" btn btn-primary" type="submit" >Acessar</button>
+        <div class='' style=" display: flex; justify-content: center;">
+            <div class="box_cinza_medio">
+                <form action="sqlLogin.php" method="post" onsubmit="return fnValidacao()">
+                    <div class="col-md-6">
+                        <label for="NomedeUsuario" class="form-label">Nome de Usuario</label>
+                        <input type="text" class="form-control" id="NomedeUsuario" name="nome_de_usuario" 
+                        placeholder ="Informe o nome de Usuario">
                     </div>
-                </div>
-            </form>          
+                    <div class="col-md-6">
+                        <label for="SenhaAcesso" class="form-label">Senha de Acesso</label>
+                        <input type="password" class="form-control" id="SenhaAcesso" name="senha_de_acesso"
+                        placeholder ="Informe a senha de acesso">
+                    </div>
+                    
+                        <div class='  centro'>
+                        <button  class=" botaoAcessar  btn btn-primary" type="submit" >Acessar</button>
+                        </div> 
+                    </div>
+                </form>          
+            </div>
         </div>
     </nav>
 

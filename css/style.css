@@ -40,3 +40,31 @@
 .m{
     border: 1px solid red;
 }
+
+.s{box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+
+.l{border: 1px solid #1E293B;}
+
+
+.fm {
+    /*.bungee-spice-regular*/ 
+
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+   color: blue ; 
+}
+
+.botaoAcessar {
+    /*.bungee-spice-regular*/ 
+
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(30, 255, 0);
+  background-color: yellow; 
+}

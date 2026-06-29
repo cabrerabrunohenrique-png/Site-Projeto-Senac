@@ -31,16 +31,15 @@
 </header>
 <main >
 
-<form style="border: 1px solid blue;">
+<form  action="sqlEditar.php" method="post"  style="">
           <div class="row g-3">
             <div class="col-12">
-              <label for="tituloFilme" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="tituloFilme" name="tituloFilme"
-                placeholder="Ex.: Cidade de Deus">
+              <label for="nome_completo" class="form-label">Nome Completo</label>
+              <input type="text" class="form-control" id="nome_completo" name="nome_completo">
             </div>
             <div class="col-md-6">
-              <label for="generoPrincipal" class="form-label">Nivel de Permissao</label>
-              <select class="form-select" id="generoPrincipal" name="generoPrincipal">
+              <label for="nivel_de_permissao" class="form-label">Nivel de Permissao</label>
+              <select class="form-select" id="nivel_de_permissao" name="nivel_de_permissao">
                 <option selected value="">Selecione</option>
                 <option></option>
                 <option>Adm</option>
@@ -51,20 +50,20 @@
             </div>
 
             <div class="col-md-6">
-              <label for="diretor" class="form-label">Nome de Usuario</label>
-              <input type="text" class="form-control" id="diretor" name="diretor" placeholder="Ex.: Fernando Meirelles">
+              <label for="nome_de_usuario" class="form-label">Nome de Usuario</label>
+              <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
             </div>
             <div class="col-md-6">
               <label for="senhade_de_acesso" class="form-label">Senha de Acesso</label>
-              <input type="password" class="form-control" id="senhade_de_acesso" name="senhade_de_acesso" placeholder="Ex.: Fernando Meirelles">
+              <input type="password" class="form-control" id="senhade_de_acesso" name="senhade_de_acesso">
             </div>
             <div class="col-md-6">
-              <label for="diretor" class="form-label">Confirmar Senha de Acesso</label>
-              <input type="password" class="form-control" id="diretor" name="diretor" placeholder="Ex.: Fernando Meirelles">
+              <label for="senha_de_acesso" class="form-label">Confirmar Senha de Acesso</label>
+              <input type="password" class="form-control" id="senha_de_acesso" name="senha_de_acesso">
             </div>
             <div class="d-flex gap-2 mt-4">
-                                                          <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
+                        
+                <button type="submit" class="btn btn-primary" ">Atualizar</button>
                 
             </div>
     </form>

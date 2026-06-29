@@ -22,8 +22,14 @@
     
     if ($linha > 0 ) {
         mysqli_close($conexao);
+        echo"<link rel ='stylesheet' href='css/style.css'>
+            <div style='display: flex; justify-content: center;' > 
+                <div class='box_cinza_claro'>
+                    <h1> Excluido com SUCESSO</h1>
+                </div>
+            </div>";
         
-        header('Location: FormularioCadastroNovoUsuario.php');
+        header('Refresh: 2; url=FormularioCadastroNovoUsuario.php');
         exit; 
         
 

@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Julius+Sans+One&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+
     <title>index</title>
 </head>
 <body class="s fundo" style=" " >
  
 <main class="" >
     <nav >
-        <div class ="s  box_cinza_claro" style ='text-transform: uppercase'>
-            <a class=" fm " href="FormularioCadastroNovoUsuario.php">
+        <div class ="texto  box_cinza_claro" style ='text-transform: uppercase'>
+            <a class="texto  " href="FormularioCadastroNovoUsuario.php">
             Cadastro Novo Usuario
             </a>
         </div>

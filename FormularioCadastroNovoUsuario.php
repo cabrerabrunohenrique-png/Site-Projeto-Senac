@@ -11,32 +11,24 @@
     <title>Cadastro de Novo Usuario</title>
 
 </head>
-<body class ="container" style="">
- 
-<!-- corpo -->
-<header style="display:flex;justify-content: center;">
+<body class ="fundo container" style="">
 
-   <nav >
-        <!-- //espaço para cada titulo de navegacao -->
-        <div class="box_cinza_claro">
-             <!-- link para acessar -->
-            <a class="box_letra" href="index.php">
-            Voltar
-            </a>
+<header style="">
+  <nav >
+    <div class="box_cinza_claro s" style ='text-transform: uppercase'>
+     <a class="fm box_letra" href="index.php">Voltar</a>
+    </div>
+     <div class='' style=' display:flex;justify-content: center;text-transform: uppercase'>
+        <div class="box_cinza_medio botaoatualizar s">
+          <a class="botaoatualizar " href="atualizar.php">Atualizar Cadastro</a>
         </div>
+        <div style="width: 150px;">
 
-        <div class="box_cinza_medio">
-             <!-- link para acessar -->
-            <a class="box_letra" href="atualizar.php">
-            Atualizar
-            </a>
         </div>
-        <div class="box_cinza_claro">
-             <!-- link para acessar -->
-            <a class="box_letra" href="deletar.php">
-            Deletar
-            </a>
-        </div>
+        <div class="box_cinza_claro botaodeletar s">
+          <a class="botaodeletar" href="deletar.php">Deletar Cadastro</a>
+          </div>
+      </div>
     </nav>
 </header>
 

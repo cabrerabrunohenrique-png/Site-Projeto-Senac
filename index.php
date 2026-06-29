@@ -6,11 +6,11 @@
     <link rel ="stylesheet" href="css/style.css">
     <title>index</title>
 </head>
-<body class="s" style=" " >
+<body class="s fundo" style=" " >
  
 <main class="" >
     <nav >
-        <div class ="s  box_cinza_claro">
+        <div class ="s  box_cinza_claro" style ='text-transform: uppercase'>
             <a class=" fm " href="FormularioCadastroNovoUsuario.php">
             Cadastro Novo Usuario
             </a>

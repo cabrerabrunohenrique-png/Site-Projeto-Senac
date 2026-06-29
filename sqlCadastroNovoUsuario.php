@@ -25,8 +25,10 @@
     if ($resultado) {
         mysqli_close($conexao);
         // Se deu certo, redireciona IMEDIATAMENTE
-        header('Location: index.php');
-        exit; // Esse 'exit' é obrigatório para a página parar aqui e o redirecionamento funcionar
+        echo 'Cadastrado com sucesso';
+        header('Refresh: 2; url=estoque_entrada.php');
+        exit;
+        
         
     }
     else {

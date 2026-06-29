@@ -53,7 +53,7 @@
     </nav>
 </header>
     <main >
-        <form>
+        <form action="sqlCadastroNovoUsuario.php" method="post">
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
                 <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
@@ -96,7 +96,7 @@
             </div>
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="button" class="btn btn-primary s" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="submit" class="btn btn-primary s" onclick="fnValidacao()">Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>
         </form>

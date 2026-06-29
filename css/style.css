@@ -31,9 +31,8 @@
     align-items: center;       /* Centraliza o link na vertical */
     text-align: center;        /* Garante o alinhamento do texto */
     
-    border: 1px solid #4F46E5 ;
+    border: 1px solid #94A3B8 ;
 }
-
 
 
 
@@ -55,9 +54,10 @@
   text-decoration: none;
   font-weight: bold;
    color: blue ; 
+   
 }
 
-.botaoAcessar {
+.botaoatualizar {
     /*.bungee-spice-regular*/ 
 
   font-family: "Bungee Spice", sans-serif;
@@ -66,5 +66,25 @@
   text-decoration: none;
   font-weight: bold;
   color: rgb(30, 255, 0);
-  background-color: yellow; 
+  background-color: yellow;
+  
+}
+
+.botaodeletar {
+    /*.bungee-spice-regular*/ 
+
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+  color:black;
+  background-color: red;
+  
+}
+
+
+.fundo{
+    background-color: #E2E8F0;
+
 }

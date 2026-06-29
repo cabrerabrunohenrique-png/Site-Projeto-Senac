@@ -10,11 +10,12 @@
 <body>
     <nav style =" display:flex; justify-content: center">
 
-        <div class="box_cinza_claro " style ="" >
+        <div class="  " style ="" >
                 <!-- //link para acessar -->
-            <a class="box_letra" href="index.php">Tela de Login</a>
+            <a class="letraPretoAzul caixa" href="index.php">Sair do Sistema</a>
         </div>    
     </nav> 
+    <div style="height: 15px"></div>
 
     <!-- corpo -->
     <main class=''>
@@ -23,37 +24,34 @@
             <!--b-->
             <div class=''>
                 <!--c-->
-                <div class='box_cinza_claro'>
-                    <a class='box_letra' href="cadastro_de_produtos.php">Cadastro de Produtos</a>
+                <div class=''>
+                    <a class='letraFundoAzul caixa' href="cadastro_de_produtos.php">Cadastro de Produtos</a>
                 </div>
-                <!--c-->
-                <div class='box_cinza_medio'>
-                    <a class='box_letra' href="ordem_de_servico.php">Ordem de Servico(OS)</a>
+                 <div style="height: 15px"> </div>
+                <div class=''>
+                    <a class='letraFundoAzul caixa' href="ordem_de_servico.php">Ordem de Servico(OS)</a>
                 </div>
 
             </div>
-            <!--b-->
+            <div style="width: 15px"> </div>
             <div class=''>
                 <!--c-->
-                <div class='box_cinza_claro'>
-                    <a class='box_letra' href="acessar_aos_relatorios.php">Acessar aos Relatorios</a>
+                <div class=''>
+                    <a class='letraFundoAzul caixa ' href="acessar_aos_relatorios.php">Acessar aos Relatorios</a>
                 </div>
-                <!--c-->
-                <div class='box_cinza_medio'>
-                    <a class='box_letra' href="estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos</a>
-
+               <div style="height: 15px"> </div>
+                <div class=''>
+                    <a class='letraFundoAzul caixa ' href="estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos</a>
                 </div>
-
             </div>
-
+            
         </div>
-        <!-- a-->
+        
+          <div style="height: 15px"> </div>
         <div class='' style ='display:flex; justify-content: center' >
-            <div class='box_cinza_medio'>
-                <a class='box_letra' href ='estoque_saida.php'>Lançamento: Estoque SAIDA de Produtos </a>
-
+            <div class=''>
+                <a class='letraPretoAzul caixa' href ='estoque_saida.php'>Lançamento: Estoque SAIDA de Produtos </a>
             </div>
-
         </div>
 
 

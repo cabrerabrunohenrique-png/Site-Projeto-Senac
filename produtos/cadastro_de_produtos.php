@@ -37,11 +37,7 @@
                 </a>
             </div>
             <div style="width: 15px"> </div>
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
-                </a>
-            </div>
+            
             <div style="width: 15px"> </div>
             <div class="">
                 <a class="letraFundoAzul caixa" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>

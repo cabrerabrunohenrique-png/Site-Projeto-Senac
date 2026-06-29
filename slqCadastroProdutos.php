@@ -1,10 +1,12 @@
 <?php
 
-    $nomecompleto =$_POST['nome_completo']??'';
-    $numeroderegistro =$_POST['numero_de_registro']??'';
-    $niveldepermissao= $_POST['nivel_de_permissao']??'';
-    $nomedeusuario =$_POST['nome_de_usuario']??'';
-    $senhadeacesso =$_POST['senha_de_acesso']??'';
+    $codigodoproduto =$_POST['codigo_do_produto']??'';
+    $nomedoproduto =$_POST['nome_do_produto']??'';
+    $fabricante= $_POST['fabricante']??'';
+    $pesodoproduto =$_POST['peso_do_produto']??'';
+    $alturadoproduto =$_POST['altura_do_produto']??'';
+    $comprimentodoproduto =$_POST['comprimento_do_produto']??'';
+    
    
     
     /*abri conexao*/ 
@@ -16,11 +18,13 @@
 
     #inserir os dados
 
-
-    $slq = "insert into tbcadastronovousuario (nomeCompleto, numeroRegistro, nivelPermisao, nomeUsuario,senhaAcesso)
-    values ('$nomecompleto','$numeroderegistro' ,'$niveldepermissao', '$nomedeusuario', '$senhadeacesso' )";
+    $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto,pesoProduto, alturaProduto,comprimentoProduto)
+    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$pesodoproduto', '$alturadoproduto' , '$comprimentodoproduto')";
+    
     
 
+    
+    
     $resultado = mysqli_query($conexao ,$slq);
 
     if ($resultado) {

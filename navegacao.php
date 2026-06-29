@@ -40,7 +40,7 @@
                 </div>
                 <!--c-->
                 <div class='box_cinza_medio'>
-                    <a class='box_letra' href="estoque_entrada.php">Entrada</a>
+                    <a class='box_letra' href="estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos</a>
 
                 </div>
 
@@ -50,7 +50,7 @@
         <!-- a-->
         <div class='' style ='display:flex; justify-content: center' >
             <div class='box_cinza_medio'>
-                <a class='box_letra' href ='estoque_saida.php'>Saida </a>
+                <a class='box_letra' href ='estoque_saida.php'>Lançamento: Estoque SAIDA de Produtos </a>
 
             </div>
 

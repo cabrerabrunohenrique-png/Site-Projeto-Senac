@@ -50,7 +50,7 @@
           <div style="height: 15px"> </div>
         <div class='' style ='display:flex; justify-content: center' >
             <div class=''>
-                <a class='letraPretoAzul caixa' href ='estoque_saida.php'>Lançamento: Estoque SAIDA de Produtos </a>
+                <a class='letraFundoAzul caixa' href ='estoque_saida.php'>Lançamento: Estoque SAIDA de Produtos </a>
             </div>
         </div>
 

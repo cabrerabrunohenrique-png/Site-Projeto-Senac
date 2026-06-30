@@ -53,32 +53,32 @@
         <form>
             <div class="col-md-4">
                 <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
-                <input type="number" class="form-control" id="codigo_ordem_de_servico" name="codigo_ordem_de_servico" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="codigo_ordem_de_servico" name="codigo_ordem_de_servico" placeholder="Ex.: 2024">
             </div>
 
             <div class="col-md-4">
                 <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
-                <input type="number" class="form-control" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
             </div>
 
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto_os" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control" id="nome_do_produto_os" name="nome_do_produto_os"
+                <input type="text" class="form-control s" id="nome_do_produto_os" name="nome_do_produto_os"
                 placeholder="Ex.: Cidade de Deus">
             </div>
 
            <div class="row g-3">
                 <div class="col-12">
                 <label for="quantidade" class="form-label">Quantidade</label>
-                <input type="text" class="form-control" id="quantidade" name="quantidade"
+                <input type="text" class="form-control s" id="quantidade" name="quantidade"
                 placeholder="Ex.: Cidade de Deus">
             </div>
     
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
-                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                <button type="reset" class="btn btn-outline-secondary ">Limpar</button>
             </div>
         </form>
     </main>

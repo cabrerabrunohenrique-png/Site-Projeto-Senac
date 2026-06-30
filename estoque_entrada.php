@@ -60,30 +60,30 @@
         <form>
             <div class="col-md-4">
                 <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
-                <input type="number" class="form-control" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada" placeholder="Ex.: 2024">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto_entrada" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control" id="nome_do_produto_entrada" name="nome_do_produto_entrada"
+                <input type="text" class="form-control s" id="nome_do_produto_entrada" name="nome_do_produto_entrada"
                 placeholder="Ex.: Cidade de Deus">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="quantidade_entrada" class="form-label">Quantidade</label>
-                <input type="text" class="form-control" id="quantidade_entrada" name="quantidade_entrada"
+                <input type="text" class="form-control s" id="quantidade_entrada" name="quantidade_entrada"
                 placeholder="Ex.: Cidade de Deus">
             </div>
 
 
             <div class="col-md-4">
                 <label for="numero_nf" class="form-label">Numero NF</label>
-                <input type="number" class="form-control" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
             </div>
 
              <div class="col-md-4">
               <label for="data_entrada_produto" class="form-label">Data Entrada Produto</label>
-              <input type="date" class="form-control" id="data_lancamento" name="data_entrada_produto">
+              <input type="date" class="form-control s" id="data_lancamento" name="data_entrada_produto">
             </div>
 
             

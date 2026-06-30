@@ -40,7 +40,7 @@
             </div>
             <div style="width: 15px"> </div>
             
-            <div style="width: 15px"> </div>
+            
             <div>
                 <a class='letraFundoAzul caixa' href='produtos/atualizar_produtos.php'> Atualizar Informações do Produto</a>
             </div>
@@ -60,49 +60,51 @@
 
     <main >
         <form>
+            <div class="col-md-4">
+                <label for="" class="form-label">Numero Ordem de Servico(OS)</label>
+                <input type="number" class="form-control s" id="" name="codigo_do_produto_entrada">
+            </div>
             
             <div class="col-md-4">
-              <label for="data_entrada_produto" class="form-label">Data Entrada Produto</label>
-              <input type="date" class="form-control" id="data_lancamento" name="data_entrada_produto">
+              <label for="data_entrada_produto" class="form-label">Data Saida Produto</label>
+              <input type="date" class="form-control s" id="data_lancamento" name="data_entrada_produto">
             </div>
             <div class="col-md-4">
                 <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
-                <input type="number" class="form-control" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto_entrada" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control" id="nome_do_produto_entrada" name="nome_do_produto_entrada"
-                placeholder="Ex.: Cidade de Deus">
+                <input type="text" class="form-control s" id="nome_do_produto_entrada" name="nome_do_produto_entrada">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="quantidade_entrada" class="form-label">Quantidade</label>
-                <input type="text" class="form-control" id="quantidade_entrada" name="quantidade_entrada"
-                placeholder="Ex.: Cidade de Deus">
+                <input type="text" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
             </div>
 
 
             <div class="col-md-4">
                 <label for="numero_nf" class="form-label">Numero NF</label>
-                <input type="number" class="form-control" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="numero_nf" name="numero_nf" >
             </div>
 
            
 
             <div class="col-md-4">
                 <label for="numero_nf" class="form-label">CPF da peça</label>
-                <input type="number" class="form-control" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
             </div>
 
             <div class="col-md-4">
                 <label for="numero_nf" class="form-label">Numero da OS</label>
-                <input type="number" class="form-control" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
             </div>
 
             <div class="col-md-4">
                 <label for="numero_nf" class="form-label">Situacao do Produto</label>
-                <input type="number" class="form-control" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
             </div>
 
 

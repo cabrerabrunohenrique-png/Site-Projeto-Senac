@@ -37,13 +37,12 @@
         <form action="sqlExcluirProdutos.php" method="post">
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
+                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                placeholder="Ex.: Cidade de Deus">
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
             </div>
             <div class="row g-3">
                 <div class="col-12">
@@ -51,30 +50,7 @@
                 <input type="text" class="form-control s" id="fabricante" name="fabricante"
                 placeholder="Ex.: Cidade de Deus">
             </div>
-            <div class="col-md-6">
-                <label for="peso_do_produto" class="form-label">Peso do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">g</span>
-                    <input type="number" class="form-control s" id="peso_do_produto" name="peso_do_produto" placeholder="0,000"
-                step="0.001">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="altura_do_produto" class="form-label">Altura do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="altura_do_produto" name="altura_do_produto" placeholder="0,00"
-                step="0.001">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="comprimento_do_produto" class="form-label">Comprimento do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="comprimento_do_produto" name="comprimento_do_produto" placeholder="0,00"
-                step="0.01">
-                </div>
-            </div>
+           
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="submit" class="btn btn-primary s" onclick="fnValidacao()">Salvar Cadastro</button>

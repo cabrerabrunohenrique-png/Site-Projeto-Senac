@@ -42,7 +42,7 @@
             
             <div style="width: 15px"> </div>
             <div>
-                <a class='letraFundoAzul caixa' href='atualizar_produtos.php'> Atualizar Informações do Produto</a>
+                <a class='letraFundoAzul caixa' href='produtos/atualizar_produtos.php'> Atualizar Informações do Produto</a>
             </div>
             <div style="width: 15px"> </div>
             <div>
@@ -53,6 +53,10 @@
 
    
 </header>
+<div class=''style='height:10px'> </div>
+<div class='' style='display: flex; justify-content: center '>
+    <h1 class=''style ='text-transform: uppercase' >Estoque Saida de Produtos</h1>
+</div>
 
     <main >
         <form>

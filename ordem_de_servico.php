@@ -46,6 +46,10 @@
 </header>
 
     <main >
+        <div class=''style='height:10px'> </div>
+        <div class='' style='display: flex; justify-content: center '>
+            <h1 class=''style ='text-transform: uppercase' >Ordem de Serviço</h1>
+        </div>
         <form>
             <div class="col-md-4">
                 <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>

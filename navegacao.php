@@ -10,7 +10,7 @@
 <body>
     <nav style =" display:flex; justify-content: center">
 
-        <div class="  " style ="" >
+        <div class=" " style='' >
                 <!-- //link para acessar -->
             <a class="letraPretoAzul caixa" href="index.php">Sair do Sistema</a>
         </div>    

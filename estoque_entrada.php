@@ -33,27 +33,28 @@
                 </a>
             </div>
             <div style="width: 15px"> </div>
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
-                </a>
-            </div>
+            
             <div style="width: 15px"> </div>
             <div class="">
                 <a class="letraFundoAzul caixa" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
             <div style="width: 15px"> </div>
             <div>
-                <a class='letraFundoAzul caixa' href='atualizar_produtos.php'> Atualizar Informações do Produto</a>
+                <a class='letraFundoAzul caixa' href='produtos/atualizar_produtos.php'> Atualizar Informações do Produto</a>
             </div>
             <div style="width: 15px"> </div>
             <div>
-                <a class="letraFundoAzul caixa" href ='deletar_produto.php'> Deletar  Produtos</a>
+                <a class="letraFundoAzul caixa" href ='produtos/deletar_produto.php'> Deletar  Produtos</a>
             </div>
         </div>    
     </nav>
 
 </header>
+
+<div class=''style='height:10px'> </div>
+<div class='' style='display: flex; justify-content: center '>
+    <h1 class=''style ='text-transform: uppercase' >Estoque Entrada de produto</h1>
+</div>
 
     <main >
         <form>

@@ -31,7 +31,7 @@
         mysqli_close($conexao);
         // Se deu certo, redireciona IMEDIATAMENTE
         echo 'Cadastrado com sucesso';
-        header('Refresh: 2; url=estoque_entrada.php');
+        header('Refresh: 2; url=../estoque_entrada.php');
         exit;
         
         

@@ -1,21 +1,60 @@
 function fnValidacao(){
-    const regexNumero  = /^\d+$/
-    const regexString =/^[A-Za-zÀ-ÿ\s]+$/
-    const regexData = /^d{4}$/
+  
     
 
     const campoNome = document.getElementById("NomeCompleto");
     let nomeCompleto = campoNome.value.trim();
         
     
-    if(nomeCompleto.length >=50 || nomeCompleto ==="")
-    {
-        alert('O campo NOME COMPLETO nao pode ficar FICAR VAZIO e NAO PODE TER MAIS 50 CARA');
+    if(nomeCompleto.length >=50 || nomeCompleto.length <5 || nomeCompleto ==="")
+    {   
+        
+        
+        alert('O campo NOME COMPLETO nao pode ficar FICAR VAZIO.\nNão pode ter menos que 6 caracteres.\nNão pode conter mais de 50 caracteres')
         campoNome.value="";
         campoNome.focus();
+        
+        return false;
+
+    }   
+
+    if (nomeCompleto.split(' ').length < 2)
+    {
+        
+        alert('O nome completo deve conter pelo menos um sobrenome')
+        campoNome.value="";
+        campoNome.focus();
+        
+        return false;
+
+
+    }
+
+       //equivalente o Any do C# 
+    const Temnumero = [...nomeCompleto].some(char => char >='0' && char <='9');
+
+    if(Temnumero)
+    { 
+        alert('O nome completo nao pode ter numeros')
+        campoNome.value="";
+        campoNome.focus();
+        
         return false;
 
     }
+            //nao tem o ANY para pontuacao entao teve que usar o REGEX
+    const temSimboloOuPontuacao = [...nomeCompleto].some(char => /[^\w\sÀ-ÿ]/.test(char));
+
+    if (temSimboloOuPontuacao)
+    {
+        alert("O nome completo não pode conter símbolos ou pontuação.");
+        campoNome.value = "";
+        campoNome.focus();
+        return false;
+    } 
+    
+  
+
     
     const campoRegistro = document.getElementById("NumerodeRegistro")
     let  numerodeRegistro = campoRegistro.value.trim();
@@ -31,11 +70,12 @@ function fnValidacao(){
         ;
 
     }
+
    
    const campoPermisao  = document.getElementById("NiveldePermisao")
    let niveldePermisao  = campoPermisao.value.trim();
 
-    if( !regexString.test(niveldePermisao) ||  niveldePermisao =="")
+    if(   niveldePermisao ==="")
     {
         alert("O campo Permisao precisa ser preenchido")
         campoPermisao.value="";
@@ -47,7 +87,7 @@ function fnValidacao(){
     const camponNomeUsuario = document.getElementById("NomedeUsuario")
     let UsuarioRestrito = camponNomeUsuario.value.trim();
 
-    if( !regexString.test(UsuarioRestrito)  || UsuarioRestrito ==="")
+    if( UsuarioRestrito ==="")
     {
         alert("O campo Usuario precisa ser preenchido")
         camponNomeUsuario.value="";

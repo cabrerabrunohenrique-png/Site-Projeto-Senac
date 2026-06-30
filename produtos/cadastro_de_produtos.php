@@ -40,6 +40,10 @@
             
             <div style="width: 15px"> </div>
             <div class="">
+                <a class="letraFundoAzul caixa" href="../estoque_entrada.php">Lançamento: Estoque Entrada de Produtos</a>
+            </div>
+            <div style="width: 15px"> </div>
+              <div class="">
                 <a class="letraFundoAzul caixa" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
             <div style="width: 15px"> </div>
@@ -58,7 +62,7 @@
         <div class='' style='display: flex; justify-content: center '>
             <h1 class=''style ='text-transform: uppercase' >Cadastro de produto</h1>
         </div>
-        <form action="produtos/slqCadastroProdutos.php" method="post">
+        <form action="slqCadastroProdutos.php" method="post">
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
                 <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">

@@ -17,6 +17,8 @@
 <body class="s fundo" style=" " >
  
 <main class="" >
+    <a href ="listagem/listaProduto.php"> lista </a>
+
     <nav >
         <div class ="texto  box_cinza_claro" style ='text-transform: uppercase'>
             <a class="texto  " href="FormularioCadastroNovoUsuario.php">

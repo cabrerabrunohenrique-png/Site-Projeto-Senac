@@ -16,8 +16,8 @@
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa" href="../navegacao.php">
-                Menu
+                <a class="letraPretoAzul caixa" href="../produtos/cadastro_de_produtos.php">
+                Voltar
                 </a>
             </div>
         </div>

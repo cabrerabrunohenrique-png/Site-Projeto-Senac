@@ -27,7 +27,7 @@
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <a class="letraFundoAzul caixa" href="../ordem_de_servico.php">Ordem de Servico(OS)
+                <a class="letraFundoAzul caixa" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
@@ -71,13 +71,13 @@
                 <div class="col-12">
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                placeholder="Ex.: Cidade de Deus">
+                placeholder="Ex.: Nome do Produto">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="fabricante" class="form-label">Fabricante</label>
                 <input type="text" class="form-control s" id="fabricante" name="fabricante"
-                placeholder="Ex.: Cidade de Deus">
+                placeholder="Ex.: Fabricante">
             </div>
             <div class="col-md-6">
                 <label for="peso_do_produto" class="form-label">Peso do Produto</label>

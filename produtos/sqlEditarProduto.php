@@ -25,7 +25,7 @@
     if ($linha >0) {
         mysqli_close($conexao);
         echo 'Atualizado com sucesso';
-        header('Refresh: 2; url=index.php');
+        header('Refresh: 2; url=../index.php');
         exit;
     }
     elseif($linha=== 0) {
@@ -33,7 +33,7 @@
         echo"<link rel ='stylesheet' href='css/style.css'>
             <div style='display: flex; justify-content: center;' > 
                 <div class='box_cinza_claro'>
-                    <a class='box_letra' href='../cadastro_de_produtos.php'>
+                    <a class='box_letra' href='cadastro_de_produtos.php'>
                     Cadastro de Prodtuos
                 </a>
                 </div>

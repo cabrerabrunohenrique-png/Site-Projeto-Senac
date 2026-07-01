@@ -29,7 +29,7 @@
                 </div>
                  <div style="height: 15px"> </div>
                 <div class=''>
-                    <a class='letraFundoAzul caixa' href="ordem_de_servico.php">Ordem de Servico(OS)</a>
+                    <a class='letraFundoAzul caixa' href="ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)</a>
                 </div>
 
             </div>

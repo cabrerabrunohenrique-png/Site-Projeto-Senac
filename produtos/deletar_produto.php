@@ -48,7 +48,7 @@
                 <div class="col-12">
                 <label for="fabricante" class="form-label">Fabricante</label>
                 <input type="text" class="form-control s" id="fabricante" name="fabricante"
-                placeholder="Ex.: Cidade de Deus">
+                placeholder="">
             </div>
            
             

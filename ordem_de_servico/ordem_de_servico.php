@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="css/style.css">
+    <link rel ="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Ordem de Servico</title>
 </head>
@@ -50,7 +50,7 @@
         <div class='' style='display: flex; justify-content: center '>
             <h1 class=''style ='text-transform: uppercase' >Ordem de Serviço</h1>
         </div>
-        <form>
+        <form action="slqCadastroOS.php" method="post">
             <div class="col-md-4">
                 <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
                 <input type="number" class="form-control s" id="codigo_ordem_de_servico" name="codigo_ordem_de_servico" placeholder="Ex.: 2024">
@@ -65,19 +65,19 @@
                 <div class="col-12">
                 <label for="nome_do_produto_os" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control s" id="nome_do_produto_os" name="nome_do_produto_os"
-                placeholder="Ex.: Cidade de Deus">
+                placeholder="Ex.: Nome do Produto">
             </div>
 
            <div class="row g-3">
                 <div class="col-12">
                 <label for="quantidade" class="form-label">Quantidade</label>
-                <input type="text" class="form-control s" id="quantidade" name="quantidade"
-                placeholder="Ex.: Cidade de Deus">
+                <input type="number" class="form-control s" id="quantidade" name="quantidade"
+                placeholder="Ex.: 2004">
             </div>
     
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary ">Limpar</button>
             </div>
         </form>

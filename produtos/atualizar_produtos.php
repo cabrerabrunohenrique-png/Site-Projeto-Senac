@@ -34,7 +34,7 @@
 </header>
 <div class=''style='height:10px'> </div>
 <div class='' style='display: flex; justify-content: center '>
-     <h1 class=''style ='text-transform: uppercase' >Cadastro de produto</h1>
+     <h1 class=''style ='text-transform: uppercase' >Atualizar Produto</h1>
 </div>
     <main >
         <form action="sqlEditarProduto.php" method="post">

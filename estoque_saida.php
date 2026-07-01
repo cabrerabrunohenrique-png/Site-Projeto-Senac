@@ -59,24 +59,24 @@
 </div>
 
     <main >
-        <form>
+        <form action="sqlSaidaEstoque.php" method="post" >
             <div class="col-md-4">
                 <label for="" class="form-label">Numero Ordem de Servico(OS)</label>
-                <input type="number" class="form-control s" id="" name="codigo_do_produto_entrada">
+                <input type="number" class="form-control s" id="" name="codigo_do_">
             </div>
             
             <div class="col-md-4">
-              <label for="data_entrada_produto" class="form-label">Data Saida Produto</label>
+              <label for="data_lancamento" class="form-label">Data Saida Produto</label>
               <input type="date" class="form-control s" id="data_lancamento" name="data_entrada_produto">
             </div>
             <div class="col-md-4">
-                <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada">
+                <label for="codigoproduto" class="form-label">Codigo do Produto</label>
+                <input type="number" class="form-control s" id="codigoproduto" name="codigo_do_produto">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto_entrada" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto_entrada" name="nome_do_produto_entrada">
+                <input type="text" class="form-control s" id="nome_do_produto_entrada" name="nome_do_produto">
             </div>
             <div class="row g-3">
                 <div class="col-12">
@@ -93,18 +93,18 @@
            
 
             <div class="col-md-4">
-                <label for="numero_nf" class="form-label">CPF da peça</label>
-                <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
+                <label for="numero_cpf" class="form-label">CPF da peça</label>
+                <input type="number" class="form-control s" id="numero_cpf" name="numero_cpf">
             </div>
 
             <div class="col-md-4">
-                <label for="numero_nf" class="form-label">Numero da OS</label>
-                <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
+                <label for="numero_os" class="form-label">Numero da OS</label>
+                <input type="number" class="form-control s" id="numero_os" name="numero_os">
             </div>
 
             <div class="col-md-4">
-                <label for="numero_nf" class="form-label">Situacao do Produto</label>
-                <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
+                <label for="situacao_produto" class="form-label">Situacao do Produto</label>
+                <input type="number" class="form-control s" id="situacao_produto" name="situacao_produto">
             </div>
 
 
@@ -115,7 +115,7 @@
     
             
             <div class="d-flex gap-2 mt-4">                              <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="submit" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>

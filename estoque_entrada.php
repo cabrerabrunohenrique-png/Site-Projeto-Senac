@@ -57,7 +57,7 @@
 </div>
 
     <main >
-        <form>
+        <form action="sqlEntradaEstoque.php" method="post">
             <div class="col-md-4">
                 <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
                 <input type="number" class="form-control s" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada" placeholder="Ex.: 2024">
@@ -93,7 +93,7 @@
     
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="button" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="submit" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>

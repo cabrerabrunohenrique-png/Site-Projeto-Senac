@@ -1,11 +1,11 @@
 <?php
 
-    $codiordemdeservico =$_POST['codigo_ordem_de_servico']??'';
     $codigodoproduto =$_POST['codigo_do_produto']??'';
-    $nomedoprodutoos= $_POST['nome_do_produto_os']??'';
-    $quantidade =$_POST['quantidade']??'';
-    
-    
+    $nomedoproduto =$_POST['nome_do_produto']??'';
+    $fabricante= $_POST['fabricante']??'';
+    $pesodoproduto =$_POST['peso_do_produto']??'';
+    $alturadoproduto =$_POST['altura_do_produto']??'';
+    $comprimentodoproduto =$_POST['comprimento_do_produto']??'';
    
     
     /*abri conexao*/ 
@@ -17,20 +17,18 @@
 
     #inserir os dados
 
-    $slq = "insert into tbordemservico (codigoOS, codigoProduto, nomeProduto,quantidadeProduzida)
-    values ('$codiordemdeservico','$codigodoproduto' ,'$nomedoprodutoos', '$quantidade')";
-    
+
+    $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto, pesoProduto, alturaProduto, comprimentoProduto)
+    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$pesodoproduto', '$alturadoproduto', '$comprimentodoproduto' )";
     
 
-    
-    
     $resultado = mysqli_query($conexao ,$slq);
 
     if ($resultado) {
         mysqli_close($conexao);
         // Se deu certo, redireciona IMEDIATAMENTE
         echo 'Cadastrado com sucesso';
-        header('Refresh: 2; url=ordem_de_servico.php');
+        header('Refresh: 2; url=estoque_entrada.php');
         exit;
         
         

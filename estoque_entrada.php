@@ -12,12 +12,12 @@
 <!-- cabeça -->
 <header>
     <nav >
+        <div>
+            <a class="letraPretoAzul caixa" href="../navegacao.php">Menu</a>
+        </div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa" href="../navegacao.php">
-                Menu
-                </a>
+                <a class='letraPretoAzul caixa' href="../listagem/lista_entra_estoque.php">Listagem Entrada Estoque </a>
             </div>
         </div>
         <div style="height: 15px"></div>

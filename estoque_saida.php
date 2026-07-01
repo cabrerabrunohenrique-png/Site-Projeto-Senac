@@ -12,14 +12,12 @@
 <!-- cabeça -->
 <header>
      <nav >
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa" href="../navegacao.php">
-                Menu
-                </a>
-            </div>
+        <div>
+         <a class="letraPretoAzul caixa" href="../navegacao.php">Menu</a>
         </div>
+        <div class ='' style="display:flex;justify-content: center;">
+            
+        
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">

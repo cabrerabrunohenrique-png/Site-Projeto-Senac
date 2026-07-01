@@ -83,6 +83,9 @@
                 echo "<td class =''> {$linha_resultado['dataEntradaProduto']} </td>";
                 echo "<td> {$linha_resultado['codigoProduto']} </td>";
                 echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                echo "<td> {$linha_resultado['quantidadeProduto']} </td>";
+                echo "<td> {$linha_resultado['nFProduto']} </td>";
                 echo"</tr>";
             }
 

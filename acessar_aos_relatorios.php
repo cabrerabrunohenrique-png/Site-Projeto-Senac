@@ -12,42 +12,19 @@
 <header> 
     <nav class="bg-body-secondary" >
          <div class="">
-                
-                <a class="letraPretoAzul caixa" href="../navegacao.php">
-                Menu
-                </a>
-            </div>
-        <div class ='' style="display:flex;justify-content: center;">
-           
-        </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <a class="letraFundoAzul caixa" href="ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
-                </a>
-            </div>
-      
-            <div style="width: 15px"> </div>
-           
-            <div style="width: 15px"> </div>
-            <div class="">
-              
-                <a class="letraFundoAzul caixa" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
-                </a>
-            </div>
-            <div style="width: 15px"> </div>
-            <div class="">
-                <a class="letraFundoAzul caixa" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
-            </div>
-            
-        </div>    
+            <a class="letraPretoAzul caixa" href="../navegacao.php">
+             Menu
+            </a>
+         </div>
+        
     </nav>
 
-    
 </header> 
 <div class=''style='height:10px'> </div>
 <div class='' style='display: flex; justify-content: center '>
-     <h1 class=''style ='text-transform: uppercase' >Relatorios</h1>
+     <h1 class=''style ='text-transform: uppercase' >
+        Relatorios
+     </h1>
 </div>
 <div class=''style='height:10px'> </div>
 

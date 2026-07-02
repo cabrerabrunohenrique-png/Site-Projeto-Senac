@@ -6,8 +6,12 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
+
     <link rel ="stylesheet" href="../css/style.css">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     
     <title>Deletar Produtos</title>
 </head>
@@ -18,10 +22,10 @@
    
 </header>
     <nav >
-        <div class ='' style="display:flex;justify-content: center;">
+        <div class ='' style="">
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa" href="../navegacao.php">
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">
                 Menu
                 </a>
             </div>
@@ -31,7 +35,7 @@
     </div>    
     <main >
         <div class=''style='height:10px'> </div>
-        <div class='' style='display: flex; justify-content: center '>
+        <div class='fontemenu' style='display: flex; justify-content: center '>
             <h1 class=''style ='text-transform: uppercase' >Deletar Produto</h1>
         </div>
         <form action="sqlExcluirProdutos.php" method="post">

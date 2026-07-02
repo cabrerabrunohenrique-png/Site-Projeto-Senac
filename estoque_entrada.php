@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel ="stylesheet" href="../css/style.css">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <title>Entrada</title>
 </head>
 <body class ="container">
@@ -13,49 +18,46 @@
 <header>
     <nav >
         <div>
-            <a class="letraPretoAzul caixa" href="../navegacao.php">Menu</a>
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
         </div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <a class='letraPretoAzul caixa' href="../listagem/lista_entra_estoque.php">Listagem Entrada Estoque </a>
+                <a class='letraFundoAzul caixa fontemenu le' href="../listagem/lista_entra_estoque.php">Lista Entrada Estoque </a>
             </div>
         </div>
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <a class="letraFundoAzul caixa" href="ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                <a class="os caixa fontemenu" href="ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
             <div style="width: 15px"> </div>
             <div class="" >
-                <a class="letraFundoAzul caixa" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                <a class="ar caixa  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
             <div style="width: 15px"> </div>
             
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
+           
             <div style="width: 15px"> </div>
             <div>
-                <a class='letraFundoAzul caixa' href='produtos/atualizar_produtos.php'> Atualizar Informações do Produto</a>
-            </div>
-            <div style="width: 15px"> </div>
-            <div>
-                <a class="letraFundoAzul caixa" href ='produtos/deletar_produto.php'> Deletar  Produtos</a>
+                <a class="cp caixa  fontemenu" href ="../produtos/cadastro_de_produtos.php"> Cadastro de Novos Produtos</a>
             </div>
         </div>    
     </nav>
 
 </header>
 
-<div class=''style='height:10px'> </div>
-<div class='' style='display: flex; justify-content: center '>
+<div class=''style='height:20px'> </div>
+<div class='fontemenu' style='display: flex; justify-content: center '>
     <h1 class=''style ='text-transform: uppercase' >Estoque Entrada de produto</h1>
 </div>
-
+<div class=''style='height:20px'> </div>
     <main >
         <form action="sqlEntradaEstoque.php" method="post">
             <div class="col-md-4">

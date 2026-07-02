@@ -16,7 +16,7 @@
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa" href="../saida.php">
+                <a class="letraPretoAzul caixa" href="../estoque_saida.php">
                 Voltar
                 </a>
             </div>
@@ -58,9 +58,9 @@
             <td class =''>dataSaida</td>
             <td>codigoPeca</td>
            <td>nomePeca</td>
+           <td>quantidaPeca</td>
            <td>numeroNf</td>
            <td>cpfPeca</td>
-
            <td>numeroOs</td>
            <td>situacaoPeca</td>
                        

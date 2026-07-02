@@ -15,9 +15,11 @@
         <div>
          <a class="letraPretoAzul caixa" href="../navegacao.php">Menu</a>
         </div>
-        <div class ='' style="display:flex;justify-content: center;">
-            
-        
+        <div class ="" style="display:flex;justify-content: center;">
+            <div>
+                <a class="letraPretoAzul caixa" href="../listagem/lista_saida_estoque.php">Lista Saida do Estoque</a>
+            </div>
+        </div>
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">

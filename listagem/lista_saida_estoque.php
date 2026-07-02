@@ -24,7 +24,7 @@
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <a class="letraFundoAzul caixa" href="ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                <a class="letraFundoAzul caixa" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
@@ -48,8 +48,10 @@
 </header>
 <div class=''style='height:10px'> </div>
 <div class='' style='display: flex; justify-content: center '>
-     <h1 class=''style ='text-transform: uppercase' >Relatorio</h1>
+     <h1 class=''style ='text-transform: uppercase' >Relação de Produtos Vendido/Saida</h1>
 </div>
+<div style ='width: px;height:10px;' > </div>
+
 
     <main >
 

@@ -6,7 +6,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel ="stylesheet" href="../css/style.css">
-    <title>Alistagem_entrada_estoque</title>
+    <title>listagem_ordem_servico</title>
 </head>
 <body class ="container">
  
@@ -16,7 +16,7 @@
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa" href="../estoque_entrada.php">
+                <a class="letraPretoAzul caixa" href="../ordem_de_servico/ordem_de_servico.php">
                 Voltar
                 </a>
             </div>
@@ -40,24 +40,30 @@
             <div class="">
                 <a class="letraFundoAzul caixa" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
+            
         </div>    
     </nav>
+
+    
 </header>
 <div class=''style='height:10px'> </div>
-<div style ='width: px;height:10px;' > </div>
 <div class='' style='display: flex; justify-content: center '>
-     <h1 class=''style ='text-transform: uppercase'>Relação de Produtos lançado no Estoque</h1>
+     <h1 class=''style ='text-transform: uppercase' >Relação de Ordem de Servios(OS)</h1>
 </div>
 <div style ='width: px;height:10px;' > </div>
+
+
     <main >
+
     <table class="table ">
         <tr class=''>
-            <td class =''>dataEntradaProduto</td>
+            <td class =''>codigoOS</td>
             <td>codigoProduto</td>
            <td>nomeProduto</td>
-           <td>quantidadeProduto</td>
-           <td>nFProduto</td>
+           <td>quantidadeProduzida</td>
+                                  
         </tr>
+       
     </main>
     
     <?php
@@ -65,7 +71,7 @@
         if(!$conexao){
             die("<h3>Erro</h3>".mysqli_connect_error());
         }
-        $sql = "select * from tbentradaestoque order by dataEntradaProduto";
+        $sql = "select * from tbordemservico order by codigoOS";
         $result = mysqli_query($conexao, $sql);
 
          echo"<link rel ='stylesheet' href='../css/style.css'>";
@@ -75,12 +81,11 @@
             {
                
                 echo"<tr class =''>";
-                echo "<td class =''> {$linha_resultado['dataEntradaProduto']} </td>";
+                echo "<td class =''> {$linha_resultado['codigoOS']} </td>";
                 echo "<td> {$linha_resultado['codigoProduto']} </td>";
                 echo "<td> {$linha_resultado['nomeProduto']} </td>";
 
-                echo "<td> {$linha_resultado['quantidadeProduto']} </td>";
-                echo "<td> {$linha_resultado['nFProduto']} </td>";
+                echo "<td> {$linha_resultado['quantidadeProduzida']} </td>";
                 echo"</tr>";
             }
 

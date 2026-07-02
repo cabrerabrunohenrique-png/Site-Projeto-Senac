@@ -21,10 +21,7 @@
     $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto,pesoProduto, alturaProduto,comprimentoProduto)
     values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$pesodoproduto', '$alturadoproduto' , '$comprimentodoproduto')";
     
-    
-
-    
-    
+     
     $resultado = mysqli_query($conexao ,$slq);
 
     if ($resultado) {

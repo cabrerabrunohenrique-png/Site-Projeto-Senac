@@ -33,96 +33,55 @@
                 <a class="letraFundoAzul caixa text-bg-danger fontemenu le" href ='deletar_produto.php'> Deletar  Produtos</a>
             </div>
         </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                               
-                <a class="cp caixa  fontemenu" href='../listagem/listaProduto.php'>Lista de Produtos </a>
-            </div>
-        </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <a class="os caixa fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
-                </a>
-            </div>
-           
-            <div style="width: 15px"> </div>
-            <div class="" >
-                <a class="ar caixa  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
-                </a>
-            </div>
-            <div style="width: 15px"> </div>
+       
+        <div class=''style='height:20px'> </div>
+        <div style ='width: px;height:10px;' > </div>
+        <main >
+            <table class="table ">
+            <tr class=''>
+                
+                <td>codigoProduto</td>
+            <td>nomeProduto</td>
+            <td>quantidadeProduto</td>
             
-            <div style="width: 15px"> </div>
-            <div class="">
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos</a>
-            </div>
-            <div style="width: 15px"> </div>
-              <div class="">
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
-            </div>
-            <div style="width: 15px"> </div>
-         
-        </div>    
-    </nav>
+            </tr>
+        </main>
+    
+        <?php
+            $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+            if(!$conexao){
+                die("<h3>Erro</h3>".mysqli_connect_error());
+            }
+        
+            $sql = " select codigoProduto,nomeProduto, sum(quantidadeproduto) as quantidadetotal from tbentradaestoque  group by codigoProduto,nomeProduto ";
+
+          $resultado = mysqli_query($conexao,$sql);
+                        
+  
+    
+            if($resultado){
+                             
+
+                while($linha_resultado = mysqli_fetch_assoc($resultado))
+                {
+               
+                    echo"<tr class =''>";
+                
+                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
+                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                    echo "<td> {$linha_resultado['quantidadetotal']} </td>";
+                    
+                    echo"</tr>";
+                
+                }
+                mysqli_close($conexao);
+            }
+    ?>
+
     
 </header>
 
-    <main >
-        <div class=''style='height:20px'> </div>       
-        <div class='' style='display: flex; justify-content: center '>
-            <h1 class='fontemenu'style ='text-transform: uppercase ' >Tabela de Quantidade por Produto</h1>
-        </div>
-        <div class=''style='height:20px'> </div>
-        <form action="../sql/sqlContarProduto.php" method="post">
-            <div class="col-md-4 ">
-                <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                placeholder="Ex.: Nome do Produto">
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="fabricante" class="form-label">Fabricante</label>
-                <input type="text" class="form-control s" id="fabricante" name="fabricante"
-                placeholder="Ex.: Fabricante">
-            </div>
-            <div class="col-md-6">
-                <label for="peso_do_produto" class="form-label">Peso do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">g</span>
-                    <input type="number" class="form-control s" id="peso_do_produto" name="peso_do_produto" placeholder="0,000"
-                step="0.001">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="altura_do_produto" class="form-label">Altura do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="altura_do_produto" name="altura_do_produto" placeholder="0,00"
-                step="0.001">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="comprimento_do_produto" class="form-label">Comprimento do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="comprimento_do_produto" name="comprimento_do_produto" placeholder="0,00"
-                step="0.01">
-                </div>
-            </div>
-            
-            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary s" onclick="fnValidacao()">Salvar</button>
-                <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
-            </div>
-        </form>
-    </main>
     
 </body>
 </html>

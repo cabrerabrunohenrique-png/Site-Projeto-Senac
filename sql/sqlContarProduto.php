@@ -16,7 +16,7 @@
 
     #inserir os dados
 
-    $sql = " select sum(quantidadeproduto) as quantidadetotal from tbentradaestoque";
+    $sql = " select sum(quantidadeproduto) as quantidadetotal from tbentradaestoque where nomeproduto='$nomedoproduto'";
 
     $resultado = mysqli_query($conexao,$sql);
                     
@@ -24,10 +24,22 @@
     
     if($resultado){
         $linha = mysqli_fetch_assoc($resultado);
-        echo "Quantidade total: " . $linha['quantidadetotal'];
         mysqli_close($conexao);
 
-        header('Refresh: 2; url=../index.php');
+        while($linha_resultado = mysqli_fetch_array($resultado))
+            {
+               
+                echo"<tr class =''>";
+                echo "<td class =''> {$linha_resultado['dataEntradaProduto']} </td>";
+                echo "<td> {$linha_resultado['codigoProduto']} </td>";
+                echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                echo "<td> {$linha_resultado['quantidadeProduto']} </td>";
+                
+                echo"</tr>";
+            }
+
+        // eader('Refresh: 2; url=../produtos/quantidade_produto.php');
         exit;      
 
 

@@ -56,6 +56,10 @@
 
         </div>
 
+        <div>
+            <a href='../produtos/quantidade_produto.php'>Quantidade</a>
+        </div>
+
 
     </main>
     

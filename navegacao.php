@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-
+    
+    <link rel ="stylesheet" href="../css/style.css">
 
     <title>Navegacao</title>
 </head>
@@ -17,9 +18,7 @@
 
 
     <nav class ="">
-        <div>
-            <a href="../produtos/quantidade_estoque_atual.php">atual</a>
-        </div>
+       
 
             <div class=" " style='' >
                  <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="index.php">Sair do Sistema</a>

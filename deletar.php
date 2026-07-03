@@ -13,17 +13,21 @@
     <title>deletar</title>
 
 </head>
-<body class ="container" style="border: 1px solid blue; ">
-  <header style="border: 1px solid red;display:flex;justify-content: center;">
+<body class ="container" style="">
+  <header style="display:flex;justify-content: center;">
     <nav >
-      <div class="box_cinza_claro">
-        <a class="box_letra" href="FormularioCadastroNovoUsuario.php">
+      <div class="">
+        <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="FormularioCadastroNovoUsuario.php">
           Voltar
         </a>
       </div>
     </nav>
 </header>
 <main >
+    <div class=''style='height:20px'> </div>       
+        <div class='' style='display: flex; justify-content: center '>
+            <h1 class='fontemenu'style ='text-transform: uppercase ' >Deletar Cadastro de Usuario</h1>
+        </div>
   <form action="sqlExcluir.php" method="post" >
     <div class="row g-3">
       <div class="col-12">

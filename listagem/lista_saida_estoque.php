@@ -17,11 +17,14 @@
 <!-- cabeça -->
 <header>
     <nav >
-        <div>
+        <div style="display:flex;justify-content: space-between;">
             <div>
                 <a class='letraPretoAzul caixa text-bg-info  fontemenu le' href='../acessar_aos_relatorios.php'>
                     Menu
                 </a>
+            </div>
+            <div>
+                <a class='letraFundoAzul caixa text-bg-success fontemenu le' href="../acessar_aos_relatorios.php">Acessar aos Relatorios</a>
             </div>
         </div>
         <div class ='' style="display:flex;justify-content: center;">

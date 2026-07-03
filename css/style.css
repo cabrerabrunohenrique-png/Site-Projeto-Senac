@@ -38,8 +38,14 @@
 
 .caixa{
     width: 150px;              /* Define a largura igual à altura */
-    height: 100px;
-    padding: 10px;             /* Define a altura igual à largura */
+    height: 100px;             /* Define a altura igual à largura */
+    padding: 10px;             
+}
+
+.caixa1{
+    width: 400px;              
+    height: 300px;
+               
 }
 
 .box_cinza_claro  {

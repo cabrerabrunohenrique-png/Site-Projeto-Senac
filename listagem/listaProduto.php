@@ -17,13 +17,18 @@
 <!-- cabeça -->
 <header>
     <nav >
-        <div class ='' style="display:flex;justify-content: center;">
+        <div class ='' style="display:flex;justify-content: space-between;">
             <div class="">
                 <!-- //link para acessar -->
                 <a class="cp caixa  fontemenu" href="../produtos/cadastro_de_produtos.php">
                 Voltar para Cadastro de Novos Produtos
                 </a>
             </div>
+            <div>
+                <a class='letraFundoAzul caixa text-bg-success fontemenu le' href="../acessar_aos_relatorios.php">Acessar aos Relatorios</a>
+            </div>
+
+
         </div>
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">

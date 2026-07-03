@@ -6,22 +6,23 @@
     <link rel ="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+     <link rel ="stylesheet" href="../css/style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
   <title>Cadastro de Novo Usuario</title>
 
 </head>
-<body class ="container" style="border: 1px solid blue; ">
+<body class ="container" style="">
  
 <!-- corpo -->
-<header style="border: 1px solid red;display:flex;justify-content: center;">
+<header style="display:flex;justify-content: center;">
 
    <nav >
         <!-- //espaço para cada titulo de navegacao -->
-        <div class="box_cinza_claro">
+        <div class="">
              <!-- //link para acessar -->
-            <a class="box_letra" href="FormularioCadastroNovoUsuario.php">
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="FormularioCadastroNovoUsuario.php">
             Voltar
             </a>
         </div>
@@ -34,6 +35,10 @@
 
 </header>
 <main >
+   <div class=''style='height:20px'> </div>       
+        <div class='' style='display: flex; justify-content: center '>
+            <h1 class='fontemenu'style ='text-transform: uppercase ' >Atualizar Cadastro de Usuario</h1>
+        </div>
 
 <form  action="sqlEditar.php" method="post"  style="">
           <div class="row g-3">

@@ -8,34 +8,39 @@
     
     <link rel ="stylesheet" href="css/style.css">
 
+    <link rel ="stylesheet" href="../css/style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
     <title>Cadastro de Novo Usuario</title>
 
 </head>
-<body class ="fundo container" style="">
+<body class ="funbg-body-secondary container" style="">
 
 <header style="">
   <nav >
-    <div class="box_cinza_claro s" style ='text-transform: uppercase'>
-     <a class="fm box_letra" href="index.php">Voltar</a>
+    <div class="" style ='text-transform: uppercase'>
+     <a class="ar caixa  fontemenu" href="index.php">Pagina de Login</a>
     </div>
      <div class='' style=' display:flex;justify-content: center;text-transform: uppercase'>
-        <div class="box_cinza_medio botaoatualizar s">
-          <a class="botaoatualizar " href="atualizar.php">Atualizar Cadastro</a>
+        <div class="">
+          <a class="letraFundoAzul caixa text-bg-warning fontemenu le " href="atualizar.php">Atualizar Cadastro</a>
         </div>
         <div style="width: 150px;">
 
         </div>
-        <div class="box_cinza_claro botaodeletar s">
-          <a class="botaodeletar" href="deletar.php">Deletar Cadastro</a>
+        <div class="">
+          <a class="letraFundoAzul caixa text-bg-danger fontemenu le " href="deletar.php">Deletar Cadastro</a>
           </div>
       </div>
     </nav>
 </header>
 
-
+<div style='height:20px'></div>
  <main>
-  <div class="centro " style="">
-    <h1 class="">Cadastro Novo Usuario</h1>
+  <div class="centro " style='display: flex; justify-content: center '>
+    <h1 class="fontemenu">Cadastro Novo Usuario</h1>
   </div>
 
 <form action="sqlCadastroNovoUsuario.php" method="post" onsubmit="return fnValidacao()">

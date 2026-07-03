@@ -18,7 +18,7 @@
     <nav >
         <div class ="" style="display:flex;justify-content: space-between;">
             <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../acessar_aos_relatorios.php">
+                <a class="letraFundoAzul caixa text-bg-success fontemenu le" href="../acessar_aos_relatorios.php">
                     Relatorios
                 </a>
             </div>

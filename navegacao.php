@@ -15,8 +15,12 @@
 </head>
 <body class="container" style='background-color: #F7F7F7'>
 
+
     <nav class ="">
-        
+        <div>
+            <a href="../produtos/quantidade_estoque_atual.php">atual</a>
+        </div>
+
             <div class=" " style='' >
                  <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="index.php">Sair do Sistema</a>
             </div>

@@ -63,7 +63,10 @@
         <div>
             <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_saida.php'>Quantidade Saida Por Produto</a>
         </div>
-
+        <div style="height: 15px"> </div>
+        <div>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php'>Estoque Atual</a>
+        </div>
 
     </main>
     

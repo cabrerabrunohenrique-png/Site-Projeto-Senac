@@ -11,38 +11,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     
-    <title>Quantidade</title>
+    <title>Quantidade_saida</title>
 </head>
 <body class ="container bg-body-secondary">
- 
-    
-<!-- cabeça -->
 <header class='' >
     <nav >
         <div class ="" style="display:flex;justify-content: space-between;">
             <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">
-                    Menu
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../acessar_aos_relatorios.php">
+                    Relatorios
                 </a>
             </div>
             <div>
-                <a class='letraFundoAzul caixa text-bg-warning fontemenu le' href='atualizar_produtos.php'> Atualizar Informações do Produto</a>
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="quantidade_produto_entrada.php">
+                    Quantidade de Entrada por Produto
+                </a>
             </div>
            
-            <div>
-                <a class="letraFundoAzul caixa text-bg-danger fontemenu le" href ='deletar_produto.php'> Deletar  Produtos</a>
-            </div>
+           
         </div>
        
         <div class=''style='height:20px'> </div>
         <div style ='width: px;height:10px;' > </div>
         <main >
-            <table class="table ">
-            <tr class=''>
+            <table class="fontemenu table ">
+            <tr class=' text-center le'>
                 
-                <td>codigoProduto</td>
-            <td>nomeProduto</td>
-            <td>quantidadeProduto</td>
+            <td>codigo Produto</td>
+            <td>nome Produto</td>
+            <td>quantidade Produto</td>
             
             </tr>
         </main>
@@ -53,7 +50,7 @@
                 die("<h3>Erro</h3>".mysqli_connect_error());
             }
         
-            $sql = " select codigoProduto,nomeProduto, sum(quantidadeproduto) as quantidadetotal from tbentradaestoque  group by codigoProduto,nomeProduto ";
+            $sql = " select codigoPeca,nomePeca, sum(quantidaPeca) as quantidadetotal from tbsaidaestoque  group by codigoPeca,nomePeca ";
 
           $resultado = mysqli_query($conexao,$sql);
                         
@@ -65,10 +62,10 @@
                 while($linha_resultado = mysqli_fetch_assoc($resultado))
                 {
                
-                    echo"<tr class =''>";
+                    echo"<tr class ='text-center'>";
                 
-                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
-                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
+                    echo "<td> {$linha_resultado['codigoPeca']} </td>";
+                    echo "<td> {$linha_resultado['nomePeca']} </td>";
 
                     echo "<td> {$linha_resultado['quantidadetotal']} </td>";
                     

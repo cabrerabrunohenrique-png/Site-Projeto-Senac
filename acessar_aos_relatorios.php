@@ -57,7 +57,11 @@
         </div>
 
         <div>
-            <a href='../produtos/quantidade_produto.php'>Quantidade</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_entrada.php'>Quantidade Lançado Por Produto</a>
+        </div>
+        <div style="height: 15px"> </div>   
+        <div>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_saida.php'>Quantidade Saida Por Produto</a>
         </div>
 
 

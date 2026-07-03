@@ -22,8 +22,9 @@
              Menu
             </a>
          </div>
-        
     </nav>
+
+    <a href='pdf_entrada_produto.php'>pdf</a>
 
 </header> 
 <div class=''style='height:10px'> </div>

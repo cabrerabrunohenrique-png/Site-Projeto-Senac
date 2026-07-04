@@ -1,4 +1,4 @@
-function fnValidacao(){
+function fnValidacao(event){
   
     
 
@@ -11,8 +11,10 @@ function fnValidacao(){
         
         
         alert('O campo NOME COMPLETO nao pode ficar FICAR VAZIO.\nNão pode ter menos que 6 caracteres.\nNão pode conter mais de 50 caracteres')
+        
         campoNome.value="";
         campoNome.focus();
+        
         
         return false;
 
@@ -80,18 +82,19 @@ function fnValidacao(){
         alert("O campo Permisao precisa ser preenchido")
         campoPermisao.value="";
         campoPermisao.focus();
+        event.preventDefault();
         return false;
 
     }
 
-    const camponNomeUsuario = document.getElementById("NomedeUsuario")
-    let UsuarioRestrito = camponNomeUsuario.value.trim();
+    const campoNomeUsuario = document.getElementById("NomedeUsuario")
+    let UsuarioRestrito = campoNomeUsuario.value.trim();
 
     if( UsuarioRestrito ==="")
     {
         alert("O campo Usuario precisa ser preenchido")
-        camponNomeUsuario.value="";
-        camponNomeUsuario.focus();
+        campoNomeUsuario.value="";
+        campoNomeUsuario.focus();
         return false;
     }
 

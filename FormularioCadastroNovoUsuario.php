@@ -1,3 +1,11 @@
+<?php 
+ //para ler o aviso criado na validacao de usuario em bando de dados
+session_start(); 
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,6 +25,7 @@
 
 </head>
 <body class ="funbg-body-secondary container" style="">
+  
 
 <header style="">
   <nav >
@@ -43,7 +52,7 @@
     <h1 class="fontemenu">Cadastro Novo Usuario</h1>
   </div>
 
-<form action="sqlCadastroNovoUsuario.php" method="post" onsubmit="return fnValidacao()">
+<form action="sqlCadastroNovoUsuario.php" method="post" onsubmit="return fnValidacao(event)">
 
   <div class="row g-3">
     <div class="col-12">
@@ -65,8 +74,14 @@
           </select>
       </div>
       <div class="col-md-6">
-        <label for="NomedeUsuario" class="form-label">Nome de Usuario</label>
+        <label for="NomedeUsuario" class="form-label">Nome de Usuario </label>
         <input type="text" class="form-control" id="NomedeUsuario" name="nome_de_usuario" placeholder="Ex.:cabrera25, BrunoCabrebra, @cabrera">
+        <?php
+            if (isset($_SESSION['erro_cadastro'])):
+              echo $_SESSION['erro_cadastro'];
+              unset($_SESSION['erro_cadastro']); // Apaga da memória para o erro sumir se a página for atualizada
+              endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+            ?>
       </div>
       <div class="col-md-6">
         <label for="SenhadeAcesso" class="form-label">Senha de Acesso</label>

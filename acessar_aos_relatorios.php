@@ -24,7 +24,7 @@
          </div>
     </nav>
 
-    <a href='pdf_entrada_produto.php'>pdf</a>
+    
 
 </header> 
 <div class=''style='height:10px'> </div>
@@ -39,34 +39,38 @@
 
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_entra_estoque.php">Lista de Entrada de Produtos no Estoque</a>
+                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_entra_estoque.php" target="_blank">Lista de Entrada de Produtos no Estoque</a>
+                <a class="letraFundoAzul   le" href='pdf_entrada_produto.php'>Pdf</a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_saida_estoque.php">Lista de Saida de Produtos</a>
+                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_saida_estoque.php" target="_blank">Lista de Saida de Produtos</a>
+                <a class="letraFundoAzul   le" href="../pdf/pdf_saida_produto.php">PDF</a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_ordem_servico.php">Lista Ordem de Servico</a>
+                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_ordem_servico.php" target="_blank">Lista Ordem de Servico</a>
+                <a class="letraFundoAzul   le" href="../pdf/pdf_relacao_ordem.php">PDF</a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa text-bg-success le " href="../listagem/listaProduto.php">Lista de Produtos Cadastrado</a>
+                <a class="letraFundoAzul caixa text-bg-success le " href="../listagem/listaProduto.php" target="_blank" >Lista de Produtos Cadastrado</a>
+                <a class="letraFundoAzul   le" href="../pdf/pdf_relacao_produto.php">PDF</a>
             </div>
 
         </div>
 
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_entrada.php'>Quantidade Lançado Por Produto</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_entrada.php' target="_blank">Quantidade Lançado Por Produto</a>
         </div>
         <div style="height: 15px"> </div>   
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_saida.php'>Quantidade Saida Por Produto</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_saida.php' target="_blank">Quantidade Saida Por Produto</a>
         </div>
         <div style="height: 15px"> </div>
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php'>Estoque Atual</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php' target="_blank">Estoque Atual</a>
         </div>
 
     </main>

@@ -53,6 +53,11 @@
         
             $sql = " select codigoProduto,nomeProduto, sum(quantidadeproduto) as quantidadetotal from tbentradaestoque  group by codigoProduto,nomeProduto ";
 
+
+            //SELECT  codigoProduto, MAX(nomeProduto) AS nomeProduto, SUM(quantidadeproduto) AS quantidadetotal FROM tbentradaestoque GROUP BY codigoProduto;
+
+                
+
           $resultado = mysqli_query($conexao,$sql);
                         
   

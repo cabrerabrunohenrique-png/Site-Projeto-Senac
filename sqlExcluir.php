@@ -25,7 +25,7 @@
         echo"<link rel ='stylesheet' href='css/style.css'>
             <div style='display: flex; justify-content: center;' > 
                 <div class='box_cinza_claro'>
-                    <h1> Excluido com SUCESSO</h1>
+                    <h1 class='letraPretoAzul caixa text-bg-danger fontemenu le'> Excluido com SUCESSO</h1>
                 </div>
             </div>";
         
@@ -40,13 +40,13 @@
        
         echo"<link rel ='stylesheet' href='css/style.css'>
             <div style='display: flex; justify-content: center;' > 
-                <div class='box_cinza_claro'>
-                    <a class='box_letra' href='FormularioCadastroNovoUsuario.php'>
+                <div class=''>
+                    <a class='cp caixa  fontemenu' href='FormularioCadastroNovoUsuario.php'>
                     Voltar
                 </a>
                 </div>
             </div>";
-        echo "<h1 class='box_letra' >Nao foi exluido!</h1>";
+        echo "<h1 class='letraFundoAzul  text-bg-info fontemenu le' >Nao foi exluido!</h1>";
         exit;
     }
 

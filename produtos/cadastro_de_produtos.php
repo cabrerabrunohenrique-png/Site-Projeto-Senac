@@ -37,7 +37,7 @@
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
                                
-                <a class="cp caixa  fontemenu" href='../listagem/listaProduto.php'>Lista de Produtos </a>
+                <a class="cp caixa  fontemenu" href='../listagem/listaProduto.php ' target="_blank">Lista de Produtos </a>
             </div>
         </div>
         <div style="height: 15px"></div>

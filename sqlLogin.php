@@ -28,15 +28,16 @@
     else {
         mysqli_close($conexao);
        
-        echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > <div class='box_cinza_claro'>
+        echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
+        <div class=''>
         
-             <!-- link para acessar -->
-            <a class='box_letra' href='index.php'>
+             
+            <a class='cp caixa  fontemenu' href='index.php'>
             Voltar
             </a>
         </div>
         </div>";
-        echo "<h1 class='box_letra' >Usuário ou senha incorretos!</h1>";
+        echo "<h1 class='letraFundoAzul  text-bg-info fontemenu le' >Usuário ou senha incorretos!</h1>";
         exit;
     }
 

@@ -30,13 +30,13 @@
         mysqli_close($conexao);
         echo"<link rel ='stylesheet' href='css/style.css'>
             <div style='display: flex; justify-content: center;' > 
-                <div class='box_cinza_claro'>
-                    <a class='box_letra' href='index'.php'>
+                <div class=''>
+                    <a class='cp caixa  fontemenu' href='index'.php'>
                     Login
                 </a>
                 </div>
             </div>";
-        echo "Nenhuma alteração foi feita";
+        echo "<h1 class='letraFundoAzul  text-bg-info fontemenu le' >Nenhuma alteração foi feita </h1>";
         exit;
     }
 

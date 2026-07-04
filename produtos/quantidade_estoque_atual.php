@@ -57,7 +57,17 @@
                 die("<h3>Erro</h3>".mysqli_connect_error());
             }
         
-            $sql = "SELECT tbentradaestoque.codigoproduto, tbentradaestoque.nomeProduto,(tbentradaestoque.quantidadeproduto - tbsaidaestoque.quantidapeca) AS saldo FROM tbentradaestoque JOIN tbsaidaestoque ON tbentradaestoque.codigoproduto = tbsaidaestoque.codigopeca GROUP BY tbentradaestoque.codigoproduto";
+            $sql = "SELECT 
+                            e.codigoProduto,e.nomeProduto,
+                            (SUM(e.quantidadeProduto) - COALESCE(s.total_saida, 0)) AS saldo 
+                            FROM tbentradaestoque e
+                            LEFT JOIN (
+                            SELECT codigoPeca, SUM(quantidaPeca) AS total_saida 
+                            FROM tbsaidaestoque 
+                            GROUP BY codigoPeca
+                            ) s ON e.codigoProduto = s.codigoPeca
+                            GROUP BY e.codigoProduto;
+                            ";
             
 
           $resultado = mysqli_query($conexao,$sql);
@@ -72,7 +82,7 @@
                
                     echo"<tr class ='text-center'>";
                 
-                    echo "<td> {$linha_resultado['codigoproduto']} </td>";
+                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
                     echo "<td> {$linha_resultado['nomeProduto']} </td>";
 
                     echo "<td> {$linha_resultado['saldo']} </td>";

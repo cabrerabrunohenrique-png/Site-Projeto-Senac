@@ -75,7 +75,7 @@
             <h1 class='fontemenu'style ='text-transform: uppercase ' >Cadastro de produto</h1>
         </div>
         <div class=''style='height:20px'> </div>
-        <form action="slqCadastroProdutos.php" method="post">
+        <form action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)">
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
                 <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex.: 2024">
@@ -118,11 +118,12 @@
             </div>
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary s" onclick="fnValidacao()">Salvar</button>
+                <button type="submit" class="btn btn-primary s" ">Salvar</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>
         </form>
     </main>
     
 </body>
+<script src="../js/produtos.js"></script>
 </html>

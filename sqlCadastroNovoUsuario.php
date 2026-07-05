@@ -3,14 +3,46 @@
     session_start();
 
 
-    $nomecompleto =$_POST['nome_completo']??'';
+    $nomecompleto =mb_strtolower($_POST['nome_completo']??'','utf-8');
     $numeroderegistro =$_POST['numero_de_registro']??'';
     $niveldepermissao= $_POST['nivel_de_permissao']??'';
     $nomedeusuario =$_POST['nome_de_usuario']??'';
     $senhadeacesso =$_POST['senha_de_acesso']??'';
    
 
-    
+
+
+
+    function nomeExiste($nomecompleto){
+
+      
+
+
+        $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+
+        if(!$conexao){
+            die("<h1>erro</h1>".mysqli_connect_error());
+        }
+
+        
+        $sql ="select nomecompleto from tbcadastronovousuario where nomecompleto ='$nomecompleto'";
+
+        $resultado = mysqli_query($conexao,$sql);
+
+        if($resultado && mysqli_num_rows($resultado)==1){
+
+        mysqli_close($conexao);
+        $_SESSION['erro_nomecompleto']="Ja existe cadastro para esse nome";
+        header('Location:FormularioCadastroNovoUsuario.php');
+        exit;
+        }
+    }
+
+    nomeExiste($nomecompleto);
+
+
+
+
 
     function usuarioExiste($nomedeusuario){
         $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
@@ -48,6 +80,31 @@
 
     }
     usuarioExiste($nomedeusuario);
+
+
+    function codigoExiste($numeroderegistro){
+
+    $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+
+        if(!$conexao){
+            die("<h1>ERRO</h1>".mysqli_connect_error());
+        }
+
+        $sql =" select numeroregistro from tbcadastronovousuario where numeroregistro ='$numeroderegistro'";
+
+        $resultado = mysqli_query($conexao,$sql);
+
+        if($resultado && mysqli_num_rows($resultado)==1){
+
+            mysqli_close($conexao);
+            $_SESSION['Existenumero']="Ja existe usuario com esse numero";
+            header('Location:FormularioCadastroNovoUsuario.php');
+            exit;
+        }
+
+    }
+
+    codigoExiste($numeroderegistro);
 
 
     /*abri conexao*/ 

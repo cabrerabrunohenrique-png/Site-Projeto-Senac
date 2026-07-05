@@ -50,7 +50,7 @@
                 die("<h3>Erro</h3>".mysqli_connect_error());
             }
         
-            $sql = " select codigoPeca,nomePeca, sum(quantidaPeca) as quantidadetotal from tbsaidaestoque  group by codigoPeca,nomePeca ";
+            $sql = " select codigopeca,nomepeca, sum(quantidapeca) as quantidadetotal from tbsaidaestoque  group by codigopeca,nomepeca ";
 
           $resultado = mysqli_query($conexao,$sql);
                         
@@ -64,8 +64,8 @@
                
                     echo"<tr class ='text-center'>";
                 
-                    echo "<td> {$linha_resultado['codigoPeca']} </td>";
-                    echo "<td> {$linha_resultado['nomePeca']} </td>";
+                    echo "<td> {$linha_resultado['codigopeca']} </td>";
+                    echo "<td> {$linha_resultado['nomepeca']} </td>";
 
                     echo "<td> {$linha_resultado['quantidadetotal']} </td>";
                     

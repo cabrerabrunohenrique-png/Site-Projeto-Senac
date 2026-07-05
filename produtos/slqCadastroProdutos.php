@@ -1,7 +1,7 @@
 <?php
 
     $codigodoproduto =$_POST['codigo_do_produto']??'';
-    $nomedoproduto =$_POST['nome_do_produto']??'';
+    $nomedoproduto =mb_strtolower($_POST['nome_do_produto'],'utf-8')??'';
     $fabricante= $_POST['fabricante']??'';
     $pesodoproduto =$_POST['peso_do_produto']??'';
     $alturadoproduto =$_POST['altura_do_produto']??'';

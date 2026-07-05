@@ -38,7 +38,7 @@
         <div class='fontemenu' style='display: flex; justify-content: center '>
             <h1 class=''style ='text-transform: uppercase' >Deletar Produto</h1>
         </div>
-        <form action="sqlExcluirProdutos.php" method="post">
+        <form action="sqlExcluirProdutos.php" method="post" onsubmit="return fnproduto(event)">
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
                 <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
@@ -57,11 +57,12 @@
            
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary s" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="submit" class="btn btn-primary s">Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>
         </form>
     </main>
     
 </body>
+<script src="../js/produtos.js"></script>
 </html>

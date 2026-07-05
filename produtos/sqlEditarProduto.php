@@ -25,7 +25,7 @@
     if ($linha >0) {
         mysqli_close($conexao);
         echo 'Atualizado com sucesso';
-        header('Refresh: 2; url=../index.php');
+        header('Refresh: 2; url=cadastro_de_produtos.php');
         exit;
     }
     elseif($linha=== 0) {

@@ -10,7 +10,7 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-  <title>Cadastro de Novo Usuario</title>
+  <title>Atualizar usuario</title>
 
 </head>
 <body class ="container" style="">
@@ -40,7 +40,7 @@
             <h1 class='fontemenu'style ='text-transform: uppercase ' >Atualizar Cadastro de Usuario</h1>
         </div>
 
-<form  action="sqlEditar.php" method="post"  style="">
+<form  action="sqlEditar.php" method="post"  onsubmit="return fnValidacaoB(event)" style="">
           <div class="row g-3">
             <div class="col-12">
               <label for="nome_completo" class="form-label">Nome Completo</label>
@@ -80,4 +80,5 @@
 </main>
     
 </body>
+<script src="js/validacao.js"></script>
 </html>

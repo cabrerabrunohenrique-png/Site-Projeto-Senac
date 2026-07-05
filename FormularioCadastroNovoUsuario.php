@@ -14,7 +14,7 @@ session_start();
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     
-    <link rel ="stylesheet" href="css/style.css">
+    
 
     <link rel ="stylesheet" href="../css/style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,10 +58,28 @@ session_start();
     <div class="col-12">
         <label for="NomeCompleto" class="form-label">Nome Completo</label>
         <input type="text" class="form-control" id="NomeCompleto" name="nome_completo"placeholder="Ex.: Bruno Henrique Cabrera">
+         <?php
+            if (isset($_SESSION['erro_nomecompleto'])):?>
+            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+               <?php echo $_SESSION['erro_nomecompleto'];
+                unset($_SESSION['erro_nomecompleto']); // Apaga da memória para o erro sumir se a página for atualizada
+              ?>
+              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+              
+              ?>
       </div>
       <div class="col-md-4">
         <label for="NumerodeRegistro" class="form-label">Numero de registro</label>
         <input type="number" class="form-control" id="NumerodeRegistro" name="numero_de_registro" placeholder="Ex.:1, 15, 2024">
+        <?php
+            if (isset($_SESSION['Existenumero'])):?>
+            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+               <?php echo $_SESSION['Existenumero'];
+                unset($_SESSION['Existenumero']); // Apaga da memória para o erro sumir se a página for atualizada
+              ?>
+              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+              
+              ?>
       </div>
       <div class="col-md-6">
         <label for="NiveldePermisao" class="form-label">Nivel de Permissao</label>
@@ -77,11 +95,15 @@ session_start();
         <label for="NomedeUsuario" class="form-label">Nome de Usuario </label>
         <input type="text" class="form-control" id="NomedeUsuario" name="nome_de_usuario" placeholder="Ex.:cabrera25, BrunoCabrebra, @cabrera">
         <?php
-            if (isset($_SESSION['erro_cadastro'])):
-              echo $_SESSION['erro_cadastro'];
-              unset($_SESSION['erro_cadastro']); // Apaga da memória para o erro sumir se a página for atualizada
-              endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
-            ?>
+            if (isset($_SESSION['erro_cadastro'])):?>
+            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+               <?php echo $_SESSION['erro_cadastro'];
+                unset($_SESSION['erro_cadastro']); // Apaga da memória para o erro sumir se a página for atualizada
+              ?>
+              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+              
+              ?>
+            </d>
       </div>
       <div class="col-md-6">
         <label for="SenhadeAcesso" class="form-label">Senha de Acesso</label>

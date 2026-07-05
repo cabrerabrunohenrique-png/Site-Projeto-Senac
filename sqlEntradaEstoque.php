@@ -1,11 +1,9 @@
 <?php
 
-    $codigodoproduto =$_POST['codigo_do_produto']??'';
-    $nomedoproduto =$_POST['nome_do_produto']??'';
-    $fabricante= $_POST['fabricante']??'';
-    $pesodoproduto =$_POST['peso_do_produto']??'';
-    $alturadoproduto =$_POST['altura_do_produto']??'';
-    $comprimentodoproduto =$_POST['comprimento_do_produto']??'';
+    $codigoproduto =$_POST['codigo_do_produto_entrada']??'';
+    $nomedoproduto =$_POST['nome_do_produto_entrada']??'';
+    $quantidadeproduto =$_POST['quantidade_entrada'] ??'';
+ 
    
     
     /*abri conexao*/ 
@@ -18,8 +16,8 @@
     #inserir os dados
 
 
-    $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto, pesoProduto, alturaProduto, comprimentoProduto)
-    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$pesodoproduto', '$alturadoproduto', '$comprimentodoproduto' )";
+    $slq = "insert into tbentradaestoque (codigoproduto, nomeproduto,quantidadeproduto)
+    values ('$codigoproduto','$nomedoproduto','$quantidadeproduto' )";
     
 
     $resultado = mysqli_query($conexao ,$slq);

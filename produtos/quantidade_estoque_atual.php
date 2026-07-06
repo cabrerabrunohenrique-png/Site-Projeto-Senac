@@ -66,7 +66,7 @@
                             FROM tbsaidaestoque 
                             GROUP BY codigoPeca
                             ) s ON e.codigoProduto = s.codigoPeca
-                            GROUP BY e.codigoProduto;
+                            GROUP BY e.codigoProduto,e.nomeProduto;
                             ";
             
 

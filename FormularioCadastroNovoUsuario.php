@@ -92,8 +92,8 @@ session_start();
           </select>
       </div>
       <div class="col-md-6">
-        <label for="NomedeUsuario" class="form-label">Nome de Usuario </label>
-        <input type="text" class="form-control" id="NomedeUsuario" name="nome_de_usuario" placeholder="Ex.:cabrera25, BrunoCabrebra, @cabrera">
+        <label for="nome_de_usuario" class="form-label">Nome de Usuario </label>
+        <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario" placeholder="Ex.:cabrera25, BrunoCabrebra, @cabrera">
         <?php
             if (isset($_SESSION['erro_cadastro'])):?>
             <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">

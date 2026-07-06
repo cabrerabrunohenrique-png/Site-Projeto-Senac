@@ -22,7 +22,7 @@
 
 <main class="" >
 
-    <a href="../class/teste.php">aqi</a>
+    
     <nav style=" display: flex; justify-content: space-between;" >
         <div class ="" style ='text-transform: uppercase'>
             <a class='letraFundoAzul caixa text-bg-info fontemenu le' href="FormularioCadastroNovoUsuario.php">

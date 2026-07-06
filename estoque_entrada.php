@@ -1,3 +1,10 @@
+<?php
+    require_once "class/class.php";
+    $listaCodigoProduto = new listaProdutos();
+    $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,7 +48,7 @@
             
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+                <a class="letraFundoAzul caixa fontemenu le text-bg-danger" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
            
             <div style="width: 15px"> </div>
@@ -62,7 +69,13 @@
         <form action="sqlEntradaEstoque.php" method="post">
             <div class="col-md-4">
                 <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigo_do_produto_entrada" name="codigo_do_produto_entrada" placeholder="Ex.: 2024">
+                <select class="form-control s">
+                     <?php foreach ($codigosDoBanco as $codigo):?>
+                    <option value="<?php echo $codigo;
+                    ?>" class="form-label"><?php echo $codigo;
+                    ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             <div class="row g-3">
                 <div class="col-12">

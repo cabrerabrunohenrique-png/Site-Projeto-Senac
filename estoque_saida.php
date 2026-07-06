@@ -1,3 +1,10 @@
+<?php
+    require_once "class/class.php";
+    $listaCodigoProduto = new listaProdutos();
+    $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -74,7 +81,13 @@
             </div>
             <div class="col-md-4">
                 <label for="codigoproduto" class="form-label">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigoproduto" name="codigo_do_produto">
+               <select class="form-control s">
+                     <?php foreach ($codigosDoBanco as $codigo):?>
+                    <option value="<?php echo $codigo;
+                    ?>" class="form-label"><?php echo $codigo;
+                    ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             <div class="row g-3">
                 <div class="col-12">

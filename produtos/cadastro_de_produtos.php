@@ -1,18 +1,3 @@
-<?php
-// index.php
-
-// 1. Primeiro, puxamos o arquivo da classe para podermos usar aqui
-require_once "../class/class.php";
-
-// 2. Criamos o objeto da classe na memória (instanciar)
-$listaCodigoProduto = new listaProdutos();
-
-// 3. Chamamos a função e guardamos o resultado na nossa variável
-$codigosDoBanco = $listaCodigoProduto->listaSuspensa();
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -75,7 +60,7 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
             </div>
             <div style="width: 15px"> </div>
               <div class="">
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+                <a class="letraFundoAzul caixa fontemenu le text-bg-danger" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
             <div style="width: 15px"> </div>
          
@@ -93,13 +78,7 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
         <form action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)">
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                <select class="form-control s">
-                     <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option value="<?php echo $codigo;
-                    ?>" class="form-label"><?php echo $codigo;
-                    ?></option>
-                    <?php endforeach; ?>
-                </select>
+                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
                 
                
             </div>

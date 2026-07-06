@@ -1,3 +1,10 @@
+<?php 
+ //para ler o aviso criado na validacao de usuario em bando de dados
+session_start(); 
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -79,6 +86,15 @@
             <div class="col-md-4 ">
                 <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
                 <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
+                 <?php
+            if (isset($_SESSION['erro_codigo'])):?>
+            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+               <?php echo $_SESSION['erro_codigo'];
+                unset($_SESSION['erro_codigo']); // Apaga da memória para o erro sumir se a página for atualizada
+              ?>
+              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+              
+              ?>
                 
                
             </div>
@@ -87,6 +103,15 @@
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
                 placeholder="Ex.: Nome do Produto">
+                <?php
+            if (isset($_SESSION['erro_nomeproduro'])):?>
+            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+               <?php echo $_SESSION['erro_nomeproduro'];
+                unset($_SESSION['erro_nomeproduro']); // Apaga da memória para o erro sumir se a página for atualizada
+              ?>
+              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+              
+              ?>
             </div>
             <div class="row g-3">
                 <div class="col-12">

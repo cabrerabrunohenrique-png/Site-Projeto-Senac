@@ -69,19 +69,19 @@
 </div>
 <div class=''style='height:20px'> </div>
     <main >
-        <form action="sqlSaidaEstoque.php" method="post" >
+        <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fnproduto(event)" >
             <div class="col-md-4">
                 <label for="" class="form-label">Numero Ordem de Servico(OS)</label>
                 <input type="number" class="form-control s" id="" name="codigo_do_">
             </div>
             
             <div class="col-md-4">
-              <label for="data_lancamento" class="form-label">Data Saida Produto</label>
-              <input type="date" class="form-control s" id="data_lancamento" name="data_entrada_produto">
+              <label for="data" class="form-label">Data Saida Produto</label>
+              <input type="date" class="form-control s" id="data" name="data_entrada_produto">
             </div>
             <div class="col-md-4">
                 <label for="codigoproduto" class="form-label">Codigo do Produto</label>
-               <select class="form-control s">
+               <select id ="codigo_do_produto" class="form-control s">
                      <?php foreach ($codigosDoBanco as $codigo):?>
                     <option value="<?php echo $codigo;
                     ?>" class="form-label"><?php echo $codigo;
@@ -91,13 +91,13 @@
             </div>
             <div class="row g-3">
                 <div class="col-12">
-                <label for="nome_do_produto_entrada" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto_entrada" name="nome_do_produto">
+                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="quantidade_entrada" class="form-label">Quantidade</label>
-                <input type="text" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
+                <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
             </div>
 
 
@@ -122,16 +122,9 @@
                 <label for="situacao_produto" class="form-label">Situacao do Produto</label>
                 <input type="number" class="form-control s" id="situacao_produto" name="situacao_produto">
             </div>
-
-
-            
-            
-
-           
-    
-            
+      
             <div class="d-flex gap-2 mt-4">                              <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary" onclick="fnValidacao()">Salvar Cadastro</button>
+                <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>
@@ -141,4 +134,5 @@
 
     
 </body>
+<script src="../js/produtos.js"></script>
 </html>

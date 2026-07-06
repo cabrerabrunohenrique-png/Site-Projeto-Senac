@@ -66,10 +66,10 @@
 </div>
 <div class=''style='height:20px'> </div>
     <main >
-        <form action="sqlEntradaEstoque.php" method="post">
+        <form action="sqlEntradaEstoque.php" method="post" onsubmit="return fnproduto(event)">
             <div class="col-md-4">
                 <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
-                <select class="form-control s">
+                <select class="form-control s" id ="codigo_do_produto">
                      <?php foreach ($codigosDoBanco as $codigo):?>
                     <option value="<?php echo $codigo;
                     ?>" class="form-label"><?php echo $codigo;
@@ -79,8 +79,8 @@
             </div>
             <div class="row g-3">
                 <div class="col-12">
-                <label for="nome_do_produto_entrada" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto_entrada" name="nome_do_produto_entrada"
+                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto_entrada"
                 placeholder="Ex.: Nome do Produto">
             </div>
             <div class="row g-3">
@@ -97,8 +97,8 @@
             </div>
 
              <div class="col-md-4">
-              <label for="data_entrada_produto" class="form-label">Data Entrada Produto</label>
-              <input type="date" class="form-control s" id="data_lancamento" name="data_entrada_produto">
+              <label for="data" class="form-label">Data Entrada Produto</label>
+              <input type="date" class="form-control s" id="data" name="data_entrada_produto">
             </div>
 
             
@@ -118,4 +118,5 @@
 
     
 </body>
+<script src="../js/produtos.js"></script>
 </html>

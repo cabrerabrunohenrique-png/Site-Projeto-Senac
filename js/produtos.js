@@ -20,6 +20,7 @@ function fnproduto(event){
         alert('O campo Nome do Produto nao pode ficar FICAR VAZIO.\nNão pode ter menos que 3 caracteres.\nNão pode conter mais de 50 caracteres')
         campo_nome_do_produto.value="";
         campo_nome_do_produto.focus();
+         
       
         return false;
         
@@ -71,5 +72,43 @@ function fnproduto(event){
             
     }
 
+    const campo_quantidade = document.getElementById('quantidade_entrada')
+    if(campo_quantidade){
+        let texto_campo_quantidade = campo_quantidade.value.trim();
+        if(texto_campo_quantidade <=0){
+            event.preventDefault();
+            alert("O Campo tem que ser um numero maior que 0")
+            campo_quantidade.value="";
+            campo_quantidade.focus();
+            return false;
+        }
+    }
+    
+    const campo_numeronf = document.getElementById('numero_nf')
+    if (campo_numeronf){
+        let texto_numeronf = campo_numeronf.value.trim();
+        if(texto_numeronf <=0 || texto_numeronf==null){
+            event.preventDefault();
+            alert("O Campo mao pode ficar vazio e ser menor que 0")
+            campo_numeronf.value="";
+            campo_numeronf.focus();
+            return false;
+        }
+    }
+
+    const campo_data = document.getElementById('data')
+    if(campo_data){
+        let texto_data = campo_data.value.trim();
+        if(texto_data ==""){
+            event.preventDefault();
+            alert("Preencha o campo Data")
+            campo_data.focus();
+            return
+        }
+
+    }
+        
+            
+    
   
 }

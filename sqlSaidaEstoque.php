@@ -12,6 +12,43 @@
     $situacao_produto =$_POST['situacao_produto']??'';
    
     
+
+    
+    function fccodigo($codigo_do_produto,$nome_do_produto){
+
+    $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+    if(!$conexao){
+        die("<h1>Erro</h1>".mysqli_connect_error());
+    }
+
+    $sql = "select codigoPeca, nomePeca from tbsaidaestoque where codigoPeca='$codigo_do_produto' and nomePeca ='$nome_do_produto'";
+
+    $resultado = mysqli_query($conexao,$sql);
+
+    if($resultado && mysqli_num_rows($resultado)>0){
+        mysqli_close($conexao);
+        return true;
+        
+    } else{
+        mysqli_close($conexao);
+         echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
+            <div class=''>
+            
+                <h1>Esse registro não foi lançado <br>Codigo nao compativel com o nome</h1>
+                <a class='cp caixa  fontemenu' href='estoque_saida.php'>
+                Voltar
+                </a>
+            </div>
+            </div>";
+        exit;
+    }
+    
+       
+
+}
+fccodigo($codigo_do_produto,$nome_do_produto);
+
+
     /*abri conexao*/ 
 
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");

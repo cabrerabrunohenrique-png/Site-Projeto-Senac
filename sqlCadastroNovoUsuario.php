@@ -71,7 +71,7 @@
 
         $resultado = mysqli_query($conexao,$sql);
 
-        if($resultado && mysqli_num_rows($resultado)>1){
+        if($resultado && mysqli_num_rows($resultado)>0){
             mysqli_close($conexao);
             $_SESSION['Existenumero']="Ja existe usuario com esse numero";
             header('Location:FormularioCadastroNovoUsuario.php');

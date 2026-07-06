@@ -68,12 +68,10 @@
     <main >
         <form action="sqlEntradaEstoque.php" method="post" onsubmit="return fnproduto(event)">
             <div class="col-md-4">
-                <label for="codigo_do_produto_entrada" class="form-label">Codigo do Produto</label>
-                <select class="form-control s" id ="codigo_do_produto">
+                <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
                      <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option value="<?php echo $codigo;
-                    ?>" class="form-label"><?php echo $codigo;
-                    ?></option>
+                    <option class="form-label" value="   <?php echo trim($codigo);?>"><?php echo $codigo;?></option>
                     <?php endforeach; ?>
                 </select>
             </div>

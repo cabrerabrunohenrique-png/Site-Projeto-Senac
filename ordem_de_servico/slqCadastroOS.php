@@ -5,9 +5,42 @@
     $nomedoprodutoos= $_POST['nome_do_produto_os']??'';
     $quantidade =$_POST['quantidade']??'';
     
+     
     
-   
-    
+    function fccodigo($codigodoproduto,$nomedoprodutoos){
+
+    $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+    if(!$conexao){
+        die("<h1>Erro</h1>".mysqli_connect_error());
+    }
+
+    $sql = "select codigoproduto, nomeproduto from tbcadastropeca where codigoproduto='$codigodoproduto' and nomeproduto ='$nomedoprodutoos'";
+
+    $resultado = mysqli_query($conexao,$sql);
+
+    if($resultado && mysqli_num_rows($resultado)>0){
+        mysqli_close($conexao);
+        return true;
+        
+    } else{
+        mysqli_close($conexao);
+         echo"<link rel ='stylesheet' href='../css/style.css'> <div style='display: flex; justify-content: center;' > 
+            <div class=''>
+            
+                <h1>Esse registro não foi lançado <br>Codigo nao compativel com o nome</h1>
+                <a class='cp caixa  fontemenu' href='ordem_de_servico.php'>
+                Voltar
+                </a>
+            </div>
+            </div>";
+        exit;
+    }
+
+    }
+    fccodigo($codigodoproduto,$nomedoprodutoos);
+
+
+
     /*abri conexao*/ 
 
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");

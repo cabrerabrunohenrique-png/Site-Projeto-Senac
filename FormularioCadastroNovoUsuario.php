@@ -29,16 +29,15 @@ session_start();
 
 <header style="">
   <nav >
-    <div class="" style ='text-transform: uppercase'>
-     <a class="ar caixa  fontemenu" href="index.php">Pagina de Login</a>
-    </div>
-     <div class='' style=' display:flex;justify-content: center;text-transform: uppercase'>
+    <div class='' style=' display:flex;justify-content: space-between;text-transform: uppercase'>
+      <div class="" style ='text-transform: uppercase'>
+      <a class="ar caixa  fontemenu" href="index.php">Pagina de Login</a>
+      </div>
+     
         <div class="">
           <a class="letraFundoAzul caixa text-bg-warning fontemenu le " href="atualizar.php">Atualizar Cadastro</a>
         </div>
-        <div style="width: 150px;">
-
-        </div>
+              
         <div class="">
           <a class="letraFundoAzul caixa text-bg-danger fontemenu le " href="deletar.php">Deletar Cadastro</a>
           </div>

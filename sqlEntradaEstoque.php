@@ -1,11 +1,46 @@
 <?php
 
-    $codigoproduto =$_POST['codigo_do_produto_entrada']??'';
-    $nomedoproduto =mb_strtolower($_POST['nome_do_produto_entrada']??'','utf-8');
+    $codigoproduto =$_POST['codigo_do_produto']??'';
+    $nomedoproduto =mb_strtolower($_POST['nome_do_produto']??'','utf-8');
     $quantidadeproduto =$_POST['quantidade_entrada'] ??'';
  
     
     /*abri conexao*/ 
+
+    function fccodigo($codigoproduto,$nomedoproduto){
+
+    $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+    if(!$conexao){
+        die("<h1>Erro</h1>".mysqli_connect_error());
+    }
+
+    $sql = "select codigoproduto, nomeproduto from tbcadastropeca where codigoproduto='$codigoproduto' and nomeproduto ='$nomedoproduto'";
+
+    $resultado = mysqli_query($conexao,$sql);
+
+    if($resultado && mysqli_num_rows($resultado)>0){
+        mysqli_close($conexao);
+        return true;
+        
+    } else{
+        mysqli_close($conexao);
+         echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
+            <div class=''>
+            
+                <h1>Esse registro não foi lançado <br>Codigo nao compativel com o nome</h1>
+                <a class='cp caixa  fontemenu' href='estoque_entrada.php'>
+                Voltar
+                </a>
+            </div>
+            </div>";
+        exit;
+    }
+    
+       
+
+}
+fccodigo($codigoproduto,$nomedoproduto);
+
 
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
     if (!$conexao) {

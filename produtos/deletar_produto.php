@@ -14,6 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     
     <title>Deletar Produtos</title>
+<?php
+
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
 </head>
 <body class ="container">
  

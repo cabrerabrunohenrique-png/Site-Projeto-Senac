@@ -1,5 +1,18 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+
+<?php
+
     $codigo_do_ =$_POST['codigo_do_']??'';
     $data_entrada_produto =$_POST['data_entrada_produto']??'';
     $codigo_do_produto= $_POST['codigo_do_produto']??'';

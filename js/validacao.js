@@ -69,7 +69,7 @@ function fnValidacao(event){
 
             }
 
-            const campoNomeUsuario = document.getElementById("NomedeUsuario")
+            const campoNomeUsuario = document.getElementById("nome_de_usuario")
             let UsuarioRestrito = campoNomeUsuario.value.trim();
 
             if( UsuarioRestrito ==="")

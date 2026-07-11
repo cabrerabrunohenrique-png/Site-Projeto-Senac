@@ -1,5 +1,17 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+<?php
+
     $nomecompleto =$_POST['nome_completo']??''; 
     $niveldepermissao= $_POST['nivel_de_permissao']??'';
     $nomedeusuario =$_POST['nome_de_usuario']??'';

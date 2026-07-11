@@ -1,4 +1,16 @@
 <?php
+
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+<?php
     $codigodoproduto =$_POST['codigo_do_produto']??'';
     $nomedoproduto =$_POST['nome_do_produto']??'';
     $fabricante= $_POST['fabricante']??'';

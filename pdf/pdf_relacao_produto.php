@@ -1,5 +1,19 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+
+
+<?php
+
 // fazer o download do DomPDF e colocar na pasta do seu projeto
 //Extrair o arquvio e deixar tudo dentro da pasta dompdf/ (cuidado com a subpastas)
 

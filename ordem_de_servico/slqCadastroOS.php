@@ -1,5 +1,18 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+
+<?php
+
     $codiordemdeservico =$_POST['codigo_ordem_de_servico']??'';
     $codigodoproduto =$_POST['codigo_do_produto']??'';
     $nomedoprodutoos= $_POST['nome_do_produto_os']??'';

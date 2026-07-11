@@ -2,6 +2,19 @@
 
 session_start();
 
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+
+<?php
+
+
+
     $codigodoproduto =$_POST['codigo_do_produto']??'';
     $nomedoproduto =mb_strtolower($_POST['nome_do_produto'],'utf-8')??'';
     $fabricante= $_POST['fabricante']??'';

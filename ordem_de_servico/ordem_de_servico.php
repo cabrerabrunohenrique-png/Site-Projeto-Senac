@@ -1,4 +1,17 @@
 <?php
+
+session_start();
+
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+
+<?php
     require_once "../class/class.php";
     $listaCodigoProduto = new listaProdutos();
     $codigosDoBanco = $listaCodigoProduto->listaSuspensa();

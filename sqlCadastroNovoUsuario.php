@@ -1,7 +1,17 @@
 <?php
 
-    session_start();
+session_start();
 
+if(!isset($_SESSION['id_usuario'])){
+    header('Location:../index.php');
+    exit;
+
+}
+
+?>
+
+
+<?php
 
     $nomecompleto =mb_strtolower($_POST['nome_completo']??'','utf-8');
     $numeroderegistro =$_POST['numero_de_registro']??'';

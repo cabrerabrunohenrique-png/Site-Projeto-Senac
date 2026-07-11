@@ -9,10 +9,6 @@ if(!isset($_SESSION['id_usuario'])){
 }
 
 ?>
-<?php 
- //para ler o aviso criado na validacao de usuario em bando de dados
-session_start(); 
-?>
 
 
 

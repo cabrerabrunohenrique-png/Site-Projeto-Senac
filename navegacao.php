@@ -34,7 +34,7 @@ if(!isset($_SESSION['id_usuario'])){
        
 
             <div class=" " style='' >
-                 <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="index.php">Sair do Sistema</a>
+                 <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="slqSairSistema.php">Sair do Sistema</a>
             </div>
           
     </nav> 

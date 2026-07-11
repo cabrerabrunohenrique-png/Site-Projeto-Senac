@@ -25,47 +25,41 @@
     
     <nav style=" display: flex; justify-content: space-between;" >
         <div class ="" style ='text-transform: uppercase'>
-            <a class='letraFundoAzul caixa text-bg-info fontemenu le' href="FormularioCadastroNovoUsuario.php">
+            <a class='letraFundoAzul caixa text-bg-info fontemenu le' href="acesso_cadastro_novo_usuario.php">
             Cadastro Novo Usuario
             </a>
         </div>
        
-        <div class="">
-          <a class="letraFundoAzul caixa text-bg-warning fontemenu le " href="atualizar.php">Atualizar Cadastro</a>
-        </div>
+       
         
 
-        </div>
-        <div class="">
-          <a class="letraFundoAzul caixa text-bg-danger fontemenu le " href="deletar.php">Deletar Cadastro</a>
-          </div>
+        
       </div>
         
     </nav>
     <div style='height:30px;' ></div>
-        <div class='' style=" display: flex; justify-content: center;">
-           
-            <form class="  " action="sqlLogin.php" method="post" onsubmit="return fnValidacao()">
-                <div class=' ar fontemenu' style='height:100px; width:500px;'>
-                    <label for="NomedeUsuario" class="">Nome de Usuario</label>
+    <div class='' style=" display: flex; justify-content: center;">
+        <form class="  " action="sqlLogin.php" method="post" onsubmit="return fnValidacao()">
+            <div class=' ar fontemenu' style='height:100px; width:500px;'>
+                <label for="NomedeUsuario" class="">Nome de Usuario</label>
+                <div style='width:50px'></div>
+                <input style='width:250px; height:30px;' type="text" class="" id="NomedeUsuario" name="nome_de_usuario" 
+                placeholder ="Informe o nome de Usuario">
+            </div>
+            <div class='m ar fontemenu' style='height:100px; width:500px;'>
+                <label for="SenhaAcesso" class="">Senha de Acesso</label>
                     <div style='width:50px'></div>
-                    <input style='width:250px; height:30px;' type="text" class="" id="NomedeUsuario" name="nome_de_usuario" 
-                        placeholder ="Informe o nome de Usuario">
+                    <input style='width:250px; height:30px;' type="password" class="" id="SenhaAcesso" name="senha_de_acesso"
+                    placeholder ="Informe a senha de acesso">
                 </div>
                 <div class='m ar fontemenu' style='height:100px; width:500px;'>
-                    <label for="SenhaAcesso" class="">Senha de Acesso</label>
-                     <div style='width:50px'></div>
-                     <input style='width:250px; height:30px;' type="password" class="" id="SenhaAcesso" name="senha_de_acesso"
-                        placeholder ="Informe a senha de acesso">
-                    </div>
-                    <div class='m ar fontemenu' style='height:100px; width:500px;'>
-                        <button  class=" botaoAcessar  btn btn-primary" type="submit" >Acessar</button>
-                    </div> 
-                </div> 
-                   
-            </form>          
+                     <button  class=" botaoAcessar  btn btn-primary" type="submit" >Acessar</button>
+                </dv>
+            </div> 
+                             
+        </form>          
          
-        </div>
+    </div>
     
 
 </main>

@@ -1,13 +1,13 @@
 <?php 
  //para ler o aviso criado na validacao de usuario em bando de dados
-session_start(); 
+/*session_start(); 
 
 
 if(!isset($_SESSION['id_usuario'])){
     header('Location:index.php');
     exit;
 
-}
+}*/
 
 ?>
 
@@ -54,6 +54,9 @@ if(!isset($_SESSION['id_usuario'])){
 
 <div style='height:20px'></div>
  <main>
+  
+
+ 
   <div class="centro " style='display: flex; justify-content: center '>
     <h1 class="fontemenu">Cadastro Novo Usuario</h1>
   </div>

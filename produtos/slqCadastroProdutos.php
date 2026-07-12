@@ -18,9 +18,7 @@ if(!isset($_SESSION['id_usuario'])){
     $codigodoproduto =$_POST['codigo_do_produto']??'';
     $nomedoproduto =mb_strtolower($_POST['nome_do_produto'],'utf-8')??'';
     $fabricante= $_POST['fabricante']??'';
-    $pesodoproduto =$_POST['peso_do_produto']??'';
-    $alturadoproduto =$_POST['altura_do_produto']??'';
-    $comprimentodoproduto =$_POST['comprimento_do_produto']??'';
+    
     
    NomeProduto($nomedoproduto);
    CodigoProduto($codigodoproduto);
@@ -77,8 +75,8 @@ if(!isset($_SESSION['id_usuario'])){
 
     #inserir os dados
 
-    $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto,pesoProduto, alturaProduto,comprimentoProduto)
-    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$pesodoproduto', '$alturadoproduto' , '$comprimentodoproduto')";
+    $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto)
+    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante')";
     
      
     $resultado = mysqli_query($conexao ,$slq);

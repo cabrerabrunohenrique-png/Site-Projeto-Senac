@@ -93,7 +93,7 @@ if(!isset($_SESSION['id_usuario'])){
             <div style='display: flex;' class=' gap-3'>
                 <div class="col-md-6 ">
                     <label for="data" class="form-label">Data Registro</label>
-                    <input type="date" class="form-control s" id="data" name="fabricante">
+                    <input type="date" class="form-control s" id="data" name="data">
                     
                 </div> 
                    
@@ -151,28 +151,28 @@ if(!isset($_SESSION['id_usuario'])){
                     <label for="varaiveldoproduto" class="form-label">Variavel do Produto</label>
                     <div class="input-group">
                         
-                        <input type="number" class="form-control s" id="varaiveldoproduto" name="comprimento_do_produto" placeholder="1">
+                        <input type="number" class="form-control s" id="varaiveldoproduto" name="varaiveldoproduto" placeholder="1">
                     </div>
                     
                 </div>
                 <div class="col-md-6">
                 
                     <label for="familia" class="form-label">Familia</label>
-                    <input type="text" class="form-control s" id="familia" name="fabricante"
+                    <input type="text" class="form-control s" id="familia" name="familia"
                     placeholder="Ex.: Pano">
                 </div>
             </div> 
             <div style='display: flex;' class=' gap-3'>
                 <div class="col-md-6">
                     <label for="categoria" class="form-label">Categoria </label>
-                    <input type="text" class="form-control s" id="categoria" name="fabricante"
+                    <input type="text" class="form-control s" id="categoria" name="categoria"
                     placeholder="Ex.: Eletrônicos">
                 </div>
                 <div class="col-md-6">
                     <label for="preco" class="form-label">Preço por produto</label>
                     <div class="input-group">
                         <span class="input-group-text">R$</span>
-                        <input type="number" class="form-control s" id="preco" name="comprimento_do_produto" placeholder="0,00"
+                        <input type="number" class="form-control s" id="preco" name="preco" placeholder="0,00"
                     step="0.01">
                     </div>
                 </div>

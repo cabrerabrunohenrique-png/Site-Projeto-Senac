@@ -83,75 +83,102 @@ if(!isset($_SESSION['id_usuario'])){
     
 </header>
 
-    <main >
+    <main class =''>
         <div class=''style='height:20px'> </div>       
         <div class='' style='display: flex; justify-content: center '>
             <h1 class='fontemenu'style ='text-transform: uppercase ' >Cadastro de produto</h1>
         </div>
         <div class=''style='height:20px'> </div>
-        <form action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)">
-            <div class="col-md-4 ">
-                <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
-                 <?php
-            if (isset($_SESSION['erro_codigo'])):?>
-            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
-               <?php echo $_SESSION['erro_codigo'];
-                unset($_SESSION['erro_codigo']); // Apaga da memória para o erro sumir se a página for atualizada
-              ?>
-              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
-              
-              ?>
+        <form class='' action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)" >
+            <div style='display: flex;' class=' gap-3'>
+                <div class="col-md-6 ">
+                    <label for="data" class="form-label">Data Registro</label>
+                    <input type="date" class="form-control s" id="data" name="fabricante">
+                    
+                </div> 
+                   
                 
-               
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                placeholder="Ex.: Nome do Produto">
-                <?php
-            if (isset($_SESSION['erro_nomeproduro'])):?>
-            <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
-               <?php echo $_SESSION['erro_nomeproduro'];
-                unset($_SESSION['erro_nomeproduro']); // Apaga da memória para o erro sumir se a página for atualizada
-              ?>
-              <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
-              
-              ?>
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="fabricante" class="form-label">Fabricante</label>
-                <input type="text" class="form-control s" id="fabricante" name="fabricante"
-                placeholder="Ex.: Fabricante">
-            </div>
-            <div class="col-md-6">
-                <label for="peso_do_produto" class="form-label">Peso do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">g</span>
-                    <input type="number" class="form-control s" id="peso_do_produto" name="peso_do_produto" placeholder="0,000"
-                step="0.001">
+                <div class="col-md-6">
+                    <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
+                    <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex. :1">
+                    <?php if (isset($_SESSION['erro_codigo'])):?>
+                    <div class="letraFundoAzul text-bg-danger fontemenu le mm" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+                        <?php echo $_SESSION['erro_codigo'];
+                            unset($_SESSION['erro_codigo']); // Apaga da memória para o erro sumir se a página for atualizada
+                        ?>
+                         </div>
+                        <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+                       
+                        ?>
+                    
+                     </div>      
                 </div>
             </div>
-            <div class="col-md-6">
-                <label for="altura_do_produto" class="form-label">Altura do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="altura_do_produto" name="altura_do_produto" placeholder="0,00"
-                step="0.001">
+            <div style='display: flex;' class=' gap-3'>
+                    <div class="col-md-6">
+                
+                    <label for="fabricante" class="form-label">Fabricante</label>
+                    <input type="text" class="form-control s" id="fabricante" name="fabricante"
+                    placeholder="Ex.: Fabricante">
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="nome_do_produto" class="form-label ">Nome do Produto</label>
+                    <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
+                    placeholder="Ex.: Nome do Produto">
+                    <?php
+                    if (isset($_SESSION['erro_nomeproduro'])):?>
+                    <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+                        <?php echo $_SESSION['erro_nomeproduro'];
+                        unset($_SESSION['erro_nomeproduro']); // Apaga da memória para o erro sumir se a página for atualizada
+                        ?>
+                        <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
+                        
+                        ?>
+                    
+                    
+                    
+                    
                 </div>
             </div>
-            <div class="col-md-6">
-                <label for="comprimento_do_produto" class="form-label">Comprimento do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="comprimento_do_produto" name="comprimento_do_produto" placeholder="0,00"
-                step="0.01">
+            <div style='display: flex;' class=' gap-3'>
+                
+                </div>
+                
+            </div>
+            <div style='display: flex;' class=' gap-3'>
+                <div class="col-md-6">
+                    <label for="varaiveldoproduto" class="form-label">Variavel do Produto</label>
+                    <div class="input-group">
+                        
+                        <input type="number" class="form-control s" id="varaiveldoproduto" name="comprimento_do_produto" placeholder="1">
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                
+                    <label for="familia" class="form-label">Familia</label>
+                    <input type="text" class="form-control s" id="familia" name="fabricante"
+                    placeholder="Ex.: Pano">
+                </div>
+            </div> 
+            <div style='display: flex;' class=' gap-3'>
+                <div class="col-md-6">
+                    <label for="categoria" class="form-label">Categoria </label>
+                    <input type="text" class="form-control s" id="categoria" name="fabricante"
+                    placeholder="Ex.: Eletrônicos">
+                </div>
+                <div class="col-md-6">
+                    <label for="preco" class="form-label">Preço por produto</label>
+                    <div class="input-group">
+                        <span class="input-group-text">R$</span>
+                        <input type="number" class="form-control s" id="preco" name="comprimento_do_produto" placeholder="0,00"
+                    step="0.01">
+                    </div>
                 </div>
             </div>
             
-            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
+            <div class=" gap-2 mt-4" style='display: flex; justify-content: center '>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="submit" class="btn btn-primary s" ">Salvar</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>

@@ -20,6 +20,7 @@ function fnproduto(event){
     let  texte_codigo_do_produto = campo_codigo_do_produto.value.trim();
     const regeDuracao = /^\d+$/
     if(!regeDuracao.test(texte_codigo_do_produto) || texte_codigo_do_produto =="" || parseInt(texte_codigo_do_produto) <= 0 ){
+        event.preventDefault();
         alert("Informe um numero inteiro maior que 0 ");
         campo_codigo_do_produto.value="";
         campo_codigo_do_produto.focus();
@@ -40,7 +41,8 @@ function fnproduto(event){
         }
         const Temnumero = [...texto_fabricante].some(char => char >='0' && char <='9');
 
-        if(Temnumero){ 
+        if(Temnumero){
+            event.preventDefault(); 
             alert('O Campo FABRICANTE nao pode ter numeros')
             campo_fabricante.value="";
             campo_fabricante.focus();
@@ -48,6 +50,7 @@ function fnproduto(event){
         }
         const temSimboloOuPontuacao = [...texto_fabricante].some(char => /[^\w\sÀ-ÿ]/.test(char));
         if (temSimboloOuPontuacao){
+            event.preventDefault();
         alert("O Campo FABRICANTE não pode conter símbolos ou pontuação.");
         campo_fabricante.value = "";
         campo_fabricante.focus();
@@ -81,6 +84,7 @@ function fnproduto(event){
 
     const temSimboloOuPontuacao = [...texto_nome_do_produto].some(char => /[^\w\sÀ-ÿ]/.test(char));
     if (temSimboloOuPontuacao){
+        event.preventDefault();
         alert("O nome completo não pode conter símbolos ou pontuação.");
         campo_nome_do_produto.value = "";
         campo_nome_do_produto.focus();
@@ -143,6 +147,7 @@ function fnproduto(event){
         const Temnumero = [...texto_familia].some(char => char >='0' && char <='9');
 
         if(Temnumero){ 
+            event.preventDefault();
             alert('O Campo FAMILIA nao pode ter numeros')
             campo_familia.value="";
             campo_familia.focus();
@@ -150,6 +155,7 @@ function fnproduto(event){
         }
         const temSimboloOuPontuacao = [...texto_familia].some(char => /[^\w\sÀ-ÿ]/.test(char));
         if (temSimboloOuPontuacao){
+            event.preventDefault();
         alert("O Campo FAMILIA não pode conter símbolos ou pontuação.");
         campo_familia.value = "";
         campo_familia.focus();
@@ -173,6 +179,7 @@ function fnproduto(event){
         const Temnumero = [...texto_categoria].some(char => char >='0' && char <='9');
 
         if(Temnumero){ 
+            event.preventDefault();
             alert('O Campo CATEGORIA nao pode ter numeros')
             campo_categoria.value="";
             campo_categoria.focus();
@@ -180,6 +187,7 @@ function fnproduto(event){
         }
         const temSimboloOuPontuacao = [...texto_categoria].some(char => /[^\w\sÀ-ÿ]/.test(char));
         if (temSimboloOuPontuacao){
+            event.preventDefault();
         alert("O Campo CATEGORIA não pode conter símbolos ou pontuação.")
         campo_categoria.value = "";
         campo_categoria.focus();
@@ -200,6 +208,7 @@ function fnproduto(event){
 
         }
         if (texto_categoria < 0 ){
+            event.preventDefault();
             alert('Informe um valor positivo')
             campo_preco.value="";
             campo_preco.focus();

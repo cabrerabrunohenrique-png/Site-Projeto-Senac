@@ -16,6 +16,9 @@ if(!isset($_SESSION['id_usuario'])){
     $codigoproduto =$_POST['codigo_do_produto']??'';
     $nomedoproduto =mb_strtolower($_POST['nome_do_produto']??'','utf-8');
     $quantidadeproduto =$_POST['quantidade_entrada'] ??'';
+    $nf = $_POST['numero_nf']??'';
+    $data =$_POST['data']??'';
+
  
     
     /*abri conexao*/ 
@@ -63,8 +66,8 @@ fccodigo($codigoproduto,$nomedoproduto);
     #inserir os dados
 
 
-    $slq = "insert into tbentradaestoque (codigoproduto, nomeproduto,quantidadeproduto)
-    values ('$codigoproduto','$nomedoproduto','$quantidadeproduto' )";
+    $slq = "insert into tbentradaestoque (dataEntradaProduto, codigoProduto,nomeProduto,quantidadeProduto,nFProduto)
+    values ('$data','$codigoproduto','$nomedoproduto','$quantidadeproduto','$nf' )";
     
 
     $resultado = mysqli_query($conexao ,$slq);

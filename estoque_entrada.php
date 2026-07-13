@@ -109,7 +109,7 @@ if(!isset($_SESSION['id_usuario'])){
 
              <div class="col-md-4">
               <label for="data" class="form-label">Data Entrada Produto</label>
-              <input type="date" class="form-control s" id="data" name="data_entrada_produto">
+              <input type="date" class="form-control s" id="data" name="data">
             </div>
 
             

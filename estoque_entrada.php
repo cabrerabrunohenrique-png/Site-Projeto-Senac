@@ -84,14 +84,14 @@ if(!isset($_SESSION['id_usuario'])){
                 <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
                 <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
                      <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option class="form-label" value="   <?php echo trim($codigo);?>"><?php echo $codigo;?></option>
+                    <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo $codigo;?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto_entrada"
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
                 placeholder="Ex.: Nome do Produto">
             </div>
             <div class="row g-3">

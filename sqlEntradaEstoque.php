@@ -27,7 +27,7 @@ if(!isset($_SESSION['id_usuario'])){
         die("<h1>Erro</h1>".mysqli_connect_error());
     }
 
-    $sql = "select codigoproduto, nomeproduto from tbcadastropeca where codigoproduto='$codigoproduto' and nomeproduto ='$nomedoproduto'";
+    $sql = "select codigoproduto, nomeProduto from tbcadastropeca where codigoproduto='$codigoproduto' and nomeProduto ='$nomedoproduto'";
 
     $resultado = mysqli_query($conexao,$sql);
 

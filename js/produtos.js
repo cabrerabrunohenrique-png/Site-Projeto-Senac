@@ -204,7 +204,7 @@ function fnproduto(event){
             alert('O campo Preço não pode ficar vazio')
             campo_preco.value="";
             campo_preco.focus();
-            return false;
+            return false;   
 
         }
         if (texto_categoria < 0 ){

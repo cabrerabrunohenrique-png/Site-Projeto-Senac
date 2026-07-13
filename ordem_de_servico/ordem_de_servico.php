@@ -80,7 +80,13 @@ if(!isset($_SESSION['id_usuario'])){
         <form action="slqCadastroOS.php" method="post">
             <div class="col-md-4">
                 <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
-                <input type="number" class="form-control s" id="codigo_ordem_de_servico" name="codigo_ordem_de_servico" placeholder="Ex.: 2024">
+                <select id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
+
+                                    //GERA NUMERO ALEATORIO  
+                    <?php $codigo = random_int(1,9999); ?>
+                    
+                <option value ="<?=$codigo;?>"> <?= $codigo;?></option>
+                </select>
             </div>
 
             <div class="col-md-4">

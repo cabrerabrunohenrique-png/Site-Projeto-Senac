@@ -148,10 +148,10 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
             <div style='display: flex;' class=' gap-3'>
                 <div class="col-md-6">
-                    <label for="varaiveldoproduto" class="form-label">Variavel do Produto</label>
+                    <label for="variavel" class="form-label">Variavel do Produto</label>
                     <div class="input-group">
                         
-                        <input type="number" class="form-control s" id="varaiveldoproduto" name="varaiveldoproduto" placeholder="1">
+                        <input type="number" class="form-control s" id="variavel" name="variavel" placeholder="1">
                     </div>
                     
                 </div>

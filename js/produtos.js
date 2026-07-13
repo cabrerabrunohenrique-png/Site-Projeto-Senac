@@ -70,14 +70,14 @@ function fnproduto(event){
         
     }
 
-    const Temnumero = [...texto_nome_do_produto].some(char => char >='0' && char <='9');
+    /*const Temnumero = [...texto_nome_do_produto].some(char => char >='0' && char <='9');
 
     if(Temnumero){ 
         alert('O nome completo nao pode ter numeros')
         campo_nome_do_produto.value="";
         campo_nome_do_produto.focus();
         return false;
-    }
+    }*/
 
     const temSimboloOuPontuacao = [...texto_nome_do_produto].some(char => /[^\w\sÀ-ÿ]/.test(char));
     if (temSimboloOuPontuacao){

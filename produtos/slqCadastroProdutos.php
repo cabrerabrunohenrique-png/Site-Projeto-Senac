@@ -14,10 +14,16 @@ if(!isset($_SESSION['id_usuario'])){
 <?php
 
 
-
+    $data = $_POST['data']??'';
     $codigodoproduto =$_POST['codigo_do_produto']??'';
+    $fabricante = mb_strtolower($_POST['fabricante'],'utf-8')??'';
     $nomedoproduto =mb_strtolower($_POST['nome_do_produto'],'utf-8')??'';
-    $fabricante= $_POST['fabricante']??'';
+    $variavel= $_POST['variavel']??'';
+    $familia = mb_strtolower($_POST['familia'],'utf-8')??'';
+    $categoria =mb_strtolower($_POST['categoria'],'utf-8')??'';
+    $valor = $_POST['preco']??'';
+
+
     
     
    NomeProduto($nomedoproduto);
@@ -75,8 +81,8 @@ if(!isset($_SESSION['id_usuario'])){
 
     #inserir os dados
 
-    $slq = "insert into tbcadastropeca (codigoproduto, nomeProduto, fabricanteProduto)
-    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante')";
+    $slq = "insert into tbcadastropeca (codigoproduto ,nomeProduto, fabricanteProduto, variavelproduto, familiaproduto, datacriacao, categoriaproduto, preco)
+    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$variavel', '$familia', '$data', '$categoria', '$valor')";
     
      
     $resultado = mysqli_query($conexao ,$slq);

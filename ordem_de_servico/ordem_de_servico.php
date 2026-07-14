@@ -62,7 +62,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
             <div style="width: 15px"> </div>
            

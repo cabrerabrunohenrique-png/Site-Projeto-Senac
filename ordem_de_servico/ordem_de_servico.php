@@ -77,7 +77,12 @@ if(!isset($_SESSION['id_usuario'])){
             <h1 class=''style ='text-transform: uppercase' >Ordem de Serviço</h1>
         </div>
         <div class=''style='height:20px'> </div>
-        <form action="slqCadastroOS.php" method="post">
+        <form action="slqCadastroOS.php" method="post" onsubmit="return fnproduto(event)" >
+            <div class="row g-3">
+                <div class="col-12">
+                <label for="data" class="form-label">Data</label>
+                <input type="date" class="form-control s" id="data" name="data">
+            </div>
             <div class="col-md-4">
                 <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
                 <select id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
@@ -93,7 +98,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
                 <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
                 <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo $codigo;?></option>
+                    <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo trim($codigo);?></option>
                     <?php endforeach; ?>
                     </select>
                
@@ -101,15 +106,15 @@ if(!isset($_SESSION['id_usuario'])){
 
             <div class="row g-3">
                 <div class="col-12">
-                <label for="nome_do_produto_os" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto_os" name="nome_do_produto_os"
+                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
                 placeholder="Ex.: Nome do Produto">
             </div>
 
            <div class="row g-3">
                 <div class="col-12">
-                <label for="quantidade" class="form-label">Quantidade</label>
-                <input type="number" class="form-control s" id="quantidade" name="quantidade"
+                <label for="quantidade_entrada" class="form-label">Quantidade</label>
+                <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada"
                 placeholder="Ex.: 2004">
             </div>
     
@@ -125,4 +130,5 @@ if(!isset($_SESSION['id_usuario'])){
 
     
 </body>
+<script src="../js/produtos.js"></script>
 </html>

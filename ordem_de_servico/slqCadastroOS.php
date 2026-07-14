@@ -15,8 +15,9 @@ if(!isset($_SESSION['id_usuario'])){
 
     $codiordemdeservico =$_POST['codigo_ordem_de_servico']??'';
     $codigodoproduto =$_POST['codigo_do_produto']??'';
-    $nomedoprodutoos= $_POST['nome_do_produto_os']??'';
-    $quantidade =$_POST['quantidade']??'';
+    $nomedoprodutoos=mb_strtolower( $_POST['nome_do_produto']??'','utf-8');
+    $quantidade =$_POST['quantidade_entrada']??'';
+    $data = $_POST['data']??'';
     
      
     
@@ -63,8 +64,8 @@ if(!isset($_SESSION['id_usuario'])){
 
     #inserir os dados
 
-    $slq = "insert into tbordemservico (codigoOS, codigoProduto, nomeProduto,quantidadeProduzida)
-    values ('$codiordemdeservico','$codigodoproduto' ,'$nomedoprodutoos', '$quantidade')";
+    $slq = "insert into tbordemservico (codigoOS, codigoProduto, nomeProduto,quantidadeProduzida, data)
+    values ('$codiordemdeservico','$codigodoproduto' ,'$nomedoprodutoos', '$quantidade', '$data')";
     
     
 

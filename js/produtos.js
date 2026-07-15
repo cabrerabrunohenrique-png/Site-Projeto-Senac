@@ -216,5 +216,16 @@ function fnproduto(event){
         }
     }
     
+    const campo_os = document.getElementById('os')
+    if(campo_os){
+        texto_os = campo_os.value.trim()
+        if(texto_os =="" || texto_os <0){
+            event.preventDefault();
+            alert('O campo nao pode ficar vazio e nao pode ser numero negativo')
+            campo_os.value='';
+            campo_os.focus();
+            return false;
+        }
+    }
   
 }

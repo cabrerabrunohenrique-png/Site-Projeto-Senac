@@ -89,9 +89,9 @@ if(!isset($_SESSION['id_usuario'])){
            <td>nomePeca</td>
            <td>quantidaPeca</td>
            <td>numeroNf</td>
-           <td>cpfPeca</td>
+           
            <td>numeroOs</td>
-           <td>situacaoPeca</td>
+           
                        
         </tr>
        
@@ -119,9 +119,9 @@ if(!isset($_SESSION['id_usuario'])){
                 echo "<td> {$linha_resultado['quantidaPeca']} </td>";
                 echo "<td> {$linha_resultado['numeroNf']} </td>";
 
-                echo "<td> {$linha_resultado['cpfPeca']} </td>";
+                
                 echo "<td> {$linha_resultado['numeroOs']} </td>";
-                echo "<td> {$linha_resultado['situacaoPeca']} </td>";
+                
 
                 echo"</tr>";
             }

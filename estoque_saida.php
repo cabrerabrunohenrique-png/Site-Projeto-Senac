@@ -84,21 +84,20 @@ if(!isset($_SESSION['id_usuario'])){
     <main >
         <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fnproduto(event)" >
             <div class="col-md-4">
-                <label for="" class="form-label">Numero Ordem de Servico(OS)</label>
-                <input type="number" class="form-control s" id="" name="codigo_do_">
+                <label for="os" class="form-label">Numero Ordem de Servico(OS)</label>
+                <input type="number" class="form-control s" id="os" name="os">
             </div>
             
             <div class="col-md-4">
               <label for="data" class="form-label">Data Saida Produto</label>
-              <input type="date" class="form-control s" id="data" name="data_entrada_produto">
+              <input type="date" class="form-control s" id="data" name="data">
             </div>
             <div class="col-md-4">
-                <label for="codigoproduto" class="form-label">Codigo do Produto</label>
-               <select id ="codigo_do_produto" class="form-control s">
+                <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+               <select id ="codigo_do_produto" class="form-control s" name='codigo_do_produto'>
                      <?php foreach ($codigosDoBanco as $codigo):?>
                     <option value="<?php echo $codigo;
-                    ?>" class="form-label"><?php echo $codigo;
-                    ?></option>
+                    ?>" class="form-label"><?php echo $codigo;?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -121,20 +120,10 @@ if(!isset($_SESSION['id_usuario'])){
 
            
 
-            <div class="col-md-4">
-                <label for="numero_cpf" class="form-label">CPF da peça</label>
-                <input type="number" class="form-control s" id="numero_cpf" name="numero_cpf">
-            </div>
+           
 
-            <div class="col-md-4">
-                <label for="numero_os" class="form-label">Numero da OS</label>
-                <input type="number" class="form-control s" id="numero_os" name="numero_os">
-            </div>
-
-            <div class="col-md-4">
-                <label for="situacao_produto" class="form-label">Situacao do Produto</label>
-                <input type="number" class="form-control s" id="situacao_produto" name="situacao_produto">
-            </div>
+           
+            
       
             <div class="d-flex gap-2 mt-4">                              <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>

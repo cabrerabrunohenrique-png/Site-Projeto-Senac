@@ -10,15 +10,15 @@ if(!isset($_SESSION['id_usuario'])){
 
 ?>
 <?php
-
+    
+    $data = $_POST['data']??'';
     $codigodoproduto =$_POST['codigo_do_produto']??'';
     $nomedoproduto =$_POST['nome_do_produto']??'';
     $fabricante= $_POST['fabricante']??'';
-    $pesodoproduto =$_POST['peso_do_produto']??'';
-    $alturadoproduto =$_POST['altura_do_produto']??'';
-    $comprimentodoproduto =$_POST['comprimento_do_produto']??'';
-   
-    
+    $variavel = $_POST['variavel']??'';
+    $familia = $_POST['familia']??'';
+    $categoria = $_POST['categoria']??'';
+    $preço= $_POST['preco']??'';
     /*abri conexao*/ 
 
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
@@ -26,7 +26,7 @@ if(!isset($_SESSION['id_usuario'])){
         die ("<h1>erro<h1>". mysqli_connect_error());
     }
 
-    $slq = "update tbcadastropeca set codigoproduto ='$codigodoproduto', nomeProduto ='$nomedoproduto', fabricanteProduto ='$fabricante', pesoProduto ='$pesodoproduto', alturaProduto= '$alturadoproduto' , comprimentoProduto = '$comprimentodoproduto'  where codigoproduto = '$codigodoproduto'";
+    $slq = "update tbcadastropeca set  fabricanteProduto ='$fabricante', variavelproduto ='$variavel',dataalteracao ='$data', familiaproduto ='$familia', categoriaproduto ='$categoria', preco='$preço'  where codigoproduto = '$codigodoproduto'";
     
     $resultado = mysqli_query($conexao ,$slq);
 

@@ -65,11 +65,18 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
 </div>
     <main >
         <form action="sqlEditarProduto.php" method="post" onsubmit="return fnproduto(event)">
-            <div class="col-md-4 ">
-                <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                <select class="form-control s">
+         <div class="col-md-6 ">
+                    <label for="data" class="form-label">Data Alteracao</label>
+                    <input type="date" class="form-control s" id="data" name="data">
+                    
+                </div>    
+        
+        
+        <div class="col-md-4 ">
+                <label for="codigo_do_produto" class="form-label  " name ="codigo_do_produto">Codigo do Produto</label>
+                <select class="form-control s " id='codigo_do_produto' name='codigo_do_produto'>
                      <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option value="<?php echo $codigo;
+                    <option  value="<?php echo $codigo;
                     ?>" class="form-label"><?php echo $codigo;
                     ?></option>
                     <?php endforeach; ?>
@@ -78,38 +85,45 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
             <div class="row g-3">
                 <div class="col-12">
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto " placeholder="Ex.: papel">
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto " >
             </div>
             <div class="row g-3">
                 <div class="col-12">
                 <label for="fabricante" class="form-label">Fabricante</label>
                 <input type="text" class="form-control s" id="fabricante" name="fabricante"placeholder="Ex.: Papel Ltda">
             </div>
-            <div class="col-md-6">
-                <label for="peso_do_produto" class="form-label">Peso do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">g</span>
-                    <input type="number" class="form-control s" id="peso_do_produto" name="peso_do_produto" placeholder="0,000"
-                step="0.001">
+
+             <div class="col-md-6">
+                    <label for="variavel" class="form-label">Variavel do Produto</label>
+                    <div class="input-group">
+                        
+                        <input type="number" class="form-control s" id="variavel" name="variavel" placeholder="1">
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                
+                    <label for="familia" class="form-label">Familia</label>
+                    <input type="text" class="form-control s" id="familia" name="familia"
+                    placeholder="Ex.: Pano">
+                </div>
+            </div> 
+            <div style='display: flex;' class=' gap-3'>
+                <div class="col-md-6">
+                    <label for="categoria" class="form-label">Categoria </label>
+                    <input type="text" class="form-control s" id="categoria" name="categoria"
+                    placeholder="Ex.: Eletrônicos">
+                </div>
+                <div class="col-md-6">
+                    <label for="preco" class="form-label">Preço por produto</label>
+                    <div class="input-group">
+                        <span class="input-group-text">R$</span>
+                        <input type="number" class="form-control s" id="preco" name="preco" placeholder="0,00"
+                    step="0.01">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <label for="altura_do_produto" class="form-label">Altura do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="altura_do_produto" name="altura_do_produto" placeholder="0,00"
-                step="0.001">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="comprimento_do_produto" class="form-label">Comprimento do Produto</label>
-                <div class="input-group">
-                    <span class="input-group-text">cm</span>
-                    <input type="number" class="form-control s" id="comprimento_do_produto" name="comprimento_do_produto" placeholder="0,00"
-                step="0.01">
-                </div>
-            </div>
-            
+                        
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="submit" class="btn btn-primary s">Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>

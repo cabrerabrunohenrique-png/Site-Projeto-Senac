@@ -28,6 +28,12 @@
     }
 
     if(empty($codigo)){
+        echo"<link rel ='stylesheet' href='css/style.css'> 
+                <div style='display: flex; justify-content: center;' >
+                    <div class=''>
+                        <a class='cp caixa  fontemenu' href='excluir_os.php'>Voltar</a>
+                    </div>
+                </div>";
         die("Erro: Por favor informe a OS");
 
     
@@ -37,21 +43,17 @@
     if(os($codigo)){
         $conn = mysqli_connect("localhost", "root", "", "bdprojetosenac"); 
     
-       $sql = "UPDATE tbordemservico SET 
-            codigoProduto = '$codigodoproduto', 
-            nomeProduto = '$nomedoprodutoos',
-            quantidadeProduzida = '$quantidade' 
-            WHERE codigoOS = '$codigo'"; 
+       $sql = "delete from tbordemservico  WHERE codigoOS = '$codigo'"; 
 
         $r = mysqli_query($conn, $sql); 
     
         if($r){ 
             mysqli_close($conn); 
-            echo 'Atualizado com Sucesso'; 
+            echo 'DELETADO COM SUCESSO'; 
              echo"<link rel ='stylesheet' href='css/style.css'> 
                 <div style='display: flex; justify-content: center;' >
                     <div class=''>
-                        <a class='cp caixa  fontemenu' href='atualizar_os.php'>Voltar</a>
+                        <a class='cp caixa  fontemenu'href='excluir_os.php'>Voltar</a>
                     </div>
                 </div>";
                 exit; 

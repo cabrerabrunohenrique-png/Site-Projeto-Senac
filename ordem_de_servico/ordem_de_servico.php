@@ -37,35 +37,25 @@ if(!isset($_SESSION['id_usuario'])){
 
 <header>
     <nav >
-        <div>
-            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
-            
-        </div>
-        <div class ='' style="display:flex;justify-content: center;">
+        <div class ='' style="display:flex;justify-content: space-around;">
             <div class="">
-            <a class="os caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php" >Menu</a>
             </div>
-        </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
+                 
+            <div class="">
+                <a class="os caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
+            </div>
             
-            <div style="width: 15px"> </div>
             <div class="" >
                 <a class="ar caixa  fontemenu text-bg-warning" href="../ordem_de_servico/atualizar_os.php">Editar Ordem de Servico(OS)
                 </a>
             </div>
-            <div style="width: 15px"> </div>
+            
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
+                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="../ordem_de_servico/excluir_os.php">Excluir Ordem de Servico(OS)
                 </a>
             </div>
-            <div style="width: 15px"> </div>
-            <div class="">
-                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
-            </div>
-            <div style="width: 15px"> </div>
-           
         </div>    
     </nav>
 
@@ -74,53 +64,52 @@ if(!isset($_SESSION['id_usuario'])){
     <main >
         <div class=''style='height:20px'> </div>
         <div class='fontemenu' style='display: flex; justify-content: center '>
-            <h1 class=''style ='text-transform: uppercase' >Ordem de Serviço</h1>
+            <h1 class=''style ='text-transform: uppercase' >Cadastro Ordem de Serviço(OS)</h1>
         </div>
         <div class=''style='height:20px'> </div>
         <form action="slqCadastroOS.php" method="post" onsubmit="return fnproduto(event)" >
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="data" class="form-label">Data</label>
-                <input type="date" class="form-control s" id="data" name="data">
-            </div>
-            <div class="col-md-4">
-                <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
-                <select id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
+            <div class="row g-3 ">
+                <div class="col-4">
+                    <label for="data" class="form-label">Data</label>
+                    <input type="date" class="form-control s" id="data" name="data">
+                </div>
+                <div class="col-md-4">
+                    <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
+                    <select id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
 
                                     //GERA NUMERO ALEATORIO  
-                    <?php $codigo = random_int(1,9999); ?>
+                     <?php $codigo = random_int(1,9999); ?>
                     
-                <option value ="<?=$codigo;?>"> <?= $codigo;?></option>
-                </select>
-            </div>
-
-            <div class="col-md-4">
-                <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
-                <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
-                <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo trim($codigo);?></option>
-                    <?php endforeach; ?>
+                        <option value ="<?=$codigo;?>"> <?= $codigo;?></option>
                     </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                    <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                        <?php foreach ($codigosDoBanco as $codigo):?>
+                            <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo trim($codigo);?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                
+                    <div class="col-4">
+                        <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                        <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"placeholder="Ex.: Nome do Produto">
+                    </div>
                
-            </div>
 
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                placeholder="Ex.: Nome do Produto">
-            </div>
-
-           <div class="row g-3">
-                <div class="col-12">
-                <label for="quantidade_entrada" class="form-label">Quantidade</label>
-                <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada"
-                placeholder="Ex.: 2004">
-            </div>
+               
+                    <div class="col-4">
+                        <label for="quantidade_entrada" class="form-label">Quantidade</label>
+                        <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada"placeholder="Ex.: 2004">
+                    </div>
+               
     
             
-            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>
+            <div class=" gap-2 mt-4 " style='display: flex; justify-content: center '>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
+                <button type="submit" class="btn btn-success" >Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary ">Limpar</button>
             </div>
         </form>

@@ -43,20 +43,15 @@ if(!isset($_SESSION['id_usuario'])){
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
             
-            <div style="width: 15px"> </div>
-            <div class="" >
-                <a class="ar caixa  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
-                </a>
-            </div>
-            <div style="width: 15px"> </div>
+            
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
+                <a class="letraFundoAzul caixa fontemenu le" href="ordem_de_servico.php">Voltar-Ordem de Servico(OS)
                 </a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="excluir_os.php">Excluir Ordem de Servico(OS)</a>
             </div>
             <div style="width: 15px"> </div>
            
@@ -110,7 +105,7 @@ if(!isset($_SESSION['id_usuario'])){
     
             
             <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>
+                <button type="submit" class="btn btn text-bg-warning" >Salvar Atualização</button>
                 <button type="reset" class="btn btn-outline-secondary ">Limpar</button>
             </div>
         </form>

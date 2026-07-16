@@ -22,8 +22,7 @@ if(!isset($_SESSION['id_usuario'])){
 
     
     
-   
-    function fcos($os){
+     function fcosa($os){
         $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
 
         if(!$conexao){
@@ -40,7 +39,7 @@ if(!isset($_SESSION['id_usuario'])){
             echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
                 <div class=''>
                 
-                    <h1>Esse registro não foi lançado <br>Nao existe esse OS</h1>
+                    <h1>Esse registro não foi lançado <br>Numeo da OS nao existe</h1>
                     <a class='cp caixa  fontemenu' href='estoque_saida.php'>
                     Voltar
                     </a>
@@ -51,7 +50,39 @@ if(!isset($_SESSION['id_usuario'])){
          
         }
     }
-    fcos($os);
+    fcosa($os);
+
+
+   
+    function fcos($os,$nome){
+        $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+
+        if(!$conexao){
+            die('<h1>ERRO</h1>'.mysqli_connect_error());
+          
+        }
+
+        $Sql ="select * from tbordemservico where codigoOs ='$os' and nomeProduto ='$nome'";
+
+        $r = mysqli_query($conexao,$Sql);
+
+        if(!$r || mysqli_num_rows($r)<1){
+            mysqli_close($conexao);
+            echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
+                <div class=''>
+                
+                    <h1>Esse registro não foi lançado <br>O produto lançado nao é compativel com o produto da OS</h1>
+                    <a class='cp caixa  fontemenu' href='estoque_saida.php'>
+                    Voltar
+                    </a>
+                </div>
+                </div>";
+            exit;
+
+         
+        }
+    }
+    fcos($os,$nome);
     
 
 

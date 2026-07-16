@@ -11,12 +11,6 @@ if(!isset($_SESSION['id_usuario'])){
 ?>
 
 
-<?php
-    require_once "../class/class.php";
-    $listaCodigoProduto = new listaProdutos();
-    $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
-?>
-
 
 
 <!DOCTYPE html>
@@ -51,7 +45,7 @@ if(!isset($_SESSION['id_usuario'])){
             
             <div style="width: 15px"> </div>
             <div class="" >
-                <a class="ar caixa  fontemenu text-bg-warning" href="../ordem_de_servico/atualizar_os.php">Editar Ordem de Servico(OS)
+                <a class="ar caixa  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
             <div style="width: 15px"> </div>
@@ -74,34 +68,30 @@ if(!isset($_SESSION['id_usuario'])){
     <main >
         <div class=''style='height:20px'> </div>
         <div class='fontemenu' style='display: flex; justify-content: center '>
-            <h1 class=''style ='text-transform: uppercase' >Ordem de Serviço</h1>
+            <h1 class=''style ='text-transform: uppercase' >Atualizar Ordem de Serviço</h1>
         </div>
         <div class=''style='height:20px'> </div>
-        <form action="slqCadastroOS.php" method="post" onsubmit="return fnproduto(event)" >
+        <form action="sqlatualizaros.php" method="post" onsubmit="return fnproduto(event)" >
             <div class="row g-3">
                 <div class="col-12">
-                <label for="data" class="form-label">Data</label>
+                <label for="data" class="form-label">Data Atualizacao</label>
                 <input type="date" class="form-control s" id="data" name="data">
             </div>
             <div class="col-md-4">
                 <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
-                <select id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
+                <input type="number" id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
 
-                                    //GERA NUMERO ALEATORIO  
-                    <?php $codigo = random_int(1,9999); ?>
+                                
+                   
                     
-                <option value ="<?=$codigo;?>"> <?= $codigo;?></option>
+                <option value =""> </option>
                 </select>
             </div>
 
             <div class="col-md-4">
                 <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
-                <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
-                <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo trim($codigo);?></option>
-                    <?php endforeach; ?>
-                    </select>
-               
+                <input type="number" class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                       
             </div>
 
             <div class="row g-3">

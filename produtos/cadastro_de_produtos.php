@@ -151,7 +151,7 @@ if(!isset($_SESSION['id_usuario'])){
                     <label for="variavel" class="form-label">Variavel do Produto</label>
                     <div class="input-group">
                         
-                        <input type="number" class="form-control s" id="variavel" name="variavel" placeholder="1">
+                        <input type="number" class="form-control s" id="variavel" name="variavel" placeholder=" Ex.: 1">
                     </div>
                     
                 </div>

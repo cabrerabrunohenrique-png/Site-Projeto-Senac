@@ -18,7 +18,7 @@ if(!isset($_SESSION['id_usuario'])){
     $variavel = $_POST['variavel']??'';
     $familia = $_POST['familia']??'';
     $categoria = $_POST['categoria']??'';
-    $preço= $_POST['preco']??'';
+    $preco= $_POST['preco']??'';
     /*abri conexao*/ 
 
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
@@ -26,7 +26,7 @@ if(!isset($_SESSION['id_usuario'])){
         die ("<h1>erro<h1>". mysqli_connect_error());
     }
 
-    $slq = "update tbcadastropeca set  fabricanteProduto ='$fabricante', variavelproduto ='$variavel',dataalteracao ='$data', familiaproduto ='$familia', categoriaproduto ='$categoria', preco='$preço'  where codigoproduto = '$codigodoproduto'";
+    $slq = "update tbcadastropeca set  fabricanteProduto ='$fabricante', variavelproduto ='$variavel',dataalteracao ='$data', familiaproduto ='$familia', categoriaproduto ='$categoria', preco='$preco'  where codigoproduto = '$codigodoproduto'";
     
     $resultado = mysqli_query($conexao ,$slq);
 

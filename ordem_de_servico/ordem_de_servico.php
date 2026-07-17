@@ -43,7 +43,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
                  
             <div class="">
-                <a class="os caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
+                <a class="ar caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
             </div>
             
             <div class="" >

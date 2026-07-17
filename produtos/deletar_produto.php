@@ -33,14 +33,14 @@ if(!isset($_SESSION['id_usuario'])){
    
 </header>
     <nav >
-        <div class ='' style="">
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">
-                Menu
-                </a>
-            </div>
+         <div style ='display: flex; justify-content: space-between'>
+        <div class="">
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
         </div>
+        <div>
+            <a  class="letraPretoAzul caixa cp fontemenu le" href="cadastro_de_produtos.php">Voltar</a>
+        </div>
+    </div>
         <div style="height: 15px"></div>
         <div class ='' style="display:flex;justify-content: center;">
     </div>    
@@ -49,26 +49,27 @@ if(!isset($_SESSION['id_usuario'])){
         <div class='fontemenu' style='display: flex; justify-content: center '>
             <h1 class=''style ='text-transform: uppercase' >Deletar Produto</h1>
         </div>
-        <form action="sqlExcluirProdutos.php" method="post" onsubmit="return fnproduto(event)">
-            <div class="col-md-4 ">
-                <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="fabricante" class="form-label">Fabricante</label>
-                <input type="text" class="form-control s" id="fabricante" name="fabricante"
-                placeholder="">
-            </div>
-           
+        <form action="sqlExcluirProdutos.php" method="post" onsubmit="return fnproduto(event)" class='' >
+           <div style='display: flex;justify-content: space-between;'>
+                <div class="col-3 ">
+                    <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
+                    <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
+                </div>
             
-            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary s">Salvar Cadastro</button>
+                    <div class="col-3">
+                        <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                        <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                    </div>
+            
+            
+                    <div class="col-3">
+                        <label for="fabricante" class="form-label">Fabricante</label>
+                        <input type="text" class="form-control s" id="fabricante" name="fabricante">
+                    </div>
+            </div>            
+            
+            <div class=" gap-2 mt-4" style='display: flex; justify-content: center'>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
+                <button type="submit" class="btn btn-danger s">Deletar</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>
         </form>

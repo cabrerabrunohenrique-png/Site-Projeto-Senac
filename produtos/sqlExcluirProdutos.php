@@ -56,7 +56,7 @@ if(!isset($_SESSION['id_usuario'])){
         echo"<link rel ='stylesheet' href='css/style.css'>
             <div style='display: flex; justify-content: center;' > 
                 <div class='box_cinza_claro'>
-                    <a class='box_letra' href='cadastro_de_produtos.php'>
+                    <a class='box_letra' href='deletar_produto.php'>
                     Voltar
                 </a>
                 </div>

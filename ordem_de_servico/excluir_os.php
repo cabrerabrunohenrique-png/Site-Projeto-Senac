@@ -31,27 +31,28 @@ if(!isset($_SESSION['id_usuario'])){
 
 <header>
     <nav >
+        <div class ='' style="display:flex;justify-content: space-between;">
         <div>
             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
             
         </div>
-        <div class ='' style="display:flex;justify-content: center;">
+        
             <div class="">
-            <a class="os caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
+            <a class="ar caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
             </div>
-        </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
+        
+        
+  
             
-            <div style="width: 15px"> </div>
+          
             <div class="" >
                 <a class="ar caixa  fontemenu text-bg-warning" href="atualizar_os.php">Editar Ordem de Servico(OS)
                 </a>
             </div>
-            <div style="width: 15px"> </div>
+            
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa fontemenu le" href="ordem_de_servico.php">Voltar-Ordem de Servico(OS)
+                <a class="letraFundoAzul caixa fontemenu le os" href="ordem_de_servico.php">Voltar-Ordem de Servico(OS)
                 </a>
             </div>
            

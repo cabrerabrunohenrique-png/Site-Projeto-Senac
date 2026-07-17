@@ -43,20 +43,17 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
 <!-- cabeça -->
 <header class='' >
     <nav >
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">
-                Menu
-                </a>
-            </div>
+    <div style ='display: flex; justify-content: space-between'>
+        <div class="">
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
         </div>
+        <div>
+            <a  class="letraPretoAzul caixa cp fontemenu le" href="cadastro_de_produtos.php">Voltar</a>
+        </div>
+    </div>
+   
         <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
-            
-           
-            
-        </div>    
+    
     </nav>
 </header>
 <div class=''style='height:10px'> </div>
@@ -65,56 +62,49 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
 </div>
     <main >
         <form action="sqlEditarProduto.php" method="post" onsubmit="return fnproduto(event)">
-         <div class="col-md-6 ">
-                    <label for="data" class="form-label">Data Alteracao</label>
-                    <input type="date" class="form-control s" id="data" name="data">
-                    
-                </div>    
-        
-        
-        <div class="col-md-4 ">
+        <div class='' style='display: flex; justify-content: space-between'>    
+            <div class="col-md-3 ">
+                <label for="data" class="form-label">Data Alteracao</label>
+                <input type="date" class="form-control s" id="data" name="data">         
+            </div>
+            <div class="col-md-3 ">
                 <label for="codigo_do_produto" class="form-label  " name ="codigo_do_produto">Codigo do Produto</label>
                 <select class="form-control s " id='codigo_do_produto' name='codigo_do_produto'>
-                     <?php foreach ($codigosDoBanco as $codigo):?>
+                    <?php foreach ($codigosDoBanco as $codigo):?>
                     <option  value="<?php echo $codigo;
                     ?>" class="form-label"><?php echo $codigo;
                     ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
-            <div class="row g-3">
-                <div class="col-12">
+            
+            <div class="col-3">
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto " >
             </div>
-            <div class="row g-3">
-                <div class="col-12">
+        </div>
+        <div class='' style ='display: flex; justify-content: space-between'>
+            <div class="col-3">
                 <label for="fabricante" class="form-label">Fabricante</label>
-                <input type="text" class="form-control s" id="fabricante" name="fabricante"placeholder="Ex.: Papel Ltda">
+                <input type="text" class="form-control s" id="fabricante" name="fabricante">
             </div>
 
-             <div class="col-md-6">
-                    <label for="variavel" class="form-label">Variavel do Produto</label>
-                    <div class="input-group">
-                        
-                        <input type="number" class="form-control s" id="variavel" name="variavel" placeholder="1">
-                    </div>
-                    
-                </div>
-                <div class="col-md-6">
+            <div class="col-md-3">
+                <label for="variavel" class="form-label">Variavel do Produto</label>
+                <input type="number" class="form-control s" id="variavel" name="variavel">
+            </div>
+            <div class="col-md-3">
+                <label for="familia" class="form-label">Familia</label>
+                <input type="text" class="form-control s" id="familia" name="familia">
                 
-                    <label for="familia" class="form-label">Familia</label>
-                    <input type="text" class="form-control s" id="familia" name="familia"
-                    placeholder="Ex.: Pano">
-                </div>
-            </div> 
-            <div style='display: flex;' class=' gap-3'>
-                <div class="col-md-6">
+            </div>
+        </div> 
+        <div class='' style ='display: flex; justify-content: space-between'>    
+                <div class="col-md-3">
                     <label for="categoria" class="form-label">Categoria </label>
-                    <input type="text" class="form-control s" id="categoria" name="categoria"
-                    placeholder="Ex.: Eletrônicos">
+                    <input type="text" class="form-control s" id="categoria" name="categoria">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <label for="preco" class="form-label">Preço por produto</label>
                     <div class="input-group">
                         <span class="input-group-text">R$</span>
@@ -123,9 +113,10 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
                     </div>
                 </div>
             </div>
+           
                         
-            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary s">Salvar Cadastro</button>
+            <div class="d-flex gap-2 mt-4 " style ='display: flex; justify-content: center'>           
+                <button type="submit" class="btn text-bg-warning s">Salvar Alteração</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>
         </form>
@@ -133,4 +124,4 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
     
 </body>
 <script src="../js/produtos.js"></script>
-</html>
+                

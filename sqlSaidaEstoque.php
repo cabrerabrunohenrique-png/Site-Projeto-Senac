@@ -30,16 +30,16 @@ if(!isset($_SESSION['id_usuario'])){
           
         }
 
-        $Sql ="select * from tbordemservico where codigoOs ='$os'";
+        $Sql ="select * from tbsaidaestoque where numeroOs ='$os'";
 
         $r = mysqli_query($conexao,$Sql);
 
-        if(!$r || mysqli_num_rows($r)<1){
+        if($r && mysqli_num_rows($r)>0){
             mysqli_close($conexao);
             echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
                 <div class=''>
                 
-                    <h1>Esse registro não foi lançado <br>Numeo da OS nao existe</h1>
+                    <h1>Ja foi lançado </h1>
                     <a class='cp caixa  fontemenu' href='estoque_saida.php'>
                     Voltar
                     </a>

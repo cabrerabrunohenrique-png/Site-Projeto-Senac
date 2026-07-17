@@ -1,13 +1,13 @@
 <?php 
  //para ler o aviso criado na validacao de usuario em bando de dados
-/*session_start(); 
+session_start(); 
 
 
 if(!isset($_SESSION['id_usuario'])){
     header('Location:index.php');
     exit;
 
-}*/
+}
 
 ?>
 

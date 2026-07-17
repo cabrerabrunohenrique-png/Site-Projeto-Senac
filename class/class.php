@@ -1,5 +1,12 @@
 <?php
 // OrdemServico.php
+   
+
+    if(!isset($_SESSION['id_usuario'])){
+        header('Location:../index.php');
+        exit;
+
+    }
 
 class listaProdutos {
     
@@ -60,6 +67,29 @@ class listaProdutos {
         }
         mysqli_close($conexao);
         return $listaOS;
+    }
+
+    function nomeExiste($os){
+
+        $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+
+        if(!$conexao){
+            die("<h1>erro</h1>".mysqli_connect_error());
+        }
+
+        
+        $sql ="select codigoOS from tbordemservico where codigoOS ='$os'";
+
+        $resultado = mysqli_query($conexao,$sql);
+
+        if($resultado && mysqli_num_rows($resultado)>0){
+
+        mysqli_close($conexao);
+        $_SESSION['erro_duplicidade']="Ja existe cadastro para esse nome";
+       header('Location:FormularioCadastroNovoUsuario.php');
+        exit;
+        }
+        mysqli_close($conexao);
     }
 
 }

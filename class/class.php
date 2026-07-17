@@ -44,6 +44,26 @@ class listaProdutos {
         return $listanome;
     }
 
+
+    public function listaos(){
+        $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+        if(!$conexao){
+            die("<h>Erro</h>".mysqli_error());
+        }
+        $sql = "select * from tbordemservico";
+        $resultado = mysqli_query($conexao,$sql);
+
+        $listaOS = [];
+
+        while ($consulta = mysqli_fetch_assoc($resultado)){
+            $listaOS[] =$consulta['codigoOS'];
+        }
+        mysqli_close($conexao);
+        return $listaOS;
+    }
+
 }
+
+
 
 ?>

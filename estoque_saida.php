@@ -15,6 +15,7 @@ if(!isset($_SESSION['id_usuario'])){
     $listaCodigoProduto = new listaProdutos();
     $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
     $nomebanco = $listaCodigoProduto->listanome();
+    $listaos = $listaCodigoProduto->listaos();
 
 ?>
 
@@ -71,7 +72,12 @@ if(!isset($_SESSION['id_usuario'])){
             <div style='display:flex;justify-content: space-between'>
                 <div class="col-3">
                     <label for="os" class="form-label">Numero Ordem de Servico(OS)</label>
-                    <input type="number" class="form-control s" id="os" name="os">
+                    <select class="form-control s" id="os" name="os">
+                        <?php foreach($listaos as $os) :?>
+                        <option><?php echo($os);?></option>
+                        <?php endforeach;?>
+
+                    </select>
                 </div>
                 
                 <div class="col-3">

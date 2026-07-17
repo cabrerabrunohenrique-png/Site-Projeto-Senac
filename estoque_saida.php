@@ -14,6 +14,8 @@ if(!isset($_SESSION['id_usuario'])){
     require_once "class/class.php";
     $listaCodigoProduto = new listaProdutos();
     $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
+    $nomebanco = $listaCodigoProduto->listanome();
+
 ?>
 
 
@@ -89,7 +91,11 @@ if(!isset($_SESSION['id_usuario'])){
             <div style='display:flex;justify-content: space-between'>
                 <div class="col-3">
                     <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                    <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                    <select  class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                        <?php foreach($nomebanco as $nome):?>
+                            <option value ="<?php echo($nome) ;?>"><?php echo($nome) ;?></option>
+                        <?php endforeach ;?>
+                    </select>
                 </div>
                 
                 <div class="col-3">

@@ -33,7 +33,7 @@ if(!isset($_SESSION['id_usuario'])){
     <nav class ="">
        
 
-            <div class=" " style='' >
+            <div class="bg-body-secondary " style='' >
                  <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="slqSairSistema.php">Sair do Sistema</a>
             </div>
           

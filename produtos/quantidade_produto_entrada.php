@@ -24,10 +24,10 @@ if(!isset($_SESSION['id_usuario'])){
     
     <title>Quantidade_entrada</title>
 </head>
-<body class ="container bg-body-secondary">
+<body class ="container ">
 <header class='' >
     <nav >
-        <div class ="" style="display:flex;justify-content: space-between;">
+        <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
             <div>
                 <a class="letraFundoAzul caixa text-bg-success fontemenu le" href="../acessar_aos_relatorios.php">
                     Relatorios

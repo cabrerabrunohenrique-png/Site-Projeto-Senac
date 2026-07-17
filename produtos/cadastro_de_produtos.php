@@ -26,15 +26,15 @@ if(!isset($_SESSION['id_usuario'])){
     
     <title>Cadastro de Produtos</title>
 </head>
-<body class ="container bg-body-secondary">
+<body class ="container">
  
     
 <!-- cabeça -->
 <header class='' >
     <nav>
-        <div class ="" style="display:flex;justify-content: space-between;">
+        <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
             <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le " href="../navegacao.php">
                     Menu
                 </a>
             </div>
@@ -75,7 +75,7 @@ if(!isset($_SESSION['id_usuario'])){
                 
                 <div class="col-md-3">
                     <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
-                    <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto" placeholder="Ex. :1">
+                    <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
                     <?php if (isset($_SESSION['erro_codigo'])):?>
                     <div class="letraFundoAzul text-bg-danger fontemenu le mm" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
                         <?php echo $_SESSION['erro_codigo'];
@@ -93,14 +93,12 @@ if(!isset($_SESSION['id_usuario'])){
                     <div class="col-md-3">
                 
                     <label for="fabricante" class="form-label">Fabricante</label>
-                    <input type="text" class="form-control s" id="fabricante" name="fabricante"
-                    placeholder="Ex.: Fabricante">
+                    <input type="text" class="form-control s" id="fabricante" name="fabricante">
                 </div>
                 
                 <div class="col-md-3">
                     <label for="nome_do_produto" class="form-label ">Nome do Produto</label>
-                    <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                    placeholder="Ex.: Nome do Produto">
+                    <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
                     <?php
                     if (isset($_SESSION['erro_nomeproduro'])):?>
                     <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
@@ -122,28 +120,26 @@ if(!isset($_SESSION['id_usuario'])){
                     <label for="variavel" class="form-label">Variavel do Produto</label>
                     <div class="input-group">
                         
-                        <input type="number" class="form-control s" id="variavel" name="variavel" placeholder=" Ex.: 1">
+                        <input type="number" class="form-control s" id="variavel" name="variavel">
                     </div>
                     
                 </div>
                 <div class="col-md-3">
                 
                     <label for="familia" class="form-label">Familia</label>
-                    <input type="text" class="form-control s" id="familia" name="familia"
-                    placeholder="Ex.: Pano">
+                    <input type="text" class="form-control s" id="familia" name="familia">
                 </div>
             </div> 
             <div style='display: flex; justify-content: center ' class=' gap-3'>
                 <div class="col-md-3">
                     <label for="categoria" class="form-label">Categoria </label>
-                    <input type="text" class="form-control s" id="categoria" name="categoria"
-                    placeholder="Ex.: Eletrônicos">
+                    <input type="text" class="form-control s" id="categoria" name="categoria">
                 </div>
                 <div class="col-md-3">
                     <label for="preco" class="form-label">Preço por produto</label>
                     <div class="input-group">
                         <span class="input-group-text">R$</span>
-                        <input type="number" class="form-control s" id="preco" name="preco" placeholder="0,00"
+                        <input type="number" class="form-control s" id="preco" name="preco"
                     step="0.01">
                     </div>
                 </div>
@@ -155,23 +151,21 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
         </form>
     </main>
-    <div class=''style='height:50px'> </div>
+    <div class=''style='height:130px'> </div>
 
     <nav>
-         <div class ='' style="display:flex;justify-content: center;">
+         <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
                 <a class="os caixa1 fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
-            <div style="width: 15px"> </div>
+            
             <div class="" >
                 <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
-            <div style="width: 15px"> </div>
             
-            <div style="width: 15px"> </div>
             <div class="">
                 <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
             </div>

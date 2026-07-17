@@ -89,6 +89,26 @@ if(!isset($_SESSION['id_usuario'])){
         </div>
 
     </main>
+    <div class=''style='height:50px'> </div>
+     <nav>
+         <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
+            <div class="">
+                <a class="os caixa1 fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                </a>
+            </div>
+           
+            
+            <div class="" >
+                <a class="cp caixa1  fontemenu" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>
+            </div>
+            
+            <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
+            </div>
+         
+         
+        </div>    
+    </nav>
     
 
 

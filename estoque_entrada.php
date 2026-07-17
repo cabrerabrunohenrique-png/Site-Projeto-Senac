@@ -38,7 +38,7 @@ if(!isset($_SESSION['id_usuario'])){
 <!-- cabeça -->
 <header>
     <nav >
-        <div class ='' style="display:flex;justify-content: space-between;">
+        <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div>
              <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
             </div>
@@ -87,11 +87,16 @@ if(!isset($_SESSION['id_usuario'])){
                     <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
                 </div>
             </div>
+            <div style ='height: 10px'></div>
             <div class=''style='display:flex; justify-content: space-between'>
 
                 <div class="col-3">
-                    <label for="numero_nf" class="form-label">Numero NF</label>
+                    <label for="numero_nf" class="form-label">Numero NF/ Numero Interno para controle</label>
                     <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
+                </div>
+                <div class="col-3">
+                    <label for="tipo" class="form-label">Tipo/Motivo</label>
+                    <input type="type" class="form-control s" id="tipo" name="tipo">
                 </div>
 
                 <div class="col-3">
@@ -112,25 +117,23 @@ if(!isset($_SESSION['id_usuario'])){
         </form>
     </main>
 
-    <div class=''style='height:150px'> </div>
+    <div class=''style='height:270px'> </div>
 
     <nav>
-         <div class ='' style="display:flex;justify-content: center;">
+         <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
                 <a class="os caixa1 fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
-            <div style="width: 15px"> </div>
+            
             <div class="" >
                 <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
-            <div style="width: 15px"> </div>
-            
-            <div style="width: 15px"> </div>
+           
             <div class="">
-                <a class="letraFundoAzul caixa1 fontemenu cp  le" href="../estoque_entrada.php">Cadastro de Produtos</a>
+                <a class="letraFundoAzul caixa1 fontemenu cp  le" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>
             </div>
          
          

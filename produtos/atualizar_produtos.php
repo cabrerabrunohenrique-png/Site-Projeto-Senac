@@ -43,7 +43,7 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
 <!-- cabeça -->
 <header class='' >
     <nav >
-    <div style ='display: flex; justify-content: space-between'>
+    <div class="bg-body-secondary" style ='display: flex; justify-content: space-between'>
         <div class="">
             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
         </div>

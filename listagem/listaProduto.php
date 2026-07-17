@@ -30,7 +30,7 @@ if(!isset($_SESSION['id_usuario'])){
 <!-- cabeça -->
 <header>
     <nav >
-        <div class ='' style="display:flex;justify-content: space-between;">
+        <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
                 <!-- //link para acessar -->
                 <a class="cp caixa  fontemenu" href="../produtos/cadastro_de_produtos.php">

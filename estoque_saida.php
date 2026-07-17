@@ -42,7 +42,7 @@ if(!isset($_SESSION['id_usuario'])){
 <!-- cabeça -->
 <header>
      <nav >
-        <div class ="" style="display:flex;justify-content: space-between;">
+        <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
             <div>
             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
             </div>

@@ -227,5 +227,18 @@ function fnproduto(event){
             return false;
         }
     }
+
+    const campo_tipo = document.getElementById('tipo')
+    if(campo_tipo){
+        text_tipo = campo_tipo.value.trim();
+        if(text_tipo ==""){
+            event.preventDefault();
+            alert('O campo nao pode ficar vazio')
+            campo_tipo.value='';
+            campo_tipo.focus();
+            return false;
+        }
+        
+    }
   
 }

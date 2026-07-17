@@ -43,7 +43,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
                  
             <div class="">
-                <a class="ar caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
+                <a class="ar caixa fontemenu" href='../listagem/lista_ordem_servico.php' target="_blank">Lista Ordem de Servico(OS)</a>                
             </div>
             
             <div class="" >
@@ -114,6 +114,30 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
         </form>
     </main>
+    <div class=''style='height:50px'> </div>
+
+    <nav>
+         <div class ='' style="display:flex;justify-content: center;">
+            <div class="">
+                <a class="cp caixa1 fontemenu le" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos
+                </a>
+            </div>
+           
+            <div style="width: 15px"> </div>
+            <div class="" >
+                <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                </a>
+            </div>
+            <div style="width: 15px"> </div>
+            
+            <div style="width: 15px"> </div>
+            <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
+            </div>
+         
+         
+        </div>    
+    </nav>
     
 
 

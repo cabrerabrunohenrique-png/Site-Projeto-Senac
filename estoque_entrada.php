@@ -37,38 +37,18 @@ if(!isset($_SESSION['id_usuario'])){
 <!-- cabeça -->
 <header>
     <nav >
-        <div>
-            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
-        </div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <a class='letraFundoAzul caixa fontemenu le' href="../listagem/lista_entra_estoque.php">Lista Entrada Estoque </a>
-            </div>
-        </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <a class="os caixa fontemenu" href="ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
-                </a>
-            </div>
-           
-            <div style="width: 15px"> </div>
-            <div class="" >
-                <a class="ar caixa  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
-                </a>
-            </div>
-            <div style="width: 15px"> </div>
-            
-            <div style="width: 15px"> </div>
-            <div class="">
-                <a class="letraFundoAzul caixa fontemenu le text-bg-danger" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
-            </div>
-           
-            <div style="width: 15px"> </div>
+        <div class ='' style="display:flex;justify-content: space-between;">
             <div>
-                <a class="cp caixa  fontemenu" href ="../produtos/cadastro_de_produtos.php"> Cadastro de Novos Produtos</a>
+             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
             </div>
-        </div>    
+           
+            <div class="">
+             <a class="letraFundoAzul caixa fontemenu le text-bg-danger" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+            </div>
+             <div class="">
+             <a class='letraFundoAzul caixa fontemenu le cp' href="../listagem/lista_entra_estoque.php" target="_blank">Lista Entrada Estoque </a>
+            </div>
+        </div>
     </nav>
 
 </header>
@@ -80,50 +60,75 @@ if(!isset($_SESSION['id_usuario'])){
 <div class=''style='height:20px'> </div>
     <main >
         <form action="sqlEntradaEstoque.php" method="post" onsubmit="return fnproduto(event)">
-            <div class="col-md-4">
-                <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
-                <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
-                     <?php foreach ($codigosDoBanco as $codigo):?>
-                    <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo $codigo;?></option>
-                    <?php endforeach; ?>
-                </select>
+            <div class=''style='display:flex; justify-content: space-between'>
+                <div class="col-3">
+                    <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                    <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                        <?php foreach ($codigosDoBanco as $codigo):?>
+                        <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo $codigo;?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            
+                <div class="col-3">
+                    <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                    <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                </div>
+            
+                <div class="col-3">
+                    <label for="quantidade_entrada" class="form-label">Quantidade</label>
+                    <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
+                </div>
             </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto"
-                placeholder="Ex.: Nome do Produto">
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                <label for="quantidade_entrada" class="form-label">Quantidade</label>
-                <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada"
-                placeholder="Ex.: 2004">
-            </div>
+            <div class=''style='display:flex; justify-content: space-between'>
 
+                <div class="col-3">
+                    <label for="numero_nf" class="form-label">Numero NF</label>
+                    <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
+                </div>
 
-            <div class="col-md-4">
-                <label for="numero_nf" class="form-label">Numero NF</label>
-                <input type="number" class="form-control s" id="numero_nf" name="numero_nf" placeholder="Ex.: 2024">
-            </div>
-
-             <div class="col-md-4">
-              <label for="data" class="form-label">Data Entrada Produto</label>
-              <input type="date" class="form-control s" id="data" name="data">
-            </div>
-
+                <div class="col-3">
+                    <label for="data" class="form-label">Data Entrada Produto</label>
+                    <input type="date" class="form-control s" id="data" name="data">
+                </div>
+            </div>                
             
             
 
            
     
             
-            <div class="d-flex gap-2 mt-4">                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
+            <div class=" gap-2 mt-4" style='display:flex;justify-content: center'>            
                 <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>
     </main>
+
+    <div class=''style='height:150px'> </div>
+
+    <nav>
+         <div class ='' style="display:flex;justify-content: center;">
+            <div class="">
+                <a class="os caixa1 fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                </a>
+            </div>
+           
+            <div style="width: 15px"> </div>
+            <div class="" >
+                <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                </a>
+            </div>
+            <div style="width: 15px"> </div>
+            
+            <div style="width: 15px"> </div>
+            <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu cp  le" href="../estoque_entrada.php">Cadastro de Produtos</a>
+            </div>
+         
+         
+        </div>    
+    </nav>
     
 
 

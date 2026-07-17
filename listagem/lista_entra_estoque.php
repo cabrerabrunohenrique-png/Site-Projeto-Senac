@@ -25,7 +25,7 @@ if(!isset($_SESSION['id_usuario'])){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
 
-    <title>Alistagem_entrada_estoque</title>
+    <title>Lista Entrada Estoque</title>
 </head>
 <body class ="container">
  
@@ -42,35 +42,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <a class='letraFundoAzul caixa text-bg-success fontemenu le' href="../acessar_aos_relatorios.php">Acessar aos Relatorios</a>
             </div>
         </div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_entrada.php">
-                Voltar Pagina Entrada no Estoque
-                </a>
-            </div>
-        </div>
-        <div style="height: 15px"></div>
-        <div class ='' style="display:flex;justify-content: center;">
-            <div class="">
-                <a class="os caixa fontemenu" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
-                </a>
-            </div>
-           
-            <div style="width: 15px"> </div>
-           
-            <div style="width: 15px"> </div>
-            <div class="">
-                <!-- //link para acessar -->
-                <a class=" cp caixa  fontemenu" href="../produtos/cadastro_de_produtos.php">
-                    Cadastro de Novos Produto
-                </a>
-            </div>
-            <div style="width: 15px"> </div>
-            <div class="">
-                <a class="letraFundoAzul caixa fontemenu le" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
-            </div>
-        </div>    
+         
     </nav>
 </header>
 <div class=''style='height:20px'> </div>

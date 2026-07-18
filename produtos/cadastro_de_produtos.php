@@ -100,11 +100,11 @@ if(!isset($_SESSION['id_usuario'])){
                     <label for="nome_do_produto" class="form-label ">Nome do Produto</label>
                     <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
                     <?php
-                    if (isset($_SESSION['erro_nomeproduro'])):?>
-                    <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+                        if (isset($_SESSION['erro_nomeproduro'])):?>
+                        <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;"> 
                         <?php echo $_SESSION['erro_nomeproduro'];
                         unset($_SESSION['erro_nomeproduro']); // Apaga da memória para o erro sumir se a página for atualizada
-                        ?>
+                        ?></div>
                         <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
                         
                         ?>

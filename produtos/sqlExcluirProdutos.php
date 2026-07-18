@@ -13,10 +13,7 @@ if(!isset($_SESSION['id_usuario'])){
 <?php
     $codigodoproduto =$_POST['codigo_do_produto']??'';
     $nomedoproduto =$_POST['nome_do_produto']??'';
-    $fabricante= $_POST['fabricante']??'';
-    $pesodoproduto =$_POST['peso_do_produto']??'';
-    $alturadoproduto =$_POST['altura_do_produto']??'';
-    $comprimentodoproduto =$_POST['comprimento_do_produto']??'';
+    
 
     
     /*abri conexao*/

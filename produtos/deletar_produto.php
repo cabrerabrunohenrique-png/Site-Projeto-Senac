@@ -50,7 +50,7 @@ if(!isset($_SESSION['id_usuario'])){
             <h1 class=''style ='text-transform: uppercase' >Deletar Produto</h1>
         </div>
         <form action="sqlExcluirProdutos.php" method="post" onsubmit="return fnproduto(event)" class='' >
-           <div style='display: flex;justify-content: space-between;'>
+           <div style='display: flex;justify-content: space-around;'>
                 <div class="col-3 ">
                     <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
                     <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
@@ -62,10 +62,6 @@ if(!isset($_SESSION['id_usuario'])){
                     </div>
             
             
-                    <div class="col-3">
-                        <label for="fabricante" class="form-label">Fabricante</label>
-                        <input type="text" class="form-control s" id="fabricante" name="fabricante">
-                    </div>
             </div>            
             
             <div class=" gap-2 mt-4" style='display: flex; justify-content: center'>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          

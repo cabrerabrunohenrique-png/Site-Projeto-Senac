@@ -94,8 +94,11 @@ if(!isset($_SESSION['id_usuario'])){
                     <label for="numero_nf" class="form-label">Numero NF/ Numero Interno para controle</label>
                     <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
                 </div>
-                <div class="col-3">
-                    <label for="tipo" class="form-label">Tipo/Motivo</label>
+                <div class="col-3 ">
+                    <label for="tipo" class="form-label">Tipo/Motivo :</label>
+                    
+                        <a href ="tipos.php">Cadastrar Tipos/Motivo</a>
+                    
                     <input type="type" class="form-control s" id="tipo" name="tipo">
                 </div>
 

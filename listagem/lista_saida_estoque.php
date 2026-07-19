@@ -28,23 +28,7 @@ if(!isset($_SESSION['id_usuario'])){
 <body class ="container">
  
 <!-- cabeça -->
-<header>
-    <nav >
-        <div style="display:flex;justify-content: space-between;">
-            <div>
-                <a class='letraPretoAzul caixa text-bg-info  fontemenu le' href='../acessar_aos_relatorios.php'>
-                    Menu
-                </a>
-            </div>
-            <div>
-                <a class='letraFundoAzul caixa text-bg-success fontemenu le' href="../acessar_aos_relatorios.php">Acessar aos Relatorios</a>
-            </div>
-        </div>
-        
-    </nav>
-
-    
-</header>
+<header></header>
 <div class=''style='height:20px'> </div>
 <div class='fontemenu' style='display: flex; justify-content: center '>
      <h1 class=''style ='text-transform: uppercase' >Relação de Produtos Vendido/Saida</h1>

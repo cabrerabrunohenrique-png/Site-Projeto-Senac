@@ -27,26 +27,7 @@ if(!isset($_SESSION['id_usuario'])){
 </head>
 <body class ="container">
  
-<!-- cabeça -->
-<header>
-    <nav >
-        <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
-            <div class="">
-                <!-- //link para acessar -->
-                <a class="cp caixa  fontemenu" href="../produtos/cadastro_de_produtos.php">
-                Voltar para Cadastro de Novos Produtos
-                </a>
-            </div>
-            <div>
-                <a class='letraFundoAzul caixa text-bg-success fontemenu le' href="../acessar_aos_relatorios.php">Acessar aos Relatorios</a>
-            </div>
-
-
-        </div>
-        <div style="height: 15px"></div>
-       
-    </nav>    
-</header>
+<header></header>
 <div class=''style='height:10px'> </div>
 <div class='fontemenu' style='display: flex; justify-content: center '>
      <h1 class=''style ='text-transform: uppercase' >Relatorio de Produtos Cadastrados</h1>

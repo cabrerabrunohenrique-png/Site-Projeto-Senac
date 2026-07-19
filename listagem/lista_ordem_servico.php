@@ -31,22 +31,7 @@ if(!isset($_SESSION['id_usuario'])){
  
 <!-- cabeça -->
 <header>
-    <nav >
-        <div style="display:flex;justify-content: space-between;">
-            <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href='../navegacao.php'>
-                    Menu
-                </a>
-            </div>
-             <div>
-                <a class='letraFundoAzul caixa text-bg-success le fontemenu' href="../acessar_aos_relatorios.php">Acessar aos Relatorios</a>
-            </div>
-
-        </div>
         
-    </nav>
-
-    
 </header>
 <div class=''style='height:10px'> </div>
 <div class='' style='display: flex; justify-content: center '>

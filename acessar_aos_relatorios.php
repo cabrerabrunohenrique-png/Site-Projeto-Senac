@@ -54,23 +54,23 @@ if(!isset($_SESSION['id_usuario'])){
 
         <div class ='' style="display:flex;justify-content: center;">
             <div class="">
-                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_entra_estoque.php" target="_blank">Lista de Entrada de Produtos no Estoque</a>
+                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_entra_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Entrada de Produtos no Estoque</a>
                 <a class="letraFundoAzul   le" href='pdf_entrada_produto.php'>Pdf</a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
                 <!-- //link para acessar -->
-                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_saida_estoque.php" target="_blank">Lista de Saida de Produtos</a>
+                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_saida_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista de Saida de Produtos</a>
                 <a class="letraFundoAzul   le" href="../pdf/pdf_saida_produto.php">PDF</a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_ordem_servico.php" target="_blank">Lista Ordem de Servico</a>
+                <a class="letraFundoAzul caixa text-bg-success le" href="../listagem/lista_ordem_servico.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista Ordem de Servico</a>
                 <a class="letraFundoAzul   le" href="../pdf/pdf_relacao_ordem.php">PDF</a>
             </div>
             <div style="width: 15px"> </div>
             <div class="">
-                <a class="letraFundoAzul caixa text-bg-success le " href="../listagem/listaProduto.php" target="_blank" >Lista de Produtos Cadastrado</a>
+                <a class="letraFundoAzul caixa text-bg-success le " href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos Cadastrado</a>
                 <a class="letraFundoAzul   le" href="../pdf/pdf_relacao_produto.php">PDF</a>
             </div>
 

@@ -51,41 +51,38 @@ if(!isset($_SESSION['id_usuario'])){
 <div class='fontemenu' style='display: flex; justify-content: center '>
      <h1 class=''style ='text-transform: uppercase' >Relatorio de Produtos Cadastrados</h1>
 </div>
-
-    <main >
-        
-            <table class="table ">
+<main>
+    <table class="table ">
+        <thead>
             <tr class=''>
                 <td class =''>codigoproduto</td>
                 <td>nomeProduto</td>
-            <td>fabricanteProduto</td>
-                
+                <td>fabricanteProduto</td>
             </tr>
-        </table>
-        
-    </main>
-    <?php
-        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-        if(!$conexao){
-            die("<h3>Erro</h3>".mysqli_connect_error());
-        }
-        $sql = "select * from tbcadastropeca order by codigoproduto";
-        $result = mysqli_query($conexao, $sql);
+        </thead>
+        <tbody>
+            <?php
+                $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                if(!$conexao){
+                    die("<h3>Erro</h3>".mysqli_connect_error());
+                }
+                $sql = "select * from tbcadastropeca order by codigoproduto";
+                $result = mysqli_query($conexao, $sql);
 
-         echo"<link rel ='stylesheet' href='../css/style.css'>";
+                echo"<link rel ='stylesheet' href='../css/style.css'>";
 
 
-        while($linha_resultado = mysqli_fetch_array($result))
-            {
-               
-                echo"<tr class =''>";
-                echo "<td class =''> {$linha_resultado['codigoproduto']} </td>";
-                echo "<td> {$linha_resultado['nomeProduto']} </td>";
-                echo "<td> {$linha_resultado['fabricanteProduto']} </td>";
-                echo"</tr>";
-            }
-
-     ?>
+                while($linha_resultado = mysqli_fetch_array($result)){    
+                    echo"<tr class =''>";
+                    echo "<td class =''> {$linha_resultado['codigoproduto']} </td>";
+                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
+                    echo "<td> {$linha_resultado['fabricanteProduto']} </td>";
+                    echo"</tr>";
+                }
+            ?>
+        </tbody>
+    </table>
+</main>
    
     
     <div class =''style='display:flex;justify-content:center'>        

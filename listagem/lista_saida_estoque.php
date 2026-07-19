@@ -50,56 +50,46 @@ if(!isset($_SESSION['id_usuario'])){
      <h1 class=''style ='text-transform: uppercase' >Relação de Produtos Vendido/Saida</h1>
 </div>
 <div style ='width: px;height:20px;' > </div>
-
-
-    <main >
-
+<main >
     <table class="table ">
-        <tr class=''>
-            <td class =''>dataSaida</td>
-            <td>codigoPeca</td>
-           <td>nomePeca</td>
-           <td>quantidaPeca</td>
-           <td>numeroNf</td>
-           
-           <td>numeroOs</td>
-           
-                       
-        </tr>
+
+        <thead>
+            <tr class=''>
+                <td class =''>dataSaida</td>
+                <td>codigoPeca</td>
+                <td>nomePeca</td>
+                <td>quantidaPeca</td>
+                <td>numeroNf</td>
+                <td>numeroOs</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                if(!$conexao){
+                    die("<h3>Erro</h3>".mysqli_connect_error());
+                }
+                $sql = "select * from tbsaidaestoque order by dataSaida";
+                $result = mysqli_query($conexao, $sql);
+
+                echo"<link rel ='stylesheet' href='../css/style.css'>";
+
+
+                while($linha_resultado = mysqli_fetch_array($result)){
+                    echo"<tr class =''>";
+                    echo "<td class =''> {$linha_resultado['dataSaida']} </td>";
+                    echo "<td> {$linha_resultado['codigoPeca']} </td>";
+                    echo "<td> {$linha_resultado['nomePeca']} </td>";
+
+                    echo "<td> {$linha_resultado['quantidaPeca']} </td>";
+                    echo "<td> {$linha_resultado['numeroNf']} </td>";
+                    echo "<td> {$linha_resultado['numeroOs']} </td>";
+                    echo"</tr>";
+                }
+            ?>
+        </tbody>
     </table>
-       
-    </main>
-    
-    <?php
-        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-        if(!$conexao){
-            die("<h3>Erro</h3>".mysqli_connect_error());
-        }
-        $sql = "select * from tbsaidaestoque order by dataSaida";
-        $result = mysqli_query($conexao, $sql);
-
-         echo"<link rel ='stylesheet' href='../css/style.css'>";
-
-
-        while($linha_resultado = mysqli_fetch_array($result))
-            {
-               
-                echo"<tr class =''>";
-                echo "<td class =''> {$linha_resultado['dataSaida']} </td>";
-                echo "<td> {$linha_resultado['codigoPeca']} </td>";
-                echo "<td> {$linha_resultado['nomePeca']} </td>";
-
-                echo "<td> {$linha_resultado['quantidaPeca']} </td>";
-                echo "<td> {$linha_resultado['numeroNf']} </td>";
-
-                
-                echo "<td> {$linha_resultado['numeroOs']} </td>";
-                
-
-                echo"</tr>";
-            }
-
-     ?>
+<main>
 
      <div class =''style='display:flex;justify-content:center'>        
         <!-- Código correto para atualizar a página -->

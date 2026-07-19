@@ -55,44 +55,42 @@ if(!isset($_SESSION['id_usuario'])){
 <div style ='width: px;height:10px;' > </div>
 
 
-    <main >
+    
 
     <table class="table ">
-        <tr class=''>
-            <td class =''>codigoOS</td>
-            <td>codigoProduto</td>
-           <td>nomeProduto</td>
-           <td>quantidadeProduzida</td>
-                                  
-        </tr>
+        <thead>
+            <tr class=''>
+                <td class =''>codigoOS</td>
+                <td>codigoProduto</td>
+            <td>nomeProduto</td>
+            <td>quantidadeProduzida</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                if(!$conexao){
+                    die("<h3>Erro</h3>".mysqli_connect_error());
+                }
+                $sql = "select * from tbordemservico order by codigoOS";
+                $result = mysqli_query($conexao, $sql);
+
+                echo"<link rel ='stylesheet' href='../css/style.css'>";
+
+
+                while($linha_resultado = mysqli_fetch_array($result)){
+                    echo"<tr class =''>";
+                    echo "<td class =''> {$linha_resultado['codigoOS']} </td>";
+                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
+                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                    echo "<td> {$linha_resultado['quantidadeProduzida']} </td>";
+                    echo"</tr>";
+                }
+
+            ?>
+        </tbody>
     </table>
-       
-    </main>
-    
-    <?php
-        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-        if(!$conexao){
-            die("<h3>Erro</h3>".mysqli_connect_error());
-        }
-        $sql = "select * from tbordemservico order by codigoOS";
-        $result = mysqli_query($conexao, $sql);
-
-         echo"<link rel ='stylesheet' href='../css/style.css'>";
-
-
-        while($linha_resultado = mysqli_fetch_array($result))
-            {
-               
-                echo"<tr class =''>";
-                echo "<td class =''> {$linha_resultado['codigoOS']} </td>";
-                echo "<td> {$linha_resultado['codigoProduto']} </td>";
-                echo "<td> {$linha_resultado['nomeProduto']} </td>";
-
-                echo "<td> {$linha_resultado['quantidadeProduzida']} </td>";
-                echo"</tr>";
-            }
-
-     ?>
 
      <div class =''style='display:flex;justify-content:center'>        
         <!-- Código correto para atualizar a página -->

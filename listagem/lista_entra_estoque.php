@@ -53,40 +53,52 @@ if(!isset($_SESSION['id_usuario'])){
 <div class=''style='height:20px'> </div>
 <div style ='width: px;height:10px;' > </div>
     <main >
-    <table class="table ">
-        <tr class=''>
-            <td class =''>dataEntradaProduto</td>
-            <td>codigoProduto</td>
-           <td>nomeProduto</td>
-           <td>quantidadeProduto</td>
-           <td>nFProduto</td>
-        </tr>
+        <table class="table ">
+            <!-- pra estruturar a tabela-->
+            <thead>
+                <tr class=''>
+                    <td class =''>dataEntradaProduto</td>
+                    <td>codigoProduto</td>
+                    <td>nomeProduto</td>
+                    <td>quantidadeProduto</td>
+                    <td>nFProduto</td>
+                </tr>
+            </thead>
+        
+        <!-- pra estruturar a tabela-->
+            <tbody>
+                <?php
+                    $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                        if(!$conexao){
+                            die("<h3>Erro</h3>".mysqli_connect_error());
+                        }
+                    $sql = "select * from tbentradaestoque order by dataEntradaProduto";
+                    $result = mysqli_query($conexao, $sql);
+
+                    echo"<link rel ='stylesheet' href='../css/style.css'>";
+
+
+                    while($linha_resultado = mysqli_fetch_array($result)){
+                    
+                        echo"<tr class =''>";
+                        echo "<td class =''> {$linha_resultado['dataEntradaProduto']} </td>";
+                        echo "<td> {$linha_resultado['codigoProduto']} </td>";
+                        echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                        echo "<td> {$linha_resultado['quantidadeProduto']} </td>";
+                        echo "<td> {$linha_resultado['nFProduto']} </td>";
+                        echo"</tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
     </main>
-    
-    <?php
-        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-        if(!$conexao){
-            die("<h3>Erro</h3>".mysqli_connect_error());
-        }
-        $sql = "select * from tbentradaestoque order by dataEntradaProduto";
-        $result = mysqli_query($conexao, $sql);
 
-         echo"<link rel ='stylesheet' href='../css/style.css'>";
-
-
-        while($linha_resultado = mysqli_fetch_array($result))
-            {
-               
-                echo"<tr class =''>";
-                echo "<td class =''> {$linha_resultado['dataEntradaProduto']} </td>";
-                echo "<td> {$linha_resultado['codigoProduto']} </td>";
-                echo "<td> {$linha_resultado['nomeProduto']} </td>";
-
-                echo "<td> {$linha_resultado['quantidadeProduto']} </td>";
-                echo "<td> {$linha_resultado['nFProduto']} </td>";
-                echo"</tr>";
-            }
-
-     ?>
+    <div class =''style='display:flex;justify-content:center'>        
+        <!-- Código correto para atualizar a página -->
+        <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+            Atualizar Página
+        </button>
+    </div>
 </body>
 </html>

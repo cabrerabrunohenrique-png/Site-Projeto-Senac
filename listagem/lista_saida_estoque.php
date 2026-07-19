@@ -66,6 +66,7 @@ if(!isset($_SESSION['id_usuario'])){
            
                        
         </tr>
+    </table>
        
     </main>
     
@@ -99,5 +100,12 @@ if(!isset($_SESSION['id_usuario'])){
             }
 
      ?>
+
+     <div class =''style='display:flex;justify-content:center'>        
+        <!-- Código correto para atualizar a página -->
+        <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+            Atualizar Página
+        </button>
+    </div>
 </body>
 </html>

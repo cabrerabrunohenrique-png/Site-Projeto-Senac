@@ -45,9 +45,7 @@ if(!isset($_SESSION['id_usuario'])){
         </div>
         <div style="height: 15px"></div>
        
-    </nav>
-
-    
+    </nav>    
 </header>
 <div class=''style='height:10px'> </div>
 <div class='fontemenu' style='display: flex; justify-content: center '>
@@ -55,17 +53,17 @@ if(!isset($_SESSION['id_usuario'])){
 </div>
 
     <main >
-
-    <table class="table ">
-        <tr class=''>
-            <td class =''>codigoproduto</td>
-            <td>nomeProduto</td>
-           <td>fabricanteProduto</td>
-            
-        </tr>
-       
+        
+            <table class="table ">
+            <tr class=''>
+                <td class =''>codigoproduto</td>
+                <td>nomeProduto</td>
+            <td>fabricanteProduto</td>
+                
+            </tr>
+        </table>
+        
     </main>
-    
     <?php
         $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
         if(!$conexao){
@@ -88,5 +86,13 @@ if(!isset($_SESSION['id_usuario'])){
             }
 
      ?>
+   
+    
+    <div class =''style='display:flex;justify-content:center'>        
+        <!-- Código correto para atualizar a página -->
+        <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+            Atualizar Página
+        </button>
+    </div>
 </body>
 </html>

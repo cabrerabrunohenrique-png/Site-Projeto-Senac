@@ -53,10 +53,7 @@ if(!isset($_SESSION['id_usuario'])){
      <h1 class=''style ='text-transform: uppercase' >Relação de Ordem de Servios(OS)</h1>
 </div>
 <div style ='width: px;height:10px;' > </div>
-
-
-    
-
+<main>
     <table class="table ">
         <thead>
             <tr class=''>
@@ -91,6 +88,7 @@ if(!isset($_SESSION['id_usuario'])){
             ?>
         </tbody>
     </table>
+</main>
 
      <div class =''style='display:flex;justify-content:center'>        
         <!-- Código correto para atualizar a página -->

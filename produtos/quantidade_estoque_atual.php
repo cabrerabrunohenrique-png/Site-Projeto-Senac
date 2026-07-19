@@ -25,26 +25,15 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Quantidade</title>
 </head>
 <body class ="container bg-body-secondary">
-<header class='' >
-    <nav >
+
+    
         <div class ="" style="display:flex;justify-content: space-between;">
             <div>
-                <a class="letraFundoAzul caixa text-bg-success le fontemenu" href="../acessar_aos_relatorios.php">
-                    Relatorios
-                </a>
+                
+                    Estoque Atual
+               
             </div>
-            <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="quantidade_produto_entrada.php">
-                    Quantidade de Entrada por Produto
-                </a>
-            </div>
-           
-            <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="quantidade_produto_saida.php">
-                    Quantidade de Saida por Produto
-                </a>
-            </div>
-           
+                    
     
 
         </div>
@@ -53,60 +42,62 @@ if(!isset($_SESSION['id_usuario'])){
         <div style ='width: px;height:10px;' > </div>
         <main >
             <table class="fontemenu table ">
-            <tr class=' text-center le'>
-                
-            <td>codigo Produto</td>
-            <td>nome Produto</td>
-            <td>quantidade Produto</td>
-            
-            </tr>
-        </main>
-    
-        <?php
-            $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-            if(!$conexao){
-                die("<h3>Erro</h3>".mysqli_connect_error());
-            }
-        
-            $sql = "SELECT 
-                            e.codigoProduto,e.nomeProduto,
-                            (SUM(e.quantidadeProduto) - COALESCE(s.total_saida, 0)) AS saldo 
-                            FROM tbentradaestoque e
-                            LEFT JOIN (
-                            SELECT codigoPeca, SUM(quantidaPeca) AS total_saida 
-                            FROM tbsaidaestoque 
-                            GROUP BY codigoPeca
-                            ) s ON e.codigoProduto = s.codigoPeca
-                            GROUP BY e.codigoProduto,e.nomeProduto;
-                            ";
-            
-
-          $resultado = mysqli_query($conexao,$sql);
-                        
-  
-    
-            if($resultado){
-                             
-
-                while($linha_resultado = mysqli_fetch_assoc($resultado))
-                {
-               
-                    echo"<tr class ='text-center'>";
-                
-                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
-                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
-
-                    echo "<td> {$linha_resultado['saldo']} </td>";
+                <thead>
+                    <tr class=' text-center le'>
                     
-                    echo"</tr>";
-                
-                }
-                mysqli_close($conexao);
-            }
-    ?>
+                        <td>codigo Produto</td>
+                        <td>nome Produto</td>
+                        <td>quantidade Produto</td>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                        if(!$conexao){
+                            die("<h3>Erro</h3>".mysqli_connect_error());
+                        }
+                    
+                        $sql = "SELECT 
+                                        e.codigoProduto,e.nomeProduto,
+                                        (SUM(e.quantidadeProduto) - COALESCE(s.total_saida, 0)) AS saldo 
+                                        FROM tbentradaestoque e
+                                        LEFT JOIN (
+                                        SELECT codigoPeca, SUM(quantidaPeca) AS total_saida 
+                                        FROM tbsaidaestoque 
+                                        GROUP BY codigoPeca
+                                        ) s ON e.codigoProduto = s.codigoPeca
+                                        GROUP BY e.codigoProduto,e.nomeProduto;
+                        ";
+                        $resultado = mysqli_query($conexao,$sql);
+                        if($resultado){
 
-    
-</header>
+                            while($linha_resultado = mysqli_fetch_assoc($resultado)){
+                        
+                                echo"<tr class ='text-center'>";
+                            
+                                echo "<td> {$linha_resultado['codigoProduto']} </td>";
+                                echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                                echo "<td> {$linha_resultado['saldo']} </td>";
+                                
+                                echo"</tr>";
+                            
+                            }
+                            mysqli_close($conexao);
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </main>
+
+    <div class =''style='display:flex;justify-content:center'>        
+        <!-- Código correto para atualizar a página -->
+            <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+                Atualizar Página
+            </button>
+        </div>
+
 
     
 </body>

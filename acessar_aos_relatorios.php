@@ -77,15 +77,15 @@ if(!isset($_SESSION['id_usuario'])){
         </div>
 
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_entrada.php' target="_blank">Quantidade Lançado Por Produto</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_entrada.php' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Quantidade Lançado Por Produto</a>
         </div>
         <div style="height: 15px"> </div>   
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_saida.php' target="_blank">Quantidade Saida Por Produto</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_produto_saida.php' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Quantidade Saida Por Produto</a>
         </div>
         <div style="height: 15px"> </div>
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php' target="_blank">Estoque Atual</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Estoque Atual</a>
         </div>
 
     </main>

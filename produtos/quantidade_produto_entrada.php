@@ -25,76 +25,59 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Quantidade_entrada</title>
 </head>
 <body class ="container ">
-<header class='' >
-    <nav >
-        <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
-            <div>
-                <a class="letraFundoAzul caixa text-bg-success fontemenu le" href="../acessar_aos_relatorios.php">
-                    Relatorios
-                </a>
-            </div>
-            <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="quantidade_produto_saida.php">
-                    Quantidade de Saida por Produto
-                </a>
-            </div>
-           
+<header class='' ></header>
     
-
-        </div>
-       
+        <div class ="bg-body-secondary" style="display:flex;justify-content: center;">
+            
+            <div>
+                    Quantidade de Saida por Produto
+            </div>                  
+        </div>       
         <div class=''style='height:20px'> </div>
-        <div style ='width: px;height:10px;' > </div>
         <main >
             <table class="fontemenu table ">
-            <tr class=' text-center le'>
-                
-            <td>codigo Produto</td>
-            <td>nome Produto</td>
-            <td>quantidade Produto</td>
-            
-            </tr>
-        </main>
-    
-        <?php
-            $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-            if(!$conexao){
-                die("<h3>Erro</h3>".mysqli_connect_error());
-            }
-        
-            $sql = " select codigoProduto,nomeProduto, sum(quantidadeproduto) as quantidadetotal from tbentradaestoque  group by codigoProduto,nomeProduto ";
+                <thead>
+                    <tr class=' text-center le'>
+                        <td>codigo Produto</td>
+                        <td>nome Produto</td>
+                        <td>quantidade Produto</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                        if(!$conexao){
+                            die("<h3>Erro</h3>".mysqli_connect_error());
+                        }
+                        $sql = " select codigoProduto,nomeProduto, sum(quantidadeproduto) as quantidadetotal from tbentradaestoque  group by codigoProduto,nomeProduto ";
 
-
-            //SELECT  codigoProduto, MAX(nomeProduto) AS nomeProduto, SUM(quantidadeproduto) AS quantidadetotal FROM tbentradaestoque GROUP BY codigoProduto;
-
-                
-
-          $resultado = mysqli_query($conexao,$sql);
+                        $resultado = mysqli_query($conexao,$sql);
+                        if($resultado){
+                            while($linha_resultado = mysqli_fetch_assoc($resultado)){
                         
+                                echo"<tr class ='text-center'>";
+                            
+                                echo "<td> {$linha_resultado['codigoProduto']} </td>";
+                                echo "<td> {$linha_resultado['nomeProduto']} </td>";
+
+                                echo "<td> {$linha_resultado['quantidadetotal']} </td>";
+                                
+                                echo"</tr>";
+                            }
+                            mysqli_close($conexao);
+                         }
+                    ?>
+                </tbody>
+            </table>
+        </main>
+        <div class =''style='display:flex;justify-content:center'>        
+        <!-- Código correto para atualizar a página -->
+            <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+                Atualizar Página
+            </button>
+        </div>
   
-    
-            if($resultado){
-                             
 
-                while($linha_resultado = mysqli_fetch_assoc($resultado))
-                {
-               
-                    echo"<tr class ='text-center'>";
-                
-                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
-                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
-
-                    echo "<td> {$linha_resultado['quantidadetotal']} </td>";
-                    
-                    echo"</tr>";
-                
-                }
-                mysqli_close($conexao);
-            }
-    ?>
-
-    
-</header>
 
     
 </body>

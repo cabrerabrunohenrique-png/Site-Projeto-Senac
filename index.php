@@ -1,3 +1,12 @@
+<?php 
+ //para ler o aviso criado na validacao de usuario em bando de dados
+session_start(); 
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,7 +47,18 @@
         
     </nav>
     <div style='height:30px;' ></div>
+    
+        <?php if(isset($_SESSION['login'])){
+           ?> <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;" style=" display: flex; justify-content: center;">
+       <?php echo $_SESSION['login'];
+        unset($_SESSION['login']);
+
+    }
+    ?>
+    </div>
+    
     <div class='' style=" display: flex; justify-content: center;">
+        
         <form class="  " action="sqlLogin.php" method="post" onsubmit="return fnValidacao()">
             <div class=' ar fontemenu' style='height:100px; width:500px;'>
                 <label for="NomedeUsuario" class="">Nome de Usuario</label>

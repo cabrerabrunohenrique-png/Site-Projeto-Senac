@@ -1,4 +1,8 @@
+<?php 
+ //para ler o aviso criado na validacao de usuario em bando de dados
+session_start(); 
 
+?>
 
 
 <!DOCTYPE html>
@@ -35,12 +39,23 @@
       </div>
     </nav>
 </header>
+<?php if (isset($_SESSION['naoautorizaddo'])): ?>
+    <!-- Exibe a mensagem de erro de forma segura -->
+    <div style="color: red; font-weight: bold;">
+        <?= htmlspecialchars($_SESSION['naoautorizaddo'], ENT_QUOTES, 'UTF-8'); ?>
+    </div>
+    <?php 
+        // Limpa a mensagem da sessão para não bugar nos próximos acessos
+        unset($_SESSION['naoautorizaddo']); 
+    ?>
+<?php endif; ?>
 
 <div style='height:20px'></div>
  <main>
     <div class="centro " style='display: flex; justify-content: center '>
     <h1 class="fontemenu">Cadastro Novo Usuario</h1>
     </div>
+
     <div style='height:30px;' ></div>
     <div class='' style=" display: flex; justify-content: center;">
         <form class="  " action="sql/sqlAutorizacaoCadastroUsuario.php" method="post" onsubmit="return fnValidacao()">

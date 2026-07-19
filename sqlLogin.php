@@ -37,17 +37,8 @@
         }
         else {
             mysqli_close($conexao);
-        
-            echo"<link rel ='stylesheet' href='css/style.css'> <div style='display: flex; justify-content: center;' > 
-            <div class=''>
-            
-                
-                <a class='cp caixa  fontemenu' href='index.php'>
-                Voltar
-                </a>
-            </div>
-            </div>";
-            echo "<h1 class='letraFundoAzul  text-bg-info fontemenu le' >Usuário ou senha incorretos!</h1>";
+            $_SESSION['login']="Dados incorretos";
+            header('Location:index.php');
             exit;
         }
    

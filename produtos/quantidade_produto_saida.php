@@ -25,70 +25,74 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Quantidade_saida</title>
 </head>
 <body class ="container ">
-<header class='' >
-    <nav >
-        <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
+<header class='' > </header>
+  
+        <div class ="bg-body-secondary" style="display:flex;justify-content: center;">
+            
             <div>
-                <a class="letraFundoAzul caixa text-bg-success le fontemenu" href="../acessar_aos_relatorios.php">
-                    Relatorios
-                </a>
-            </div>
-            <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="quantidade_produto_entrada.php">
+                
                     Quantidade de Entrada por Produto
-                </a>
+               
             </div>
            
            
         </div>
        
         <div class=''style='height:20px'> </div>
-        <div style ='width: px;height:10px;' > </div>
+      
         <main >
             <table class="fontemenu table ">
-            <tr class=' text-center le'>
-                
-            <td>codigo Produto</td>
-            <td>nome Produto</td>
-            <td>quantidade Produto</td>
-            
-            </tr>
-        </main>
-    
-        <?php
-            $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-            if(!$conexao){
-                die("<h3>Erro</h3>".mysqli_connect_error());
-            }
-        
-            $sql = " select codigopeca,nomepeca, sum(quantidapeca) as quantidadetotal from tbsaidaestoque  group by codigopeca,nomepeca ";
-
-          $resultado = mysqli_query($conexao,$sql);
-                        
-  
-    
-            if($resultado){
-                             
-
-                while($linha_resultado = mysqli_fetch_assoc($resultado))
-                {
-               
-                    echo"<tr class ='text-center'>";
-                
-                    echo "<td> {$linha_resultado['codigopeca']} </td>";
-                    echo "<td> {$linha_resultado['nomepeca']} </td>";
-
-                    echo "<td> {$linha_resultado['quantidadetotal']} </td>";
+                <thead>
+                    <tr class=' text-center le'>
                     
-                    echo"</tr>";
+                        <td>codigo Produto</td>
+                        <td>nome Produto</td>
+                        <td>quantidade Produto</td>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
+                        if(!$conexao){
+                            die("<h3>Erro</h3>".mysqli_connect_error());
+                        }
+                    
+                        $sql = " select codigopeca,nomepeca, sum(quantidapeca) as quantidadetotal from tbsaidaestoque  group by codigopeca,nomepeca ";
+
+                        $resultado = mysqli_query($conexao,$sql);
+                                    
+            
                 
-                }
-                mysqli_close($conexao);
-            }
-    ?>
+                        if($resultado){
+                                        
+
+                            while($linha_resultado = mysqli_fetch_assoc($resultado)){
+                        
+                                echo"<tr class ='text-center'>";
+                            
+                                echo "<td> {$linha_resultado['codigopeca']} </td>";
+                                echo "<td> {$linha_resultado['nomepeca']} </td>";
+
+                                echo "<td> {$linha_resultado['quantidadetotal']} </td>";
+                                
+                                echo"</tr>";
+                            
+                            }
+                            mysqli_close($conexao);
+                        }   
+                    ?>
+                </tbody>
+            </table>
+        </main>
 
     
-</header>
+    <div class =''style='display:flex;justify-content:center'>        
+        <!-- Código correto para atualizar a página -->
+            <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+                Atualizar Página
+            </button>
+        </div>
 
     
 </body>

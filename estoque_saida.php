@@ -46,15 +46,16 @@ if(!isset($_SESSION['id_usuario'])){
             <div>
             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
             </div>
-       
-            <div>
-                <a class="letraFundoAzul caixa fontemenu le ar" href="../listagem/lista_saida_estoque.php" target="_blank" >Lista Saida do Estoque</a>
-            </div>          
-            
-            <div class="">
-                <a class="letraFundoAzul caixa fontemenu le text-bg-info" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
+             <div class="">
+                <a class="letraFundoAzul caixa fontemenu le text-bg-success" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
                 </a>
             </div>
+       
+            <div>
+                <a class="letraFundoAzul caixa fontemenu le ar text-bg-primary" href="../listagem/lista_saida_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Saida do Estoque</a>
+            </div>          
+            
+           
               
             
         </div>    
@@ -117,7 +118,7 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
             </div>
             <div class="gap-2 mt-4" style='display:flex;justify-content: center'>                              <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary"> Salvar  </button>
+                <button type="submit" class="btn btn-success"> Salvar Saida Produto do Estoque  </button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>

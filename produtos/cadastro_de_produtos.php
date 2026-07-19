@@ -49,7 +49,7 @@ if(!isset($_SESSION['id_usuario'])){
        
             <div class="">
                                
-                <a class="cp caixa  fontemenu" href='../listagem/listaProduto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
+                <a class="cp caixa  fontemenu text-bg-primary" href='../listagem/listaProduto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
             </div>
         </div>
         <div style="height: 15px"></div>

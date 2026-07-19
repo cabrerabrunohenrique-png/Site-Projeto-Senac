@@ -47,7 +47,7 @@ if(!isset($_SESSION['id_usuario'])){
              <a class="letraFundoAzul caixa fontemenu le text-bg-danger" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
              <div class="">
-             <a class='letraFundoAzul caixa fontemenu le cp' href="../listagem/lista_entra_estoque.php" target="_blank">Lista Entrada Estoque </a>
+             <a class='letraFundoAzul caixa fontemenu text-bg-primary le cp' href="../listagem/lista_entra_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista Entrada Estoque </a>
             </div>
         </div>
     </nav>
@@ -114,7 +114,7 @@ if(!isset($_SESSION['id_usuario'])){
     
             
             <div class=" gap-2 mt-4" style='display:flex;justify-content: center'>            
-                <button type="submit" class="btn btn-primary" >Salvar Cadastro</button>
+                <button type="submit" class="btn btn-success" >Salvar Entrada Produto Estoque </button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>

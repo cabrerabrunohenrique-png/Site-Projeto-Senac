@@ -47,6 +47,9 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
         <div class="">
             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
         </div>
+        <div class="">
+            <a class="letraPretoAzul caixa text-bg-primary  fontemenu le" href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista de Produtos</a>
+        </div>
         <div>
             <a  class="letraPretoAzul caixa cp fontemenu le" href="cadastro_de_produtos.php">Voltar</a>
         </div>

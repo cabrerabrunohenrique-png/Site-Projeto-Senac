@@ -37,10 +37,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
        
             <div class="">
-                <a class="ar caixa fontemenu" href='../listagem/lista_ordem_servico.php'>Lista Ordem de Servico(OS)</a>                
-            </div>
-            <div class="">
-                <!-- //link para acessar -->
+                
                 <a class="letraFundoAzul caixa fontemenu le os" href="ordem_de_servico.php">Voltar-Ordem de Servico(OS)
                 </a>
             </div>
@@ -48,7 +45,9 @@ if(!isset($_SESSION['id_usuario'])){
             <div class="">
                 <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="excluir_os.php">Excluir Ordem de Servico(OS)</a>
             </div>
-            
+             <div class="">
+                <a class="ar caixa fontemenu text-bg-primary" href='../listagem/lista_ordem_servico.php' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista Ordem de Servico(OS)</a>                
+            </div>
            
         
     </nav>

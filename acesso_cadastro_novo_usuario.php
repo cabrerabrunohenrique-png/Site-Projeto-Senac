@@ -39,14 +39,25 @@ session_start();
       </div>
     </nav>
 </header>
-<?php if (isset($_SESSION['naoautorizaddo'])): ?>
+<?php if (isset($_SESSION['nao'])): ?>
     <!-- Exibe a mensagem de erro de forma segura -->
     <div style="color: red; font-weight: bold;">
-        <?= htmlspecialchars($_SESSION['naoautorizaddo'], ENT_QUOTES, 'UTF-8'); ?>
+        <?= htmlspecialchars($_SESSION['nao'], ENT_QUOTES, 'UTF-8'); ?>
     </div>
     <?php 
         // Limpa a mensagem da sessão para não bugar nos próximos acessos
-        unset($_SESSION['naoautorizaddo']); 
+        unset($_SESSION['nao']); 
+    ?>
+<?php endif; ?>
+<?php if (isset($_SESSION['senha'])): ?>
+    <!-- Exibe a mensagem de erro de forma segura -->
+    
+    <div class="letraFundoAzul text-bg-danger fontemenu le" style="font-weight: bold;">
+        <?= htmlspecialchars($_SESSION['senha'], ENT_QUOTES, 'UTF-8'); ?>
+    </div>
+    <?php 
+        // Limpa a mensagem da sessão para não bugar nos próximos acessos
+        unset($_SESSION['senha']); 
     ?>
 <?php endif; ?>
 

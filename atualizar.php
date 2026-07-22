@@ -39,56 +39,52 @@ if(!isset($_SESSION['id_usuario'])){
             Voltar
             </a>
         </div>
-
-        
     </nav>
 
-   
-    
-
 </header>
-<main >
-   <div class=''style='height:20px'> </div>       
-        <div class='' style='display: flex; justify-content: center '>
-            <h1 class='fontemenu'style ='text-transform: uppercase ' >Atualizar Cadastro de Usuario</h1>
-        </div>
-
+<main>
+<div class=''style='height:20px'></div>
+<div class='' style='display: flex; justify-content: center '>
+  <h1 class='fontemenu'style ='text-transform: uppercase ' >Atualizar Cadastro de Usuario</h1>
+</div>
+<div class=''style='height:20px'></div>
 <form  action="sqlEditar.php" method="post"  onsubmit="return fnValidacaoB(event)" style="">
-          <div class="row g-3">
-            <div class="col-12">
-              <label for="nome_completo" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="nome_completo" name="nome_completo">
-            </div>
-            <div class="col-md-6">
-              <label for="nivel_de_permissao" class="form-label">Nivel de Permissao</label>
-              <select class="form-select" id="nivel_de_permissao" name="nivel_de_permissao">
-                <option selected value="">Selecione</option>
-                <option></option>
-                <option>Adm</option>
-                <option>Usuario Comum</option>
-                <option>Usuario Restrito</option>
-                
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <label for="nome_de_usuario" class="form-label">Nome de Usuario</label>
-              <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
-            </div>
-            <div class="col-md-6">
-              <label for="senhade_de_acesso" class="form-label">Senha de Acesso</label>
-              <input type="password" class="form-control" id="senhade_de_acesso" name="senhade_de_acesso">
-            </div>
-            <div class="col-md-6">
-              <label for="senha_de_acesso" class="form-label">Confirmar Senha de Acesso</label>
-              <input type="password" class="form-control" id="senha_de_acesso" name="senha_de_acesso">
-            </div>
-            <div class="d-flex gap-2 mt-4">
-                        
-                <button type="submit" class="btn btn-primary" ">Atualizar</button>
-                
-            </div>
-    </form>
+  <div class=" g-3" style="display:flex;justify-content: space-between;">
+    <div class="col-4">
+      <label for="nome_completo" class="form-label">Nome Completo</label>
+      <input type="text" class="form-control" id="nome_completo" name="nome_completo">
+    </div>
+    <div class="col-md-2">
+      <label for="nivel_de_permissao" class="form-label">Nivel de Permissao</label>
+        <select class="form-select" id="nivel_de_permissao" name="nivel_de_permissao">
+          <option selected value="">Selecione</option>
+          <option></option>
+          <option>Adm</option>
+          <option>Usuario Comum</option>
+          <option>Usuario Restrito</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+      <label for="nome_de_usuario" class="form-label">Nome de Usuario</label>
+      <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
+    </div>
+  </div>
+  <div style="display:flex;justify-content: space-between;" class=" g-3">
+    
+    <div class="col-md-4">
+      <label for="senhade_de_acesso" class="form-label">Senha de Acesso</label>
+      <input type="password" class="form-control" id="senhade_de_acesso" name="senhade_de_acesso">
+    </div>
+    <div class="col-md-4">
+      <label for="senha_de_acesso" class="form-label">Confirmar Senha de Acesso</label>
+      <input type="password" class="form-control" id="senha_de_acesso" name="senha_de_acesso">
+    </div>
+  </div>
+  <div class=''style='height:20px'></div>
+  <div style="display:flex;justify-content: center;">
+    <button type="submit" class="btn btn-primary" ">Atualizar</button>
+  </div>
+</form>
 
 </main>
     

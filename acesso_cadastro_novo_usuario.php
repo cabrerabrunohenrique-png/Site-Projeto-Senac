@@ -41,7 +41,7 @@ session_start();
 </header>
 <?php if (isset($_SESSION['nao'])): ?>
     <!-- Exibe a mensagem de erro de forma segura -->
-    <div style="color: red; font-weight: bold;">
+    <div class="letraFundoAzul text-bg-warning fontemenu le" style="font-weight: bold;">
         <?= htmlspecialchars($_SESSION['nao'], ENT_QUOTES, 'UTF-8'); ?>
     </div>
     <?php 

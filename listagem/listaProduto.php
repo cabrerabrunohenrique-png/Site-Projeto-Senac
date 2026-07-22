@@ -36,9 +36,9 @@ if(!isset($_SESSION['id_usuario'])){
     <table class="table ">
         <thead>
             <tr class=''>
-                <td class =''>codigoproduto</td>
-                <td>nomeProduto</td>
-                <td>fabricanteProduto</td>
+                <th class =''>codigoproduto</th>
+                <th>nomeProduto</th>
+                <th>fabricanteProduto</th>
             </tr>
         </thead>
         <tbody>

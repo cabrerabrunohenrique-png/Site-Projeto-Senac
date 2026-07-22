@@ -29,7 +29,7 @@
                 header('Location: ../FormularioCadastroNovoUsuario.php'); 
                 
             }
-            else{$_SESSION['nao'] ="Sem permissão";
+            else{$_SESSION['nao'] ="Você não tem autorização para fazer cadastro de novos usuarios";
             header('Location:../acesso_cadastro_novo_usuario.php');
             
 

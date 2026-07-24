@@ -5,18 +5,21 @@ function fnValidacao(event){
     const campoNome = document.getElementById("NomeCompleto");    
     if(campoNome){
             let nomeCompleto = campoNome.value.trim();
+
             if(nomeCompleto.length >=50 || nomeCompleto.length <5 || nomeCompleto ===""){
-                event.preventDefault();
-                alert('O campo NOME COMPLETO nao pode ficar FICAR VAZIO.\nNão pode ter menos que 6 caracteres.\nNão pode conter mais de 50 caracteres')
-                campoNome.focus();
-                campoNome.value="";
+                //event.preventDefault();
+                exibirErro(campoNome, "O campo Nome Completo é obrigatório e não pode ficar vazio."+
+                    "\nNão pode ter menos que 5 caracteres." +
+                    "\nNão pode ter mais  que 50 caracteres.", event);
                 return false;
             }
             if (nomeCompleto.split(' ').length < 2)
             {
-                alert('O nome completo deve conter pelo menos um sobrenome')
-                campoNome.value="";
-                campoNome.focus();
+                //alert('O nome completo deve conter pelo menos O campo Nome Completo é obrigatório e não pode ficar vazio. sobrenome')
+               //campoNome.value="";
+                //campoNome.focus();
+                exibirErro(campoNome, "O nome completo deve conter pelo menos um sobrenome.", event);
+            
                 return false;
             }
 
@@ -24,10 +27,8 @@ function fnValidacao(event){
             const Temnumero = [...nomeCompleto].some(char => char >='0' && char <='9');
 
             if(Temnumero)
-            { 
-                alert('O nome completo nao pode ter numeros')
-                campoNome.value="";
-                campoNome.focus();
+            {   exibirErro(campoNome, "O nome completo NAO PODE conter numeros.", event);
+                
                 
                 return false;
 
@@ -37,37 +38,39 @@ function fnValidacao(event){
 
             if (temSimboloOuPontuacao)
             {
-                alert("O nome completo não pode conter símbolos ou pontuação.");
-                campoNome.value = "";
-                campoNome.focus();
+                exibirErro(campoNome, "O nome completo NÃO PODE CONTER PONTUAÇÃO.", event);
                 return false;
             } 
+
+            limparErro(campoNome); 
+
             const campoRegistro = document.getElementById("NumerodeRegistro")
             let  numerodeRegistro = campoRegistro.value.trim();
         
             const regeDuracao = /^\d+$/
 
             if(!regeDuracao.test(numerodeRegistro) || numerodeRegistro =="" || parseInt(numerodeRegistro) <= 0 )
-            {
-                alert("Informe um numero inteiro maior que 0 ");
-                campoRegistro.value="";
-                campoRegistro.focus();
+            {   exibirErro(campoRegistro,"Informe um numero inteiro maior que 0",event);
+                
                 return false;
-                ;
+                
 
             }
+
+            limparErroE(campoRegistro);
+
             const campoPermisao  = document.getElementById("NiveldePermisao")
             let niveldePermisao  = campoPermisao.value.trim();
 
             if(   niveldePermisao ==="")
             {
-                alert("O campo Permisao precisa ser preenchido")
-                campoPermisao.value="";
-                campoPermisao.focus();
-                event.preventDefault();
+                exibirErro(campoPermisao,"O campo Permisao precisa ser preenchido",event);
+                               
                 return false;
 
             }
+            limparErrof(campoPermisao);
+            
 
             const campoNomeUsuario = document.getElementById("nome_de_usuario")
             let UsuarioRestrito = campoNomeUsuario.value.trim();
@@ -107,6 +110,40 @@ function fnValidacao(event){
             }  
         }  
         return true;
+    }
+
+    function exibirErro(nomeCompleto, mensagem,event) {
+        event.preventDefault();
+        nomeCompleto.focus();
+        nomeCompleto.classList.add('is-invalid'); // Adiciona borda vermelha no input
+        alert(mensagem);
+    
+    }
+
+    function limparErro(nomeCompleto) {
+    nomeCompleto.classList.remove('is-invalid'); // Desliga a borda vermelha
+    }
+
+    function codigo(codigo, messagem,event){
+        event.preventDefault();
+        codigo.focus();
+        codigo.classList.add('is-invalid');
+        alert(messagem)
+    }
+
+    function limparErroE(codigo) {
+    codigo.classList.remove('is-invalid'); // Desliga a borda vermelha
+    }
+
+    function nivelPermisa(permisaso){
+        event.preventDefault();
+        permisaso.focus();
+        permisaso.classList.add('is-invalid');
+        alert(messagem)
+    }
+
+     function limparErrof(permisaso) {
+    permisaso.classList.remove('is-invalid'); // Desliga a borda vermelha
     }
 
     
@@ -177,6 +214,7 @@ function fnValidacaoB(event){
             return false;
         }
     }
+
     const regexSenhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     const campoAtualizarSenha = document.getElementById("senhade_de_acesso");
     let atualizarsenha = campoAtualizarSenha.value.trim();
@@ -194,20 +232,22 @@ function fnValidacaoB(event){
     if (camposenha_de_acesso) {
         let ConfirmarSenhadeAcesso = camposenha_de_acesso.value.trim();
 
-       if (ConfirmarSenhadeAcesso === "" || ConfirmarSenhadeAcesso !== atualizarsenha) {
-        event.preventDefault(); 
-        
-        // Mensagem dinâmica para ajudar o usuário
-        if (ConfirmarSenhadeAcesso === "") {
-            alert("O campo de confirmação de senha não pode ficar vazio.");
-            camposenha_de_acesso.focus();
-        } else {
-            alert("A senha não bate.");
-            camposenha_de_acesso.value = "";
-            campoAtualizarSenha.value = "";
-            campoAtualizarSenha.focus();
+        if (ConfirmarSenhadeAcesso === "" || ConfirmarSenhadeAcesso !== atualizarsenha) {
+            event.preventDefault(); 
+            
+            // Mensagem dinâmica para ajudar o usuário
+            if (ConfirmarSenhadeAcesso === "") {
+                alert("O campo de confirmação de senha não pode ficar vazio.");
+                camposenha_de_acesso.focus();
+            } else {
+                alert("A senha não bate.");
+                camposenha_de_acesso.value = "";
+                campoAtualizarSenha.value = "";
+                campoAtualizarSenha.focus();
+            }
+            
+            return false;
         }
-        
-        return false;
-    }} 
+    }
 }
+        

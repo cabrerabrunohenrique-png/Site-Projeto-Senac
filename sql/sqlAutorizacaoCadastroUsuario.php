@@ -25,7 +25,7 @@
             $_SESSION['permissao'] = $dados['nivelPermisao'];
             mysqli_close($conexao);
         
-            if ($_SESSION['permissao'] == 'adm') {
+            if ($_SESSION['permissao'] == 'Adm') {
                 header('Location: ../FormularioCadastroNovoUsuario.php'); 
                 
             }

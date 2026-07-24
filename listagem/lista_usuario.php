@@ -83,7 +83,7 @@ if(!isset($_SESSION['id_usuario'])){
     }
 
     .table tbody tr:hover {
-      background-color: #f1f1f1; /* Efeito visual ao passar o mouse */
+      background-color:#bebb4c65; /* Efeito visual ao passar o mouse */
     }
   </style>
 </head>

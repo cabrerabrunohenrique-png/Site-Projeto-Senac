@@ -65,7 +65,7 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
 </div>
     <main >
         <form action="sqlEditarProduto.php" method="post" onsubmit="return fnproduto(event)">
-        <div class='' style='display: flex; justify-content: space-between'>    
+        <div class='mm' style='display: flex; justify-content: space-between'>    
             <div class="col-md-3 ">
                 <label for="data" class="form-label">Data Alteracao</label>
                 <input type="date" class="form-control s" id="data" name="data">         
@@ -83,7 +83,16 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
             
             <div class="col-3">
                 <label for="nome_do_produto" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto " >
+                <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto" >
+                <?php if(isset($_SESSION['nomeEcodigo'])) { ?>
+                    <div class="letraFundoAzul text-bg-danger fontemenu le mm" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+                        <?php
+                            echo $_SESSION['nomeEcodigo'];
+                            unset($_SESSION['nomeEcodigo']) ;
+                        ?>
+                    </div>
+                <?php } ?>
+                    
             </div>
         </div>
         <div class='' style ='display: flex; justify-content: space-between'>
@@ -93,8 +102,8 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
             </div>
 
             <div class="col-md-3">
-                <label for="variavel" class="form-label">Variavel do Produto</label>
-                <input type="number" class="form-control s" id="variavel" name="variavel">
+                <label for="varaiveldoproduto" class="form-label">Variavel do Produto</label>
+                <input type="number" class="form-control s" id="varaiveldoproduto" name="variavel">
             </div>
             <div class="col-md-3">
                 <label for="familia" class="form-label">Familia</label>

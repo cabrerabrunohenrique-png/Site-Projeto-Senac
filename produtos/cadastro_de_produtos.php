@@ -117,10 +117,10 @@ if(!isset($_SESSION['id_usuario'])){
           
             <div style='display: flex; justify-content: center ' class=' gap-3'>
                 <div class="col-md-3">
-                    <label for="variavel" class="form-label">Variavel do Produto</label>
+                    <label for="varaiveldoproduto" class="form-label">Variavel do Produto</label>
                     <div class="input-group">
                         
-                        <input type="number" class="form-control s" id="variavel" name="variavel">
+                        <input type="number" class="form-control s" id="varaiveldoproduto" name="variavel">
                     </div>
                     
                 </div>

@@ -17,13 +17,11 @@ if(!isset($_SESSION['id_usuario'])){
     $data = $_POST['data']??'';
     $codigodoproduto =$_POST['codigo_do_produto']??'';
                 //deixa tudo minusculo
-    $fabricante = mb_strtolower     //remove todos os espaco extra por espaco simples
-                                (preg_replace('/\s+/',' ',
-                                                            ($_POST['fabricante']??'')),'utf-8');
-    $nomedoproduto =mb_strtolower(preg_replace('/\s+/',' ',($_POST['nome_do_produto']??'')),'utf-8');
+    $fabricante = mb_strtolower (trim(preg_replace('/\s+/',' ',$_POST['fabricante']??'')),'utf-8');
+    $nomedoproduto = mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['nome_do_produto']??'')),'utf-8');
     $variavel= $_POST['variavel']??'';
-    $familia = mb_strtolower(preg_replace('/\s+/',' ',($_POST['familia']??'')),'utf-8');
-    $categoria =mb_strtolower(preg_replace('/\s+/',' ',($_POST['categoria']??'')),'utf-8');
+    $familia = mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['familia']??'')),'utf-8');
+    $categoria =mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['categoria']??'')),'utf-8');
     $valor = $_POST['preco']??'';
 
 

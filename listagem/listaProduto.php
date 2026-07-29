@@ -109,9 +109,14 @@ if(!isset($_SESSION['id_usuario'])){
     <table class="table ">
         <thead>
             <tr class=''>
-                <th class =''>codigoproduto</th>
-                <th>nomeProduto</th>
-                <th>fabricanteProduto</th>
+                <th class =''>Codigo do Produto</th>
+                <th>Nome do Produto</th>
+                <th>Variavel do Produto</th>
+                <th>Familia do Produto</th>
+                <th>Data de Cadastro </th>
+                <th>Categoria do Produto</th>
+                <th>Preço do Produto R$</th>
+                <th>Data da ultima Alteração</th>
             </tr>
         </thead>
         <tbody>
@@ -130,7 +135,13 @@ if(!isset($_SESSION['id_usuario'])){
                     echo"<tr class =''>";
                     echo "<td class =''> {$linha_resultado['codigoproduto']} </td>";
                     echo "<td> {$linha_resultado['nomeProduto']} </td>";
-                    echo "<td> {$linha_resultado['fabricanteProduto']} </td>";
+                    echo "<td> {$linha_resultado['variavelproduto']} </td>";
+                   
+                    echo "<td> {$linha_resultado['familiaproduto']} </td>";
+                    echo "<td> {$linha_resultado['datacriacao']} </td>";
+                    echo "<td> {$linha_resultado['categoriaproduto']} </td>";
+                    echo "<td> {$linha_resultado['preco']} </td>";
+                    echo "<td> {$linha_resultado['dataalteracao']} </td>";
                     echo"</tr>";
                 }
             ?>

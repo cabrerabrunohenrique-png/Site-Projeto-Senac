@@ -46,7 +46,7 @@ if(!isset($_SESSION['id_usuario'])){
     }
     elseif($linha=== 0) {
         mysqli_close($conexao);
-        echo "<link rel='stylesheet' href='css/style.css'>"; 
+        echo "<link rel='stylesheet' href='../css/style.css'>"; 
         echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 40px; font-family: sans-serif;'>"; 
         
         // Texto de aviso no topo, destacado e elegante

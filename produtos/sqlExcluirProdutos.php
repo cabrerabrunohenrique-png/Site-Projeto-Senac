@@ -48,7 +48,8 @@ if(!isset($_SESSION['id_usuario'])){
     else {
         mysqli_close($conexao);
        
-        echo "<link rel='stylesheet' href='css/style.css'>"; 
+        echo "<link rel='stylesheet' href='../css/style.css'>"; 
+        echo "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB' crossorigin='anonymous'>";
         echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 40px; font-family: sans-serif;'>"; 
         
         // Texto de aviso no topo, destacado e elegante
@@ -56,12 +57,12 @@ if(!isset($_SESSION['id_usuario'])){
 
         // Bloco dos botões alinhados
         echo "    <div style='display: flex; justify-content: center;'>"; 
-        echo "        <div class='box_cinza_claro' style='background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
+        echo "        <div class='cp caixa  fontemenu '>"; 
         echo "            <a class='box_letra' href='cadastro_de_produtos.php' style='text-decoration: none; color: #333; font-weight: bold;'> Cadastro de Produtos </a>"; 
         echo "        </div>"; 
         echo "        <div style='width: 15px;'></div>"; // Corrigido o erro da aspa que sumia com o botão do Menu
-        echo "        <div class='box_cinza_claro' style='background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
-        echo "            <a class='box_letra' href='../navegacao.php' style='text-decoration: none; color: #333; font-weight: bold;'> Menu </a>"; 
+        echo "        <div class=' caixa  fontemenu  letraFundoAzul text-bg-info'> "; 
+        echo "            <a class='box_letra ' href='../navegacao.php' style='text-decoration: none; color: #333; font-weight: bold;'> Menu </a>"; 
         echo "        </div>"; 
         echo "    </div>"; 
         echo "</div>"; 

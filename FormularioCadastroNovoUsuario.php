@@ -114,7 +114,7 @@ if(!isset($_SESSION['id_usuario'])){
             unset($_SESSION['erro_cadastro']); // Apaga da memória para o erro sumir se a página for atualizada
           ?>
           <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO?>
-        </d>
+        </div>
       </div>
     </div>
     <div class='' style="display:flex;justify-content: space-evenly;">

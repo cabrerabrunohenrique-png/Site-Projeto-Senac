@@ -14,7 +14,7 @@ if(!isset($_SESSION['id_usuario'])){
 
     $nomecompleto =$_POST['nome_completo']??''; 
     $niveldepermissao= $_POST['nivel_de_permissao']??'';
-    $nomedeusuario =$_POST['nome_de_usuario']??'';
+    $nomedeusuario = mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['nome_de_usuario']??'')),'utf-8');
     $senhadeacesso =$_POST['senha_de_acesso']??'';
    
     
@@ -34,8 +34,13 @@ if(!isset($_SESSION['id_usuario'])){
    
     if ($linha >0) {
         mysqli_close($conexao);
-        echo 'Atualizado com sucesso';
-        header('Refresh: 2; url=index.php');
+        echo "    <div style='display: flex; justify-content: center;'>"; 
+        echo "        <div class='box_cinza_claro' style='background: #0bfd64; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
+        
+        echo"<h1> Alterado com SUCESSO</h1>";
+        echo "        </div>";
+        
+        header('Refresh: 2; url=FormularioCadastroNovousuario.php');
         exit;
     }
     elseif($linha=== 0) {

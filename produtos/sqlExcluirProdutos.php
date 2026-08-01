@@ -35,7 +35,7 @@ if(!isset($_SESSION['id_usuario'])){
     if ($linha > 0 ) {
         mysqli_close($conexao);
         echo "    <div style='display: flex; justify-content: center;'>"; 
-        echo "        <div class='box_cinza_claro' style='background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
+        echo "        <div class='box_cinza_claro' style='background: #f21919; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
         
         echo"<h1> Excluido com SUCESSO</h1>";
         echo "        </div>";

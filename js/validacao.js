@@ -249,5 +249,17 @@ function fnValidacaoB(event){
             return false;
         }
     }
+
+    const campo_data = document.getElementById('data');
+
+    if(campo_data ){
+        let data = campo_data.value.trim();
+
+        if( data ===""){
+            alert("O campo Data de Alteração não pode ficar vazio");
+            campo_data.focus();
+            return false;
+        }
+    }
 }
         

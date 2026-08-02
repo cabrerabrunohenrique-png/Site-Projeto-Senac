@@ -67,13 +67,24 @@ if(!isset($_SESSION['id_usuario'])){
     <div class="col-md-3">
       <label for="nome_de_usuario" class="form-label">Nome de Usuario</label>
       <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
-    </div>
-  </div>
+      <?php if(isset($_SESSION['usuario'])){?>
+          <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px;     padding: 5px; border-radius: 4px; font-size: 0.9rem;">
+            <?php echo $_SESSION['usuario'];
+            unset($_SESSION['usuario']); ?>
+          </div>
+          <?php } ?>
+    </div> 
+  </div>   
   <div style="display:flex;justify-content:space-between;" class=" g-3">
     
     <div class="col-md-3">
       <label for="senhade_de_acesso" class="form-label">Senha de Acesso</label>
+      
+     
       <input type="password" class="form-control" id="senhade_de_acesso" name="senhade_de_acesso">
+
+   
+
     </div>
     <div class="col-md-3">
       <label for="senha_de_acesso" class="form-label">Confirmar Senha de Acesso</label>
@@ -93,5 +104,5 @@ if(!isset($_SESSION['id_usuario'])){
 </main>
     
 </body>
-<script src="js/validacao.js"></script>
+<script src="/js/validacao.js"></script>
 </html>

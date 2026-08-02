@@ -8,9 +8,11 @@ function fnValidacao(event){
 
             if(nomeCompleto.length >=50 || nomeCompleto.length <5 || nomeCompleto ===""){
                 //event.preventDefault();
-                exibirErro(campoNome, "O campo Nome Completo é obrigatório e não pode ficar vazio."+
-                    "\nNão pode ter menos que 5 caracteres." +
-                    "\nNão pode ter mais  que 50 caracteres.", event);
+                exibirErro(campoNome, "Atenção: É obrigatório preenchimento."+
+                    "\n Atenção: Não pode haver menos que 5 caracteres." +
+                    "\n Atenção: Não pode haver mais  que 50 caracteres.", event);
+                
+                
                 return false;
             }
             if (nomeCompleto.split(' ').length < 2)
@@ -18,7 +20,7 @@ function fnValidacao(event){
                 //alert('O nome completo deve conter pelo menos O campo Nome Completo é obrigatório e não pode ficar vazio. sobrenome')
                //campoNome.value="";
                 //campoNome.focus();
-                exibirErro(campoNome, "O nome completo deve conter pelo menos um sobrenome.", event);
+                exibirErro(campoNome, "Atenção: O nome  deve conter pelo menos um sobrenome.", event);
             
                 return false;
             }
@@ -27,18 +29,18 @@ function fnValidacao(event){
             const Temnumero = [...nomeCompleto].some(char => char >='0' && char <='9');
 
             if(Temnumero)
-            {   exibirErro(campoNome, "O nome completo NAO PODE conter numeros.", event);
+            {   exibirErro(campoNome, "Atenção: Numeros  não são permitidos.", event);
                 
                 
                 return false;
 
             }
                     //nao tem o ANY para pontuacao entao teve que usar o REGEX
-            const temSimboloOuPontuacao = [...nomeCompleto].some(char => /[^\w\sÀ-ÿ]/.test(char));
+            const temSimboloOuPontuacao = [...nomeCompleto].some(char => /[^\w\s]/.test(char));
 
             if (temSimboloOuPontuacao)
             {
-                exibirErro(campoNome, "O nome completo NÃO PODE CONTER PONTUAÇÃO.", event);
+                exibirErro(campoNome, "Atenção: Caracteres especiais e pontuação não são permitidos.", event);
                 return false;
             } 
 
@@ -50,26 +52,30 @@ function fnValidacao(event){
             const regeDuracao = /^\d+$/
 
             if(!regeDuracao.test(numerodeRegistro) || numerodeRegistro =="" || parseInt(numerodeRegistro) <= 0 )
-            {   exibirErro(campoRegistro,"Informe um numero inteiro maior que 0",event);
+            {   exibirErro(campoRegistro,"Atenção: Informe um numero inteiro maior que 0",event);
                 
                 return false;
                 
 
             }
 
-            limparErroE(campoRegistro);
+            limparErro(campoRegistro)
+
+            
 
             const campoPermisao  = document.getElementById("NiveldePermisao")
             let niveldePermisao  = campoPermisao.value.trim();
 
             if(   niveldePermisao ==="")
             {
-                exibirErro(campoPermisao,"O campo Permisao precisa ser preenchido",event);
+                exibirErro(campoPermisao,"Atenção: O campo Permisao precisa ser preenchido",event);
                                
                 return false;
 
             }
-            limparErrof(campoPermisao);
+
+            limparErro(campoPermisao);
+            
             
 
             const campoNomeUsuario = document.getElementById("nome_de_usuario")
@@ -77,12 +83,20 @@ function fnValidacao(event){
 
             if( UsuarioRestrito ==="")
             {
-                alert("O campo Usuario precisa ser preenchido")
-                campoNomeUsuario.value="";
-                campoNomeUsuario.focus();
+                exibirErro(campoNomeUsuario,"Ateção: O campo precisa ser preenchido",event)
+                              
                 return false;
             }
 
+            const pontuacao = [...UsuarioRestrito ].some(char => /[^\w\s]/.test(char) );
+            if(pontuacao)
+            {
+            exibirErro(campoNomeUsuario,"Atenção: caracteres especiais e pontuação não são permitidos.",event);
+                return false;
+            }
+
+            limparErro(campoNomeUsuario);
+            
 
             const regexSenhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
             const campoSenha = document.getElementById("SenhadeAcesso");
@@ -91,62 +105,43 @@ function fnValidacao(event){
             
             if( !regexSenhaForte.test(SenhadeAcesso) || SenhadeAcesso ==="")
             {   
-                alert("A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e pelo menos um caractere especial (ex: @, $, !, %, *, ?, &).")
-                campoSenha.value="";
-                campoSenha.focus();
+                exibirErro( campoSenha,"Atenção: A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e pelo menos um caractere especial (ex: @, $, !, %, *, ?, &).",event)
+                
                 return false;
             }
+
+            limparErro(campoSenha);
 
             const campoConfirmasenha = document.getElementById("ConfirmarSenhadeAcesso");
             if(campoConfirmasenha){
                 let ConfirmarSenhadeAcesso = campoConfirmasenha.value.trim();
                 if(ConfirmarSenhadeAcesso !=SenhadeAcesso){
-                    alert ("A senha nao bate.")
-                    campoConfirmasenha.value="";
-                    campoSenha.value="";
-                    campoSenha.focus();
+                    exibirErro(campoConfirmasenha,"Atenção: A senha nao bate.",event)
+                    
                     return false;
                 }
             }  
+
+            limparErro(campoConfirmasenha);
+
+
         }  
         return true;
     }
 
-    function exibirErro(nomeCompleto, mensagem,event) {
+    function exibirErro(campo, mensagem,event) {
         event.preventDefault();
-        nomeCompleto.focus();
-        nomeCompleto.classList.add('is-invalid'); // Adiciona borda vermelha no input
+        campo.focus();
+        campo.classList.add('is-invalid'); // Adiciona borda vermelha no input
         alert(mensagem);
     
     }
 
-    function limparErro(nomeCompleto) {
-    nomeCompleto.classList.remove('is-invalid'); // Desliga a borda vermelha
+    function limparErro(campo) {
+    campo.classList.remove('is-invalid'); // Desliga a borda vermelha
     }
 
-    function codigo(codigo, messagem,event){
-        event.preventDefault();
-        codigo.focus();
-        codigo.classList.add('is-invalid');
-        alert(messagem)
-    }
-
-    function limparErroE(codigo) {
-    codigo.classList.remove('is-invalid'); // Desliga a borda vermelha
-    }
-
-    function nivelPermisa(permisaso){
-        event.preventDefault();
-        permisaso.focus();
-        permisaso.classList.add('is-invalid');
-        alert(messagem)
-    }
-
-     function limparErrof(permisaso) {
-    permisaso.classList.remove('is-invalid'); // Desliga a borda vermelha
-    }
-
-    
+       
 
 
 function fnValidacaoB(event){
@@ -188,7 +183,7 @@ function fnValidacaoB(event){
         } 
 
     }
-    const campoNivelPermissao = document.getElementById("nivel_de_permissao");
+    const campoNivelPermissao = document.getElementById("NiveldePermisao");
     if( campoNivelPermissao){
         
         let atualizarnivel = campoNivelPermissao.value.trim();

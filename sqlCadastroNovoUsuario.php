@@ -13,10 +13,10 @@ if(!isset($_SESSION['id_usuario'])){
 
 <?php
 
-    $nomecompleto =mb_strtolower($_POST['nome_completo']??'','utf-8');
+    $nomecompleto =mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['nome_completo']??'')),'utf-8');
     $numeroderegistro =$_POST['numero_de_registro']??'';
     $niveldepermissao= $_POST['nivel_de_permissao']??'';
-    $nomedeusuario =$_POST['nome_de_usuario']??'';
+    $nomedeusuario =mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['nome_de_usuario']??'')),'utf-8');
     $senhadeacesso =$_POST['senha_de_acesso']??'';
 
     nomeExiste($nomecompleto);

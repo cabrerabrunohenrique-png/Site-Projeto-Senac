@@ -59,7 +59,7 @@ if(!isset($_SESSION['id_usuario'])){
   <div class="centro " style='display: flex; justify-content: center; align-items: center;gap: 15px; '>
     <h1 class="fontemenu">Cadastro Novo Usuario</h1>
     <div class=" " >
-      <a style="text-decoration: none;" href ="../listagem/lista_usuario.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >lista </a>
+      <a style="text-decoration: none;" href ="../listagem/lista_usuario.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Relação de Usuarios </a>
     </div>
   </div>
   

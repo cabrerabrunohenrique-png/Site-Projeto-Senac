@@ -13,7 +13,7 @@ if(!isset($_SESSION['id_usuario'])){
 <?php
     $nomecompleto =$_POST['nome_completo']??'';
     $nomedeusuario =$_POST['nome_de_usuario']??'';
-    $senhadeacesso =$_POST['senhade_de_acesso']??'';
+    
 
     
     /*abri conexao*/
@@ -25,7 +25,7 @@ if(!isset($_SESSION['id_usuario'])){
 
     #inserir os dados
 
-    $sql = " delete from tbcadastronovousuario where nomeCompleto ='$nomecompleto' and nomeUsuario='$nomedeusuario' and senhaAcesso='$senhadeacesso'";
+    $sql = " delete from tbcadastronovousuario where nomeCompleto ='$nomecompleto' and nomeUsuario='$nomedeusuario'";
 
     $resultado = mysqli_query($conexao,$sql);
                     
@@ -34,12 +34,11 @@ if(!isset($_SESSION['id_usuario'])){
     
     if ($linha > 0 ) {
         mysqli_close($conexao);
-        echo"<link rel ='stylesheet' href='css/style.css'>
-            <div style='display: flex; justify-content: center;' > 
-                <div class='box_cinza_claro'>
-                    <h1 class='letraPretoAzul caixa text-bg-danger fontemenu le'> Excluido com SUCESSO</h1>
-                </div>
-            </div>";
+        echo "    <div style='display: flex; justify-content: center;'>"; 
+        echo "        <div class='box_cinza_claro' style='background: #19f261; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>";
+        echo"<h1> Usuário Excluido com Sucesso</h1>";
+        echo "        </div>"; 
+        
         
         header('Refresh: 2; url=FormularioCadastroNovoUsuario.php');
         exit; 
@@ -53,7 +52,7 @@ if(!isset($_SESSION['id_usuario'])){
         echo"<link rel ='stylesheet' href='css/style.css'>
             <div style='display: flex; justify-content: center;' > 
                 <div class=''>
-                    <a class='cp caixa  fontemenu' href='FormularioCadastroNovoUsuario.php'>
+                    <a class='cp caixa  fontemenu' href='deletar.php'>
                     Voltar
                 </a>
                 </div>

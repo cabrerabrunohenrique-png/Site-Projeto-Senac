@@ -37,25 +37,26 @@ if(!isset($_SESSION['id_usuario'])){
     </nav>
 </header>
 <main >
-    <div class=''style='height:20px'> </div>       
+  <div class=''style='height:20px'> </div>       
         <div class='' style='display: flex; justify-content: center '>
             <h1 class='fontemenu'style ='text-transform: uppercase ' >Deletar Cadastro de Usuario</h1>
         </div>
-  <form action="sqlExcluir.php" method="post" onsubmit="return fnValidacaoB(event)" >
-    <div class="row g-3">
-      <div class="col-4">
-        <label for="NomeCompleto" class="form-label">Nome Completo</label>
-        <input  type="text" class="form-control" id="NomeCompleto"name="nome_completo">
+  <div class=''style='height:20px'> </div>
+  <form class ='' action="sqlExcluir.php" method="post" onsubmit="return validacaoc(event)" >
+    <div class="containner" >
+      <div class='' style='display: flex; justify-content: center '>
+        <div class="col-4" >
+          <label style='display: flex; justify-content: center' for="NomeCompleto" class="form-label">Nome Completo</label>
+          <input  type="text" class="form-control" id="NomeCompleto"name="nome_completo">
+        </div>
       </div>
-              
-      <div class="col-md-4">
-        <label for="nome_de_usuario" class="form-label">Nome de Usuario</label>
-          <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
+      <div class='' style='display: flex; justify-content: center '>       
+        <div class="col-md-4">
+          <label style='display: flex; justify-content: center ' for="nome_de_usuario" class="form-label">Nome de Usuario</label>
+            <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
+        </div>
       </div>
-      <div class="col-md-4">
-        <label for="senhade_de_acesso" class="form-label">Senha de Acesso</label>
-        <input type="password" class="form-control" id="senhade_de_acesso" name="senhade_de_acesso">
-      </div>
+      
       
       <div class=" gap-2 mt-4 " style="display:flex;justify-content: center;">
         <button type="submit" class="btn btn-danger">Excluir</button>

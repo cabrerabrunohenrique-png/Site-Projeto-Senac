@@ -277,4 +277,62 @@ function fnValidacaoB(event){
 
 
 }
+
+function validacaoc(){
+    const campoNome = document.getElementById("NomeCompleto");    
+    if(campoNome){
+        let nomeCompleto = campoNome.value.trim();
+
+        if(nomeCompleto.length >=50 || nomeCompleto.length <5 || nomeCompleto ===""){
+            exibirErro(campoNome, "Atenção: É obrigatório preenchimento."+
+            "\n Atenção: Não pode haver menos que 5 caracteres." +
+            "\n Atenção: Não pode haver mais  que 50 caracteres.", event);
+            return false;
+        }
+        if (nomeCompleto.split(' ').length < 2)
+        {
+            exibirErro(campoNome, "Atenção: O nome  deve conter pelo menos um sobrenome.", event);
+            return false;
+        }
+        const Temnumero = [...nomeCompleto].some(char => char >='0' && char <='9');
+        if(Temnumero){
+            exibirErro(campoNome, "Atenção: Numeros  não são permitidos.", event);
+            return false;
+        }
+        
+        const temSimboloOuPontuacao = [...nomeCompleto].some(char => /[^\w\s]/.test(char));
+        if (temSimboloOuPontuacao){
+            exibirErro(campoNome, "Atenção: Caracteres especiais e pontuação não são permitidos.", event);
+            return false;
+        } 
+
+        limparErro(campoNome); 
+
+    }
+    const campoNomeUsuario = document.getElementById("nome_de_usuario")
+    let UsuarioRestrito = campoNomeUsuario.value.trim();
+    if( UsuarioRestrito ===""){
+        exibirErro(campoNomeUsuario,"Ateção: O campo precisa ser preenchido",event);
+                              
+        return false;
+    }
+    const pontuacao = [...UsuarioRestrito ].some(char => /[^\w\s]/.test(char) );
+    if(pontuacao){
+        exibirErro(campoNomeUsuario,"Atenção: caracteres especiais e pontuação não são permitidos.",event);
+        return false;
+    }
+    limparErro(campoNomeUsuario);
+    const regexSenhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const campoSenha = document.getElementById("SenhadeAcesso");
+    let SenhadeAcesso = campoSenha.value.trim();
+    if( !regexSenhaForte.test(SenhadeAcesso) || SenhadeAcesso ===""){   
+        exibirErro( campoSenha,"Atenção: A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e pelo menos um caractere especial (ex: @, $, !, %, *, ?, &).",event)
+        return false;
+    }
+
+    limparErro(campoSenha);
+
+
+    
+}
         

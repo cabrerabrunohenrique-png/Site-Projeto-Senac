@@ -16,6 +16,7 @@ if(!isset($_SESSION['id_usuario'])){
     $niveldepermissao= $_POST['nivel_de_permissao']??'';
     $nomedeusuario = mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['nome_de_usuario']??'')),'utf-8');
     $senhadeacesso =$_POST['senha_de_acesso']??'';
+    $data = $_POST['data']??'';
 
     usuario($nomedeusuario);
 
@@ -44,7 +45,7 @@ if(!isset($_SESSION['id_usuario'])){
         die ("<h1>erro<h1>". mysqli_connect_error());
     }
 
-    $slq = "update tbcadastronovousuario set nomeCompleto ='$nomecompleto', nivelPermisao ='$niveldepermissao', nomeUsuario ='$nomedeusuario', senhaAcesso='$senhadeacesso' where nomeCompleto ='$nomecompleto'";
+    $slq = "update tbcadastronovousuario set usuarioAlteracao='$data', nomeCompleto ='$nomecompleto', nivelPermisao ='$niveldepermissao', nomeUsuario ='$nomedeusuario', senhaAcesso='$senhadeacesso' where nomeCompleto ='$nomecompleto'";
     
     $resultado = mysqli_query($conexao ,$slq);
 

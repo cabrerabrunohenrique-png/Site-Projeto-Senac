@@ -40,7 +40,7 @@ if(!isset($_SESSION['id_usuario'])){
         echo "        </div>"; 
         
         
-        header('Refresh: 2; url=FormularioCadastroNovoUsuario.php');
+        header('Refresh: 2; url=deletar.php');
         exit; 
         
 

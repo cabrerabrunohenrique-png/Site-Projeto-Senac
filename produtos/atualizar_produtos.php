@@ -65,7 +65,7 @@ $codigosDoBanco = $listaCodigoProduto->listaSuspensa();
 </div>
     <main >
         <form action="sqlEditarProduto.php" method="post" onsubmit="return fnproduto(event)">
-        <div class='mm' style='display: flex; justify-content: space-between'>    
+        <div class='' style='display: flex; justify-content: space-between'>    
             <div class="col-md-3 ">
                 <label for="data" class="form-label">Data Alteracao</label>
                 <input type="date" class="form-control s" id="data" name="data">         

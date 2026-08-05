@@ -251,7 +251,9 @@ function fnValidacaoB(event){
     
 
         const campo_data = document.getElementById('data');
+        let hoje = new  Date();
 
+        hoje.setHours(0,0,0,0);
          if(campo_data ){
             let data = campo_data.value.trim();
 
@@ -259,9 +261,27 @@ function fnValidacaoB(event){
                  exibirErro(campo_data,"Atenção: Informe a data de Alteração.",event);
                 
                 return false;
-             }
+            }
+        
+            let dataescolhida = new Date(data +"T00:00:00");
+
+
+            if(dataescolhida < hoje){
+ 
+                exibirErro(campo_data,"Atenção: Não é Permitido Data Retroativa .",event);
+                
+                return false;
+ 
+            }
+
+            if(dataescolhida>hoje){
+                exibirErro(campo_data,"Atenção: Não é Permitido Data Futura .",event);
+                
+                return false;
+
+            }
         }
-         limparErro(data);
+         limparErro(campo_data);
 
      function exibirErro(campo, mensagem,event) {
         event.preventDefault();

@@ -58,6 +58,7 @@ if(!isset($_SESSION['id_usuario'])){
         
         // Bloco dos botões alinhados
         echo "    <div style='display: flex; justify-content: center;'>"; 
+        
         echo "        <div class='box_cinza_claro' style='background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
         echo "            <a class='box_letra' href='cadastro_de_produtos.php' style='text-decoration: none; color: #333; font-weight: bold;'> Cadastro de Produtos </a>"; 
         echo "        </div>"; 

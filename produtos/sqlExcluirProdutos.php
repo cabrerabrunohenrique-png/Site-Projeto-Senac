@@ -35,7 +35,7 @@ if(!isset($_SESSION['id_usuario'])){
     if ($linha > 0 ) {
         mysqli_close($conexao);
         echo "    <div style='display: flex; justify-content: center;'>"; 
-        echo "        <div class='box_cinza_claro' style='background: #f21919; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
+        echo "        <div class='box_cinza_claro' style='background: #19f21d; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
         
         echo"<h1> Excluido com SUCESSO</h1>";
         echo "        </div>";
@@ -56,12 +56,17 @@ if(!isset($_SESSION['id_usuario'])){
         echo "<p style='color: #666; font-size: 1.1rem; margin-bottom: 20px; font-weight: 500; text-align: center;'>Nenhum Produto foi Excluído.<br>Verifique se o nome e o código estão corretos.</p>";
 
         // Bloco dos botões alinhados
-        echo "    <div style='display: flex; justify-content: center;'>"; 
+        echo "    <div style='display: flex; justify-content: center; '>"; 
+         echo "        <div class='cp caixa  fontemenu ' style ='background-color: red'>"; 
+        echo "            <a class='box_letra' href='deletar_produto.php' style='text-decoration: none; color: #333; font-weight: bold;'> Voltar</a>";
+       
+        echo "        </div>";
+        echo "<div style='width: 15px;'></div>";
         echo "        <div class='cp caixa  fontemenu '>"; 
         echo "            <a class='box_letra' href='cadastro_de_produtos.php' style='text-decoration: none; color: #333; font-weight: bold;'> Cadastro de Produtos </a>"; 
         echo "        </div>"; 
-        echo "        <div style='width: 15px;'></div>"; // Corrigido o erro da aspa que sumia com o botão do Menu
-        echo "        <div class=' caixa  fontemenu  letraFundoAzul text-bg-info'> "; 
+        echo "        <div style='width: 15px;'></div>"; 
+        echo "        <div class=' cp caixa  fontemenu  letraFundoAzul text-bg-info'> "; 
         echo "            <a class='box_letra ' href='../navegacao.php' style='text-decoration: none; color: #333; font-weight: bold;'> Menu </a>"; 
         echo "        </div>"; 
         echo "    </div>"; 

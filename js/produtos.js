@@ -11,7 +11,12 @@ function limparErro(campo) {
 }
 
 function fnproduto(event){
-    const campo_data = document.getElementById('data')
+    const campo_data = document.getElementById('data');
+    let hoje  = new Date();
+    
+    hoje.setHours(0,0,0,0);
+
+
     if(campo_data){
         let texto_data = campo_data.value.trim();
         if(texto_data ==""){
@@ -19,6 +24,19 @@ function fnproduto(event){
             return false;
         }
 
+        let dataescolhida = new Date(texto_data.replace(/-/g, '/') + " 00:00:00");
+
+
+        if(dataescolhida < hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Retroativa",event);
+            return false;
+
+        }
+
+        if(dataescolhida > hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Futura",event);
+            return false
+        }
     }
 
     limparErro(campo_data);

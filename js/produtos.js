@@ -194,29 +194,81 @@ function fnproduto(event){
         limparErro(campo_preco);
     }
     
-    const campo_os = document.getElementById('os')
-    if(campo_os){
-        texto_os = campo_os.value.trim()
-        if(texto_os =="" || texto_os <0){
-            event.preventDefault();
-            alert('O campo nao pode ficar vazio e nao pode ser numero negativo')
-            campo_os.value='';
-            campo_os.focus();
-            return false;
-        }
-    }
+   
+  
+} 
 
-    const campo_tipo = document.getElementById('tipo')
-    if(campo_tipo){
-        text_tipo = campo_tipo.value.trim();
-        if(text_tipo ==""){
-            event.preventDefault();
-            alert('O campo nao pode ficar vazio')
-            campo_tipo.value='';
-            campo_tipo.focus();
+
+function fnprodutob(event) {
+
+    const campo_data = document.getElementById('data');
+    let hoje  = new Date();
+    
+    hoje.setHours(0,0,0,0);
+
+
+    if(campo_data){
+        let texto_data = campo_data.value.trim();
+        if(texto_data ==""){
+            exibirErro(campo_data,"Atenção: Informa a data",event);    
             return false;
         }
+
+        let dataescolhida = new Date(texto_data.replace(/-/g, '/') + " 00:00:00");
+
+
+        if(dataescolhida < hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Retroativa",event);
+            return false;
+
+        }
+
+        if(dataescolhida > hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Futura",event);
+            return false
+        }
+
         
     }
-  
+
+    limparErro(campo_data);
+
+    const campo_codigo = document.getElementById('codigo_do_produto');
+    if(campo_codigo){
+        let texto_codigo = campo_codigo.value.trim();
+        if(texto_codigo <=0){
+            exibirErro(campo_codigo,"Atenão:Informe um numero valido",event);
+            return false;
+
+        }
+
+        limparErro(campo_codigo);
+    }
+
+    const campo_nomeProduto = document.getElementById('nome_do_produto');
+    if(campo_nomeProduto){
+        let texto_nome = campo_nomeProduto.value.trim();
+        if(texto_nome =="" || texto_nome =="null"){
+            exibirErro(campo_nomeProduto,"Atenção: Informe um nome valido",event);
+            return false;
+        }
+        limparErro(campo_nomeProduto);
+    }
+
+    
+
+    const campo_quantidade = document.getElementById('quantidade_entrada')
+    if(campo_quantidade){
+        texto_quantidade = campo_quantidade.value.trim()
+        if(texto_quantidade =="" || texto_quantidade <0){
+            exibirErro(campo_quantidade,'Atenção:O campo nao pode ficar vazio e nao pode ser numero negativo',event);
+            
+            return false;
+        }
+
+    }
+
+    limparErro(campo_quantidade)
+
+
 }

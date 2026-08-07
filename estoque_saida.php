@@ -70,7 +70,7 @@ if(!isset($_SESSION['id_usuario'])){
 </div>
 <div class=''style='height:20px'> </div>
     <main >
-        <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fnproduto(event)" >
+        <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fnprodutoc(event)" >
             <div style='display:flex;justify-content: space-between'>
                 <div class="col-3">
                     <label for="os" class="form-label">Numero Ordem de Servico(OS)</label>

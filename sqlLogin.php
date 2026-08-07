@@ -16,7 +16,7 @@
           #inserir os dados
 
 
-        $slq = "select numeroRegistro,nomeusuario, senhaacesso from tbcadastronovousuario where nomeUsuario = '$nomedeusuario' and SenhaAcesso='$senhadeacesso'";
+        $slq = "select nomeCompleto, numeroRegistro,nomeusuario, senhaacesso from tbcadastronovousuario where nomeUsuario = '$nomedeusuario' and SenhaAcesso='$senhadeacesso'";
         
         $resultado = mysqli_query($conexao ,$slq);
 
@@ -27,8 +27,12 @@
             //echo "<pre>"; print_r($resultado); echo "</pre>"; exit;
 
             $_SESSION['id_usuario'] = $resultado['numeroRegistro'];
+            $_SESSION ['nome'] = $resultado['nomeCompleto'];
             mysqli_close($conexao);
             
+
+            echo   $_SESSION['id_usuario'];
+            echo $_SESSION ['nome'];
 
             // Se deu certo, redireciona IMEDIATAMENTE
             header('Location: navegacao.php');

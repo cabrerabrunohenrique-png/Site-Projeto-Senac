@@ -31,7 +31,7 @@ if(!isset($_SESSION['id_usuario'])){
         --bg-light: #f8f9fa;
         --border-color: #dddddd;
         }
-        body {
+        body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-color);
             background-color: #ffffff;
@@ -46,7 +46,7 @@ if(!isset($_SESSION['id_usuario'])){
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
         }
-          .fontemenu h1 {
+          .fontemenu h1 { 
             text-transform: uppercase;
             color: var(--primary-color);
             font-size: 24px;
@@ -55,7 +55,7 @@ if(!isset($_SESSION['id_usuario'])){
         }
 
          main {
-            max-width: 1000px;
+            /*max-width: 1000px;*/
             margin: 0 auto;
             overflow-x: auto; /* Garante que a tabela seja responsiva no celular */
         }
@@ -70,6 +70,7 @@ if(!isset($_SESSION['id_usuario'])){
 
 
         .table thead tr {
+            
             background-color: var(--primary-color);
             color: #ffffff;
             text-align: left;
@@ -77,6 +78,7 @@ if(!isset($_SESSION['id_usuario'])){
         }
 
         .table th, .table td {
+            
             padding: 12px 15px;
             border: 1px solid var(--border-color);
         } 
@@ -112,6 +114,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <th class =''>Codigo do Produto</th>
                 <th>Nome do Produto</th>
                 <th>Variavel do Produto</th>
+                <th>Fabricante</th>
                 <th>Familia do Produto</th>
                 <th>Data de Cadastro </th>
                 <th>Categoria do Produto</th>
@@ -136,7 +139,7 @@ if(!isset($_SESSION['id_usuario'])){
                     echo "<td class =''> {$linha_resultado['codigoproduto']} </td>";
                     echo "<td> {$linha_resultado['nomeProduto']} </td>";
                     echo "<td> {$linha_resultado['variavelproduto']} </td>";
-                   
+                    echo "<td> {$linha_resultado['fabricanteProduto']} </td>";
                     echo "<td> {$linha_resultado['familiaproduto']} </td>";
                     echo "<td> {$linha_resultado['datacriacao']} </td>";
                     echo "<td> {$linha_resultado['categoriaproduto']} </td>";

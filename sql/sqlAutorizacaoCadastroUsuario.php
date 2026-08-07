@@ -21,7 +21,7 @@
             
             $dados = mysqli_fetch_assoc($resultado);            
 
-            $_SESSION['id_usuario'] = $dados['numeroRegistro'];
+            $_SESSION['id_usuario'] = $dados['nomeCompleto'];
             $_SESSION['permissao'] = $dados['nivelPermisao'];
             mysqli_close($conexao);
         

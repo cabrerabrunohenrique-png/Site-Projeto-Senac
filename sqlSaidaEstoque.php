@@ -12,7 +12,7 @@ if(!isset($_SESSION['id_usuario'])){
 
 
 <?php
-    $os =$_POST['os']??'';
+    $os =$_POST['codigo_ordem_de_servico']??'';
     $data =$_POST['data']??'';   
     
     $codigo= $_POST['codigo_do_produto']??'';

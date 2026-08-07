@@ -69,7 +69,7 @@ class listaProdutos {
         return $listaOS;
     }
 
-    function nomeExiste($os){
+    public function nomeExiste($os){
 
         $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
 
@@ -90,6 +90,27 @@ class listaProdutos {
         exit;
         }
         mysqli_close($conexao);
+    }
+
+    public function vendedor(){
+
+        $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+        if(!$conexao){
+            die("<h1>Erro</h1>".mysqli_connect_error());
+        }
+
+        $sql = "select nomeCompleto from tbcadastronovousuario";
+        $resultado = mysqli_query($conexao,$sql);
+
+        $lista_vendedor = [];
+
+        while($lista = mysqli_fetch_assoc($resultado)){
+            $lista_vendedor[] = $lista['nomeCompleto'];
+        }
+        mysqli_close($conexao);
+        return $lista_vendedor;
+
+
     }
 
 }

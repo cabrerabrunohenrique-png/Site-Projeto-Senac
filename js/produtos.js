@@ -264,10 +264,6 @@ function fnprodutob(event) {
 
     limparErro(campo_nomeProduto);
 
-    
-
-    
-
     const campo_quantidade = document.getElementById('quantidade_entrada')
     if(campo_quantidade){
         texto_quantidade = campo_quantidade.value.trim()
@@ -280,6 +276,16 @@ function fnprodutob(event) {
     }
 
     limparErro(campo_quantidade)
+
+    const campo_responsavel = document.getElementById('responsavel')
+    if(campo_responsavel){
+        texto_responsavel = campo_responsavel.value.trim();
+        if(texto_responsavel =="null" || texto_responsavel ==""){
+            exibirErro(campo_responsavel,"Atencão:Informe o Responsavel pela Alteração",event);
+            return false;
+        }
+        limparErro(campo_responsavel);
+    }
 
 
 }

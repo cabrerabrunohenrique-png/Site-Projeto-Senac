@@ -8,7 +8,14 @@ if(!isset($_SESSION['id_usuario'])){
 
 }
 
+require_once "../class/class.php";
+$lista = new listaProdutos();
+$listaproduto = $lista -> listaSuspensa();
+$lista_nome_produto = $lista -> listanome();
+$lista_responsavel = $lista -> vendedor();
+
 ?>
+
 
 
 
@@ -72,15 +79,23 @@ if(!isset($_SESSION['id_usuario'])){
                     <option value =""> </option>
                     </select>
                 </div>
-                 <div class="col-3">
+                <div class="col-3">
                     <label style='display:flex; justify-content:center' for="codigo_do_produto" class="form-label">Codigo do Produto</label>
-                    <input type="number" class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                    <select type="number" class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                        <?php foreach($listaproduto as $produto): ?>
+                            <option value="<?php echo($produto); ?>"><?php echo($produto);?> </option>
+                        <?php endforeach;?>
+                    </select>    
                 </div>
             </div>
             <div class=" " style='display:flex;justify-content: space-between'>
                 <div class="col-3">
                     <label style='display:flex; justify-content:center' for="nome_do_produto" class="form-label">Nome do Produto</label>
-                    <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                    <select type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                        <?php foreach($lista_nome_produto as $nomeProduto): ?>
+                            <option value="<?php echo($nomeProduto);?>"><?php echo($nomeProduto);?> </option>
+                        <?php endforeach;?>
+                    </select>
                 </div>
                 <div class="col-3">
                     <label style='display:flex;justify-content:center' for="quantidade_entrada" class="form-label">Quantidade</label>
@@ -88,7 +103,11 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
                 <div class="col-3">
                     <label style='display:flex;justify-content:center' for="responsavel" class="form-label">Responsavel</label>
-                    <input type="number" class="form-control s" id="responsavel" name="responsavel">
+                    <select type="" class="form-control s" id="responsavel" name="responsavel">
+                        <?php foreach($lista_responsavel as $responsavel): ?>
+                        <option value="<?php echo($responsavel); ?>"><?php echo($responsavel); ?></option>
+                        <?php endforeach;?>
+                    </select>
                 </div>
             </div>
             <div style='height:20px' ></div>

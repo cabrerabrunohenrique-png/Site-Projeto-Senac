@@ -39,13 +39,17 @@ if(!isset($_SESSION['id_usuario'])){
 </div>
 <div style ='width: px;height:10px;' > </div>
 <main>
-    <table class="table ">
+    <table  class="table ">
         <thead>
-            <tr class=''>
-                <td class =''>codigoOS</td>
-                <td>codigoProduto</td>
-            <td>nomeProduto</td>
-            <td>quantidadeProduzida</td>
+            <tr class='' >
+                <td> Data </td>
+                <td>Codigo OS</td>
+                <td>Codigo do Produto</td>
+                <td>Nome do Produto</td>
+                <td>Quantidade</td>
+                <td>Primeiro a Cadastrar</td>
+                <td>Data Alteração </td>
+                <td>Responsavel</td> 
             </tr>
         </thead>
         <tbody>
@@ -62,11 +66,15 @@ if(!isset($_SESSION['id_usuario'])){
 
                 while($linha_resultado = mysqli_fetch_array($result)){
                     echo"<tr class =''>";
+                    echo "<td class=''> {$linha_resultado['data']} </td>";
                     echo "<td class =''> {$linha_resultado['codigoOS']} </td>";
                     echo "<td> {$linha_resultado['codigoProduto']} </td>";
                     echo "<td> {$linha_resultado['nomeProduto']} </td>";
 
                     echo "<td> {$linha_resultado['quantidadeProduzida']} </td>";
+                    echo "<td> {$linha_resultado['responsavel']}</td>";
+                    echo "<td> {$linha_resultado['data_alteracao']}</td>";
+                    echo "<td> {$linha_resultado['responsavel_alteracao']}</td>";
                     echo"</tr>";
                 }
 

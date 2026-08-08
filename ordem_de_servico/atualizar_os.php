@@ -103,9 +103,9 @@ $lista_responsavel = $lista -> vendedor();
                 </div>
                 <div class="col-3">
                     <label style='display:flex;justify-content:center' for="responsavel" class="form-label">Responsavel</label>
-                    <select type="" class="form-control s" id="responsavel" name="responsavel">
+                    <select type="" class="form-control s" id="responsavelb" name="responsavelb">
                         <?php foreach($lista_responsavel as $responsavel): ?>
-                        <option value="<?php echo($responsavel); ?>"><?php echo($responsavel); ?></option>
+                        <option value="<?php echo($responsavel); ?>"><?php echo($responsavel); ?> </option>
                         <?php endforeach;?>
                     </select>
                 </div>

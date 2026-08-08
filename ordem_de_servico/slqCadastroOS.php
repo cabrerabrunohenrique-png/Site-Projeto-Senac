@@ -180,8 +180,8 @@ echo "<link rel='stylesheet' href='../css/style.css'>
 
     #inserir os dados
 
-    $slq = "insert into tbordemservico (codigoOS, codigoProduto, nomeProduto,quantidadeProduzida, data)
-    values ('$codiordemdeservico','$codigodoproduto' ,'$nomedoprodutoos', '$quantidade', '$data')";
+    $slq = "insert into tbordemservico (codigoOS, codigoProduto, nomeProduto,quantidadeProduzida, data, responsavel)
+    values ('$codiordemdeservico','$codigodoproduto' ,'$nomedoprodutoos', '$quantidade', '$data' ,'$responsavel')";
     
     
 

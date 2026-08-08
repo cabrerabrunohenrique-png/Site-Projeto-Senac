@@ -5,6 +5,7 @@
     $nomedoprodutoos=mb_strtolower( $_POST['nome_do_produto']??'','utf-8');
     $quantidade =$_POST['quantidade_entrada']??'';
     $data = $_POST['data']??'';
+    $responsavelb = $_POST['responsavelb'] ??'';
 
     function os($codigo){
         $conn = mysqli_connect("localhost","root","","bdprojetosenac");
@@ -50,11 +51,7 @@
     if(os($codigo)){
         $conn = mysqli_connect("localhost", "root", "", "bdprojetosenac"); 
     
-       $sql = "UPDATE tbordemservico SET 
-            codigoProduto = '$codigodoproduto', 
-            nomeProduto = '$nomedoprodutoos',
-            quantidadeProduzida = '$quantidade' 
-            WHERE codigoOS = '$codigo'"; 
+       $sql = "UPDATE tbordemservico SET data_alteracao ='$data', codigoProduto = '$codigodoproduto', nomeProduto = '$nomedoprodutoos', quantidadeProduzida = '$quantidade', responsavel_alteracao = '$responsavelb' WHERE codigoOS = '$codigo'"; 
 
         $r = mysqli_query($conn, $sql); 
     

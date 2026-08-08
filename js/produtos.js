@@ -252,8 +252,19 @@ function fnprodutob(event) {
             exibirErro(campo_nomeProduto,"Atenção: Informe um nome valido",event);
             return false;
         }
-        limparErro(campo_nomeProduto);
+        
+    
+
+        const temSimboloOuPontuacao = [...texto_nome].some(char => /[^\w\sÀ-ÿ]/.test(char));
+        if (temSimboloOuPontuacao){
+            exibirErro(campo_nomeProduto,"O nome completo não pode conter símbolos ou pontuação.",event);
+            return false;
+        } 
     }
+
+    limparErro(campo_nomeProduto);
+
+    
 
     
 

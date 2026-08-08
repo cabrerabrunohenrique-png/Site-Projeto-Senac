@@ -55,38 +55,43 @@ if(!isset($_SESSION['id_usuario'])){
 </header>
 
     <main >
-        <div class=''style='height:20px'> </div>
+        <div class=''style='height:50px'> </div>
         <div class='fontemenu' style='display: flex; justify-content: center '>
             <h1 class=''style ='text-transform: uppercase' >Atualizar Ordem de Serviço</h1>
         </div>
-        <div class=''style='height:20px'> </div>
-        <form action="sqlatualizaros.php" method="post" onsubmit="return fnproduto(event)" >
+        <div class=''style='height:50px'> </div>
+        <form action="sqlatualizaros.php" method="post" onsubmit="return fnprodutob(event)" >
             <div class="" style='display:flex; justify-content: space-between'>
                  <div class="col-3">
-                    <label for="data" class="form-label">Data Atualizacao</label>
+                    <label style='display:flex; justify-content: center' for="data" class="form-label">Data Atualizacao</label>
                     <input type="date" class="form-control s" id="data" name="data">
                 </div>
                 <div class="col-3">
-                   <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
+                   <label style='display:flex; justify-content:center' for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
                     <input type="number" id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
                     <option value =""> </option>
                     </select>
                 </div>
                  <div class="col-3">
-                    <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                    <label style='display:flex; justify-content:center' for="codigo_do_produto" class="form-label">Codigo do Produto</label>
                     <input type="number" class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
                 </div>
             </div>
             <div class=" " style='display:flex;justify-content: space-between'>
-                <div class="col-4">
-                    <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                <div class="col-3">
+                    <label style='display:flex; justify-content:center' for="nome_do_produto" class="form-label">Nome do Produto</label>
                     <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
                 </div>
-                <div class="col-4">
-                    <label for="quantidade_entrada" class="form-label">Quantidade</label>
+                <div class="col-3">
+                    <label style='display:flex;justify-content:center' for="quantidade_entrada" class="form-label">Quantidade</label>
                     <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
                 </div>
+                <div class="col-3">
+                    <label style='display:flex;justify-content:center' for="responsavel" class="form-label">Responsavel</label>
+                    <input type="number" class="form-control s" id="responsavel" name="responsavel">
+                </div>
             </div>
+            <div style='height:20px' ></div>
             <div class=" gap-2 mt-4" style='display:flex;justify-content:center'>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
                 <button type="submit" class="btn btn text-bg-warning" >Salvar Atualização</button>
                 <button type="reset" class="btn btn-outline-secondary ">Limpar</button>

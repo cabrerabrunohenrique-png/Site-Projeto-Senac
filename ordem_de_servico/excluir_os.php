@@ -67,8 +67,8 @@ if(!isset($_SESSION['id_usuario'])){
         <div class=''style='height:20px'> </div>
         <form action="sqlexcluir_os.php" method="post" onsubmit="return fnproduto(event)" >
             <div class='' style='display: flex; justify-content: center '>
-                <div class="col-md-4 " >
-                    <label for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
+                <div class="col-md-4  " >
+                    <label style='display:flex;justify-content: center' for="codigo_ordem_de_servico" class=" form-label">Codigo Ordem de Servico(0S)</label>
                     <input type="number" id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico">
                 </div>
             </div>  

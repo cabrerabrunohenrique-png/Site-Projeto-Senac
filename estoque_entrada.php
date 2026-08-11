@@ -60,10 +60,10 @@ if(!isset($_SESSION['id_usuario'])){
 </div>
 <div class=''style='height:20px'> </div>
     <main >
-        <form action="sqlEntradaEstoque.php" method="post" onsubmit="return fnproduto(event)">
+        <form action="sqlEntradaEstoque.php" method="post" onsubmit="return fnprodutoc(event)">
             <div class=''style='display:flex; justify-content: space-between'>
                 <div class="col-3">
-                    <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                    <label for="codigo_do_produto " class="form-label " style='display: flex; justify-content: center '>Codigo do Produto</label>
                     <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
                         <?php foreach ($codigosDoBanco as $codigo):?>
                         <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo $codigo;?></option>
@@ -72,7 +72,7 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
             
                 <div class="col-3">
-                    <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                    <label for="nome_do_produto" class="form-label" style='display: flex; justify-content: center '>Nome do Produto</label>
                     <select id="nome_do_produto" name="nome_do_produto"class="form-control s" >
                         <?php foreach ($nomeBanco as $nome):?>
                             <option value="<?php echo ($nome);?>" ><?php echo $nome;?></option>
@@ -83,7 +83,7 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
             
                 <div class="col-3">
-                    <label for="quantidade_entrada" class="form-label">Quantidade</label>
+                    <label for="quantidade_entrada" class="form-label" style="display:flex; justify-content : center" >Quantidade</label>
                     <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
                 </div>
             </div>
@@ -91,19 +91,19 @@ if(!isset($_SESSION['id_usuario'])){
             <div class=''style='display:flex; justify-content: space-between'>
 
                 <div class="col-3">
-                    <label for="numero_nf" class="form-label">Numero NF/ Numero Interno para controle</label>
+                    <label for="numero_nf" class="form-label" style="display:flex; justify-content:center" >Numero NF/ Numero Interno para controle</label>
                     <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
                 </div>
                 <div class="col-3 ">
-                    <label for="tipo" class="form-label">Tipo/Motivo :</label>
+                    <label for="tipo" class="form-label" style="display:flex; justify-content : center" >Tipo/Motivo :</label>
                     
-                        <a href ="tipos.php">Cadastrar Tipos/Motivo</a>
+                        <a href ="tipos.php" style="display:flex;justify-content:center" >Cadastrar Tipos/Motivo</a>
                     
                     <input type="type" class="form-control s" id="tipo" name="tipo">
                 </div>
 
                 <div class="col-3">
-                    <label for="data" class="form-label">Data Entrada Produto</label>
+                    <label for="data" class="form-label" style="display:flex;justify-content:center" >Data Entrada Produto</label>
                     <input type="date" class="form-control s" id="data" name="data">
                 </div>
             </div>                

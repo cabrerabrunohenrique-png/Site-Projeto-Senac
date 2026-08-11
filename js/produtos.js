@@ -289,3 +289,122 @@ function fnprodutob(event) {
 
 
 }
+
+function fnprodutoc(event) {
+     const campo_codigo_do_produto = document.getElementById("codigo_do_produto")
+    
+    let  texte_codigo_do_produto = campo_codigo_do_produto.value.trim();
+    const regeDuracao = /^\d+$/
+    if(!regeDuracao.test(texte_codigo_do_produto) || texte_codigo_do_produto =="" || parseInt(texte_codigo_do_produto) <= 0 ){
+        exibirErro(campo_codigo_do_produto,"Atenção: Informe um codigo novo.\n Atenção: O codigo tem que ser um numero Positivo",event);
+        return false;
+    }
+    limparErro(campo_codigo_do_produto);
+
+   
+    const campo_nome_do_produto = document.getElementById("nome_do_produto")
+
+    let texto_nome_do_produto = campo_nome_do_produto.value.trim();
+    if(texto_nome_do_produto.length >=50 || texto_nome_do_produto.length <4 || texto_nome_do_produto ===""){
+        exibirErro(campo_nome_do_produto,'Atenção:O campo Nome do Produto não pode ficar FICAR VAZIO.\nNão pode ter menos que 3 caracteres.\nNão pode conter mais de 50 caracteres',event);
+        return false;
+        
+    }
+
+    limparErro(campo_nome_do_produto);
+
+    const temSimboloOuPontuacao = [...texto_nome_do_produto].some(char => /[^\w\sÀ-ÿ]/.test(char));
+    if (temSimboloOuPontuacao){
+        exibirErro(campo_nome_do_produto,"O nome completo não pode conter símbolos ou pontuação.",event);
+        return false;
+    } 
+
+    limparErro(campo_nome_do_produto);
+
+    const campo_quantidade = document.getElementById('quantidade_entrada')
+    if(campo_quantidade){
+        texto_quantidade = campo_quantidade.value.trim()
+        if(texto_quantidade =="" || texto_quantidade <0){
+            exibirErro(campo_quantidade,'Atenção:O campo nao pode ficar vazio e nao pode ser numero negativo',event);
+            
+            return false;
+        }
+
+    }
+
+    limparErro(campo_quantidade);
+
+
+    const campo_nf = document.getElementById('numero_nf')
+    if(campo_nf){
+        texto_nf = campo_nf.value.trim();
+        if(texto_nf =="" || texto_nf <=0){
+            exibirErro(campo_nf,"Atenção: O campo não pode ficar vazio. \n Não pode ser numero negativi",event);
+            return false
+        }
+
+        limparErro(campo_nf);
+    }
+
+
+
+    const campo_tipo = document.getElementById("tipo")
+    if(campo_tipo){
+        let texto_tipo = campo_tipo.value.trim()
+        if(texto_tipo.length >=50 || texto_tipo.length <4 || texto_tipo ===""){
+            exibirErro(campo_tipo,"Atenção:O Campo Tipo nao pode FICAR VAZIO.\nNão pode ter menos que 3 caracteres.\nNao pode conter mais de 50 caracteres",event);
+            return false;
+        }
+        limparErro(campo_tipo);
+
+        const Temnumero = [...texto_tipo].some(char => char >='0' && char <='9');
+
+        if(Temnumero){ 
+            exibirErro(campo_tipo,'Atenção:O Campo CATEGORIA não pode ter numeros',event);
+            return false;
+        }
+        limparErro(campo_tipo);
+        
+        const temSimboloOuPontuacao = [...texto_tipo].some(char => /[^\w\sÀ-ÿ]/.test(char));
+        if (temSimboloOuPontuacao){
+            exibirErro(campo_tipo,"Atenção:O Campo CATEGORIA não pode conter símbolos ou pontuação.",event);
+            return false;
+        }
+        limparErro(campo_tipo);
+            
+    }
+    const campo_data = document.getElementById('data');
+    let hoje  = new Date();
+    
+    hoje.setHours(0,0,0,0);
+
+
+    if(campo_data){
+        let texto_data = campo_data.value.trim();
+        if(texto_data ==""){
+            exibirErro(campo_data,"Atenção: Informa a data",event);    
+            return false;
+        }
+
+        let dataescolhida = new Date(texto_data.replace(/-/g, '/') + " 00:00:00");
+
+
+        if(dataescolhida < hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Retroativa",event);
+            return false;
+
+        }
+
+        if(dataescolhida > hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Futura",event);
+            return false
+        }
+    }
+
+    limparErro(campo_data);
+
+   
+
+
+
+}

@@ -151,7 +151,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
         </form>
     </main>
-    <div class=''style='height:130px'> </div>
+    <div class=''style='height:90px'> </div>
 
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
@@ -169,8 +169,7 @@ if(!isset($_SESSION['id_usuario'])){
             <div class="">
                 <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
             </div>
-         
-         
+              
         </div>    
     </nav>
     

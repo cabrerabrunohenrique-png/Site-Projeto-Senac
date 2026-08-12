@@ -89,7 +89,7 @@ if(!isset($_SESSION['id_usuario'])){
         </div>
 
     </main>
-    <div class=''style='height:50px'> </div>
+    <div class=''style='height:10px'> </div>
      <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
@@ -109,9 +109,6 @@ if(!isset($_SESSION['id_usuario'])){
          
         </div>    
     </nav>
-    
-
-
     
 </body>
 </html>

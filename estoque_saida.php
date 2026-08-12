@@ -73,7 +73,7 @@ if(!isset($_SESSION['id_usuario'])){
         <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fnprodutoc(event)" >
             <div style='display:flex;justify-content: space-between'>
                 <div class="col-3">
-                    <label for="os" class="form-label">Numero Ordem de Servico(OS)</label>
+                    <label style="display:flex;justify-content:center" class="" for="os" class="form-label">Numero Ordem de Servico(OS)</label>
                      <select class="form-control s" id="os" name="os">
                         <?php foreach($listaos as $os) :?>
                         <option><?php echo($os);?></option>
@@ -83,12 +83,12 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
                 
                 <div class="col-3">
-                <label for="data" class="form-label">Data Saida Produto</label>
+                <label  style="display:flex; justify-content:center" for="data" class="form-label">Data Saida Produto</label>
                 <input type="date" class="form-control s" id="data" name="data">
                 </div>
                 <div class="col-3">
-                    <label for="codigo_do_produto" class="form-label">Codigo do Produto</label>
-                <select id ="codigo_do_produto" class="form-control s" name='codigo_do_produto'>
+                    <label style="display:flex;justify-content:center" for="codigo_do_produto" class="form-label">Codigo do Produto</label>
+                    <select id ="codigo_do_produto" class="form-control s" name='codigo_do_produto'>
                         <?php foreach ($codigosDoBanco as $codigo):?>
                         <option value="<?php echo $codigo;
                         ?>" class="form-label"><?php echo $codigo;?></option>
@@ -98,7 +98,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
             <div style='display:flex;justify-content: space-between'>
                 <div class="col-3">
-                    <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                    <label style="display:flex;justify-content:center" for="nome_do_produto" class="form-label">Nome do Produto</label>
                     <select  class="form-control s" id="nome_do_produto" name="nome_do_produto">
                         <?php foreach($nomebanco as $nome):?>
                             <option value ="<?php echo($nome) ;?>"><?php echo($nome) ;?></option>
@@ -107,13 +107,13 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
                 
                 <div class="col-3">
-                    <label for="quantidade_entrada" class="form-label">Quantidade</label>
+                    <label style="display:flex;justify-content:center" for="quantidade_entrada" class="form-label">Quantidade</label>
                     <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
                 </div>
 
 
                 <div class="col-3">
-                    <label for="numero_nf" class="form-label">Numero NF</label>
+                    <label style="display:flex;justify-content:center" for="numero_nf" class="form-label">Numero NF</label>
                     <input type="number" class="form-control s" id="numero_nf" name="numero_nf" >
                 </div>
             </div>

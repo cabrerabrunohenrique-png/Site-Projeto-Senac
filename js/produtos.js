@@ -403,8 +403,91 @@ function fnprodutoc(event) {
 
     limparErro(campo_data);
 
-   
-
-
-
+ 
 }
+
+
+function fc5(event){
+
+    let campo_os = document.getElementById('os');
+    if(campo_os){
+        let texto_os= campo_os.value.trim();{
+            if(texto_os =="" || texto_os =="null"){
+                exibirErro(campo_os,"Atenção: O Informe um numero de OS valido",event);
+                return false
+            }
+        }
+
+    }
+
+    limparErro(campo_os)
+
+
+    const campo_data = document.getElementById('data');
+    let hoje  = new Date();
+    
+    hoje.setHours(0,0,0,0);
+
+
+    if(campo_data){
+        let texto_data = campo_data.value.trim();
+        if(texto_data ==""){
+            exibirErro(campo_data,"Atenção: Informa a data",event);    
+            return false;
+        }
+
+        let dataescolhida = new Date(texto_data.replace(/-/g, '/') + " 00:00:00");
+
+
+        if(dataescolhida < hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Retroativa",event);
+            return false;
+
+        }
+
+        if(dataescolhida > hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Futura",event);
+            return false
+        }
+
+        
+    }
+
+    limparErro(campo_data);
+
+    let campo_codigo = document.getElementById('codigo_do_produto');
+    if(campo_codigo){
+        let texto_codigo = campo_codigo.value.trim();
+        if(texto_codigo <=0 || texto_codigo =="" || texto_codigo ==="null"){
+            exibirErro(campo_codigo,"Atenção: Informe o codigo correto do produto cadastrado",event);
+            return false;
+        }
+        
+        limparErro(campo_codigo);
+    
+    }
+
+
+    let campo_quantidade = document.getElementById('quantidade');
+    if(campo_quantidade){
+        let texto_quantidade = campo_quantidade.value.trim();
+        if(texto_quantidade <=0){
+            exibirErro(campo_quantidade,"Atenção: Informe a quantidade com numero maior que 0",event);
+            return false
+        }
+    }
+
+    limparErro(campo_quantidade);
+
+    let campo_nf = document.getElementById('numero_nf');
+    if(campo_nf){
+        let texto_nf = campo_nf.value.trim();
+        if(texto_nf <=0 || texto_nf ==="null"){
+            exibirErro(campo_nf,"Atenção: Informe o numero da NF(numero positivo)",event);
+            return false;
+        }
+        limparErro(campo_nf);
+    }
+
+
+}   

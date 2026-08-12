@@ -70,7 +70,7 @@ if(!isset($_SESSION['id_usuario'])){
 </div>
 <div class=''style='height:20px'> </div>
     <main >
-        <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fnprodutoc(event)" >
+        <form action="sqlSaidaEstoque.php" method="post"onsubmit="return fc5(event)" >
             <div style='display:flex;justify-content: space-between'>
                 <div class="col-3">
                     <label style="display:flex;justify-content:center" class="" for="os" class="form-label">Numero Ordem de Servico(OS)</label>
@@ -107,8 +107,8 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
                 
                 <div class="col-3">
-                    <label style="display:flex;justify-content:center" for="quantidade_entrada" class="form-label">Quantidade</label>
-                    <input type="number" class="form-control s" id="quantidade_entrada" name="quantidade_entrada">
+                    <label style="display:flex;justify-content:center" for="quantidade" class="form-label">Quantidade</label>
+                    <input type="number" class="form-control s" id="quantidade" name="quantidade">
                 </div>
 
 

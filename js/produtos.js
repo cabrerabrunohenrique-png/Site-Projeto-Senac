@@ -491,3 +491,110 @@ function fc5(event){
 
 
 }   
+
+
+function fn6(event) {
+
+    const campo_data = document.getElementById('data');
+    let hoje  = new Date();
+    
+    hoje.setHours(0,0,0,0);
+
+
+    if(campo_data){
+        let texto_data = campo_data.value.trim();
+        if(texto_data ==""){
+            exibirErro(campo_data,"Atenção: Informa a data",event);    
+            return false;
+        }
+
+        let dataescolhida = new Date(texto_data.replace(/-/g, '/') + " 00:00:00");
+
+
+        if(dataescolhida < hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Retroativa",event);
+            return false;
+
+        }
+
+        if(dataescolhida > hoje){
+            exibirErro(campo_data,"Atenção: Não é permitido Data Futura",event);
+            return false
+        }
+
+        
+    }
+
+    limparErro(campo_data);
+
+
+    let campo_os = document.getElementById('codigo_ordem_de_servico');
+    if(campo_os){
+        let texto_os= campo_os.value.trim();{
+            if(texto_os =="" || texto_os =="null"){
+                exibirErro(campo_os,"Atenção: O Informe um numero de OS valido",event);
+                return false
+            }
+        }
+
+    }
+
+    limparErro(campo_os)
+
+    const campo_codigo = document.getElementById('codigo_do_produto');
+    if(campo_codigo){
+        let texto_codigo = campo_codigo.value.trim();
+        if(texto_codigo <=0){
+            exibirErro(campo_codigo,"Atenão:Informe um numero valido",event);
+            return false;
+
+        }
+
+        limparErro(campo_codigo);
+    }
+
+    const campo_nomeProduto = document.getElementById('nome_do_produto');
+    if(campo_nomeProduto){
+        let texto_nome = campo_nomeProduto.value.trim();
+        if(texto_nome =="" || texto_nome =="null"){
+            exibirErro(campo_nomeProduto,"Atenção: Informe um nome valido",event);
+            return false;
+        }
+        
+    
+
+        const temSimboloOuPontuacao = [...texto_nome].some(char => /[^\w\sÀ-ÿ]/.test(char));
+        if (temSimboloOuPontuacao){
+            exibirErro(campo_nomeProduto,"O nome completo não pode conter símbolos ou pontuação.",event);
+            return false;
+        } 
+    }
+
+    limparErro(campo_nomeProduto);
+
+    const campo_quantidade = document.getElementById('quantidade_entrada')
+    if(campo_quantidade){
+        texto_quantidade = campo_quantidade.value.trim()
+        if(texto_quantidade =="" || texto_quantidade <0){
+            exibirErro(campo_quantidade,'Atenção:O campo nao pode ficar vazio e nao pode ser numero negativo',event);
+            
+            return false;
+        }
+
+    }
+
+    limparErro(campo_quantidade)
+
+    const campo_responsavel = document.getElementById('responsavel')
+    if(campo_responsavel){
+        texto_responsavel = campo_responsavel.value.trim();
+        if(texto_responsavel =="null" || texto_responsavel ==""){
+            exibirErro(campo_responsavel,"Atencão:Informe o Responsavel pela Alteração",event);
+            return false;
+        }
+        limparErro(campo_responsavel);
+    }
+
+
+}
+

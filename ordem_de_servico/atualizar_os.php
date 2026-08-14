@@ -67,7 +67,7 @@ $lista_responsavel = $lista -> vendedor();
             <h1 class=''style ='text-transform: uppercase' >Atualizar Ordem de Serviço</h1>
         </div>
         <div class=''style='height:50px'> </div>
-        <form action="sqlatualizaros.php" method="post" onsubmit="return fnprodutob(event)" >
+        <form action="sqlatualizaros.php" method="post" onsubmit="return fn6(event)" >
             <div class="" style='display:flex; justify-content: space-between'>
                  <div class="col-3">
                     <label style='display:flex; justify-content: center' for="data" class="form-label">Data Atualizacao</label>

@@ -30,7 +30,7 @@ if(!isset($_SESSION['id_usuario'])){
         <div class ="bg-body-secondary" style="display:flex;justify-content: center;">
             
             <div>
-                    Quantidade de Saida por Produto
+                    Quantidade de Entrada por Produto
             </div>                  
         </div>       
         <div class=''style='height:20px'> </div>

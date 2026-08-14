@@ -58,7 +58,25 @@ if(!isset($_SESSION['id_usuario'])){
                             die("<h3>Erro</h3>".mysqli_connect_error());
                         }
                     
-                        $sql = "SELECT 
+                        $sql =" SELECT 
+                                    codigoProduto,
+                                    MAX(nomeProduto) AS nomeProduto, -- Evita nulos no nome se veio só da saída
+                                    SUM(quantidade) AS saldo
+                                FROM (
+                                    -- Busca todas as entradas (positivo)
+                                    SELECT codigoProduto, nomeProduto, quantidadeProduto AS quantidade 
+                                    FROM tbentradaestoque
+                                    
+                                    UNION ALL
+                                    
+                                    -- Busca todas as saídas (negativo)
+                                    SELECT codigoPeca, NULL AS nomeProduto, -quantidaPeca AS quantidade 
+                                    FROM tbsaidaestoque
+                                ) Movimentacao
+                                GROUP BY codigoProduto;";
+ 
+                        
+                        /*= "SELECT 
                                         e.codigoProduto,e.nomeProduto,
                                         (SUM(e.quantidadeProduto) - COALESCE(s.total_saida, 0)) AS saldo 
                                         FROM tbentradaestoque e
@@ -68,7 +86,7 @@ if(!isset($_SESSION['id_usuario'])){
                                         GROUP BY codigoPeca
                                         ) s ON e.codigoProduto = s.codigoPeca
                                         GROUP BY e.codigoProduto,e.nomeProduto;
-                        ";
+                        ";*/
                         $resultado = mysqli_query($conexao,$sql);
                         if($resultado){
 

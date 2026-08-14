@@ -26,10 +26,8 @@ if(!isset($_SESSION['id_usuario'])){
     
     <title>Cadastro de Produtos</title>
 </head>
-<body class ="container">
- 
-    
-<!-- cabeça -->
+<body class ="container ">
+     
 <header class='' >
     <nav>
         <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
@@ -40,22 +38,15 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
             <div>
                 <a class='letraFundoAzul caixa text-bg-warning fontemenu le' href='atualizar_produtos.php'> Atualizar Informações do Produto</a>
-            </div>
-           
+            </div>           
             <div>
                 <a class="letraFundoAzul caixa text-bg-danger fontemenu le" href ='deletar_produto.php'> Deletar  Produtos</a>
-            </div>
-        
-       
-            <div class="">
-                               
+            </div>      
+            <div class="">                               
                 <a class="cp caixa  fontemenu text-bg-primary" href='../listagem/listaProduto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
             </div>
-        </div>
-        <div style="height: 15px"></div>
-       
-    </nav>
-    
+        </div>               
+    </nav>    
 </header>
 
     <main class =''>
@@ -64,7 +55,7 @@ if(!isset($_SESSION['id_usuario'])){
             <h1 class='fontemenu'style ='text-transform: uppercase ' >Cadastro de produto</h1>
         </div>
         <div class=''style='height:20px'> </div>
-        <form class='' action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)" >
+        <form class='container' action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)" >
             <div style='display: flex; justify-content: center ' class=' gap-3 '>
                 <div class="col-md-3 ">
                     <label for="data" class="form-label">Data Registro</label>
@@ -81,12 +72,12 @@ if(!isset($_SESSION['id_usuario'])){
                         <?php echo $_SESSION['erro_codigo'];
                             unset($_SESSION['erro_codigo']); // Apaga da memória para o erro sumir se a página for atualizada
                         ?>
-                         </div>
+                    </div>
                         <?php endif; //SERVE PARA FECHAR OS {}, OU SEJA, SÓ COLOCAR NO FINAL E FECHA TUDO 
                        
                         ?>
                     
-                     </div>      
+                   
                 </div>
             </div>
             <div style='display: flex; justify-content: center ' class=' gap-3 '>
@@ -146,12 +137,12 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
             
             <div class=" gap-2 mt-4" style='display: flex; justify-content: center '>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-primary s" ">Salvar</button>
+                <button type="submit" class="btn btn-primary s">Salvar</button>
                 <button type="reset" class="btn btn-outline-secondary s">Limpar</button>
             </div>
         </form>
     </main>
-    <div class=''style='height:90px'> </div>
+    <div class=''style='height:95px'> </div>
 
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">

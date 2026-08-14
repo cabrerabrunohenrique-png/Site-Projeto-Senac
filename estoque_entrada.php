@@ -33,7 +33,7 @@ if(!isset($_SESSION['id_usuario'])){
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <title>Entrada</title>
 </head>
-<body class ="container">
+<body class ="container ">
  
 <!-- cabeça -->
 <header>
@@ -60,7 +60,7 @@ if(!isset($_SESSION['id_usuario'])){
 </div>
 <div class=''style='height:20px'> </div>
     <main >
-        <form action="sqlEntradaEstoque.php" method="post" onsubmit="return fnprodutoc(event)">
+        <form class=" container" action="sqlEntradaEstoque.php" method="post" onsubmit="return fnprodutoc(event)">
             <div class=''style='display:flex; justify-content: space-between'>
                 <div class="col-3">
                     <label for="codigo_do_produto " class="form-label " style='display: flex; justify-content: center '>Codigo do Produto</label>
@@ -120,7 +120,7 @@ if(!isset($_SESSION['id_usuario'])){
         </form>
     </main>
 
-    <div class=''style='height:270px'> </div>
+    <div class=''style='height: 189px;px'> </div>
 
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">

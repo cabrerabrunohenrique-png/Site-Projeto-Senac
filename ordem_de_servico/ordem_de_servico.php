@@ -111,7 +111,7 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
         </form>
     </main>
-    <div class=''style='height:230px'> </div>
+    <div class=''style='height:191px'> </div>
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">

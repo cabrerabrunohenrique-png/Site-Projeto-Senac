@@ -52,11 +52,11 @@ if(!isset($_SESSION['id_usuario'])){
 <form  action="sqlEditar.php" method="post"  onsubmit="return fnValidacaoB(event)" style="">
   <div class=" g-3" style="display:flex;justify-content: space-between;">
     <div class="col-3">
-      <label for="NomeCompleto" class="form-label">Nome Completo</label>
+      <label for="NomeCompleto" class="form-label" style="display:flex;justify-content:center">Nome Completo</label>
       <input type="text" class="form-control" id="NomeCompleto" name="nome_completo">
     </div>
     <div class="col-md-3">
-      <label for="NiveldePermisao" class="form-label">Nivel de Permissao</label>
+      <label for="NiveldePermisao" class="form-label dp">Nivel de Permissao</label>
         <select class="form-select" id="NiveldePermisao" name="nivel_de_permissao">
           <option selected value="">Selecione</option>
           <option></option>
@@ -66,7 +66,7 @@ if(!isset($_SESSION['id_usuario'])){
         </select>
     </div>
     <div class="col-md-3">
-      <label for="nome_de_usuario" class="form-label">Nome de Usuario</label>
+      <label for="nome_de_usuario" class="form-label dp">Nome de Usuario</label>
       <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario">
       <?php if(isset($_SESSION['usuario'])){?>
           <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px;     padding: 5px; border-radius: 4px; font-size: 0.9rem;">
@@ -79,7 +79,7 @@ if(!isset($_SESSION['id_usuario'])){
   <div style="display:flex;justify-content:space-between;" class=" g-3">
     
     <div class="col-md-3">
-      <label for="SenhadeAcesso" class="form-label">Senha de Acesso</label>
+      <label for="SenhadeAcesso" class="form-label dp">Senha de Acesso</label>
       
      
       <input type="password" class="form-control" id="SenhadeAcesso" name="senhade_de_acesso">
@@ -88,11 +88,11 @@ if(!isset($_SESSION['id_usuario'])){
 
     </div>
     <div class="col-md-3">
-      <label for="ConfirmarSenhadeAcesso" class="form-label">Confirmar Senha de Acesso</label>
+      <label for="ConfirmarSenhadeAcesso" class="form-label dp">Confirmar Senha de Acesso</label>
       <input type="password" class="form-control" id="ConfirmarSenhadeAcesso" name="senha_de_acesso">
     </div>
     <div class="col-md-3">
-      <label for="data" class="form-label">Data Alteração</label>
+      <label for="data" class="form-label dp">Data Alteração</label>
       <input type="date" class="form-control" id="data" name="data">
     </div>
   </div>

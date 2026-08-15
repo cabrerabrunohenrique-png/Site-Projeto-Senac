@@ -81,6 +81,10 @@
     border: 1px solid red;
 }
 
+.dp{
+    display: flex; justify-content: center;
+}
+
 .s{box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
 
 .l{border: 1px solid #1E293B;}

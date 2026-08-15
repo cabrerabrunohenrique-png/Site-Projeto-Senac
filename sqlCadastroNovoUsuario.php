@@ -103,13 +103,14 @@ if(!isset($_SESSION['id_usuario'])){
         $resultado = mysqli_query($conexao ,$slq);
         if ($resultado){
             mysqli_close($conexao);
-            //Se deu certo, redireciona IMEDIATAMENTE
-            echo "    <div style='display: flex; justify-content: center;'>"; 
-            echo "        <div class='box_cinza_claro' style='background: #19f261; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
-        
-            echo"<h1> Usuário Cadastrado com Sucesso</h1>";
-            echo "        </div>";
-            header('Refresh: 2; url=FormularioCadastroNovoUsuario.php');
+            echo "<link rel ='stylesheet' href='../css/style.css'>";
+            echo "
+            <div class='success-container'>
+                <div class='success-box'>
+                    <h1 class='success-title' >Usuário Cadastrado com Sucesso</h1>                  
+                    <a class='btn-success success-text 'href='FormularioCadastroNovoUsuario.php'>Voltar Pagina</a>
+                </div>
+            </div>";
             exit;
         }else{
             mysqli_close($conexao);

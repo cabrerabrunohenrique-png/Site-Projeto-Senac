@@ -54,37 +54,31 @@ if(!isset($_SESSION['id_usuario'])){
    
     if ($linha >0) {
         mysqli_close($conexao);
-       
-        echo"<link rel ='stylesheet' href='../css/style.css'>";
-       
-        echo "<div style='display: flex; justify-content: center;'>"; 
-        echo "<div class='box_cinza_claro'>"; 
-        
-        echo"<h1 class ='ar caixa '> Alterado com SUCESSO</h1>";
-        
-        
-       header('Refresh: 2; url=FormularioCadastroNovousuario.php');
+
+        echo "<link rel ='stylesheet' href='../css/style.css'>";
+            echo "
+            <div class='success-container'>
+                <div class='success-box'>
+                    <h1 class='success-title' >Alterado com Sucesso</h1>                  
+                    <a class='btn-success success-text 'href='FormularioCadastroNovousuario.php'>Voltar Pagina</a>
+                </div>
+            </div>";        
+        //header('Refresh: 2; url=FormularioCadastroNovousuario.php');
         exit;
     }
     elseif($linha=== 0) {
         mysqli_close($conexao);
+
+         echo "<link rel ='stylesheet' href='../css/style.css'>
+            <div class='alert-container'>
+                <div class='alert-box'>
+                    <h1 class='alert-title' >Atenção: Nenhuma alteração foi feita.</h1>           
+                    <a class='btn-back alert-text 'href='atualizar.php'>Voltar Pagina</a>
+                </div>
+            </div>"  ;
         echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>";
        
-        echo"<link rel ='stylesheet' href='../css/style.css'>
-            <div style='display: flex; justify-content: space-around;' > 
-                <div class=''>
-                    <a class='ar caixa  fontemenu' href='index'.php'>
-                      Voltar para Pagina de Login
-                    </a>
-                </div>
-                <div class=''>
-                    <a class='cp caixa  fontemenu text-bg-warning' href='atualizar.php'>
-                        Voltar para Pagina de Alteração de Usuário
-                    </a>
-                </div>
-            </div>";
-        echo"<div style ='height: 20px'> </div>" ;   
-        echo "<h1 class='letraFundoAzul  text-bg-danger fontemenu ' >Nenhuma alteração foi feita </h1>";
+       
         exit;
     }
 

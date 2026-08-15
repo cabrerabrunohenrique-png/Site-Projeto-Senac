@@ -34,11 +34,14 @@ if(!isset($_SESSION['id_usuario'])){
     
     if ($linha > 0 ) {
         mysqli_close($conexao);
-        echo "    <div style='display: flex; justify-content: center;'>"; 
-        echo "        <div class='box_cinza_claro' style='background: #19f261; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>";
-        echo"<h1> Usuário Excluido com Sucesso</h1>";
-        echo "        </div>"; 
-        
+        echo "<link rel ='stylesheet' href='../css/style.css'>";
+            echo "
+            <div class='success-container'>
+                <div class='success-box'>
+                    <h1 class='success-title' >Usuário excluido com Sucesso</h1>                  
+                    
+                </div>
+            </div>";        
         
         header('Refresh: 2; url=deletar.php');
         exit; 
@@ -48,23 +51,16 @@ if(!isset($_SESSION['id_usuario'])){
 
     else {
         mysqli_close($conexao);
-       
-        echo"<link rel ='stylesheet' href='css/style.css'>
-            <div style='display: flex; justify-content: center;' > 
-                <div class=''>
-                    <a class='cp caixa  fontemenu' href='deletar.php'>
-                    Voltar
-                </a>
+       echo "<link rel ='stylesheet' href='../css/style.css'>
+            <div class='alert-container'>
+                <div class='alert-box'>
+                    <h1 class='alert-title' >Atenção: Nao foi exluido!.</h1>           
+                    <a class='btn-back alert-text 'href='deletar.php'>Voltar Pagina</a>
                 </div>
-            </div>";
-        echo "<h1 class='letraFundoAzul  text-bg-info fontemenu le' >Nao foi exluido!</h1>";
+            </div>"  ;
+       
         exit;
     }
-
-
-
-    //header('Location:discografia_listagem.php');
-
 
 
 ?>

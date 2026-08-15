@@ -1,7 +1,6 @@
 <?php 
- //para ler o aviso criado na validacao de usuario em bando de dados
-session_start(); 
 
+session_start();
 
 if(!isset($_SESSION['id_usuario'])){
     header('Location:index.php');
@@ -69,7 +68,7 @@ if(!isset($_SESSION['id_usuario'])){
 
     <div class='' style="display:flex;justify-content: space-evenly;">
       <div class="col-md-4 ">
-        <label for="NomeCompleto" class="form-label">Nome Completo</label>
+        <label for="NomeCompleto" class="form-label"  style='display:flex; justify-content:center' >Nome Completo</label>
         <input type="text" class="form-control" id="NomeCompleto" name="nome_completo">
         <?php
         if (isset($_SESSION['erro_nomecompleto'])):?>
@@ -82,7 +81,7 @@ if(!isset($_SESSION['id_usuario'])){
       </div>
       
       <div class="col-4 ">
-        <label for="NumerodeRegistro" class="form-label">Numero de registro</label>
+        <label for="NumerodeRegistro" class="form-label"style="display:flex; justify-content:center" >Numero de registro</label>
         <input type="number" class="form-control" id="NumerodeRegistro" name="numero_de_registro" >
         <?php if (isset($_SESSION['Existenumero'])):?>
         <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
@@ -96,7 +95,7 @@ if(!isset($_SESSION['id_usuario'])){
     </div>
     <div class='' style="display:flex;justify-content: space-evenly;">
       <div class="col-md-4">
-        <label for="NiveldePermisao" class="form-label">Nivel de Permissao</label>
+        <label for="NiveldePermisao" class="form-label" style="display:flex; justify-content: center">Nivel de Permissao</label>
         <select class="form-select" id="NiveldePermisao" name="nivel_de_permissao">
           <option selected value="">Selecione</option>
           <option></option>
@@ -106,7 +105,7 @@ if(!isset($_SESSION['id_usuario'])){
         </select>
       </div>
       <div class="col-md-4">
-        <label for="nome_de_usuario" class="form-label">Nome de Usuario </label>
+        <label for="nome_de_usuario" class="form-label" style="display:flex;justidy-content:center" >Nome de Usuario </label>
         <input type="text" class="form-control" id="nome_de_usuario" name="nome_de_usuario" >
         <?php if (isset($_SESSION['erro_cadastro'])):?>
         <div class="letraFundoAzul text-bg-danger fontemenu le" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
@@ -119,11 +118,11 @@ if(!isset($_SESSION['id_usuario'])){
     </div>
     <div class='' style="display:flex;justify-content: space-evenly;">
       <div class="col-md-4">
-        <label for="SenhadeAcesso" class="form-label">Senha de Acesso</label>
+        <label for="SenhadeAcesso" class="form-label" style="display:flex; justify-content:center">Senha de Acesso</label>
         <input type="password" class="form-control" id="SenhadeAcesso" name="senha_de_acesso">
       </div>
       <div class="col-md-4">
-        <label for="ConfirmarSenhadeAcesso" class="form-label">Confirmar Senha de Acesso</label>
+        <label for="ConfirmarSenhadeAcesso" class="form-label" style="display:flex;justify-content:center">Confirmar Senha de Acesso</label>
         <input type="password" class="form-control" id="ConfirmarSenhadeAcesso" name="confirmar_senha_de_acesso">
       </div>
     </div >

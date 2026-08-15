@@ -126,6 +126,40 @@ if(!isset($_SESSION['id_usuario'])){
     }
     fccodigo($codigo,$nome);
 
+    function quantidade($os,$quantidade){
+         $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+        if(!$conexao){
+            die("<h1>Erro</h1>".mysqli_connect_error());
+        }
+
+        $sql = "select codigoOS, quantidadeProduzida from tbordemservico where codigoOS='$os' and quantidadeProduzida ='$quantidade'";
+
+        $resultado = mysqli_query($conexao,$sql);
+
+        if($resultado && mysqli_num_rows($resultado)>0){
+            mysqli_close($conexao);
+            return true;
+            
+        } else{
+            mysqli_close($conexao);
+            echo "<link rel ='stylesheet' href='../css/style.css'>";
+
+            echo "
+            <div class='alert-container'>
+                <div class='alert-box'>
+                    <h2 class='alert-title'>⚠️ Registro não lançado</h2>
+                    <p class='alert-text'>Quantidade diferente do informado na OS.</p>
+                    <a class='btn-back' href='estoque_saida.php'>Voltar para o Estoque</a>
+                </div>
+            </div>
+            ";
+            exit;
+        }
+
+    }
+
+    quantidade($os,$quantidade);
+
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
     if (!$conexao) {
         die ("<h1>erro<h1>". mysqli_connect_error());
@@ -147,7 +181,7 @@ if(!isset($_SESSION['id_usuario'])){
         echo "
         <div class='success-container'>
             <div class='success-box'>
-                <h2 class='success-title'>✅ Produto Lançado com Sucesso</h2>
+                <h2 class='success-title'>✅ Produto Lançado na Saida com Sucesso</h2>
                 <p class='success-text'>Redirecionando em instantes...</p>
             </div>
         </div>

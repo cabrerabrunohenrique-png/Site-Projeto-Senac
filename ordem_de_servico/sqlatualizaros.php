@@ -18,7 +18,7 @@
 
 
 
-    if($_SESSION['id_usuario'] != $responsavelb){
+    if($_SESSION['nome'] !== $responsavelb){
         echo "<link rel ='stylesheet' href='../css/style.css'>";
 
             echo "

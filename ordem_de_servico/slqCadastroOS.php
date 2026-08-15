@@ -22,7 +22,7 @@ if(!isset($_SESSION['id_usuario'])){
     $responsavel= $_POST['Responsavel']?? '';
         
      
-     if($responsavel != $_SESSION['nome']){
+     if($responsavel !== $_SESSION['nome']){
 
 echo "<link rel='stylesheet' href='../css/style.css'>
 

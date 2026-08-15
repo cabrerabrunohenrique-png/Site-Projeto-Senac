@@ -30,20 +30,14 @@
     if(empty($codigo)){
         
        
-        die("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>;
-            <link rel ='stylesheet' href='../css/style.css'>
-            <div style='display: flex; justify-content: space-around;' > 
-                <div class=''>
-                    <a class='cp caixa  fontemenu text-bg-warning' href='excluir_os.php'>
-                        Voltar para Pagina de Excluir OS
-                    </a>
+        die("<link rel ='stylesheet' href='../css/style.css'>
+            <div class='alert-container'>
+                <div class='alert-box'>
+                    <h1 class='alert-title' >Informe o numero da OS.</h1>           
+                    <a class='btn-back alert-text 'href='excluir_os.php'>Voltar Pagina</a>
                 </div>
-            </div>
-            <div style ='height: 20px '> </div>
-            <div class ='container'> 
-                <h1 class= ' letraFundoAzul  text-bg-danger fontemenu ' >Atenção: Informe o numero da OS. </h1>
-            </div>"
-        );
+            </div>"           
+        );   
 
     
     }
@@ -58,19 +52,14 @@
     
         if($r){ 
             mysqli_close($conn);
-            echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>";
-            echo"<link rel ='stylesheet' href='../css/style.css'>
-            <div style='display: flex; justify-content: space-around;' > 
-                <div class=''>
-                    <a class=' cp caixa  fontemenu' href='excluir_os.php'>
-                        Voltar para Pagina de Excluir OS
-                    </a>
+            echo "<link rel ='stylesheet' href='../css/style.css'>";
+            echo "
+            <div class='success-container'>
+                <div class='success-box'>
+                    <h1 class='success-title' >OS excluido com Sucesso</h1>                  
+                    <a class='btn-success success-text 'href='excluir_os.php'>Voltar Pagina</a>
                 </div>
             </div>";
-            echo"<div style ='height: 20px'> </div>";
-            echo "<div class='container'>";   
-            echo "<h1 class='  letraFundoAzul  text-bg-success  fontemenu ' >Atenção: OS excluir com Sucesso. </h1>";
-            echo"</div>";    
             exit; 
             } 
         mysqli_close($conn);
@@ -78,21 +67,14 @@
     }
     else{
 
-        echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>";
-        echo"<link rel ='stylesheet' href='../css/style.css'>
-        <div style='display: flex; justify-content: space-around;' > 
-            <div class=''>
-                <a class='cp caixa  fontemenu text-bg-warning' href='excluir_os.php'>
-                    Voltar para Pagina de Excluir OS
-                </a>
-            </div>
-        </div>";
-        echo"<div style ='height: 20px'> </div>" ;
-        echo "<div class ='container'> 
-        <h1 class= ' letraFundoAzul  text-bg-danger fontemenu ' >Atenção: Esta OS não existe no sistema. </h1>";
-        echo"</div>";
-        
-        
+    echo "<link rel ='stylesheet' href='../css/style.css'>
+            <div class='alert-container'>
+                <div class='alert-box'>
+                    <h1 class='alert-title' >Atenção: Esta OS não existe no sistema.</h1>           
+                    <a class='btn-back alert-text 'href='excluir_os.php'>Voltar Pagina</a>
+                </div>
+            </div>"  ;
+            
         exit; 
     }
 

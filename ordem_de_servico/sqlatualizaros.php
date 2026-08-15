@@ -101,9 +101,7 @@
     }
     if (!os($codigo)){
         echo "<link rel ='stylesheet' href='../css/style.css'>";
-
-            echo "
-            <div class='alert-container'>
+            echo "<div class='alert-container'>
                 <div class='alert-box'>
                     <h1 class='alert-title' >Erro: Esta Ordem de Serviço não existe no sistema.</h1>
                     
@@ -113,8 +111,6 @@
             </div>";
 
         exit;
-
-
 
     }
 
@@ -133,14 +129,12 @@
             <div class='success-container'>
                 <div class='success-box'>
                     <h1 class='success-title' >Atualizado com Sucesso</h1>
-                    
-                  
+                                     
                     <a class='btn-success success-text ' href='atualizar_os.php'>Voltar Pagina</a>
                 </div>
             </div>";
 
-
-          
+         
                 exit; 
         } 
         mysqli_close($conn);
@@ -153,8 +147,7 @@
             <div class='alert-container'>
                 <div class='alert-box'>
                     <h1 class='alert-title' >Erro: Codigo do Produto x Nome Produto.</h1>
-                    
-                  
+                                     
                     <a class='btn-back alert-text ' href='atualizar_os.php'>Voltar Pagina</a>
                 </div>
             </div>";

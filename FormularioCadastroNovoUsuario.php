@@ -37,17 +37,17 @@ if(!isset($_SESSION['id_usuario'])){
 
 <header style="">
   <nav >
-    <div class=' bg-body-secondary ' style=' display:flex;justify-content: space-between;text-transform: uppercase'>
+    <div class=' bg-body-secondary link-alerta' style=' display:flex;justify-content: space-between;text-transform: uppercase'>
       <div class="" style ='text-transform: uppercase'>
       <a class="ar caixa  fontemenu" href="index.php">Pagina de Login</a>
       </div>
      
         <div class="">
-          <a class="letraFundoAzul caixa text-bg-warning fontemenu le " href="atualizar.php">Atualizar Cadastro</a>
+          <a class="letraFundoAzul caixa text-bg-warning fontemenu le link-alerta " href="atualizar.php">Atualizar Cadastro</a>
         </div>
               
         <div class="">
-          <a class="letraFundoAzul caixa text-bg-danger fontemenu le " href="deletar.php">Deletar Cadastro</a>
+          <a class="letraFundoAzul caixa text-bg-danger fontemenu le link-alerta " href="deletar.php">Deletar Cadastro</a>
           </div>
       </div>
     </nav>

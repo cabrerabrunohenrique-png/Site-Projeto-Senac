@@ -30,7 +30,7 @@ if(!isset($_SESSION['id_usuario'])){
   <header style="display:flex;justify-content: center;">
     <nav >
       <div class="">
-        <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="FormularioCadastroNovoUsuario.php">
+        <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="FormularioCadastroNovoUsuario.php">
           Voltar
         </a>
       </div>

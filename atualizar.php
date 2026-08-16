@@ -35,7 +35,7 @@ if(!isset($_SESSION['id_usuario'])){
         <!-- //espaço para cada titulo de navegacao -->
         <div class="">
              <!-- //link para acessar -->
-            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="FormularioCadastroNovoUsuario.php">
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="FormularioCadastroNovoUsuario.php">
             Voltar
             </a>
         </div>

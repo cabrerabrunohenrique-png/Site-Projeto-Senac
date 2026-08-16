@@ -40,17 +40,17 @@ $lista_responsavel = $lista -> vendedor();
     <nav class=''style="display:flex;justify-content: space-between">
         
             <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">Menu</a>
             </div>
        
             <div class="">
                 
-                <a class="letraFundoAzul caixa fontemenu le os" href="ordem_de_servico.php">Voltar-Ordem de Servico(OS)
+                <a class="letraFundoAzul caixa fontemenu le os link-alerta" href="ordem_de_servico.php">Voltar-Ordem de Servico(OS)
                 </a>
             </div>
             
             <div class="">
-                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="excluir_os.php">Excluir Ordem de Servico(OS)</a>
+                <a class="letraFundoAzul caixa fontemenu text-bg-danger le link-alerta" href="excluir_os.php">Excluir Ordem de Servico(OS)</a>
             </div>
              <div class="">
                 <a class="ar caixa fontemenu text-bg-primary" href='../listagem/lista_ordem_servico.php' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista Ordem de Servico(OS)</a>                
@@ -76,12 +76,14 @@ $lista_responsavel = $lista -> vendedor();
                 <div class="col-3">
                    <label style='display:flex; justify-content:center' for="codigo_ordem_de_servico" class="form-label">Codigo Ordem de Servico(0S)</label>
                     <input type="number" id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
+                    <option selected value="">Selecione</option>
                     <option value =""> </option>
                     </select>
                 </div>
                 <div class="col-3">
                     <label style='display:flex; justify-content:center' for="codigo_do_produto" class="form-label">Codigo do Produto</label>
                     <select type="number" class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                        <option selected value="">Selecione</option>
                         <?php foreach($listaproduto as $produto): ?>
                             <option value="<?php echo($produto); ?>"><?php echo($produto);?> </option>
                         <?php endforeach;?>
@@ -92,6 +94,7 @@ $lista_responsavel = $lista -> vendedor();
                 <div class="col-3">
                     <label style='display:flex; justify-content:center' for="nome_do_produto" class="form-label">Nome do Produto</label>
                     <select type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                        <option selected value="">Selecione</option>
                         <?php foreach($lista_nome_produto as $nomeProduto): ?>
                             <option value="<?php echo($nomeProduto);?>"><?php echo($nomeProduto);?> </option>
                         <?php endforeach;?>
@@ -104,6 +107,7 @@ $lista_responsavel = $lista -> vendedor();
                 <div class="col-3">
                     <label style='display:flex;justify-content:center' for="responsavelb" class="form-label">Responsavel</label>
                     <select type="" class="form-control s" id="responsavelb" name="responsavelb">
+                        <option selected value="">Selecione</option>
                         <?php foreach($lista_responsavel as $responsavel): ?>
                         <option value="<?php echo($responsavel); ?>"><?php echo($responsavel); ?> </option>
                         <?php endforeach;?>
@@ -111,7 +115,7 @@ $lista_responsavel = $lista -> vendedor();
                 </div>
             </div>
             <div style='height:20px' ></div>
-            <div class=" gap-2 mt-4" style='display:flex;justify-content:center'>                                                            <!-- COMANDO PARA CHAMAR O CLIK-->          
+            <div class=" gap-2 mt-4" style='display:flex;justify-content:center'>                                  
                 <button type="submit" class="btn btn text-bg-warning" >Salvar Atualização</button>
                 <button type="reset" class="btn btn-outline-secondary ">Limpar</button>
             </div>

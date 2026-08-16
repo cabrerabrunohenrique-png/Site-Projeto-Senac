@@ -42,7 +42,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php" >Menu</a>
             </div>          
             <div class="" >
-                <a class="ar caixa  fontemenu text-bg-warning link-alerta link-alerta" href="../ordem_de_servico/atualizar_os.php">Editar Ordem de Servico(OS)
+                <a class="ar caixa  fontemenu text-bg-warning link-alerta" href="../ordem_de_servico/atualizar_os.php">Editar Ordem de Servico(OS)
                 </a>
             </div>            
             <div class="">
@@ -70,6 +70,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-md-4">
                     <label for="codigo_ordem_de_servico" class="form-label" style='display: flex; justify-content: center '>Codigo Ordem de Servico(0S)</label>
                     <select id="codigo_ordem_de_servico" class="form-control s" name="codigo_ordem_de_servico" >
+                        <option selected value="">Selecione</option>
 
                                     //GERA NUMERO ALEATORIO  
                      <?php $codigo = random_int(1,9999); ?>
@@ -80,6 +81,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-md-4">
                     <label for="codigo_do_produto" class="form-label" style='display: flex; justify-content: center ' >Codigo do Produto</label>
                     <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                        <option selected value="">Selecione</option>
                         <?php foreach ($codigosDoBanco as $codigo):?>
                             <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo trim($codigo);?></option>
                         <?php endforeach; ?>
@@ -88,6 +90,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-4">
                     <label for="nome_do_produto" class="form-label" style='display: flex; justify-content: center '>Nome do Produto</label>
                     <select class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                        <option selected value="">Selecione</option>
                         <?php foreach($nomeBanco as $nome): ?>
                             <option value="<?php echo($nome);?>"><?php echo($nome) ;?></option>
                             <?php endforeach; ?>
@@ -100,6 +103,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-4">
                     <label for="Responsavel" class="form-label" style='display: flex; justify-content: center '>Responsavel</label>
                     <select class="form-control s" id="Responsavel" name="Responsavel">
+                        <option selected value="">Selecione</option>
                         <?php foreach($vendor as $nome): ?>
                             <option value="<?php echo($nome);?>"><?php echo($nome) ;?></option>
                             <?php endforeach; ?>
@@ -115,15 +119,15 @@ if(!isset($_SESSION['id_usuario'])){
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
-                <a class="cp caixa1 fontemenu le" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos
+                <a class="cp caixa1 fontemenu le link-alerta" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos
                 </a>
             </div>          
             <div class="" >
-                <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                <a class="ar caixa1  fontemenu link-alerta" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>           
             <div class="">
-                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le link-alerta " href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
             </div>        
         </div>    
     </nav>

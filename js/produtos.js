@@ -352,7 +352,7 @@ function fnprodutoc(event) {
     if(campo_tipo){
         let texto_tipo = campo_tipo.value.trim()
         if(texto_tipo.length >=50 || texto_tipo.length <4 || texto_tipo ===""){
-            exibirErro(campo_tipo,"Atenção:O Campo Tipo nao pode FICAR VAZIO.\nNão pode ter menos que 3 caracteres.\nNao pode conter mais de 50 caracteres",event);
+            exibirErro(campo_tipo,"Atenção:O Campo TIPO/MOTIVO nao pode FICAR VAZIO.",event);
             return false;
         }
         limparErro(campo_tipo);

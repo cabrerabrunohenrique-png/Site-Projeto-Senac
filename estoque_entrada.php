@@ -94,13 +94,19 @@ if(!isset($_SESSION['id_usuario'])){
                     <label for="numero_nf" class="form-label" style="display:flex; justify-content:center" >Numero NF/ Numero Interno para controle</label>
                     <input type="number" class="form-control s" id="numero_nf" name="numero_nf">
                 </div>
-                <div class="col-3 ">
-                    <label for="tipo" class="form-label" style="display:flex; justify-content : center" >Tipo/Motivo :</label>
-                    
-                        <a href ="tipos.php" style="display:flex;justify-content:center" >Cadastrar Tipos/Motivo</a>
-                    
-                    <input type="type" class="form-control s" id="tipo" name="tipo">
-                </div>
+
+
+                <div class="col-3">
+                    <label for="tipo" class="form-label" style="display:flex; justify-content: center">Tipo/Motivo :</label>
+                    <select class="form-select" id="tipo" name="tipo">
+                    <option selected value="">Selecione</option>
+                    <option></option>
+                    <option value ="brinde" id ="brinde" >Brinde</option> 
+                    <option value ="compra" id="compra">Compra</option>
+                    <option value ="devolucao" id="devolucao">Devolução</option>                                   
+                    </select>
+                </div>    
+
 
                 <div class="col-3">
                     <label for="data" class="form-label" style="display:flex;justify-content:center" >Data Entrada Produto</label>

@@ -55,7 +55,7 @@ if(!isset($_SESSION['id_usuario'])){
 
 
                 while($linha_resultado = mysqli_fetch_array($result)){
-                    echo"<tr class =''>";
+                    echo"<tr class ='mouse'>";
                     echo "<td class='borda'> {$linha_resultado['data']} </td>";
                     echo "<td class='borda'> {$linha_resultado['codigoOS']} </td>";
                     echo "<td class='borda'> {$linha_resultado['codigoProduto']} </td>";

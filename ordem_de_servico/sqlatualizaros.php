@@ -103,7 +103,7 @@
         echo "<link rel ='stylesheet' href='../css/style.css'>";
             echo "<div class='alert-container'>
                 <div class='alert-box'>
-                    <h1 class='alert-title' >Erro: Esta Ordem de Serviço não existe no sistema.</h1>
+                    <h1 class='alert-title' >Erro: Essa Ordem de Serviço não existe no sistema.</h1>
                     
                   
                     <a class='btn-back alert-text ' href='atualizar_os.php'>Voltar Pagina</a>

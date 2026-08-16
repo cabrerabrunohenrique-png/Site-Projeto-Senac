@@ -70,7 +70,7 @@
     echo "<link rel ='stylesheet' href='../css/style.css'>
             <div class='alert-container'>
                 <div class='alert-box'>
-                    <h1 class='alert-title' >Atenção: Esta OS não existe no sistema.</h1>           
+                    <h1 class='alert-title' >Atenção: Essa OS não existe no sistema.</h1>           
                     <a class='btn-back alert-text 'href='excluir_os.php'>Voltar Pagina</a>
                 </div>
             </div>"  ;

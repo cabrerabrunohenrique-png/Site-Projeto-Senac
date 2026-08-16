@@ -72,7 +72,7 @@ echo "<link rel='stylesheet' href='../css/style.css'>
     <div class='container-erro'>
         <div class='card-erro'>
              <h1>Acesso Negado</h1>
-        <p>O Responsável tem que estar logado.<br>Não é permitido lançar Responsável diferente do usuário que está logado.</p>
+        <p>O Responsável tem que estar logado.<br>O responsável deve ser o mesmo usuário logado no sistema.</p>
         <a class='btn-voltar cp caixa fontemenu' href='ordem_de_servico.php'>Voltar</a>
         </div>
     </div>
@@ -154,7 +154,7 @@ echo "<link rel='stylesheet' href='../css/style.css'>
 <div class='container-erro'>
     <div class='card-erro'>
         <h1>Registro não lançado</h1>
-        <p>O código digitado não é compatível com o nome informado.</p>
+        <p>O código do Produto digitado não é compatível com o nome do Produto informado.</p>
         <a class='btn-voltar cp caixa fontemenu' href='ordem_de_servico.php'>Voltar</a>
     </div>
 </div>

@@ -64,7 +64,7 @@ if(!isset($_SESSION['id_usuario'])){
         <form action="slqCadastroOS.php" method="post" onsubmit="return fnprodutob(event)" >
             <div class="  row g-3 ">
                 <div class="  col-4">
-                    <label for="data" class="form-label  " style='display: flex; justify-content: center ' >Data</label>
+                    <label for="data" class="form-label  " style='display: flex; justify-content: center '>Data</label>
                     <input type="date" class="form-control s" id="data" name="data">
                 </div>
                 <div class="col-md-4">

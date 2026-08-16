@@ -194,7 +194,7 @@ function fnproduto(event){
         limparErro(campo_preco);
     }
     
-   
+   return true;
   
 } 
 
@@ -287,6 +287,7 @@ function fnprodutob(event) {
         limparErro(campo_responsavel);
     }
 
+    return true;
 
 }
 
@@ -399,10 +400,13 @@ function fnprodutoc(event) {
             exibirErro(campo_data,"Atenção: Não é permitido Data Futura",event);
             return false
         }
+
+        limparErro(campo_data);
+
     }
 
-    limparErro(campo_data);
-
+    
+    return true;
  
 }
 
@@ -488,9 +492,11 @@ function fc5(event){
         }
         limparErro(campo_nf);
     }
-
+    
+    return true;
 
 }   
+
 
 
 function fn6(event) {
@@ -595,6 +601,40 @@ function fn6(event) {
         limparErro(campo_responsavel);
     }
 
+     return true;
 
 }
+
+
+// 1. Criamos a variável em minúsculo iniciando em false
+let formulario_modificado = false;
+
+// 2. O navegador localiza seu formulário na tela
+const formulario_da_pagina = document.querySelector('form');
+
+// 3. Sensor nativo ativado caso o usuário altere qualquer dado ou digite
+if (formulario_da_pagina) {
+    formulario_da_pagina.addEventListener('change', function() {
+        formulario_modificado = true; 
+    });
+}
+
+// 4. Captura os links normais do seu menu (Menu e Estoque Entrada que usam a classe 'le')
+const links_do_menu = document.querySelectorAll('nav a.le');
+
+// 5. Para cada link normal, adiciona o aviso antes de mudar de aba
+links_do_menu.forEach(function(link_atual) {
+    link_atual.addEventListener('click', function(evento_do_clique) {
+        
+        // Se houve modificação na tela, o confirm entra em ação
+        if (formulario_modificado) {
+            let usuario_quer_sair = confirm("Você possui alterações não salvas. Tem certeza que deseja sair?");
+            
+            // Se clicar em Cancelar, cancela a navegação
+            if (!usuario_quer_sair) {
+                evento_do_clique.preventDefault();
+            }
+        }
+    });
+});
 

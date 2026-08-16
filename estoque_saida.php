@@ -17,10 +17,7 @@ if(!isset($_SESSION['id_usuario'])){
     $nomebanco = $listaCodigoProduto->listanome();
     $listaos = $listaCodigoProduto->listaos();
     
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,13 +30,10 @@ if(!isset($_SESSION['id_usuario'])){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <title>Estoque Saida</title>
-
-   
+    <title>Lançamento - Saida de Produtos</title>   
 </head>
 <body class ="container">
- 
-<!-- cabeça -->
+
 <header>
      <nav >
         <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
@@ -53,20 +47,24 @@ if(!isset($_SESSION['id_usuario'])){
        
             <div>
                 <a class="letraFundoAzul caixa fontemenu le ar text-bg-primary" href="../listagem/lista_saida_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Saida do Estoque</a>
-            </div>          
+            </div>
             
-           
-              
+            <div>
+                <a class="letraFundoAzul caixa fontemenu le os " href="../listagem/lista_ordem_servico.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Ordem Servico(OS)</a>
+            </div>
             
+            <div>
+                <a class="cp caixa  fontemenu " href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Produtos</a>
+            </div>
+  
         </div>    
     </nav>
-
    
 </header>
 <div class=''style='height:20px'> </div>
 
 <div class='fontemenu' style='display: flex; justify-content: center '>
-    <h1 class=''style ='text-transform: uppercase' >Estoque Saida de Produtos</h1>
+    <h1 class='fontemenu' >Lançamento -  Saída de Produtos</h1>
 </div>
 <div class=''style='height:20px'> </div>
     <main >
@@ -117,8 +115,8 @@ if(!isset($_SESSION['id_usuario'])){
                     <input type="number" class="form-control s" id="numero_nf" name="numero_nf" >
                 </div>
             </div>
-            <div class="gap-2 mt-4" style='display:flex;justify-content: center'>                              <!-- COMANDO PARA CHAMAR O CLIK-->          
-                <button type="submit" class="btn btn-success"> Salvar Saida Produto do Estoque  </button>
+            <div class="gap-2 mt-4" style='display:flex;justify-content: center'>                                      
+                <button type="submit" class="btn btn-success"> Salvar Saída Produto do Estoque </button>
                 <button type="reset" class="btn btn-outline-secondary">Limpar</button>
             </div>
         </form>

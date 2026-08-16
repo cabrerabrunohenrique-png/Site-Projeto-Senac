@@ -16,35 +16,26 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel ="stylesheet" href="../css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="../css/style_lista.css">  
     <title>Estoque Saida</title>
 </head>
-<body class ="container">
- 
-<!-- cabeça -->
-<header></header>
-<div class=''style='height:20px'> </div>
-<div class='fontemenu' style='display: flex; justify-content: center '>
-     <h1 class=''style ='text-transform: uppercase' >Relação de Produtos Vendido/Saida</h1>
+<body class ="">
+
+<div class=''>
+     <h1 class='texto_titulo'>Relação de Produtos Vendido/Saida</h1>
 </div>
-<div style ='width: px;height:20px;' > </div>
-<main >
-    <table class="table ">
+
+ <main class=" texto_centro borda " > 
+    <table style="width:100%">
 
         <thead>
             <tr class=''>
-                <td class =''>dataSaida</td>
-                <td>codigoPeca</td>
-                <td>nomePeca</td>
-                <td>quantidaPeca</td>
-                <td>numeroNf</td>
-                <td>numeroOs</td>
+                <td class="borda"'>dataSaida</td>
+                <td class="borda">codigoPeca</td>
+                <td class="borda">nomePeca</td>
+                <td class="borda">quantidaPeca</td>
+                <td class="borda">numeroNf</td>
+                <td class="borda">numeroOs</td>
             </tr>
         </thead>
         <tbody>
@@ -60,25 +51,24 @@ if(!isset($_SESSION['id_usuario'])){
 
 
                 while($linha_resultado = mysqli_fetch_array($result)){
-                    echo"<tr class =''>";
-                    echo "<td class =''> {$linha_resultado['dataSaida']} </td>";
-                    echo "<td> {$linha_resultado['codigoPeca']} </td>";
-                    echo "<td> {$linha_resultado['nomePeca']} </td>";
+                    echo"<tr class ='texto_centro mouse '>";
+                    echo "<td class='borda'> {$linha_resultado['dataSaida']} </td>";
+                    echo "<td class='borda' {$linha_resultado['codigoPeca']} </td>";
+                    echo "< td class='borda'> {$linha_resultado['nomePeca']} </td>";
 
-                    echo "<td> {$linha_resultado['quantidaPeca']} </td>";
-                    echo "<td> {$linha_resultado['numeroNf']} </td>";
-                    echo "<td> {$linha_resultado['numeroOs']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['quantidaPeca']} </td>";
+                    echo "td class='borda'> {$linha_resultado['numeroNf']} </td>";
+                    echo "td class='borda'> {$linha_resultado['numeroOs']} </td>";
                     echo"</tr>";
                 }
             ?>
         </tbody>
     </table>
-<main>
+</main>
+    <div style="height:20px"></div>
 
-     <div class =''style='display:flex;justify-content:center'>        
-        <!-- Código correto para atualizar a página -->
-        <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
-            Atualizar Página
+    <div class =''style='display:flex;justify-content:center'>        
+        <button class='btn-success' type="button"  onclick="window.location.reload();"> Atualizar Página
         </button>
     </div>
 </body>

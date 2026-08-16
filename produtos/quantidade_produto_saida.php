@@ -15,23 +15,18 @@ if(!isset($_SESSION['id_usuario'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
-    <link rel ="stylesheet" href="../css/style.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="../css/style_lista.css">
     
     <title>Quantidade_saida</title>
 </head>
-<body class ="container ">
+<body class ="">
 <header class='' > </header>
   
         <div class ="bg-body-secondary" style="display:flex;justify-content: center;">
             
-            <div>
-                
-                    Quantidade de Entrada por Produto
+            <div>                
+                <h1 class=" texto_titulo  ">Relatorio de Saida por Produto</h1>
                
             </div>
            
@@ -40,14 +35,15 @@ if(!isset($_SESSION['id_usuario'])){
        
         <div class=''style='height:20px'> </div>
       
-        <main >
-            <table class="fontemenu table ">
+        <main class=" texto_centro borda " >
+            <table style="width:100%">
                 <thead>
                     <tr class=' text-center le'>
-                    
-                        <td>codigo Produto</td>
-                        <td>nome Produto</td>
-                        <td>quantidade Produto</td>
+
+                        <td class="borda"> numero OS </td>
+                        <td class="borda">codigo Produto</td>
+                        <td class="borda">nome Produto</td>
+                        <td class="borda">quantidade Produto</td>
                     
                     </tr>
                 </thead>
@@ -58,7 +54,7 @@ if(!isset($_SESSION['id_usuario'])){
                             die("<h3>Erro</h3>".mysqli_connect_error());
                         }
                     
-                        $sql = " select codigopeca,nomepeca, sum(quantidapeca) as quantidadetotal from tbsaidaestoque  group by codigopeca,nomepeca ";
+                        $sql = " select codigopeca,nomepeca, numeroOS, sum(quantidapeca) as quantidadetotal from tbsaidaestoque  group by codigopeca,nomepeca ";
 
                         $resultado = mysqli_query($conexao,$sql);
                                     
@@ -69,12 +65,14 @@ if(!isset($_SESSION['id_usuario'])){
 
                             while($linha_resultado = mysqli_fetch_assoc($resultado)){
                         
-                                echo"<tr class ='text-center'>";
+                                echo"<tr class ='texto_centro mouse'>";
+                                
+                                echo "<td class='borda'> {$linha_resultado['numeroOS']} </td>";
                             
-                                echo "<td> {$linha_resultado['codigopeca']} </td>";
-                                echo "<td> {$linha_resultado['nomepeca']} </td>";
+                                echo "<td class='borda'> {$linha_resultado['codigopeca']} </td>";
+                                echo "<td class='borda'> {$linha_resultado['nomepeca']} </td>";
 
-                                echo "<td> {$linha_resultado['quantidadetotal']} </td>";
+                                echo "<td class='borda'> {$linha_resultado['quantidadetotal']} </td>";
                                 
                                 echo"</tr>";
                             
@@ -85,11 +83,12 @@ if(!isset($_SESSION['id_usuario'])){
                 </tbody>
             </table>
         </main>
+        <div style="height:20px"></div>
 
     
     <div class =''style='display:flex;justify-content:center'>        
         <!-- Código correto para atualizar a página -->
-            <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+            <button class='btn-success' type="button"  onclick="window.location.reload();">
                 Atualizar Página
             </button>
         </div>

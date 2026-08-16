@@ -55,17 +55,17 @@ if(!isset($_SESSION['id_usuario'])){
             <h1 class='fontemenu'style ='text-transform: uppercase ' >Cadastro de produto</h1>
         </div>
         <div class=''style='height:20px'> </div>
-        <form class='container' action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)" >
+        <form class='container ' action="slqCadastroProdutos.php" method="post" onsubmit="return fnproduto(event)" >
             <div style='display: flex; justify-content: center ' class=' gap-3 '>
                 <div class="col-md-3 ">
-                    <label for="data" class="form-label">Data Registro</label>
+                    <label for="data" class="form-label dp">Data Registro</label>
                     <input type="date" class="form-control s" id="data" name="data">
                     
                 </div> 
                    
                 
                 <div class="col-md-3">
-                    <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
+                    <label for="codigo_do_produto" class="form-label dp  ">Codigo do Produto</label>
                     <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
                     <?php if (isset($_SESSION['erro_codigo'])):?>
                     <div class="letraFundoAzul text-bg-danger fontemenu le mm" style="margin-top: 5px; padding: 5px; border-radius: 4px; font-size: 0.9rem;">
@@ -83,12 +83,12 @@ if(!isset($_SESSION['id_usuario'])){
             <div style='display: flex; justify-content: center ' class=' gap-3 '>
                     <div class="col-md-3">
                 
-                    <label for="fabricante" class="form-label">Fabricante</label>
+                    <label for="fabricante" class="form-label dp">Fabricante</label>
                     <input type="text" class="form-control s" id="fabricante" name="fabricante">
                 </div>
                 
                 <div class="col-md-3">
-                    <label for="nome_do_produto" class="form-label ">Nome do Produto</label>
+                    <label for="nome_do_produto" class="form-label dp ">Nome do Produto</label>
                     <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
                     <?php
                         if (isset($_SESSION['erro_nomeproduro'])):?>
@@ -108,7 +108,7 @@ if(!isset($_SESSION['id_usuario'])){
           
             <div style='display: flex; justify-content: center ' class=' gap-3'>
                 <div class="col-md-3">
-                    <label for="varaiveldoproduto" class="form-label">Variavel do Produto</label>
+                    <label for="varaiveldoproduto" class="form-label dp">Variavel do Produto</label>
                     <div class="input-group">
                         
                         <input type="number" class="form-control s" id="varaiveldoproduto" name="variavel">
@@ -117,17 +117,17 @@ if(!isset($_SESSION['id_usuario'])){
                 </div>
                 <div class="col-md-3">
                 
-                    <label for="familia" class="form-label">Familia</label>
+                    <label for="familia" class="form-label dp">Familia</label>
                     <input type="text" class="form-control s" id="familia" name="familia">
                 </div>
             </div> 
             <div style='display: flex; justify-content: center ' class=' gap-3'>
                 <div class="col-md-3">
-                    <label for="categoria" class="form-label">Categoria </label>
+                    <label for="categoria" class="form-label dp">Categoria </label>
                     <input type="text" class="form-control s" id="categoria" name="categoria">
                 </div>
                 <div class="col-md-3">
-                    <label for="preco" class="form-label">Preço por produto</label>
+                    <label for="preco" class="form-label dp">Preço por produto</label>
                     <div class="input-group">
                         <span class="input-group-text">R$</span>
                         <input type="number" class="form-control s" id="preco" name="preco"

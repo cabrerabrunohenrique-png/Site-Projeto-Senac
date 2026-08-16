@@ -60,9 +60,9 @@ if(!isset($_SESSION['id_usuario'])){
         <select class="form-select" id="NiveldePermisao" name="nivel_de_permissao">
           <option selected value="">Selecione</option>
           <option></option>
-          <option>Adm</option>
-          <option>Usuario Comum</option>
-          <option>Usuario Restrito</option>
+          <option>adm</option>
+          <option>usuario Comum</option>
+          <option>usuario Restrito</option>
         </select>
     </div>
     <div class="col-md-3">

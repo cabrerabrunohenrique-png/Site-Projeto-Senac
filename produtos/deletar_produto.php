@@ -55,12 +55,12 @@ if(!isset($_SESSION['id_usuario'])){
         <form action="sqlExcluirProdutos.php" method="post" onsubmit="return fnproduto(event)" class='' >
            <div style='display: flex;justify-content: space-around;'>
                 <div class="col-3 ">
-                    <label for="codigo_do_produto" class="form-label  ">Codigo do Produto</label>
+                    <label for="codigo_do_produto" class="form-label dp ">Codigo do Produto</label>
                     <input type="number" class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
                 </div>
             
                     <div class="col-3">
-                        <label for="nome_do_produto" class="form-label">Nome do Produto</label>
+                        <label for="nome_do_produto" class="form-label dp">Nome do Produto</label>
                         <input type="text" class="form-control s" id="nome_do_produto" name="nome_do_produto">
                     </div>
             

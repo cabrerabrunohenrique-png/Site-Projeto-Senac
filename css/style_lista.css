@@ -1,0 +1,59 @@
+.centralizar{
+    display: flex; justify-content: center;  
+}
+
+.mm{
+    border: 1px solid red;
+    
+}
+
+.texto_titulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+   
+    
+}
+
+.texto_centro{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 0;
+    letter-spacing: 1px;
+    
+}
+
+.mouse{
+    text-align: center;
+
+}
+.mouse:hover {
+    background-color: #1ab106f5;
+    color: rgb(13, 9, 234);
+}
+
+.borda{ border: 2px solid blue;
+   
+    
+
+}
+
+
+.btn-success {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #280df3;
+    border: 1px solid #10e942e0;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;    
+    transition: all 0.2s ease;
+}
+.btn-success:hover {
+    background-color: #b4f8c4;
+    color: #0d13cd;
+}
+
+

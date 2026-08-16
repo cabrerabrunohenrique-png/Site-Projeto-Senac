@@ -16,40 +16,30 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="../css/style_lista.css"> 
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel ="stylesheet" href="../css/style.css">
-
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-
     <title>Lista OS</title>
 </head>
-<body class ="container">
- 
-<!-- cabeça -->
-<header>
-        
-</header>
-<div class=''style='height:10px'> </div>
+<body class ="">
+
+
 <div class='' style='display: flex; justify-content: center '>
-     <h1 class=''style ='text-transform: uppercase' >Relação de Ordem de Servios(OS)</h1>
+     <h1 class='texto_titulo'>Relação de Ordem de Servios(OS)</h1>
 </div>
-<div style ='width: px;height:10px;' > </div>
-<main>
-    <table  class="table ">
+
+<main class=" texto_centro borda " >
+    <table style="width:100%">
         <thead>
             <tr class='' >
-                <td> Data </td>
-                <td>Codigo OS</td>
-                <td>Codigo do Produto</td>
-                <td>Nome do Produto</td>
-                <td>Quantidade</td>
-                <td>Primeiro a Cadastrar</td>
-                <td>Data Alteração </td>
-                <td>Responsavel</td> 
+                <td class="borda"> Data </td>
+                <td class="borda">Codigo OS</td>
+                <td class="borda">Codigo do Produto</td>
+                <td class="borda">Nome do Produto</td>
+                <td class="borda">Quantidade</td>
+                <td class="borda">Primeiro a Cadastrar</td>
+                <td class="borda">Data Alteração </td>
+                <td class="borda">Responsavel</td> 
             </tr>
         </thead>
         <tbody>
@@ -61,20 +51,20 @@ if(!isset($_SESSION['id_usuario'])){
                 $sql = "select * from tbordemservico order by codigoOS";
                 $result = mysqli_query($conexao, $sql);
 
-                echo"<link rel ='stylesheet' href='../css/style.css'>";
+               echo"<tr class ='texto_centro mouse '>";
 
 
                 while($linha_resultado = mysqli_fetch_array($result)){
                     echo"<tr class =''>";
-                    echo "<td class=''> {$linha_resultado['data']} </td>";
-                    echo "<td class =''> {$linha_resultado['codigoOS']} </td>";
-                    echo "<td> {$linha_resultado['codigoProduto']} </td>";
-                    echo "<td> {$linha_resultado['nomeProduto']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['data']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['codigoOS']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['codigoProduto']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
 
-                    echo "<td> {$linha_resultado['quantidadeProduzida']} </td>";
-                    echo "<td> {$linha_resultado['responsavel']}</td>";
-                    echo "<td> {$linha_resultado['data_alteracao']}</td>";
-                    echo "<td> {$linha_resultado['responsavel_alteracao']}</td>";
+                    echo "<td class='borda'> {$linha_resultado['quantidadeProduzida']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['responsavel']}</td>";
+                    echo "<td class='borda'> {$linha_resultado['data_alteracao']}</td>";
+                    echo "<td class='borda'> {$linha_resultado['responsavel_alteracao']}</td>";
                     echo"</tr>";
                 }
 
@@ -82,10 +72,11 @@ if(!isset($_SESSION['id_usuario'])){
         </tbody>
     </table>
 </main>
+<div style="height:20px"></div>
 
      <div class =''style='display:flex;justify-content:center'>        
         <!-- Código correto para atualizar a página -->
-        <button class='text-bg-primary' type="button"  onclick="window.location.reload();">
+        <button class='btn-success' type="button"  onclick="window.location.reload();">
             Atualizar Página
         </button>
     </div>

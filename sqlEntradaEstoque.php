@@ -1,16 +1,11 @@
 <?php
-
 session_start();
-
 if(!isset($_SESSION['id_usuario'])){
     header('Location:../index.php');
     exit;
-
 }
 
 ?>
-
-
 <?php
 
     $codigoproduto =$_POST['codigo_do_produto']??'';
@@ -20,7 +15,6 @@ if(!isset($_SESSION['id_usuario'])){
     $data =$_POST['data']??'';
     $tipo =$_POST['tipo']??'';
 
- 
     
     /*abri conexao*/ 
 
@@ -110,8 +104,46 @@ if(!isset($_SESSION['id_usuario'])){
        
 
 }
+
+
 fccodigo($codigoproduto,$nomedoproduto);
 
+
+
+function lancamentoDuplicado($codigoproduto,$nf,$data,$tipo){
+
+    $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+        if(!$conexao){
+            die("<h1>Erro</h1>". mysqli_connect_error());
+            
+        }
+
+        $sql ="select dataEntradaProduto, codigoProduto,nFProduto,tipo from tbentradaestoque where dataEntradaProduto ='$data' and codigoProduto ='$codigoproduto' and nFProduto = '$nf' and tipo ='$tipo'";
+
+        $r = mysqli_query($conexao,$sql);
+
+        if($r && mysqli_num_rows($r)>0){
+            mysqli_close($conexao);
+            echo "<link rel ='stylesheet' href='../css/style.css'>
+                <div class='alert-container'>
+                    <div class='alert-box'>
+                        <h1 class='alert-title' >ERRO</h1>
+                        <p>Atenção: Ja existe lançamento igual!</p>           
+                        <a class='btn-back alert-text 'href='estoque_entrada.php'>Voltar Pagina</a>
+                    </div>
+                </div>"  ;
+            return true;   
+        
+
+        }
+        else{
+            mysqli_close($conexao);
+            return false ;
+        }
+}
+if(lancamentoDuplicado($codigoproduto,$nf,$data,$tipo)){
+    exit;
+}
 
     $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
     if (!$conexao) {

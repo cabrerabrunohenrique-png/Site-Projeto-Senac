@@ -38,23 +38,23 @@ if(!isset($_SESSION['id_usuario'])){
      <nav >
         <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
             <div>
-            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">Menu</a>
             </div>
              <div class="">
-                <a class="letraFundoAzul caixa fontemenu le text-bg-success" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
+                <a class="letraFundoAzul caixa fontemenu le text-bg-success link-alerta" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
                 </a>
             </div>
        
             <div>
-                <a class="letraFundoAzul caixa fontemenu le ar text-bg-primary" href="../listagem/lista_saida_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Saida do Estoque</a>
+                <a class="letraFundoAzul caixa fontemenu le ar text-bg-primary link-alerta" href="../listagem/lista_saida_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Saida do Estoque</a>
             </div>
             
             <div>
-                <a class="letraFundoAzul caixa fontemenu le os " href="../listagem/lista_ordem_servico.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Ordem Servico(OS)</a>
+                <a class="letraFundoAzul caixa fontemenu le os  link-alerta" href="../listagem/lista_ordem_servico.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Ordem Servico(OS)</a>
             </div>
             
             <div>
-                <a class="cp caixa  fontemenu " href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Produtos</a>
+                <a class="cp caixa  fontemenu link-alerta" href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Produtos</a>
             </div>
   
         </div>    
@@ -74,6 +74,7 @@ if(!isset($_SESSION['id_usuario'])){
                     <label style="display:flex;justify-content:center" class="" for="os" class="form-label">Numero Ordem de Servico(OS)</label>
                      <select class="form-control s" id="os" name="os">
                         <?php foreach($listaos as $os) :?>
+                        <option selected value="">Selecione</option>
                         <option><?php echo($os);?></option>
                         <?php endforeach;?>
 
@@ -87,6 +88,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-3">
                     <label style="display:flex;justify-content:center" for="codigo_do_produto" class="form-label">Codigo do Produto</label>
                     <select id ="codigo_do_produto" class="form-control s" name='codigo_do_produto'>
+                        <option selected value="">Selecione</option>
                         <?php foreach ($codigosDoBanco as $codigo):?>
                         <option value="<?php echo $codigo;
                         ?>" class="form-label"><?php echo $codigo;?></option>
@@ -98,6 +100,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-3">
                     <label style="display:flex;justify-content:center" for="nome_do_produto" class="form-label">Nome do Produto</label>
                     <select  class="form-control s" id="nome_do_produto" name="nome_do_produto">
+                        <option selected value="">Selecione</option>
                         <?php foreach($nomebanco as $nome):?>
                             <option value ="<?php echo($nome) ;?>"><?php echo($nome) ;?></option>
                         <?php endforeach ;?>

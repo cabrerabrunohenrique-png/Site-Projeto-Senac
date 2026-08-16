@@ -266,7 +266,7 @@ function fnprodutob(event) {
 
     const campo_quantidade = document.getElementById('quantidade_entrada')
     if(campo_quantidade){
-        texto_quantidade = campo_quantidade.value.trim()
+        let texto_quantidade = campo_quantidade.value.trim()
         if(texto_quantidade =="" || texto_quantidade <0){
             exibirErro(campo_quantidade,'Atenção:O campo nao pode ficar vazio e nao pode ser numero negativo',event);
             
@@ -279,14 +279,14 @@ function fnprodutob(event) {
 
     const campo_responsavel = document.getElementById('responsavel')
     if(campo_responsavel){
-        texto_responsavel = campo_responsavel.value.trim();
+        let texto_responsavel = campo_responsavel.value.trim();
         if(texto_responsavel =="null" || texto_responsavel ==""){
             exibirErro(campo_responsavel,"Atencão:Informe o Responsavel pela Alteração",event);
             return false;
         }
-        limparErro(campo_responsavel);
+       limparErro(campo_responsavel);
     }
-
+    
     return true;
 
 }
@@ -618,9 +618,19 @@ if (formulario_da_pagina) {
         formulario_modificado = true; 
     });
 }
+if(formulario_da_pagina){
+    formulario_da_pagina.addEventListener('input', function() {
+        formulario_modificado = true; 
+    });
+}
+
+
+
+
+
 
 // 4. Captura os links normais do seu menu (Menu e Estoque Entrada que usam a classe 'le')
-const links_do_menu = document.querySelectorAll('nav a.le');
+const links_do_menu = document.querySelectorAll('.link-alerta');
 
 // 5. Para cada link normal, adiciona o aviso antes de mudar de aba
 links_do_menu.forEach(function(link_atual) {

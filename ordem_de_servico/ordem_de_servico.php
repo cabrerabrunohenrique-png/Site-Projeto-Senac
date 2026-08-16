@@ -39,14 +39,14 @@ if(!isset($_SESSION['id_usuario'])){
     <nav >
         <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php" >Menu</a>
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php" >Menu</a>
             </div>          
             <div class="" >
-                <a class="ar caixa  fontemenu text-bg-warning" href="../ordem_de_servico/atualizar_os.php">Editar Ordem de Servico(OS)
+                <a class="ar caixa  fontemenu text-bg-warning link-alerta link-alerta" href="../ordem_de_servico/atualizar_os.php">Editar Ordem de Servico(OS)
                 </a>
             </div>            
             <div class="">
-                <a class="letraFundoAzul caixa fontemenu text-bg-danger le" href="../ordem_de_servico/excluir_os.php">Excluir Ordem de Servico(OS)
+                <a class="letraFundoAzul caixa fontemenu text-bg-danger le link-alerta" href="../ordem_de_servico/excluir_os.php">Excluir Ordem de Servico(OS)
                 </a>
             </div>
             <div class="">

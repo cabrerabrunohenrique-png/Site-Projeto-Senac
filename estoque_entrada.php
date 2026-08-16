@@ -40,11 +40,11 @@ if(!isset($_SESSION['id_usuario'])){
     <nav >
         <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div>
-             <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
+             <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">Menu</a>
             </div>
            
             <div class="">
-             <a class="letraFundoAzul caixa fontemenu le text-bg-danger" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
+             <a class="letraFundoAzul caixa fontemenu le text-bg-danger link-alerta" href="../estoque_saida.php">Lançamento: Estoque SAIDA de Produtos</a>
             </div>
              <div class="">
              <a class='letraFundoAzul caixa fontemenu text-bg-primary le cp' href="../listagem/lista_entra_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista Entrada Estoque </a>
@@ -64,7 +64,8 @@ if(!isset($_SESSION['id_usuario'])){
             <div class=''style='display:flex; justify-content: space-between'>
                 <div class="col-3">
                     <label for="codigo_do_produto " class="form-label " style='display: flex; justify-content: center '>Codigo do Produto</label>
-                    <select class="form-control s" id ="codigo_do_produto" name="codigo_do_produto">
+                    <select class="form-control s" id="codigo_do_produto" name="codigo_do_produto">
+                         <option selected value="">Selecione</option>
                         <?php foreach ($codigosDoBanco as $codigo):?>
                         <option class="form-label" value="<?php echo trim($codigo);?>"><?php echo $codigo;?></option>
                         <?php endforeach; ?>
@@ -74,6 +75,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-3">
                     <label for="nome_do_produto" class="form-label" style='display: flex; justify-content: center '>Nome do Produto</label>
                     <select id="nome_do_produto" name="nome_do_produto"class="form-control s" >
+                         <option selected value="">Selecione</option>
                         <?php foreach ($nomeBanco as $nome):?>
                             <option value="<?php echo ($nome);?>" ><?php echo $nome;?></option>
                             <?php endforeach; ?>
@@ -131,18 +133,18 @@ if(!isset($_SESSION['id_usuario'])){
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
-                <a class="os caixa1 fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                <a class="os caixa1 fontemenu le link-alerta" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
             
             <div class="" >
-                <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                <a class="ar caixa1  fontemenu link-alerta" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
            
             <div class="">
-                <a class="letraFundoAzul caixa1 fontemenu cp  le" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>
+                <a class="letraFundoAzul caixa1 fontemenu cp  le link-alerta" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>
             </div>
          
          

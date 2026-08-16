@@ -35,13 +35,13 @@ if(!isset($_SESSION['id_usuario'])){
     <nav >
          <div style ='display: flex; justify-content: space-between'>
         <div class="">
-            <a class="letraPretoAzul caixa text-bg-info  fontemenu le" href="../navegacao.php">Menu</a>
+            <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">Menu</a>
         </div>
         <div class="">
-            <a class="letraPretoAzul caixa text-bg-primary  fontemenu le" href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista de Produtos</a>
+            <a class="letraPretoAzul caixa text-bg-primary  fontemenu le link-alerta" href="../listagem/listaProduto.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Lista de Produtos</a>
         </div>
         <div>
-            <a  class="letraPretoAzul caixa cp fontemenu le" href="cadastro_de_produtos.php">Voltar</a>
+            <a  class="letraPretoAzul caixa cp fontemenu le link-alerta" href="cadastro_de_produtos.php">Voltar</a>
         </div>
     </div>
         <div style="height: 15px"></div>

@@ -32,15 +32,15 @@ if(!isset($_SESSION['id_usuario'])){
     <nav>
         <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
             <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le " href="../navegacao.php">
+                <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">
                     Menu
                 </a>
             </div>
             <div>
-                <a class='letraFundoAzul caixa text-bg-warning fontemenu le' href='atualizar_produtos.php'> Atualizar Informações do Produto</a>
+                <a class='letraFundoAzul caixa text-bg-warning fontemenu le link-alerta' href='atualizar_produtos.php'> Atualizar Informações do Produto</a>
             </div>           
             <div>
-                <a class="letraFundoAzul caixa text-bg-danger fontemenu le" href ='deletar_produto.php'> Deletar  Produtos</a>
+                <a class="letraFundoAzul caixa text-bg-danger fontemenu le link-alerta" href ='deletar_produto.php'> Deletar  Produtos</a>
             </div>      
             <div class="">                               
                 <a class="cp caixa  fontemenu text-bg-primary" href='../listagem/listaProduto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
@@ -147,18 +147,18 @@ if(!isset($_SESSION['id_usuario'])){
     <nav>
          <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
             <div class="">
-                <a class="os caixa1 fontemenu le" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                <a class="os caixa1 fontemenu le link-alerta" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
                 </a>
             </div>
            
             
             <div class="" >
-                <a class="ar caixa1  fontemenu" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                <a class="ar caixa1  fontemenu link-alerta" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
             
             <div class="">
-                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le link-alerta" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
             </div>
               
         </div>    

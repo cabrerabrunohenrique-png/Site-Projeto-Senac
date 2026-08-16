@@ -25,17 +25,18 @@ if(!isset($_SESSION['id_usuario'])){
      <h1 class='texto_titulo'>Relação de Produtos Vendido/Saida</h1>
 </div>
 
- <main class=" texto_centro borda " > 
+ <main class="texto_centro borda" > 
     <table style="width:100%">
-
         <thead>
             <tr class=''>
-                <td class="borda"'>dataSaida</td>
-                <td class="borda">codigoPeca</td>
-                <td class="borda">nomePeca</td>
-                <td class="borda">quantidaPeca</td>
-                <td class="borda">numeroNf</td>
-                <td class="borda">numeroOs</td>
+                <td class="borda"'>data Saida</td>
+                <td class="borda">codigo Peca</td>
+                <td class="borda">nome Peca</td>
+                <td class="borda">quantida Peca</td>
+                <td class="borda">numero Nf</td>
+                <td class="borda">numero Os</td>
+
+
             </tr>
         </thead>
         <tbody>
@@ -47,18 +48,19 @@ if(!isset($_SESSION['id_usuario'])){
                 $sql = "select * from tbsaidaestoque order by dataSaida";
                 $result = mysqli_query($conexao, $sql);
 
-                echo"<link rel ='stylesheet' href='../css/style.css'>";
+                
 
 
                 while($linha_resultado = mysqli_fetch_array($result)){
-                    echo"<tr class ='texto_centro mouse '>";
+                    echo"<link rel ='stylesheet' href='../css/style.css'>";
+                    echo"<tr class ='texto_centro mouse'>";
                     echo "<td class='borda'> {$linha_resultado['dataSaida']} </td>";
-                    echo "<td class='borda' {$linha_resultado['codigoPeca']} </td>";
-                    echo "< td class='borda'> {$linha_resultado['nomePeca']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['codigoPeca']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['nomePeca']} </td>";
 
                     echo "<td class='borda'> {$linha_resultado['quantidaPeca']} </td>";
-                    echo "td class='borda'> {$linha_resultado['numeroNf']} </td>";
-                    echo "td class='borda'> {$linha_resultado['numeroOs']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['numeroNf']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['numeroOs']} </td>";
                     echo"</tr>";
                 }
             ?>

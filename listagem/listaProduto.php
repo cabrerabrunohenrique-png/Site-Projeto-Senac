@@ -47,10 +47,11 @@ if(!isset($_SESSION['id_usuario'])){
                 $sql = "select * from tbcadastropeca order by codigoproduto";
                 $result = mysqli_query($conexao, $sql);
 
-                echo"<link rel ='stylesheet' href='../css/style.css'>";
+                
 
 
                 while($linha_resultado = mysqli_fetch_array($result)){    
+                    echo"<link rel ='stylesheet' href='../css/style.css'>";
                     echo"<tr class ='texto_centro mouse'>";
                     echo "<td class='borda'> {$linha_resultado['codigoproduto']} </td>";
                     echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";

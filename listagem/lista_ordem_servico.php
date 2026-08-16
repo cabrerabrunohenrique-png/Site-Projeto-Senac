@@ -17,12 +17,9 @@ if(!isset($_SESSION['id_usuario'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="../css/style_lista.css"> 
-    
-    
-    <title>Lista OS</title>
+<title>Lista OS</title>
 </head>
 <body class ="">
-
 
 <div class='' style='display: flex; justify-content: center '>
      <h1 class='texto_titulo'>Relação de Ordem de Servios(OS)</h1>
@@ -51,11 +48,11 @@ if(!isset($_SESSION['id_usuario'])){
                 $sql = "select * from tbordemservico order by codigoOS";
                 $result = mysqli_query($conexao, $sql);
 
-               echo"<tr class ='texto_centro mouse '>";
+              
 
 
                 while($linha_resultado = mysqli_fetch_array($result)){
-                    echo"<tr class ='mouse'>";
+                    echo"<tr class ='texto_centro mouse'>";
                     echo "<td class='borda'> {$linha_resultado['data']} </td>";
                     echo "<td class='borda'> {$linha_resultado['codigoOS']} </td>";
                     echo "<td class='borda'> {$linha_resultado['codigoProduto']} </td>";
@@ -75,7 +72,6 @@ if(!isset($_SESSION['id_usuario'])){
 <div style="height:20px"></div>
 
      <div class =''style='display:flex;justify-content:center'>        
-        <!-- Código correto para atualizar a página -->
         <button class='btn-success' type="button"  onclick="window.location.reload();">
             Atualizar Página
         </button>

@@ -34,12 +34,16 @@ if(!isset($_SESSION['id_usuario'])){
     
     if ($linha > 0 ) {
         mysqli_close($conexao);
-        echo "    <div style='display: flex; justify-content: center;'>"; 
-        echo "        <div class='box_cinza_claro' style='background: #19f21d; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
+        echo "<link rel ='stylesheet' href='../css/style.css'>";
+            echo "
+            <div class='success-container'>
+                <div class='success-box'>
+                    <h1 class='success-title' >Produto Excluido com Sucesso</h1>                  
+                    <a class='btn-success success-text 'href='deletar_produto.php'>Voltar Cadastro</a>
+                </div>
+            </div>";  
         
-        echo"<h1> Excluido com SUCESSO</h1>";
-        echo "        </div>";
-        header('Refresh: 2; url=cadastro_de_produtos.php');
+        header('Refresh: 5; url=cadastro_de_produtos.php');
         exit; 
         
 

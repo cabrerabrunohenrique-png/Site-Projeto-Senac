@@ -91,14 +91,15 @@ if(!isset($_SESSION['id_usuario'])){
     if ($resultado) {
         mysqli_close($conexao);
         // Se deu certo, redireciona IMEDIATAMENTE
-        
-        echo "    <div style='display: flex; justify-content: center;'>"; 
-        echo "        <div class='box_cinza_claro' style='background: #19f261; border: 1px solid #ccc; border-radius: 4px; padding: 10px 20px;'>"; 
-        
-        echo"<h1> Produto Cadastrado com Sucesso</h1>";
-        echo "        </div>";
-        
-        header('Refresh: 2; url=../estoque_entrada.php');
+         echo "<link rel ='stylesheet' href='../css/style.css'>";
+            echo "
+            <div class='success-container'>
+                <div class='success-box'>
+                    <h1 class='success-title' >Produto Cadastrado com Sucesso</h1>                  
+                    <a class='btn-success success-text 'href='../estoque_entrada.php'>Voltar Pagina</a>
+                </div>
+            </div>";          
+        header('Refresh: 4; url=../estoque_entrada.php');
         exit;
         
         
@@ -106,6 +107,7 @@ if(!isset($_SESSION['id_usuario'])){
     else {
         mysqli_close($conexao);
         echo "Deu algum problema";
+        header('Refresh: 4; url=../estoque_entrada.php');
         exit;
     }
 

@@ -28,14 +28,10 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Navegacao</title>
 </head>
 <body class="container" style='background-color: #F7F7F7'>
-
-
     <nav class ="">
-       
-
-            <div class="bg-body-secondary " style='' >
-                 <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="slqSairSistema.php">Sair do Sistema</a>
-            </div>
+        <div class="bg-body-secondary " style='' >
+            <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="slqSairSistema.php">Sair do Sistema</a>
+        </div>
           
     </nav> 
     <div style="height: 15px"></div>

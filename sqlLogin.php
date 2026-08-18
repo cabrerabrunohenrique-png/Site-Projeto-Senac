@@ -6,13 +6,14 @@
    
     
     /*abri conexao*/ 
-    
+    try {
 
         $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
-        if (!$conexao) {
-            die ("<h1>erro<h1>". mysqli_connect_error());
+        }catch (mysqli_sql_exception $e)
+        {
+            die ($e->getMessage()."<h1>Erro</h1> <a href='index.php'>Voltar</a>" );
+        
         }
-
           #inserir os dados
 
 

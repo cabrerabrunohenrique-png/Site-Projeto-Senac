@@ -41,10 +41,16 @@ if(!isset($_SESSION['id_usuario'])){
         </thead>
         <tbody>
             <?php
-                $conexao = mysqli_connect("localhost", "root", "", "bdprojetosenac");
-                if(!$conexao){
-                    die("<h3>Erro</h3>".mysqli_connect_error());
-                }
+
+                  try{
+            $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+            }
+            catch(mysqli_sql_exception $e){
+                die ("Erro com o banco de dados"."<h1>Erro</h1> <a href='../index.php'>Voltar</a>" );
+            }
+
+
+
                 $sql = "select * from tbsaidaestoque order by dataSaida";
                 $result = mysqli_query($conexao, $sql);
 

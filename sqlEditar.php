@@ -21,10 +21,12 @@ if(!isset($_SESSION['id_usuario'])){
     usuario($nomedeusuario);
 
     function usuario($nomedeusuario){
-        $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
-        if(!$conexao){
-            die("<h>Erro</h>".mysqli_connect_error());
-        }
+          try{
+          $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
+          }
+          catch(mysqli_sql_exception $e){
+              die ("Erro com o banco de dados"."<h1>Erro</h1> <a href='../index.php'>Voltar</a>" );
+          }
 
         $sql = "select nomeUsuario from tbcadastronovousuario where nomeUsuario ='$nomedeusuario'";
         $resultado = mysqli_query($conexao,$sql);

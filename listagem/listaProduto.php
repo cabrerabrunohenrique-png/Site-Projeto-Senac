@@ -31,11 +31,11 @@ if(!isset($_SESSION['id_usuario'])){
                 <td class="borda">Nome do Produto</td>
                 <td class="borda">Variavel do Produto</td>
                 <td class="borda">Fabricante</td>
-                <td class="borda">Familia do Produto</td>
-                <td class="borda">Data de Cadastro </td>
-                <td class="borda">Categoria do Produto</td>
+               
+                
+                
                 <td class="borda">Preço do Produto R$</td>
-                <td class="borda">Data da ultima Alteração</td>
+                
             </tr>
         </thead>
         <tbody>
@@ -57,15 +57,14 @@ if(!isset($_SESSION['id_usuario'])){
                 while($linha_resultado = mysqli_fetch_array($result)){    
                     echo"<link rel ='stylesheet' href='../css/style.css'>";
                     echo"<tr class ='texto_centro mouse'>";
-                    echo "<td class='borda'> {$linha_resultado['codigoproduto']} </td>";
+                    echo "<td class='borda'> <a href='../card/cart_produto.php'>    {$linha_resultado['codigoproduto']} </a> </td>";
                     echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
                     echo "<td class='borda'> {$linha_resultado['variavelproduto']} </td>";
-                    echo "<td class='borda'> {$linha_resultado['fabricanteProduto']} </td>";
-                    echo "<td class='borda'> {$linha_resultado['familiaproduto']} </td>";
-                    echo "<td class='borda'>{$linha_resultado['datacriacao']} </td>";
-                    echo "<td class='borda'>{$linha_resultado['categoriaproduto']} </td>";
+                    echo "<td class='borda'> {$linha_resultado['fabricanteProduto']} </td>";      
+                    
+                    
                     echo "<td class='borda'> {$linha_resultado['preco']} </td>";
-                    echo "<td class='borda'>{$linha_resultado['dataalteracao']} </td>";
+                    
                     echo"</tr>";
                 }
             ?>

@@ -43,7 +43,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <a class="letraFundoAzul caixa text-bg-danger fontemenu le link-alerta" href ='deletar_produto.php'> Deletar  Produtos</a>
             </div>      
             <div class="">                               
-                <a class="cp caixa  fontemenu text-bg-primary" href='../listagem/listaProduto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
+                <a class="cp caixa  fontemenu text-bg-primary" href='../card/cart_produto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
             </div>
         </div>               
     </nav>    

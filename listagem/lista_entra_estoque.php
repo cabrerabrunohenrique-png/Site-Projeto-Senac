@@ -65,7 +65,7 @@ if(!isset($_SESSION['id_usuario'])){
                         echo"<link rel ='stylesheet' href='../css/style.css'>";
                         echo"<tr class ='texto_centro mouse '>";
                         echo "<td class='borda'> {$linha_resultado['dataEntradaProduto']} </td>";
-                        echo "<td class='borda'> {$linha_resultado['codigoProduto']} </td>";
+                        echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigoProduto']}</a> </td>";
                         echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
 
                         echo "<td class='borda'> {$linha_resultado['quantidadeProduto']} </td>";

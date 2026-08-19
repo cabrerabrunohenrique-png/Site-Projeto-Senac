@@ -1,0 +1,21 @@
+<?php
+    $id = $_GET ['id'];    
+    
+
+    $sql = "select * from tb_discografia where id_tb_discografia = {$id}";
+   
+    $result = mysqli_query($conexao, $sql);
+
+
+    $foto = $nome = $album = $ano = $tipo ="";
+    while ($linha = mysqli_fetch_assoc($result)){
+        $nome = $linha['nomeArtista'];
+        $album = $linha ['nomeAlbum'];
+        $foto =$linha ['fotoAlum'];
+        $ano = $linha ['anoLancamento'];
+        $tipo = $linha ['tipo'];
+
+    }
+
+
+?>

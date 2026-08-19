@@ -103,8 +103,12 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
             
             <div class="">
-                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada e Saida</a>
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="../estoque_entrada.php">Lançamentos -Entrada de Produtos</a>
             </div>
+
+             <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-danger  le link-alerta " href="../estoque_saida.php">Lançamentos -Venda de Produtos</a>
+            </div> 
          
          
         </div>    

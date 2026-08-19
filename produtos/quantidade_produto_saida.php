@@ -70,9 +70,9 @@ if(!isset($_SESSION['id_usuario'])){
                         
                                 echo"<tr class ='texto_centro mouse'>";
                                 
-                                echo "<td class='borda'> {$linha_resultado['numeroOS']} </td>";
+                                echo "<td class='borda'>  {$linha_resultado['numeroOS']}  </td>";
                             
-                                echo "<td class='borda'> {$linha_resultado['codigopeca']} </td>";
+                                echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigopeca']} </a> </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomepeca']} </td>";
 
                                 echo "<td class='borda'> {$linha_resultado['quantidadetotal']} </td>";

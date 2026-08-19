@@ -56,7 +56,7 @@ if(!isset($_SESSION['id_usuario'])){
 
 <div class=''style='height:20px'> </div>
 <div class='fontemenu' style='display: flex; justify-content: center '>
-    <h1 class=''style ='text-transform: uppercase' >Estoque Entrada de produto</h1>
+    <h1 class=''style ='text-transform: uppercase' >Lançamento -Estoque Entrada de produto</h1>
 </div>
 <div class=''style='height:20px'> </div>
     <main >
@@ -142,6 +142,9 @@ if(!isset($_SESSION['id_usuario'])){
                 <a class="ar caixa1  fontemenu link-alerta" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
                 </a>
             </div>
+             <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-danger  le link-alerta " href="../estoque_saida.php">Lançamentos -Venda de Produtos</a>
+            </div> 
            
             <div class="">
                 <a class="letraFundoAzul caixa1 fontemenu cp  le link-alerta" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>

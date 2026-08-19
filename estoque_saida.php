@@ -40,10 +40,7 @@ if(!isset($_SESSION['id_usuario'])){
             <div>
             <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">Menu</a>
             </div>
-             <div class="">
-                <a class="letraFundoAzul caixa fontemenu le text-bg-success link-alerta" href="../estoque_entrada.php">Lançamento: Estoque ENTRADA de Produtos
-                </a>
-            </div>
+            
        
             <div>
                 <a class="letraFundoAzul caixa fontemenu le ar text-bg-primary link-alerta" href="../listagem/lista_saida_estoque.php" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista Saida do Estoque</a>
@@ -124,6 +121,31 @@ if(!isset($_SESSION['id_usuario'])){
             </div>
         </form>
     </main>
+    <div class=''style='height: 189px;px'> </div>
+
+    <nav>
+         <div class ='bg-body-secondary' style="display:flex;justify-content: space-between;">
+            <div class="">
+                <a class="os caixa1 fontemenu le link-alerta" href="../ordem_de_servico/ordem_de_servico.php">Ordem de Servico(OS)
+                </a>
+            </div>
+           
+            
+            <div class="" >
+                <a class="ar caixa1  fontemenu link-alerta" href="../acessar_aos_relatorios.php">Acessar aos Relatorios
+                </a>
+            </div>
+             <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu text-bg-info  le" href="estoque_entrada.php">Lançamentos -Entrada de Produtos</a>
+            </div> 
+           
+            <div class="">
+                <a class="letraFundoAzul caixa1 fontemenu cp  le link-alerta" href="../produtos/cadastro_de_produtos.php">Cadastro de Produtos</a>
+            </div>
+         
+         
+        </div>    
+    </nav>
     
 
 

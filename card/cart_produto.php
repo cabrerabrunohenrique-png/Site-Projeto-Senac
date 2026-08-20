@@ -10,7 +10,6 @@ if(!isset($_SESSION['id_usuario'])){
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,16 +27,19 @@ if(!isset($_SESSION['id_usuario'])){
     <main class=" texto_centro borda ">
         <table style="width:100%">
             <thead>
+                <h1>Informações dos Produto</h1>
                 <tr class=''>
-                    <td class="borda">Codigo do Produto</td>
+                    <td class="borda">Codigo do Produto </td>
                     <td class="borda">Nome do Produto</td>
                     <td class="borda">Variavel do Produto</td>
                     <td class="borda">Fabricante</td>
                     <td class="borda">Familia do Produto</td>
-                    <td class="borda">Data de Cadastro </td>
+                    
                     <td class="borda">Categoria do Produto</td>
                     <td class="borda">Preço do Produto R$</td>
-                    <td class="borda">Data da ultima Alteração</td>
+                  
+                    
+                    
                 </tr>
             </thead>
             <tbody>
@@ -50,19 +52,26 @@ if(!isset($_SESSION['id_usuario'])){
                         
                     $sql = "select * from tbcadastropeca order by codigoproduto";
                     $result = mysqli_query($conexao, $sql);
-                    while($linha_resultado = mysqli_fetch_array($result)){    
+                    while($linha_resultado = mysqli_fetch_array($result)){ 
+                        $codigoproduto = $linha_resultado['codigoproduto'];
+
                         echo"<link rel ='stylesheet' href='../css/style.css'>";
                         echo"<tr class ='texto_centro mouse'>";
-                        echo "<td class='borda'>{$linha_resultado['codigoproduto']} </td>";
+                        
+                        echo "<td class='borda'> <a href='card.php?id={$codigoproduto}'>{$linha_resultado['codigoproduto']}</a> </td>";
+
                         echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
                         echo "<td class='borda'> {$linha_resultado['variavelproduto']} </td>";
                         echo "<td class='borda'> {$linha_resultado['fabricanteProduto']} </td>";
                         echo "<td class='borda'> {$linha_resultado['familiaproduto']} </td>";
-                        echo "<td class='borda'>{$linha_resultado['datacriacao']} </td>";
                         echo "<td class='borda'>{$linha_resultado['categoriaproduto']} </td>";
                         echo "<td class='borda'> {$linha_resultado['preco']} </td>";
-                        echo "<td class='borda'>{$linha_resultado['dataalteracao']} </td>";
+                        
+                        echo "<td><button class='btn-success' type='button'  onclick='window.location.reload();'>
+                        Atualizar Página</button>";
                         echo"</tr>";
+
+                        
                     }
                 ?>
             </tbody>
@@ -76,7 +85,11 @@ if(!isset($_SESSION['id_usuario'])){
             Atualizar Página
         </button>
     </div>
-    </nav>
+    <div class=''style='height:95px'> </div>
+    <div class =''style='display:flex;justify-content:center'>      
+         <a href='../listagem/listaProduto.php'>Volta Pagina Relação de Produtos </a>
+    </div>
+    
     
 </body>
 <script src="../js/produtos.js"></script>

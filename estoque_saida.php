@@ -70,8 +70,8 @@ if(!isset($_SESSION['id_usuario'])){
                 <div class="col-3">
                     <label style="display:flex;justify-content:center" class="" for="os" class="form-label">Numero Ordem de Servico(OS)</label>
                      <select class="form-control s" id="os" name="os">
-                        <?php foreach($listaos as $os) :?>
-                        <option selected value="">Selecione</option>
+                      <option selected value="">Selecione</option>    
+                        <?php foreach($listaos as $os) :?>                        
                         <option><?php echo($os);?></option>
                         <?php endforeach;?>
 

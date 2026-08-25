@@ -49,7 +49,7 @@ if(!isset($_SESSION['id_usuario'])){
             }
 
 
-                $sql = "select * from tbordemservico order by codigoOS";
+                $sql = "select * from tbordemservico order by data";
                 $result = mysqli_query($conexao, $sql);
 
               

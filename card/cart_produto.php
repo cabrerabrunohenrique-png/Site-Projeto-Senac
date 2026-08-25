@@ -34,10 +34,10 @@ if(!isset($_SESSION['id_usuario'])){
                     <td class="borda">Variavel do Produto</td>
                     <td class="borda">Fabricante</td>
                     <td class="borda">Familia do Produto</td>
-                    
                     <td class="borda">Categoria do Produto</td>
                     <td class="borda">Preço do Produto R$</td>
-                  
+                    <td class ="borda"> Atulizar Pagina</td>
+                    <td class ="borda"> dados do produto</td>
                     
                     
                 </tr>
@@ -67,10 +67,11 @@ if(!isset($_SESSION['id_usuario'])){
                         echo "<td class='borda'>{$linha_resultado['categoriaproduto']} </td>";
                         echo "<td class='borda'> {$linha_resultado['preco']} </td>";
                         
-                        echo "<td><button class='btn-success' type='button'  onclick='window.location.reload();'>
+                        echo "<td class='borda'  ><button class='btn-success' type='button'  onclick='window.location.reload();'>
                         Atualizar Página</button>";
-                        echo"</tr>";
-
+                        
+                        echo"<td class='borda'> <a class='btn-dados' href='card.php?id={$codigoproduto}'>Dados do Produto </a> </td>";
+                        echo"</tr>";    
                         
                     }
                 ?>
@@ -87,7 +88,7 @@ if(!isset($_SESSION['id_usuario'])){
     </div>
     <div class=''style='height:95px'> </div>
     <div class =''style='display:flex;justify-content:center'>      
-         <a href='../listagem/listaProduto.php'>Volta Pagina Relação de Produtos </a>
+         <a class='btn-dados' href='../listagem/listaProduto.php'>Volta Pagina Relação de Produtos </a>
     </div>
     
     

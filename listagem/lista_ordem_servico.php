@@ -80,5 +80,12 @@ if(!isset($_SESSION['id_usuario'])){
             Atualizar Página
         </button>
     </div>
+    <div style="height:20px"></div>
+     <div class =''style='display:flex;justify-content:center'>        
+        
+            <button class='btn-success' type="button" ">
+                <a  href='../acessar_aos_relatorios.php'>Relatorios</a>
+            </button>
+    </div>
 </body>
 </html>

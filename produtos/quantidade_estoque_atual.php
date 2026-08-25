@@ -74,17 +74,19 @@ if(!isset($_SESSION['id_usuario'])){
                                         ) s ON e.codigoProduto = s.codigoPeca
                                         GROUP BY e.codigoProduto,e.nomeProduto;
                         ";*/
-                        $resultado = mysqli_query($conexao,$sql);
+                         $resultado = mysqli_query($conexao,$sql);
                         if($resultado){
 
                             while($linha_resultado = mysqli_fetch_assoc($resultado)){
                         
+                
+
                                 echo"<tr class ='texto_centro mouse '>";
                             
                                 echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigoProduto']} </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
 
-                                echo "<td class='borda'> {$linha_resultado['saldo']} </td>";
+                                echo "<td class='borda'> <a href='quantidade_produto_entrada.php'>     {$linha_resultado['saldo']} </td>";
                                 
                                 echo"</tr>";
                             

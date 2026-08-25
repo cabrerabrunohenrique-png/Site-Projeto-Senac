@@ -53,13 +53,14 @@ if(!isset($_SESSION['id_usuario'])){
                         $resultado = mysqli_query($conexao,$sql);
                         if($resultado){
                             while($linha_resultado = mysqli_fetch_assoc($resultado)){
+                                $codigoproduto = $linha_resultado['codigoProduto'];
                         
                                 echo"<tr class ='text-center mouse'>";
                             
                                 echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigoProduto']} </a> </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
 
-                                echo "<td class='borda'> {$linha_resultado['quantidadetotal']} </td>";
+                                echo "<td class='borda'> <a href='../card/card_totalPorprodutoEntrada.php?id={$codigoproduto}'> {$linha_resultado['quantidadetotal']} </td>";
                                 
                                 echo"</tr>";
                             }

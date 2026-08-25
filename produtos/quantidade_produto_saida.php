@@ -5,7 +5,6 @@ session_start();
 if(!isset($_SESSION['id_usuario'])){
     header('Location:../index.php');
     exit;
-
 }
 
 ?>
@@ -29,7 +28,7 @@ if(!isset($_SESSION['id_usuario'])){
                 <h1 class=" texto_titulo  ">Relatorio de Saida por Produto</h1>
                
             </div>
-           
+          
            
         </div>
        
@@ -67,6 +66,7 @@ if(!isset($_SESSION['id_usuario'])){
                                         
 
                             while($linha_resultado = mysqli_fetch_assoc($resultado)){
+                                $codigoproduto = $linha_resultado['codigopeca'];
                         
                                 echo"<tr class ='texto_centro mouse'>";
                                 
@@ -75,7 +75,7 @@ if(!isset($_SESSION['id_usuario'])){
                                 echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigopeca']} </a> </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomepeca']} </td>";
 
-                                echo "<td class='borda'> {$linha_resultado['quantidadetotal']} </td>";
+                                echo "<td class='borda'> <a href='../card/card_totalPorProduto.php?id={$codigoproduto}'> {$linha_resultado ['quantidadetotal']} </a> </td>";
                                 
                                 echo"</tr>";
                             

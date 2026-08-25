@@ -8,11 +8,6 @@ if(!isset($_SESSION['id_usuario'])){
 
 }
 
-?>
-
-
-
-<?php
 
 // fazer o download do DomPDF e colocar na pasta do seu projeto
 //Extrair o arquvio e deixar tudo dentro da pasta dompdf/ (cuidado com a subpastas)
@@ -47,12 +42,12 @@ $relatorio = "
             <th>Data Saida</th>
             <th>Código</th>
             <th>Nome do Produto</th>
+            
             <th>Quantidade</th>
-            <th>NF</th>
 
             <th>Cpf do Produto</th>
             <th>Numero da OS</th>
-            <th>Situacao do Produto</th>
+            
             
         </tr>
     </thead>
@@ -67,12 +62,12 @@ $relatorio = "
                 $relatorio.="<td> {$linha_resultado['codigoPeca']} </td>";
                 $relatorio.="<td> {$linha_resultado['nomePeca']} </td>";
 
+                $relatorio.="<td> {$linha_resultado['quantidaPeca']} </td>";
                 $relatorio.="<td> {$linha_resultado['numeroNf']} </td>";
-                $relatorio.="<td> {$linha_resultado['cpfPeca']} </td>";
                 $relatorio.="<td> {$linha_resultado['numeroOs']} </td>";
-                $relatorio.="<td> {$linha_resultado['situacaoPeca']} </td>";
+                
                 $relatorio.="</tr>";
-            } ;
+            } 
 
 $relatorio .= "
     </tbody>

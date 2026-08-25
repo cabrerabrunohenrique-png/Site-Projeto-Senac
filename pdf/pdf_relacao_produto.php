@@ -46,11 +46,14 @@ $relatorio = "
         <tr>
             <th>Codigo do Produto</th>
             <th>Nome do Produto</th>
-            <th>Fabricante  do Produto</th>
-            <th>Peso do Produto em grama</th>
-            <th>Alturo do Produto em cm</th>
+            <th>Fabricante</th>
+            <th>variavelproduto</th>
+            <th>familiaproduto</th>
+            <th>datacriacao</th>
+            <th>categoriaproduto</th>
+            <th>preco</th>
 
-            <th>Comprimento do Produto em cm</th>
+            
             
         </tr>
     </thead>
@@ -64,10 +67,12 @@ $relatorio = "
                 $relatorio.="<td class =''> {$linha_resultado['codigoproduto']} </td>";
                 $relatorio.="<td> {$linha_resultado['nomeProduto']} </td>";
                 $relatorio.="<td> {$linha_resultado['fabricanteProduto']} </td>";
+                $relatorio.="<td> {$linha_resultado['variavelproduto']} </td>";
 
-                $relatorio.="<td> {$linha_resultado['pesoProduto']} </td>";
-                $relatorio.="<td> {$linha_resultado['alturaProduto']} </td>";
-                $relatorio.="<td> {$linha_resultado['comprimentoProduto']} </td>";
+                $relatorio.="<td> {$linha_resultado['familiaproduto']} </td>";
+                $relatorio.="<td> {$linha_resultado['datacriacao']} </td>";
+                $relatorio.="<td> {$linha_resultado['categoriaproduto']} </td>";
+                $relatorio.="<td> {$linha_resultado['preco']} </td>";
                 
                 $relatorio.="</tr>";
             } ;

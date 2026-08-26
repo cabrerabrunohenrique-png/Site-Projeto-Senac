@@ -21,14 +21,12 @@ if(!isset($_SESSION['id_usuario'])){
 </head>
 <body class ="">
 <nav style='display:flex;justify-content:space-around' >
-        
-        <div class =''style='display:flex;justify-content:center'>        
-            <button class='btn-success' type="button" ">
-                <a  href='../produtos/quantidade_estoque_atual.php'>Voltar - Estoque Atual</a>
-            </button>
-        </div>
-
-    </nav>
+    <div class =''style='display:flex;justify-content:center'>
+        <button class='btn-success' type="button" ">
+            <a  href='../produtos/quantidade_estoque_atual.php'>Voltar - Estoque Atual</a>
+        </button>
+    </div>
+</nav>
 
 <div style="height:20px"></div>
 <div class='' style='display: flex; justify-content: center '>

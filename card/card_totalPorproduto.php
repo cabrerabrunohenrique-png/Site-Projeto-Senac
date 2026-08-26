@@ -23,7 +23,15 @@ if(!isset($_SESSION['id_usuario'])){
     
     <title>Relacao Saida por Produto</title>
 </head>
-<body class =" ">     
+<body class =" ">
+    <nav style='display:flex;justify-content:space-around' >
+    <div class =''style='display:flex;justify-content:center'>
+        <button class='btn-success' type="button" ">
+            <a  href='../produtos/quantidade_estoque_atual.php'>Voltar - Estoque Atual</a>
+        </button>
+    </div>
+</nav>
+<div style="height:20px"></div>     
     <main class=" texto_centro borda ">
         <table style="width:100%">
             <thead>
@@ -90,11 +98,7 @@ if(!isset($_SESSION['id_usuario'])){
             Atualizar Página
         </button>
     </div>
-    <div class=''style='height:95px'> </div>
-    <div class =''style='display:flex;justify-content:center'>      
-         <a class='btn-dados' href='../produtos/quantidade_produto_saida.php'>Volta Pagina - SAIDA PRODUTOS </a>
-    </div>
-    
+   
     
 </body>
 <script src="../js/produtos.js"></script>

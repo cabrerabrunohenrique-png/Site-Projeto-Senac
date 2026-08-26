@@ -19,6 +19,25 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Quantidade</title>
 </head>
 <body class ="">
+    <nav style='display:flex;justify-content:space-around' >
+        <div class =''style='display:flex;justify-content:center'>        
+            <button class='btn-success' type="button" ">
+                <a  href='quantidade_produto_saida.php'>Relatorio - Total Saida por Produto</a>
+            </button>
+        </div>
+        <div class =''style='display:flex;justify-content:center'>        
+            <button class='btn-success' type="button" ">
+                <a  href='../listagem/lista_ordem_servico.php'>Relatorio - Ordem Servico(OS)</a>
+            </button>
+        </div>
+        <div class =''style='display:flex;justify-content:center'>        
+            <button class='btn-success' type="button" ">
+                <a  href='quantidade_produto_entrada.php'>Relatorio - Total Entrada por Produto</a>
+            </button>
+        </div>
+
+    </nav>
+    <div style="height:20px"></div>
     <div class ="">
         <div class=" ">
             <h1 class=" texto_titulo  "> Relatorio de estoque atual</h1>
@@ -105,14 +124,6 @@ if(!isset($_SESSION['id_usuario'])){
             Atualizar Página
         </button>
     </div>
-    <div style="height:20px"></div>
-     <div class =''style='display:flex;justify-content:center'>        
         
-            <button class='btn-success' type="button" ">
-                <a  href='../acessar_aos_relatorios.php'>Relatorios</a>
-            </button>
-    </div>
-
-    
 </body>
 </html>

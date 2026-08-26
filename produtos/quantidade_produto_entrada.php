@@ -21,6 +21,22 @@ if(!isset($_SESSION['id_usuario'])){
 </head>
 <body class =" ">
 <header class='' ></header>
+<nav style='display:flex;justify-content:space-around'>
+          
+        <div class =''style='display:flex;justify-content:center'>        
+        
+            <button class='btn-success' type="button" ">
+                <a  href='../listagem/lista_entra_estoque.php'>Relação de Produtos lançado no Estoque</a>
+            </button>
+        </div>
+        
+    <div class =''style='display:flex;justify-content:center'>        
+        <button class='btn-success' type="button" ">
+            <a  href='quantidade_estoque_atual.php'>Volta- Estoque Atual</a>
+        </button>
+    </div>
+</nav>
+<div style="height:20px"></div>
     
         <div class =""style="display:flex;justify-content: center;">
             
@@ -77,13 +93,7 @@ if(!isset($_SESSION['id_usuario'])){
                 Atualizar Página
             </button>
         </div>
-        <div style="height:20px"></div>
-        <div class =''style='display:flex;justify-content:center'>        
-        
-            <button class='btn-success' type="button" ">
-                <a  href='../acessar_aos_relatorios.php'>Relatorios</a>
-            </button>
-        </div>
+  
   
 
 

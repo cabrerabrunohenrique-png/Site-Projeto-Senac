@@ -20,7 +20,17 @@ if(!isset($_SESSION['id_usuario'])){
 <title>Lista OS</title>
 </head>
 <body class ="">
+<nav style='display:flex;justify-content:space-around' >
+        
+        <div class =''style='display:flex;justify-content:center'>        
+            <button class='btn-success' type="button" ">
+                <a  href='../produtos/quantidade_estoque_atual.php'>Voltar - Estoque Atual</a>
+            </button>
+        </div>
 
+    </nav>
+
+<div style="height:20px"></div>
 <div class='' style='display: flex; justify-content: center '>
      <h1 class='texto_titulo'>Relação de Ordem de Servios(OS)</h1>
 </div>
@@ -80,12 +90,6 @@ if(!isset($_SESSION['id_usuario'])){
             Atualizar Página
         </button>
     </div>
-    <div style="height:20px"></div>
-     <div class =''style='display:flex;justify-content:center'>        
-        
-            <button class='btn-success' type="button" ">
-                <a  href='../acessar_aos_relatorios.php'>Relatorios</a>
-            </button>
-    </div>
+    
 </body>
 </html>

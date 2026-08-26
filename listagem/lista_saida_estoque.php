@@ -20,10 +20,21 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Estoque Saida</title>
 </head>
 <body class ="">
+<nav>
+    
+     <div class =''style='display:flex;justify-content:center'>        
+        
+            <button class='btn-success' type="button" ">
+                <a  href='../produtos/quantidade_estoque_atual.php'>Voltar - Estoque Atual </a>
+            </button>
+    </div>
+    <div style="height:20px"></div>
+</nav>
 
 <div class=''>
      <h1 class='texto_titulo'>Relação de Produtos Vendido/Saida</h1>
 </div>
+
 
  <main class="texto_centro borda" > 
     <table style="width:100%">
@@ -79,12 +90,6 @@ if(!isset($_SESSION['id_usuario'])){
         <button class='btn-success' type="button"  onclick="window.location.reload();"> Atualizar Página
         </button>
     </div>
-    <div style="height:20px"></div>
-     <div class =''style='display:flex;justify-content:center'>        
-        
-            <button class='btn-success' type="button" ">
-                <a  href='../acessar_aos_relatorios.php'>Relatorios</a>
-            </button>
-    </div>
+    
 </body>
 </html>

@@ -9,22 +9,6 @@
 </head>
 
 <body >
-    <nav class ="container ">
-        <div class ="bg-body-secondary" style="display:flex;justify-content: space-between;">
-            <div>
-                <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="../navegacao.php">
-                    Menu
-                </a>
-            </div>
-            <div>
-                <a class='letraFundoAzul caixa fontemenu cp  le link-alerta' href='../produtos/cadastro_de_produtos.php'> PAGINA - PRODUTOS</a>
-            </div>           
-                  
-            <div class="">                               
-                <a class="cp caixa  fontemenu  text-bg-success" href='../card/cart_produto.php ' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;" >Lista de Produtos </a>
-            </div>
-        </div>
-    </nav>
     <div style='height: 15px  ' ></div>     
     <main class=" texto_centro borda ">
         <table style="width:100%">

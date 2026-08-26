@@ -22,7 +22,15 @@ if(!isset($_SESSION['id_usuario'])){
     <title>Lista Entrada Estoque</title>
 </head>
 <body class ="container">
-    
+<nav class =''style='display:flex;justify-content:space-around'>        
+        
+    <div class =''style='display:flex;justify-content:center'>        
+        <button class='btn-success' type="button" ">
+            <a  href='../produtos/quantidade_estoque_atual.php'>Volta- Estoque Atual</a>
+        </button>
+    </div>
+</nav>
+<div class=''style='height:20px'> </div>    
 
 
 
@@ -30,9 +38,9 @@ if(!isset($_SESSION['id_usuario'])){
 <div class='' style='display: flex; justify-content: center '>
      <h1 class='texto_titulo'style ='text-transform: uppercase'>Relação de Produtos lançado no Estoque</h1>
 </div>
-<div class=''style='height:20px'> </div>
-<div style ='width: px;height:10px;' > </div>
-    <main class=" texto_centro borda " >
+
+<div style ='height:10px;' > </div>
+<main class=" texto_centro borda " >
        <table style="width:100%">
             <!-- pra estruturar a tabela-->
             <thead>
@@ -84,12 +92,7 @@ if(!isset($_SESSION['id_usuario'])){
             Atualizar Página
         </button>
     </div>
-    <div style="height:20px"></div>
-     <div class =''style='display:flex;justify-content:center'>        
-        
-            <button class='btn-success' type="button" ">
-                <a  href='../acessar_aos_relatorios.php'>Relatorios</a>
-            </button>
-    </div>
+    
+    
 </body>
 </html>

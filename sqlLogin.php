@@ -11,7 +11,8 @@
         $conexao = mysqli_connect("localhost","root","","bdprojetosenac");
         }catch (mysqli_sql_exception $e)
         {
-            die ($e->getMessage()."<h1>Erro</h1> <a href='index.php'>Voltar</a>" );
+            die ($e->getMessage()."<h1>Erro</h1>
+            <p>Verifique se o Banco de Dados esta conectado corretamente</p> <a href='index.php'>Voltar</a>" );
         
         }
           #inserir os dados

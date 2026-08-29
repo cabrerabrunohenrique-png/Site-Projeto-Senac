@@ -21,21 +21,25 @@ if(!isset($_SESSION['id_usuario'])){
 <body class ="">
     <nav style='display:flex;justify-content:space-around' >
         <div class =''style='display:flex;justify-content:center'>        
-            <button class='btn-success' type="button" ">
-                <a  href='quantidade_produto_saida.php'>Relatorio - Total Saida por Produto</a>
+            <button class='btn-success' type="button"
+                 onclick="window.open('quantidade_produto_saida.php', 'popup_saida', 'width=600,height=400');return false;">Relatorio - Total Saida por Produto
             </button>
         </div>
         <div class =''style='display:flex;justify-content:center'>        
-            <button class='btn-success' type="button" ">
-                <a  href='../listagem/lista_ordem_servico.php'>Relatorio - Ordem Servico(OS)</a>
+            <button class='btn-success' type="button" onclick="window.open('../listagem/lista_ordem_servico.php', 'popup_os', 'width=600,height=400');return false;">Relatorio - Ordem Servico(OS)
             </button>
         </div>
         <div class =''style='display:flex;justify-content:center'>        
-            <button class='btn-success' type="button" ">
-                <a  href='quantidade_produto_entrada.php'>Relatorio - Total Entrada por Produto</a>
+            <button class='btn-success' type="button" onclick="window.open('quantidade_produto_entrada.php', 'popup_entrada', 'width=600,height=400');return false;">Relatorio - Total Entrada por Produto
             </button>
         </div>
-
+        
+        <div class =''style='display:flex;justify-content:center'>        
+            <button class='btn-success' type="button" ">
+                <a  href='../listagem/listaProduto.php'>Relatorio - Produtos Cadastrado
+                </a>
+            </button>
+        </div>    
     </nav>
     <div style="height:20px"></div>
     <div class ="">
@@ -50,6 +54,7 @@ if(!isset($_SESSION['id_usuario'])){
                         <td class="borda">codigo produto</td>
                         <td class="borda" >nome produto</td>
                         <td class="borda">quantidade estoque</td>
+                        
                     </tr>
                 </thead>
         
@@ -108,6 +113,7 @@ if(!isset($_SESSION['id_usuario'])){
                                 echo "<td class='borda'> <a href='quantidade_produto_entrada.php'>     {$linha_resultado['saldo']} </td>";
                                 
                                 echo"</tr>";
+                                
                             
                             }
                             mysqli_close($conexao);

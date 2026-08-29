@@ -24,10 +24,10 @@ if(!isset($_SESSION['id_usuario'])){
 <nav style='display:flex;justify-content:space-around'>
     
     <div class =''style='display:flex;justify-content:center'>        
-        <button class='btn-success' type="button" ">
-                <a  href='../listagem/lista_saida_estoque.php'>Relação de Produtos Vendidos</a>
+        <button class='btn-success' type="button"  onclick="window.open('../listagem/lista_saida_estoque.php', 'popup_saida_', 'width=600,height=400');return false;">Relação de Produtos Vendidos
         </button>
     </div>
+    
     <div class =''style='display:flex;justify-content:center'>        
         <button class='btn-success' type="button" ">
             <a  href='quantidade_estoque_atual.php'>Volta- Estoque Atual</a>
@@ -58,6 +58,8 @@ if(!isset($_SESSION['id_usuario'])){
                         <td class="borda">codigo Produto</td>
                         <td class="borda">nome Produto</td>
                         <td class="borda">quantidade Produto</td>
+                        <td class="borda">Atualizar Pagina</td>
+                        <td class="borda">Relação analitica 
                     
                     </tr>
                 </thead>
@@ -90,10 +92,20 @@ if(!isset($_SESSION['id_usuario'])){
                                 echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigopeca']} </a> </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomepeca']} </td>";
 
-                                echo "<td class='borda'> <a href='../card/card_totalPorProduto.php?id={$codigoproduto}'> {$linha_resultado ['quantidadetotal']} </a> </td>";
+                                echo "<td class='borda'>  <a  href='../card/card_totalPorProduto.php?id={$codigoproduto}' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}', 'popup_saida_', 'width=600,height=400'); return false;\"> {$linha_resultado['quantidadetotal']} </a> </td>";
                                 
+                                
+                                echo "<td class='borda'  ><button class='btn-success' type='button'  onclick='window.location.reload();'>
+                                 Atualizar Página</button>";
+
+                                echo "<td class='borda'>
+                                        <button class='btn-success' type='button' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}', 'popup_saida__', 'width=600,height=400'); return false;\">
+                                            Relação Analítica
+                                        </button>
+                                    </td>";
+                                echo "</tr>";
+
                                 echo"</tr>";
-                            
                             }
                             mysqli_close($conexao);
                         }   
@@ -102,6 +114,12 @@ if(!isset($_SESSION['id_usuario'])){
             </table>
         </main>
         <div style="height:20px"></div>
+
+         <div class =''style='display:flex;justify-content:center'>
+        <button class='btn-success' type="button"  onclick="window.location.reload();">
+            Atualizar Página
+        </button>
+    </div>
 
     
           

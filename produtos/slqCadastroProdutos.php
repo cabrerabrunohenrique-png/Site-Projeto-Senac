@@ -23,7 +23,7 @@ if(!isset($_SESSION['id_usuario'])){
     $familia = mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['familia']??'')),'utf-8');
     $categoria =mb_strtolower(trim(preg_replace('/\s+/',' ',$_POST['categoria']??'')),'utf-8');
     $valor = $_POST['preco']??'';
-
+    $responsavel = $_SESSION['id_usuario'] ??'';
 
     
     
@@ -87,8 +87,8 @@ if(!isset($_SESSION['id_usuario'])){
 
     #inserir os dados
 
-    $slq = "insert into tbcadastropeca (codigoproduto ,nomeProduto, fabricanteProduto, variavelproduto, familiaproduto, datacriacao, categoriaproduto, preco)
-    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$variavel', '$familia', '$data', '$categoria', '$valor')";
+    $slq = "insert into tbcadastropeca (codigoproduto ,nomeProduto, fabricanteProduto, variavelproduto, familiaproduto, datacriacao, categoriaproduto, preco, responsavel)
+    values ('$codigodoproduto','$nomedoproduto' ,'$fabricante', '$variavel', '$familia', '$data', '$categoria', '$valor' , '$responsavel' )";
     
      
     $resultado = mysqli_query($conexao ,$slq);

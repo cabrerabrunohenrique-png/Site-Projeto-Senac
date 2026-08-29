@@ -30,7 +30,7 @@ if(!isset($_SESSION['id_usuario'])){
     
     <div class =''style='display:flex;justify-content:center'>        
         <button class='btn-success' type="button" ">
-            <a  href='quantidade_estoque_atual.php'>Volta- Estoque Atual</a>
+            <a  href='quantidade_estoque_atual.php' onclick="if(window.opener && !window.opener.closed) { window.opener.location.href = this.href; window.close(); return false; }">Volta- Estoque Atual</a>
         </button>
     </div>
 </nav>
@@ -59,7 +59,7 @@ if(!isset($_SESSION['id_usuario'])){
                         <td class="borda">nome Produto</td>
                         <td class="borda">quantidade Produto</td>
                         <td class="borda">Atualizar Pagina</td>
-                        <td class="borda">Relação analitica 
+                        <td class="borda">Relação analitica</td>
                     
                     </tr>
                 </thead>
@@ -89,7 +89,7 @@ if(!isset($_SESSION['id_usuario'])){
                                 
                                 echo "<td class='borda'>  {$linha_resultado['numeroOS']}  </td>";
                             
-                                echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigopeca']} </a> </td>";
+                                echo "<td class='borda'> <a href='../card/cart_produto.php' onclick=\"window.open('../card/cart_produto.php','informacaoproduto','width=800,height=600');return false;\"> {$linha_resultado['codigopeca']}</a> </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomepeca']} </td>";
 
                                 echo "<td class='borda'>  <a  href='../card/card_totalPorProduto.php?id={$codigoproduto}' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}', 'popup_saida_', 'width=600,height=400'); return false;\"> {$linha_resultado['quantidadetotal']} </a> </td>";
@@ -99,13 +99,13 @@ if(!isset($_SESSION['id_usuario'])){
                                  Atualizar Página</button>";
 
                                 echo "<td class='borda'>
-                                        <button class='btn-success' type='button' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}', 'popup_saida__', 'width=600,height=400'); return false;\">
+                                        <button class='btn-success' type='button' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}', 'popup_saida_', 'width=600,height=400'); return false;\">
                                             Relação Analítica
                                         </button>
                                     </td>";
                                 echo "</tr>";
 
-                                echo"</tr>";
+                                
                             }
                             mysqli_close($conexao);
                         }   

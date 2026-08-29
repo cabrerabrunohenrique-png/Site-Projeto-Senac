@@ -85,7 +85,7 @@ if(!isset($_SESSION['id_usuario'])){
         </div>
         <div style="height: 15px"> </div>
         <div>
-            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php' onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Estoque Atual</a>
+            <a class="letraFundoAzul caixa text-bg-success le" href='../produtos/quantidade_estoque_atual.php' onclick="window.open('../produtos/quantidade_estoque_atual.php', 'um', 'width=600,height=400'); return false;">Estoque Atual</a>
         </div>
 
     </main>

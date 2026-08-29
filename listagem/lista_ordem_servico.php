@@ -67,7 +67,7 @@ if(!isset($_SESSION['id_usuario'])){
                     echo"<tr class ='texto_centro mouse'>";
                     echo "<td class='borda'> {$linha_resultado['data']} </td>";
                     echo "<td class='borda'> {$linha_resultado['codigoOS']} </td>";
-                    echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigoProduto']}</a> </td>";
+                    echo "<td class='borda'> <a href='../card/cart_produto.php' onclick=\"window.open('../card/cart_produto.php','informacaoproduto','width=400,height=400');return false;\"> {$linha_resultado['codigoProduto']}</a> </td>";
                     echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
 
                     echo "<td class='borda'> {$linha_resultado['quantidadeProduzida']} </td>";

@@ -35,8 +35,8 @@ if(!isset($_SESSION['id_usuario'])){
         </div>
         
         <div class =''style='display:flex;justify-content:center'>        
-            <button class='btn-success' type="button" ">
-                <a  href='../listagem/listaProduto.php'>Relatorio - Produtos Cadastrado
+            <button class='btn-success' type="button" >
+                <a  href='../listagem/listaProduto.php' onclick="window.open('../listagem/listaProduto.php','poup_produtos','width=400,height=300'); return false;">Relatorio - Produtos Cadastrado
                 </a>
             </button>
         </div>    
@@ -107,10 +107,10 @@ if(!isset($_SESSION['id_usuario'])){
 
                                 echo"<tr class ='texto_centro mouse '>";
                             
-                                echo "<td class='borda'> <a href='../card/cart_produto.php'> {$linha_resultado['codigoProduto']} </td>";
+                                echo "<td class='borda'> <a href='../card/cart_produto.php' onclick=\"window.open('../card/cart_produto.php','informacaoproduto','width=400,heigth=300');return false;\" > {$linha_resultado['codigoProduto']} </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
 
-                                echo "<td class='borda'> <a href='quantidade_produto_entrada.php'>     {$linha_resultado['saldo']} </td>";
+                                echo "<td class='borda'> <a href='quantidade_produto_entrada.php' onclick=\"window.open('quantidade_produto_entrada.php','popup_entrada','width=300, heigth=300');return false;\">{$linha_resultado['saldo']} </td>";
                                 
                                 echo"</tr>";
                                 

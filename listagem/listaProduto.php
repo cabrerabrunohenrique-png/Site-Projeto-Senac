@@ -67,7 +67,7 @@ if(!isset($_SESSION['id_usuario'])){
                 while($linha_resultado = mysqli_fetch_array($result)){    
                     echo"<link rel ='stylesheet' href='../css/style.css'>";
                     echo"<tr class ='texto_centro mouse'>";
-                    echo "<td class='borda'> <a href='../card/cart_produto.php'>    {$linha_resultado['codigoproduto']} </a> </td>";
+                    echo "<td class='borda'> <a href='../card/cart_produto.php' onclick=\"window.open('../card/cart_produto.php','informacaoproduto','width=200, height=300');return false;\" >    {$linha_resultado['codigoproduto']} </a> </td>";
                     echo "<td class='borda'> {$linha_resultado['nomeProduto']} </td>";
                     echo "<td class='borda'> {$linha_resultado['variavelproduto']} </td>";
                     echo "<td class='borda'> {$linha_resultado['fabricanteProduto']} </td>";      

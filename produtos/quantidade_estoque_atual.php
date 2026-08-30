@@ -14,9 +14,14 @@ if(!isset($_SESSION['id_usuario'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel ="stylesheet" href="../css/style_lista.css">  
+    <link rel ="stylesheet" href="../css/style_lista.css"> 
+
+    <script>
+    window.name = "janela_pai_estoque";
+    </script>    
     
     <title>Quantidade</title>
+
 </head>
 <body class ="">
     <nav style='display:flex;justify-content:space-around' >

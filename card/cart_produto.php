@@ -26,9 +26,22 @@ if(!isset($_SESSION['id_usuario'])){
 <body class =" ">
     <nav style='display:flex;justify-content:space-around' >
         <div class =''style='display:flex;justify-content:center'>
-            <button class='btn-success' type="button" ">
-                <a  href='../produtos/quantidade_estoque_atual.php'>Voltar - Estoque Atual</a>
-            </button>
+                    <button class='btn-success' type="button" onclick="
+            // 1. Se a mãe (Página 2) ainda estiver aberta, muda a página do pai (Página 1) através dela
+            if (window.opener && window.opener.opener && !window.opener.opener.closed) { 
+                window.opener.opener.location.href = '../produtos/quantidade_estoque_atual.php';
+                window.close(); 
+            } 
+            // 2. Se a mãe (Página 2) foi fechada, busca a janela pai pelo nome e muda a página dela
+            else {
+                let janelaMae = window.open('', 'janela_pai_estoque');
+                if (janelaMae && janelaMae.opener && !janelaMae.opener.closed) {
+                    janelaMae.opener.location.href = '../produtos/quantidade_estoque_atual.php';
+                    janelaMae.opener.focus();
+                }
+                window.close();
+            }
+        ">Voltar - Estoque Atual</button>
         </div>
         <div class =''style='display:flex;justify-content:center'>      
              <a class='btn-dados' href='../listagem/listaProduto.php'>Volta Pagina Relação de Produtos </a>

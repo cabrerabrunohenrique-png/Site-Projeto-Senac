@@ -18,14 +18,29 @@ if(!isset($_SESSION['id_usuario'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="../css/style_lista.css">  
     <title>Estoque Saida</title>
+    <script>window.name = "janela_mae_saida";</script> 
 </head>
 <body class ="">
 <nav>
     
      <div class =''style='display:flex;justify-content:center'>        
         
-            <button class='btn-success' type="button" ">
-                <a  href='../produtos/quantidade_estoque_atual.php' onclick="if(window.opener && !window.opener.closed){ window.opener.location.href='../produtos/quantidade_estoque_atual.php';window.close(); return false;}">Voltar - Estoque Atual </a>
+            <button class='btn-success' type="button" onclick="
+                    // 1. Se a mãe (Página 2) ainda estiver aberta, usa o caminho normal
+                    if (window.opener && window.opener.opener && !window.opener.opener.closed) { 
+                        window.opener.opener.location.href = '../produtos/quantidade_estoque_atual.php';
+                        window.close(); 
+                    } 
+                    // 2. Se a mãe (Página 2) foi fechada, localiza a Página 1 pelo nome e a redireciona
+                    else {
+                        let janelaMae = window.open('', 'janela_mae_saida');
+                        if (janelaMae && janelaMae.opener && !janelaMae.opener.closed) {
+                            janelaMae.opener.location.href = '../produtos/quantidade_estoque_atual.php';
+                            janelaMae.opener.focus();
+                        }
+                        window.close();
+                    }
+                ">Voltar - Estoque Atual </a>
             </button>
     </div>
     <div style="height:20px"></div>
@@ -77,7 +92,7 @@ if(!isset($_SESSION['id_usuario'])){
 
                     echo "<td class='borda'> {$linha_resultado['quantidaPeca']} </td>";
                     echo "<td class='borda'> {$linha_resultado['numeroNf']} </td>";
-                    echo "<td class='borda'> <a href='../listagem/lista_ordem_servico.php' onclick=\"window.open('../listagem/lista_ordem_servico.php', 'popup1', 'width=800,height=600'); return false;\">{$linha_resultado['numeroOs']}</a></td>";
+                    echo "<td class='borda'> <a href='../listagem/lista_ordem_servico.php' onclick=\"window.open('../listagem/lista_ordem_servico.php?mae=janela_mae_saida', 'popup1', 'width=800,height=600'); return false;\">{$linha_resultado['numeroOs']}</a></td>";
 
                     //echo "<td class='borda'> <a href='../listagem/lista_ordem_servico.php'> {$linha_resultado['numeroOs']}' onclick=\"window.open('../listagem/lista_ordem_servico.php,'popup1');return false;\"> </a></td>";
                     echo"</tr>";

@@ -18,7 +18,8 @@ if(!isset($_SESSION['id_usuario'])){
     <link rel ="stylesheet" href="../css/style_lista.css">
     
     <title>Quantidade_saida</title>
-</head>
+    <script>window.name = "janela_mae_saida";</script>
+</head>                                      
 <body class ="">
     
 <nav style='display:flex;justify-content:space-around'>
@@ -92,7 +93,7 @@ if(!isset($_SESSION['id_usuario'])){
                                 echo "<td class='borda'> <a href='../card/cart_produto.php' onclick=\"window.open('../card/cart_produto.php','informacaoproduto','width=800,height=600');return false;\"> {$linha_resultado['codigopeca']}</a> </td>";
                                 echo "<td class='borda'> {$linha_resultado['nomepeca']} </td>";
 
-                                echo "<td class='borda'>  <a  href='../card/card_totalPorProduto.php?id={$codigoproduto}' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}', 'popup_saida_', 'width=600,height=400'); return false;\"> {$linha_resultado['quantidadetotal']} </a> </td>";
+                                echo "<td class='borda'>  <a  href='../card/card_totalPorProduto.php?id={$codigoproduto}' onclick= \"window.open('../card/card_totalPorProduto.php?id={$codigoproduto}&mae=janela_mae_saida', 'popup_saida_', 'width=600,height=400'); return false;\"> {$linha_resultado['quantidadetotal']} </a> </td>";
                                 
                                 
                                 echo "<td class='borda'  ><button class='btn-success' type='button'  onclick='window.location.reload();'>

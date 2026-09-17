@@ -30,6 +30,7 @@
 
             $_SESSION['id_usuario'] = $resultado['numeroRegistro'];
             $_SESSION ['nome'] = $resultado['nomeCompleto'];
+            $_SESSION['permissao'] = $resultado['nivelPermisao'];
             mysqli_close($conexao);
             
 

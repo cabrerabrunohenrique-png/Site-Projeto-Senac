@@ -8,6 +8,38 @@ if(!isset($_SESSION['id_usuario'])){
 
 }
 
+if($_SESSION['permissao'] != 'adm'){
+
+    echo "<link rel='stylesheet' href='../css/style.css'>"; 
+        echo "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB' crossorigin='anonymous'>";
+        echo "<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 40px; font-family: sans-serif;'>"; 
+        
+        // Texto de aviso no topo, destacado e elegante
+        echo "<p style='color: #666; font-size: 1.1rem; margin-bottom: 20px; font-weight: 500; text-align: center;'>Você não tem Permissão.</p>";
+
+        // Bloco dos botões alinhados
+        echo "    <div style='display: flex; justify-content: center; '>"; 
+         echo "        <div class='cp caixa  fontemenu ' style ='background-color: red'>"; 
+        echo "            <a class='box_letra' href='deletar_produto.php' style='text-decoration: none; color: #333; font-weight: bold;'> Voltar</a>";
+       
+        echo "        </div>";
+        echo "<div style='width: 15px;'></div>";
+        echo "        <div class='cp caixa  fontemenu '>"; 
+        echo "            <a class='box_letra' href='cadastro_de_produtos.php' style='text-decoration: none; color: #333; font-weight: bold;'> Cadastro de Produtos </a>"; 
+        echo "        </div>"; 
+        echo "        <div style='width: 15px;'></div>"; 
+        echo "        <div class=' cp caixa  fontemenu  letraFundoAzul text-bg-info'> "; 
+        echo "            <a class='box_letra ' href='../navegacao.php' style='text-decoration: none; color: #333; font-weight: bold;'> Menu </a>"; 
+        echo "        </div>"; 
+        echo "    </div>"; 
+        echo "</div>"; 
+        exit;
+    
+
+}
+
+
+
 ?>
 
 <?php
@@ -23,6 +55,8 @@ if(!isset($_SESSION['id_usuario'])){
         die ("Erro com o banco de dados"."<h1>Erro</h1> <a href='deletar_produto.php'>Voltar</a>" );
     }
 
+
+     
     #inserir os dados
 
     $sql = " delete from tbcadastropeca where codigoproduto ='$codigodoproduto' and nomeProduto='$nomedoproduto'";

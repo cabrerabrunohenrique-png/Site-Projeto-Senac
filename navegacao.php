@@ -70,7 +70,11 @@ if(!isset($_SESSION['id_usuario'])){
                     <a class='letraFundoAzul caixa text-bg-info fontemenu le ' href="estoque_entrada.php">Lançamentos: Entradas e Saidas</a>
                 </div>
             </div>
+           
             
+        </div>
+        <div class=''>
+            <a class='letraFundoAzul caixa text-bg-info fontemenu le ' href="/financeiro/agenda.php">Agenda de Pagamentos</a>
         </div>
         
        

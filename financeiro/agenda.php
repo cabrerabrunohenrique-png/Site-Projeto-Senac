@@ -30,16 +30,48 @@ if(!isset($_SESSION['id_usuario'])){
 </head>
 <body class="container" style='background-color: #F7F7F7'>
     <nav class ="">
-        <div class="bg-body-secondary " style='' >
-            <a class="letraPretoAzul caixa text-bg-danger fontemenu le" href="slqSairSistema.php">Sair do Sistema</a>
-        </div>
-        <div class="">
-        <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="/navegacao.php">
-          Voltar
-        </a>
-      </div>
-          
+         <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="/navegacao.php">
+                Voltar
+        </a>       
+    
     </nav>
+    <main class='mm' style="display:flex;justify-content:">
+        <div class="mm" style="width:100vb; height:100vb">ttt
+           
+        </div>
+        <div class="mm" style="width:100vb" >ttt
+            <form action="">
+                <div>
+                    <label for="data">data do pagamento</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div>
+                    <label for="nome">Nome do Fornecedor/Prestador de Servico</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div>
+                    <label for="">Valor do Boleto</label>
+                    <input type="number">
+                </div>
+                <div>
+                    <label for="">Numero da NF</label>
+                    <input type="number">
+                </div>
+                <div>
+                    <label for="">tipo</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value="a">a</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" >Enviar</button>
+                </div>
+            </form>
+            
+        </div>
+    </main>
+
 
 </body>
 </html>

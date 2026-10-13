@@ -3,10 +3,10 @@
 session_start();
 
 if(!isset($_SESSION['id_usuario'])){
-    header('Location:index.php');
+  header('Location:index.php');
     exit;
-
 }
+
 
 ?>
 
@@ -28,7 +28,7 @@ if(!isset($_SESSION['id_usuario'])){
 
     <title>Agenda</title>
 </head>
-<body class="container" style='background-color: #F7F7F7'>
+<body class="" style='background-color: #F7F7F7'>
     <nav class ="">
          <a class="letraPretoAzul caixa text-bg-info  fontemenu le link-alerta" href="/navegacao.php">
                 Voltar
@@ -36,35 +36,43 @@ if(!isset($_SESSION['id_usuario'])){
     
     </nav>
     <main class='mm' style="display:flex;justify-content:">
-        <div class="mm" style="width:100vb; height:100vb">ttt
-           
+        <div class="mm" style="width:120vb; height:100vb">
+            <iframe name="janela-do-lado" width="800" height="400" src="about:blank"></iframe>
         </div>
-        <div class="mm" style="width:100vb" >ttt
-            <form action="">
-                <div>
-                    <label for="data">data do pagamento</label>
-                    <input type="date" id="data" name="data">
+
+        <div class="mm" style="width:100vb" >
+            <div class="mb-3 " style="display:flex;justify-content:center">
+                <h2 class ="fontemenu">Lançamento de boletos</h2>
+                
+
+            </div>
+            <form action="../navegacao.php" method="POST" target="janela-do-lado">
+                <div class="mb-3  " >
+                <label class="" style="width:45vb" for="data">Data do Pagamento</label>
+                    <input class="" type="date" id="data" name="data">
+                </div>
+                <div class="mb-3" >
+                    <label for="nome" style="width:45vb">Nome do Fornecedor/Prestador de Servico</label>
+                    <input type="text" id="nome" name="nome" style="width:40vb" class=''>
+                </div>
+                <div class="mb-3">
+                    <label style="width:45vb" for="valor">Valor do Boleto</label>
+                    <input type="number" id="valor" name='valor'>
+                </div>
+                <div class="mb-3">
+                    <label style="width:45vb" for="nf">Numero da NF</label>
+                    <input type="number" id='nf' name='nf'>
                 </div>
                 <div>
-                    <label for="nome">Nome do Fornecedor/Prestador de Servico</label>
-                    <input type="text" id="nome" name="nome">
-                </div>
-                <div>
-                    <label for="">Valor do Boleto</label>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="">Numero da NF</label>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="">tipo</label>
-                    <select name="" id="">
+                    <label class="mb-3" style="width:45vb" for="tipo">Tipo</label>
+                    <select id="tipo" name='tipo'>
                         <option value=""></option>
-                        <option value="a">a</option>
+                        <option value="fornecedor">Fornecedor</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="pessoal">Pessoal</option>
                     </select>
                 </div>
-                <div>
+                <div class="" style="display:flex; justify-content:center">
                     <button type="submit" >Enviar</button>
                 </div>
             </form>
@@ -74,4 +82,5 @@ if(!isset($_SESSION['id_usuario'])){
 
 
 </body>
-</html>
+</html> 
+

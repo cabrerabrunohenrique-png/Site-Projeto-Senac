@@ -46,26 +46,26 @@ if(!isset($_SESSION['id_usuario'])){
                 
 
             </div>
-            <form action="../navegacao.php" method="POST" target="janela-do-lado">
+            <form action="sqlCadastroAgenda.php" method="post" target="janela-do-lado">
                 <div class="mb-3  " >
                 <label class="" style="width:45vb" for="data">Data do Pagamento</label>
-                    <input class="" type="date" id="data" name="data">
+                    <input class="" type="date" id="data" name="Data">
                 </div>
                 <div class="mb-3" >
                     <label for="nome" style="width:45vb">Nome do Fornecedor/Prestador de Servico</label>
-                    <input type="text" id="nome" name="nome" style="width:40vb" class=''>
+                    <input type="text" id="nome" name="Nome" style="width:40vb" class=''>
                 </div>
                 <div class="mb-3">
                     <label style="width:45vb" for="valor">Valor do Boleto</label>
-                    <input type="number" id="valor" name='valor'>
+                    <input type="number" id="valor" name='Valor'>
                 </div>
                 <div class="mb-3">
                     <label style="width:45vb" for="nf">Numero da NF</label>
-                    <input type="number" id='nf' name='nf'>
+                    <input type="number" id='nf' name='Nf'>
                 </div>
                 <div>
                     <label class="mb-3" style="width:45vb" for="tipo">Tipo</label>
-                    <select id="tipo" name='tipo'>
+                    <select id="tipo" name='Tipo'>
                         <option value=""></option>
                         <option value="fornecedor">Fornecedor</option>
                         <option value="administrativo">Administrativo</option>

@@ -201,7 +201,7 @@ echo "<link rel='stylesheet' href='../css/style.css'>
                 display: flex; 
                 justify-content: center; 
                 align-items: center; 
-                min-height: 80vh;
+                min-height: 80vh;           
                 font-family: 'Segoe UI', Roboto, sans-serif;
             }
             .card-erro {

@@ -35,50 +35,60 @@ if(!isset($_SESSION['id_usuario'])){
         </a>       
     
     </nav>
-    <main class='mm' style="display:flex;justify-content:">
-        <div class="mm" style="width:120vb; height:100vb">
-            <iframe name="janela-do-lado" width="800" height="400" src="about:blank"></iframe>
-        </div>
-
-        <div class="mm" style="width:100vb" >
-            <div class="mb-3 " style="display:flex;justify-content:center">
-                <h2 class ="fontemenu">Lançamento de boletos</h2>
-                
-
+    <main class='mm'>
+        <div class= "mm" style="display:flex;justify-content:">
+            <div class="mm" style="width:100vw; height:40vb">
+                <iframe name="janela-do-lado" width="100%" height="100%" src="about:blank"></iframe>
             </div>
-            <form action="sqlCadastroAgenda.php" method="post" target="janela-do-lado">
-                <div class="mb-3  " >
-                <label class="" style="width:45vb" for="data">Data do Pagamento</label>
-                    <input class="" type="date" id="data" name="Data">
+
+            <div class="mm" style="width:100vw" >
+                <div class="mb-3 " style="display:flex;justify-content:center">
+                    <h2 class ="fontemenu">Lançamento de boletos</h2>
+                    
+
                 </div>
-                <div class="mb-3" >
-                    <label for="nome" style="width:45vb">Nome do Fornecedor/Prestador de Servico</label>
-                    <input type="text" id="nome" name="Nome" style="width:40vb" class=''>
-                </div>
-                <div class="mb-3">
-                    <label style="width:45vb" for="valor">Valor do Boleto</label>
-                    <input type="number" id="valor" name='Valor'>
-                </div>
-                <div class="mb-3">
-                    <label style="width:45vb" for="nf">Numero da NF</label>
-                    <input type="number" id='nf' name='Nf'>
-                </div>
-                <div>
-                    <label class="mb-3" style="width:45vb" for="tipo">Tipo</label>
-                    <select id="tipo" name='Tipo'>
-                        <option value=""></option>
-                        <option value="fornecedor">Fornecedor</option>
-                        <option value="administrativo">Administrativo</option>
-                        <option value="pessoal">Pessoal</option>
-                    </select>
-                </div>
-                <div class="" style="display:flex; justify-content:center">
-                    <button type="submit" >Enviar</button>
-                </div>
-            </form>
+                <form action="sqlCadastroAgenda.php" method="post" target="janela-do-lado">
+                    <div class="mb-3  " >
+                    <label class="" style="width:25vw" for="data">Data do Pagamento</label>
+                        <input class="" type="date" id="data" name="Data">
+                    </div>
+                    <div class="mb-3" >
+                        <label for="nome" style="width:25vw">Nome do Fornecedor/Prestador de Servico</label>
+                        <input type="text" id="nome" name="Nome" style="width:40vb" class=''>
+                    </div>
+                    <div class="mb-3">
+                        <label style="width:25vw" for="valor">Valor do Boleto</label>
+                        <input type="number" id="valor" name='Valor'>
+                    </div>
+                    <div class="mb-3">
+                        <label style="width:25vw" for="nf">Numero da NF</label>
+                        <input type="number" id='nf' name='Nf'>
+                    </div>
+                    <div>
+                        <label class="mb-3" style="width:25vw" for="tipo">Tipo</label>
+                        <select id="tipo" name='Tipo'>
+                            <option value=""></option>
+                            <option value="fornecedor">Fornecedor</option>
+                            <option value="administrativo">Administrativo</option>
+                            <option value="pessoal">Pessoal</option>
+                        </select>
+                    </div>
+                    <div class="" style="display:flex; justify-content:center">
+                        <button type="submit" >Enviar</button>
+                    </div>
+                </form>
+                
+            </div>
             
         </div>
+        <div class="mm" style ="height:20vw">
+            eee
+
+        </div>
+       
     </main>
+    
+       
 
 
 </body>
